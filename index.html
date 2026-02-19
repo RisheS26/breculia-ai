@@ -6,9 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
   <!-- Primary Meta -->
-  <title>Breculia AI — AI Voice Receptionists for US-based home service contractors</title>
-  <meta name="description" content="Breculia AI builds 24/7 AI voice receptionists for HVAC, plumbing, electrical, and roofing contractors across the US. Never miss a job again. Setup in 48 hours." />
-  <meta name="keywords" content="AI receptionist, HVAC answering service, plumbing call center, roofing contractor AI, electrical contractors AI,  24/7 answering service, voice AI, automated booking" />
+  <title>Breculia AI — AI Voice Receptionists for HVAC & Plumbing Contractors</title>
+  <meta name="description" content="Breculia AI builds 24/7 AI voice receptionists for HVAC, plumbing, and roofing contractors across the US. Never miss a job again. Setup in 48 hours." />
+  <meta name="keywords" content="AI receptionist, HVAC answering service, plumbing call center, roofing contractor AI, 24/7 answering service, voice AI, automated booking" />
   <meta name="author" content="Breculia AI" />
   <meta name="theme-color" content="#07070f" />
 
@@ -35,11 +35,14 @@
   <link rel="icon" type="image/png" href="logo and favicon.png" />
   <link rel="apple-touch-icon" href="logo and favicon.png" />
 
-  <!-- Fonts - Preload for performance -->
+  <!-- Security - CSP Meta Tag (other security headers should be set by server/CDN) -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://calendar.google.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; frame-src https://calendar.google.com; connect-src 'self'; base-uri 'self'; form-action 'self'">
+
+  <!-- Fonts - Optimized loading with swap -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" as="style" />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet" /></noscript>
 
   <style>
   /* ══════════════════════════════════════════════
@@ -60,13 +63,13 @@
     --red:      #ff5b5b;
     --white:    #ffffff;
     --off:      #e8e8f4;
-    --gray:     #9898b4;
-    --gray2:    #5c5c78;
+    --gray:     #ababc4;
+    --gray2:    #7a7a94;
     --border:   rgba(108,99,255,0.18);
     --border2:  rgba(255,255,255,0.06);
     --border3:  rgba(255,255,255,0.03);
-    --fh:       'Syne', sans-serif;
-    --fb:       'DM Sans', sans-serif;
+    --fh:       'Syne', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    --fb:       'DM Sans', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
     --r:        12px;
     --rl:       20px;
     --rxl:      28px;
@@ -159,6 +162,8 @@
   section {
     padding: clamp(64px, 10vw, 108px) 0;
     position: relative;
+    content-visibility: auto;
+    contain-intrinsic-size: auto 800px;
   }
   .section-inner { max-width: 680px; }
 
@@ -258,14 +263,15 @@
     background: currentColor;
     animation: blink 2s ease-in-out infinite;
     box-shadow: 0 0 8px currentColor;
+    will-change: opacity;
   }
-  @keyframes blink { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.4;transform:scale(.6)} }
+  @keyframes blink { 0%,100%{opacity:1} 50%{opacity:.4} }
 
   /* ══════════════════════════════════════════════
      WAVEFORM
   ══════════════════════════════════════════════ */
-  .wave { display: flex; align-items: center; gap: 2.5px; height: 18px; }
-  .wave span { display: block; width: 2.5px; border-radius: 3px; background: currentColor; animation: wv 1.4s ease-in-out infinite; }
+  .wave { display: flex; align-items: center; gap: 2.5px; height: 18px; contain: layout; }
+  .wave span { display: block; width: 2.5px; border-radius: 3px; background: currentColor; animation: wv 1.4s ease-in-out infinite; will-change: transform; }
   .wave span:nth-child(1){height:4px;animation-delay:0s}
   .wave span:nth-child(2){height:12px;animation-delay:.1s}
   .wave span:nth-child(3){height:18px;animation-delay:.2s}
@@ -282,6 +288,7 @@
     position: fixed; top: 0; left: 0; right: 0; z-index: 900;
     padding: 18px 0;
     transition: background .3s var(--ease-out), border-color .3s, padding .3s;
+    contain: layout style;
   }
   #nav.stuck {
     background: rgba(7,7,15,0.92);
@@ -408,22 +415,18 @@
   #hero {
     min-height: 100svh; display: flex; align-items: center;
     padding-top: 88px; position: relative; overflow: hidden;
+    content-visibility: visible;
   }
   .hero-glow-a {
-    position: absolute; top: -15%; left: 50%; transform: translateX(-50%);
+    position: absolute; top: -15%; left: 50%; transform: translate3d(-50%,0,0);
     width: 900px; height: 600px; pointer-events: none;
     background: radial-gradient(ellipse at center, rgba(108,99,255,0.13) 0%, transparent 68%);
-    animation: float 8s ease-in-out infinite;
+    will-change: transform;
   }
   .hero-glow-b {
     position: absolute; bottom: 5%; right: -8%; pointer-events: none;
     width: 540px; height: 540px;
     background: radial-gradient(ellipse, rgba(0,200,150,0.07) 0%, transparent 68%);
-    animation: float 10s ease-in-out infinite reverse;
-  }
-  @keyframes float {
-    0%, 100% { transform: translateX(-50%) translateY(0); }
-    50% { transform: translateX(-50%) translateY(-30px); }
   }
   .hero-content { position: relative; z-index: 1; max-width: 920px; }
   .hero-badge { margin-bottom: 30px; }
@@ -461,12 +464,14 @@
   .ticker-bar {
     border-top: 1px solid var(--border2); border-bottom: 1px solid var(--border2);
     background: var(--bg2); padding: 13px 0; overflow: hidden;
+    contain: layout style;
   }
   .ticker-track {
     display: flex;
     width: max-content;
     animation: tick 32s linear infinite;
     will-change: transform;
+    transform: translateZ(0);
   }
   .ticker-track:hover { animation-play-state: paused; }
   .ti {
@@ -480,7 +485,7 @@
     background: var(--purple); flex-shrink: 0;
     box-shadow: 0 0 6px var(--purple);
   }
-  @keyframes tick { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
+  @keyframes tick { 0%{transform:translate3d(0,0,0)} 100%{transform:translate3d(-50%,0,0)} }
 
   /* ══════════════════════════════════════════════
      PAIN
@@ -573,8 +578,10 @@
   .call-status {
     width: 10px; height: 10px; border-radius: 50%;
     background: var(--teal); box-shadow: 0 0 10px var(--teal);
-    animation: blink 1.5s infinite;
+    animation: pulse-glow 1.5s infinite;
+    will-change: opacity;
   }
+  @keyframes pulse-glow { 0%,100%{opacity:1} 50%{opacity:.5} }
   .call-title { font-family: var(--fh); font-size: .9rem; font-weight: 700; }
   .call-sub { font-size: .72rem; color: var(--gray); }
   .call-time { margin-left: auto; font-size: .72rem; color: var(--gray2); }
@@ -616,11 +623,6 @@
     border-radius: var(--r); display: flex; align-items: center; gap: 10px;
     position: relative;
     z-index: 1;
-    animation: resultPulse 2s ease-in-out infinite;
-  }
-  @keyframes resultPulse {
-    0%, 100% { box-shadow: 0 0 0 0 rgba(0,200,150,0.2); }
-    50% { box-shadow: 0 0 20px 5px rgba(0,200,150,0.1); }
   }
   .call-result-icon { font-size: 1.1rem; }
   .call-result-text { font-size: clamp(0.72rem, 1.2vw, 0.8rem); color: var(--teal); font-weight: 600; }
@@ -790,7 +792,7 @@
   }
   .addon:hover { border-color: var(--border); }
   .addon-price { font-family: var(--fh); font-size: 1.1rem; font-weight: 700; color: var(--purple2); margin-bottom: 8px; }
-  .addon h4 { font-size: .95rem; color: var(--white); margin-bottom: 6px; }
+  .addon h3 { font-size: .95rem; color: var(--white); margin-bottom: 6px; font-weight: 600; }
   .addon p  { font-size: .8rem; }
 
   /* ══════════════════════════════════════════════
@@ -806,8 +808,9 @@
     box-shadow: var(--glow-p);
   }
   .cal-wrap iframe {
-    display: block; width: 100%; min-height: 650px;
+    display: block; width: 100%; height: 650px;
     border: none; background: #fff;
+    aspect-ratio: 16/9;
   }
 
   /* ══════════════════════════════════════════════
@@ -880,11 +883,10 @@
     padding: clamp(72px, 12vw, 108px) 0; text-align: center; position: relative; overflow: hidden;
   }
   #cta::before {
-    content: ''; position: absolute; top: -100px; left: 50%; transform: translateX(-50%);
+    content: ''; position: absolute; top: -100px; left: 50%; transform: translate3d(-50%,0,0);
     width: 700px; height: 500px;
     background: radial-gradient(ellipse, rgba(108,99,255,.16), transparent 68%);
     pointer-events: none;
-    animation: float 10s ease-in-out infinite;
   }
   .cta-inner { position: relative; z-index: 1; }
   #cta h2 { font-size: clamp(1.75rem,4.5vw,3.2rem); margin-bottom: 16px; }
@@ -907,7 +909,7 @@
   .fb-logo { font-family: var(--fh); font-size: 1.2rem; font-weight: 800; margin-bottom: 12px; }
   .fb-logo em { font-style: normal; color: var(--purple); }
   .fb p { font-size: clamp(0.78rem, 1.2vw, 0.84rem); max-width: 250px; margin-bottom: 20px; }
-  .fc h4 { font-size: .68rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--gray2); margin-bottom: 16px; }
+  .fc h3 { font-size: .68rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--gray2); margin-bottom: 16px; }
   .fc ul { display: flex; flex-direction: column; gap: 9px; }
   .fc ul a {
     font-size: clamp(0.78rem, 1.2vw, 0.84rem);
@@ -927,11 +929,10 @@
   ══════════════════════════════════════════════ */
   .fu {
     opacity: 0;
-    transform: translateY(40px);
+    transform: translate3d(0,40px,0);
     transition: opacity .7s var(--ease-out), transform .7s var(--ease-out);
-    will-change: opacity, transform;
   }
-  .fu.vis { opacity: 1; transform: translateY(0); }
+  .fu.vis { opacity: 1; transform: translate3d(0,0,0); }
 
   /* Staggered delays for grid items */
   .pain-grid .fu:nth-child(1) { transition-delay: 0s; }
@@ -966,10 +967,10 @@
   /* Scale-in animation variant */
   .fu-scale {
     opacity: 0;
-    transform: scale(0.9);
+    transform: scale3d(0.9,0.9,1);
     transition: opacity .6s var(--ease-out), transform .6s var(--ease-bounce);
   }
-  .fu-scale.vis { opacity: 1; transform: scale(1); }
+  .fu-scale.vis { opacity: 1; transform: scale3d(1,1,1); }
 
   /* ══════════════════════════════════════════════
      RESPONSIVE
@@ -1108,7 +1109,7 @@
         <span class="badge badge-r"><span class="dot"></span>Now accepting US contractors — 3 spots left this month</span>
       </div>
       <h1 id="hero-heading">Your Phone Rings<br />at 11pm. Your Crew<br />is Off. <span class="grad-p">We Answer.</span></h1>
-      <p class="hero-sub">Breculia AI builds 24/7 AI voice receptionists for HVAC, plumbing, electrical, and roofing contractors across the US. Every missed call is a missed job. We make sure that never happens again.</p>
+      <p class="hero-sub">Breculia AI builds 24/7 AI voice receptionists for HVAC, plumbing, and roofing contractors across the US. Every missed call is a missed job. We make sure that never happens again.</p>
       <div class="hero-btns">
         <a href="#book" class="btn btn-p btn-lg">
           <div class="wave"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
@@ -1388,32 +1389,32 @@
       <div class="addon-grid">
         <div class="addon fu">
           <div class="addon-price">$1,500 setup + $150/mo</div>
-          <h4>CRM Integration</h4>
+          <h3>CRM Integration</h3>
           <p>Housecall Pro or ServiceTitan sync — jobs auto-push into your dispatch board.</p>
         </div>
         <div class="addon fu">
           <div class="addon-price">$97/mo</div>
-          <h4>Google Review Automation</h4>
+          <h3>Google Review Automation</h3>
           <p>Post-job SMS requesting a 5-star Google review. Improves Local Services Ads ranking.</p>
         </div>
         <div class="addon fu">
           <div class="addon-price">$500 setup + $100/mo</div>
-          <h4>Spanish Language Agent</h4>
+          <h3>Spanish Language Agent</h3>
           <p>Separate Spanish-language agent on the same number — for Spanish-speaking customers.</p>
         </div>
         <div class="addon fu">
           <div class="addon-price">$150/mo</div>
-          <h4>After-Hours Premium</h4>
+          <h3>After-Hours Premium</h3>
           <p>Priority escalation logic and premium messaging window 10pm–6am.</p>
         </div>
         <div class="addon fu">
           <div class="addon-price">$800 setup + $100/mo</div>
-          <h4>Website Chat Widget</h4>
+          <h3>Website Chat Widget</h3>
           <p>AI chat widget on your website — same booking logic, different channel.</p>
         </div>
         <div class="addon fu">
           <div class="addon-price">$150/mo</div>
-          <h4>Monthly Strategy Call</h4>
+          <h3>Monthly Strategy Call</h3>
           <p>Monthly 30-min call to review call data, optimize scripts, improve conversions.</p>
         </div>
       </div>
@@ -1559,7 +1560,7 @@
         <a href="mailto:hello@breculia.tech" style="font-size:.84rem;color:var(--gray);display:flex;align-items:center;gap:6px">📧 hello@breculia.tech</a>
       </div>
       <div class="fc">
-        <h4>Navigation</h4>
+        <h3>Navigation</h3>
         <ul>
           <li><a href="#pain">Why Us</a></li>
           <li><a href="#services">Services</a></li>
@@ -1570,7 +1571,7 @@
         </ul>
       </div>
       <div class="fc">
-        <h4>Legal</h4>
+        <h3>Legal</h3>
         <ul>
           <li><a href="terms.html">Terms &amp; Conditions</a></li>
           <li><a href="privacy.html">Privacy Policy</a></li>
