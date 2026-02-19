@@ -59,7 +59,7 @@
   <li>Owner and staff contact details for emergency escalation</li>
   <li>Google Calendar access credentials (OAuth — we never store passwords)</li>
   <li>CRM credentials (if integration is purchased)</li>
-  <li>Payment information (processed via Xflow — we do not store card details)</li>
+  <li>Payment information (processed via Xflow — we do not store card details or bank account details on our servers)</li>
 </ul>
 <p><strong>From callers (end customers of our clients):</strong></p>
 <ul>
@@ -87,11 +87,12 @@
 <h2>4. Third-Party Services We Use</h2>
 <ul>
   <li><strong>Retell AI</strong> — Voice AI platform (processes call audio). <a href="https://www.retellai.com/privacy" target="_blank">Privacy Policy</a></li>
-  <li><strong>Twilio</strong> — SMS delivery. <a href="https://www.twilio.com/en-us/legal/privacy" target="_blank">Privacy Policy</a></li>
-  <li><strong>Google Calendar API</strong> — Appointment booking. <a href="https://policies.google.com/privacy" target="_blank">Privacy Policy</a></li>
-  <li><strong>Airtable</strong> — Call log storage. <a href="https://www.airtable.com/privacy" target="_blank">Privacy Policy</a></li>
+  <li><strong>Twilio</strong> — Telephony and SMS delivery. <a href="https://www.twilio.com/en-us/legal/privacy" target="_blank">Privacy Policy</a></li>
+  <li><strong>Google Calendar API</strong> — Appointment synchronization. <a href="https://policies.google.com/privacy" target="_blank">Privacy Policy</a></li>
+  <li><strong>DigitalOcean</strong> — Secure server hosting (n8n instance). <a href="https://www.airtable.com/privacy" target="_blank">Privacy Policy</a></li>
+  <li><strong>Airtable</strong> — Secure storage for call logs and transcripts. <a href="https://www.airtable.com/privacy" target="_blank">Privacy Policy</a></li>
   <li><strong>n8n</strong> — Workflow automation (self-hosted)</li>
-  <li><strong>Xflow</strong> — Payment processing. <a href="https://docs.xflowpay.com/privacy-policy" target="_blank">Privacy Policy</a></li>
+  <li><strong>Xflow</strong> — International payment processing and compliance. <a href="https://docs.xflowpay.com/privacy-policy" target="_blank">Privacy Policy</a></li>
 </ul>
 <p>All third-party services are industry-standard and GDPR-aware. Caller data transmitted to these services is limited to what is necessary for service delivery.</p>
 
@@ -104,7 +105,7 @@
 </ul>
 
 <h2>6. Data Security</h2>
-<p>We implement industry-standard security measures including encrypted connections (HTTPS), OAuth for third-party integrations (no stored passwords), and access controls limiting data access to authorized personnel only.</p>
+<p>We implement industry-standard security measures including SSL/TLS encryption for all data in transit, OAuth 2.0 for third-party integrations (meaning we never see or store your passwords), and isolated Docker environments for our self-hosted automation workflows on DigitalOcean.</p>
 
 <h2>7. Your Rights (GDPR & CCPA)</h2>
 <p>If you are located in the EU or California, you have the right to:</p>
