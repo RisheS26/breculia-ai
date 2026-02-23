@@ -894,6 +894,73 @@
   .cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
 
   /* ══════════════════════════════════════════════
+     FOUNDER
+  ══════════════════════════════════════════════ */
+  #founder {
+    background: var(--bg);
+    border-top: 1px solid var(--border2);
+  }
+  .founder-grid {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: clamp(32px, 6vw, 64px);
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .founder-image-wrap {
+    position: relative;
+  }
+  .founder-image {
+    width: 100%;
+    border-radius: var(--rxl);
+    border: 2px solid var(--border);
+    box-shadow: var(--glow-p);
+    transition: transform 0.3s var(--ease-out), box-shadow 0.3s;
+  }
+  .founder-image:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 24px 72px rgba(108,99,255,0.25);
+  }
+  .founder-content h2 {
+    margin-bottom: 16px;
+  }
+  .founder-content h3 {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    color: var(--purple2);
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+  .founder-content p {
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+    line-height: 1.75;
+    margin-bottom: 28px;
+  }
+  .founder-linkedin {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 24px;
+    background: #0077b5;
+    color: #fff;
+    border-radius: 100px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s var(--ease-out);
+    box-shadow: 0 4px 20px rgba(0, 119, 181, 0.3);
+  }
+  .founder-linkedin:hover {
+    background: #005f94;
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 8px 32px rgba(0, 119, 181, 0.45);
+  }
+  .founder-linkedin svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+  }
+
+  /* ══════════════════════════════════════════════
      FOOTER
   ══════════════════════════════════════════════ */
   footer {
@@ -996,6 +1063,8 @@
     .dv-grid{grid-template-columns:1fr}
     .dv-right { margin-top: 24px; }
     .proof-stats{grid-template-columns:repeat(2,1fr)}
+    .founder-grid{grid-template-columns:1fr; gap: 32px; text-align: center;}
+    .founder-image-wrap{max-width: 280px; margin: 0 auto;}
     section{padding:clamp(56px, 10vw, 72px) 0}
   }
 
@@ -1536,6 +1605,31 @@
       <div class="cta-btns">
         <a href="#book" class="btn btn-t btn-lg">Book a Free 15-Min Demo</a>
         <a href="mailto:founder@breculia.tech" class="btn btn-o btn-lg">Email Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     FOUNDER
+══════════════════════════════════ -->
+<section id="founder">
+  <div class="wrap">
+    <div class="founder-grid">
+      <div class="founder-image-wrap fu">
+        <img src="rishe.png" alt="Rishe S T - Founder of Breculia AI" class="founder-image" loading="lazy" />
+      </div>
+      <div class="founder-content fu">
+        <span class="label">Meet the Founder</span>
+        <h2>Built by a Founder Who <span class="grad-p">Gets It</span></h2>
+        <h3>Rishe S T</h3>
+        <p>I built Breculia AI because I watched too many small business owners lose revenue to something as simple as a missed call. Every plumber deserves to capture every opportunity — whether it's 3pm or 3am. This isn't just software. It's your safety net for growth.</p>
+        <a href="https://www.linkedin.com/in/rishe-s-t/" target="_blank" rel="noopener noreferrer" class="founder-linkedin">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+          </svg>
+          Connect on LinkedIn
+        </a>
       </div>
     </div>
   </div>
