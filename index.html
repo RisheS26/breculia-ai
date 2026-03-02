@@ -91,7 +91,7 @@
   "@type":"FAQPage",
   "mainEntity":[
     {"@type":"Question","name":"Won't the AI sound robotic on emergency calls?","acceptedAnswer":{"@type":"Answer","text":"No. Our NYC-trained voice agent handles 'burst pipe at 2am' calls with the same calm urgency a dispatcher would — customers routinely don't realize it's AI."}},
-    {"@type":"Question","name":"What if it misbooks a job or gives the customer wrong info?","acceptedAnswer":{"@type":"Answer","text":"Every booking fires a live SMS to your phone within 4 seconds. You review every job card before you even get out of bed."}},
+    {"@type":"Question","name":"What if it misbooks a job or gives the customer wrong info?","acceptedAnswer":{"@type":"Answer","text":"Every call fires a live job card to your phone within 4 seconds — caller name, address, job type, requested window. You decide dispatch before you even get out of bed. Nothing is promised to the customer until you confirm."}},
     {"@type":"Question","name":"Am I locked into a contract?","acceptedAnswer":{"@type":"Answer","text":"Month-to-month. Cancel anytime with 30 days notice. No penalties. We survive on results, not contracts."}}
   ]
 }
@@ -440,7 +440,7 @@ footer{border-top:1px solid var(--border);padding:32px 0;background:var(--bg)}
         <div class="wa-body">
           <div class="wa-time">Today, 2:14 AM</div>
           <div class="wa-bubble">
-            <p>🔧 <strong>NEW JOB</strong> — James M. | 482 Park Slope, Brooklyn | Burst Pipe Emergency | Appt booked 6am | Est. $750 | Tap to call</p>
+            <p>🚨 <strong>EMERGENCY</strong> — James M. | 482 Park Slope, Brooklyn | Burst Pipe | NO SLOT — you decide dispatch | Est. $750–$800 | Call now: [number]</p>
             <div class="wa-msg-time">2:14 AM ✓✓</div>
           </div>
         </div>
@@ -513,12 +513,12 @@ footer{border-top:1px solid var(--border);padding:32px 0;background:var(--bg)}
       </div>
       <div class="chat-msg chat-msg-ai">
         <div class="chat-bubble">
-          <p>Done — plumber dispatched, ETA 35 min. Shutoff your main valve right away. Confirmation text incoming.</p>
+          <p>I've got all your details — I'm sending them to the owner right now. They'll call you back within 30 minutes. While you wait, shut off your main water valve. Help is on the way.</p>
           <span class="chat-ts">11:48 PM</span>
         </div>
       </div>
     </div>
-    <div class="chat-result">✅ Job booked · SMS sent · Owner alerted · $750 secured</div>
+    <div class="chat-result">✅ Emergency job card sent · Owner alerted · $750 opportunity captured</div>
   </div>
 </div>
 </section>
@@ -539,9 +539,9 @@ footer{border-top:1px solid var(--border);padding:32px 0;background:var(--bg)}
       <div class="price-calls">~220 calls / 600 min per month</div>
       <ul class="price-features">
         <li>24/7 AI receptionist</li>
-        <li>Google Calendar booking</li>
-        <li>SMS confirmation to customers</li>
-        <li>Emergency escalation calls</li>
+        <li>Google Calendar window capture (owner confirms exact time)</li>
+        <li>SMS alert to owner + confirmation to customer</li>
+        <li>Emergency escalation — job card fired, you decide dispatch</li>
       </ul>
       <a href="#qualify-form" class="cta-btn price-cta">Book My Free 15-Min Demo</a>
     </div>
@@ -554,9 +554,9 @@ footer{border-top:1px solid var(--border);padding:32px 0;background:var(--bg)}
       <div class="price-setup">$500 one-time setup</div>
       <div class="price-calls">~400 calls per month</div>
       <ul class="price-features">
-        <li>Everything in Core + WhatsApp job cards</li>
-        <li>Email + .ics calendar invites</li>
-        <li>Missed-call follow-up automation</li>
+        <li>Everything in Core + WhatsApp job cards to owner</li>
+        <li>Email + .ics calendar invite (window placeholder — owner adjusts)</li>
+        <li>Missed-call follow-up SMS within 2 min</li>
         <li>Slack alerts for your team</li>
       </ul>
       <a href="#qualify-form" class="cta-btn price-cta">Book My Free 15-Min Demo</a>
@@ -570,7 +570,7 @@ footer{border-top:1px solid var(--border);padding:32px 0;background:var(--bg)}
       <div class="price-calls">~800 calls per month</div>
       <ul class="price-features">
         <li>Everything in Growth + Spanish agent</li>
-        <li>Daily 7am job digest email</li>
+        <li>Daily 7am job digest email (Gmail)</li>
         <li>Telegram bot for instant updates</li>
         <li>Staff WhatsApp group notifications</li>
       </ul>
@@ -594,7 +594,7 @@ footer{border-top:1px solid var(--border);padding:32px 0;background:var(--bg)}
     </div>
     <div class="objection-card fade-in">
       <div class="objection-q">What if it misbooks a job or gives the customer wrong info?</div>
-      <div class="objection-a">Every booking fires a live SMS to your phone within 4 seconds. You review every job card before you even get out of bed.</div>
+      <div class="objection-a">Every call fires a live job card to your phone within 4 seconds — caller name, address, job type, requested window. You decide dispatch before you even get out of bed. Nothing is promised to the customer until you confirm.</div>
     </div>
     <div class="objection-card fade-in">
       <div class="objection-q">Am I locked into a contract?</div>
