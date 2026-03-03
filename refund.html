@@ -63,6 +63,9 @@
     .highlight{background:rgba(34,197,94,0.06);border:1px solid rgba(34,197,94,0.15);border-left:3px solid var(--green);border-radius:8px;padding:20px 24px;margin-bottom:20px;transition:border-color 0.3s ease;}
     .highlight p{margin:0;color:var(--white);}
     html.light .highlight{background:rgba(22,163,74,0.05);border-color:rgba(22,163,74,0.2);}
+    .warn-box{background:var(--bg2);border:1px solid var(--border);border-left:3px solid #f59e0b;padding:16px 20px;margin:20px 0;border-radius:4px;}
+    .warn-box p{margin:0;color:var(--text);}
+    .warn-box strong{color:#f59e0b;}
     footer{border-top:1px solid var(--border);padding:28px 0;background:var(--bg);transition:background-color 0.3s ease,border-color 0.3s ease;}
     footer p{font-size:.76rem;color:var(--text-dim);text-align:center;line-height:1.8;}
     footer a{color:var(--text);transition:color .2s;}
@@ -88,64 +91,82 @@
 <div class="doc-hero">
   <span class="label">Legal</span>
   <h1>Refund Policy</h1>
-  <p>Last updated: January 1, 2026 · Please read before purchasing any Breculia AI service.</p>
+  <p>Last updated: March 3, 2026 · Please read before purchasing any Breculia AI service.</p>
 </div>
 
 <div class="doc-body">
 
 <div class="highlight">
-  <p><strong>Summary:</strong> Setup fees are non-refundable once deployment begins. Early adopter pricing (March-April): $220/$500/$1,000. Regular pricing (after April 15): $2,500/$3,500/$5,000. Monthly retainers ($797/$1,097/$1,497) are refundable pro-rata only in cases of Breculia AI service failure.</p>
+  <p><strong>Summary:</strong> Setup fees are non-refundable once deployment begins. Early adopter pricing (first 3 clients only): $220 / $500 / $1,000 for Core / Growth / Pro. Standard pricing after first 3 clients: $2,500 / $3,500 / $5,000. Monthly retainers ($797 / $1,097 / $1,497) are non-refundable except under the 7-day satisfaction guarantee or verified Breculia AI service failure exceeding 48 hours.</p>
+</div>
+
+<div class="warn-box">
+  <p><strong>Note:</strong> Breculia AI is operated by Rishe S as an unregistered sole proprietorship. You are contracting with an individual service provider, not a registered company.</p>
 </div>
 
 <h2>1. One-Time Setup Fees</h2>
-<p>Setup fees cover custom build time, integration work, testing, and deployment of your AI voice receptionist system. Early adopter pricing available for NYC plumbers during March-April intake only. Because this work begins immediately after payment:</p>
+
+<p>Setup fees cover custom build time, integration work, testing, and deployment of your AI voice receptionist. Because this work begins immediately after payment and onboarding form submission:</p>
+
 <ul>
-  <li><strong>Before deployment begins:</strong> Full refund available within 24 hours of payment if you request cancellation before we have started onboarding work.</li>
-  <li><strong>After deployment begins:</strong> Setup fees are non-refundable. "Deployment begins" means we have started building your agent (typically within 24 hours of receiving your completed Discovery Questionnaire or Onboarding Form).</li>
-  <li>If you paid but have not yet submitted your onboarding form, a full refund is available within 48 hours of payment.</li>
-  <li><strong>Pricing tiers:</strong> Early adopter (March-April): $220 (Tier 1), $500 (Tier 2), $1,000 (Tier 3). Regular pricing after April 15: $2,500/$3,500/$5,000.</li>
+  <li><strong>Before deployment begins:</strong> Full refund available if requested within 48 hours of payment, provided you have not yet submitted your onboarding form and no agent build work has begun.</li>
+  <li><strong>After deployment begins:</strong> Setup fees are non-refundable. Deployment is considered to have begun when your onboarding form is submitted, an agent script is configured, or a phone number is provisioned — whichever comes first.</li>
+  <li><strong>Early adopter pricing (first 3 clients):</strong> Core $220 · Growth $500 · Pro $1,000</li>
+  <li><strong>Standard pricing (after first 3 clients):</strong> Core $2,500 · Growth $3,500 · Pro $5,000</li>
 </ul>
 
 <h2>2. Monthly Retainer Fees</h2>
+
 <ul>
-  <li>Monthly retainers are generally non-refundable once a billing period has started.</li>
-  <li><strong>Exception — Service Failure:</strong> If the AI agent experiences downtime exceeding 48 continuous hours due to an error on our part (not third-party platform outages), we will issue a pro-rata credit for the affected days toward your next billing cycle.</li>
-  <li>Third-party platform outages (Retell AI, Twilio, Google Calendar) are outside our control and do not qualify for refunds. We will make best-effort attempts to restore service during such outages.</li>
-  <li>Cancellations must be submitted via email at least 7 days before the next billing cycle to avoid the subsequent month's retainer fee.</li>
+  <li>Monthly retainers are non-refundable once a billing period has started.</li>
+  <li><strong>7-Day Satisfaction Guarantee:</strong> If you are dissatisfied with service quality within the first 7 days of go-live, you may request a full refund of Month 1's retainer fee. Setup fee is not refunded. Written request required within 7 days of go-live date. Issue must be attributable to Breculia AI's service, not client-side error or external factors.</li>
+  <li><strong>Exception — Verified Service Failure:</strong> If the AI agent experiences downtime exceeding 48 continuous hours due to a fault on Breculia AI's part, a pro-rata credit will be issued for the affected days toward your next billing cycle.</li>
+  <li>Outages caused by third-party platforms (Retell AI, Telnyx, Google Calendar) are outside Breculia AI's control and do not qualify for refunds or credits. Best-effort service restoration will be made during such outages.</li>
+  <li>Cancellations must be submitted in writing at least <strong>7 days before your next billing date</strong> to avoid the subsequent month's retainer charge.</li>
 </ul>
 
-<h2>3. What Qualifies for a Refund</h2>
+<h2>3. What Qualifies for a Refund or Credit</h2>
+
 <ul>
-  <li>Setup fee cancellation within 24 hours of payment (before onboarding form submitted)</li>
-  <li>Pro-rata monthly credit for verified downtime exceeding 48 hours caused by Breculia AI</li>
-  <li>Duplicate payments — 100% refunded immediately</li>
+  <li>Setup fee cancellation within 48 hours of payment, before onboarding form is submitted and before any build work has begun</li>
+  <li>Month 1 retainer refund under the 7-day satisfaction guarantee (see Section 2)</li>
+  <li>Pro-rata billing credit for verified downtime exceeding 48 continuous hours caused by Breculia AI</li>
+  <li>Duplicate payments — 100% refunded immediately upon confirmation</li>
 </ul>
 
 <h2>4. What Does Not Qualify for a Refund</h2>
+
 <ul>
-  <li>Dissatisfaction with call volume or revenue outcomes (we cannot guarantee specific business results)</li>
-  <li>Third-party platform outages beyond our control</li>
-  <li>Client-caused issues (incorrect onboarding form data, failure to update business information, delays in granting access)</li>
+  <li>Setup fees after deployment has begun (onboarding form submitted, agent configured, or number provisioned)</li>
+  <li>Monthly retainer fees beyond Month 1 (no refund for partial months or cancellations mid-cycle)</li>
+  <li>Dissatisfaction with call volume, revenue outcomes, or booking rates — Breculia AI cannot guarantee specific business results</li>
+  <li>Outages caused by third-party platforms (Retell AI, Telnyx, Google Calendar, Stripe)</li>
+  <li>Client-caused issues: incorrect onboarding data, failure to update business information, delays in granting system access, or misconfigured call forwarding</li>
   <li>Change of mind after deployment has commenced</li>
 </ul>
 
 <h2>5. How to Request a Refund</h2>
-<p>Email <a href="mailto:founder@breculia.tech">founder@breculia.tech</a> with subject line "Refund Request — [Your Business Name]" and a brief description of the issue. We respond within 2 business days. Approved refunds are processed within 7 business days via the original payment method.</p>
 
-<h2>6. Disputes</h2>
-<p>If you believe you have been charged incorrectly, please contact us at <a href="mailto:founder@breculia.tech">founder@breculia.tech</a> before initiating a chargeback. We strive to resolve all billing disputes fairly and promptly. Chargebacks initiated without prior communication will result in immediate service suspension and may affect future eligibility for services. <strong>Any bank or processing fees incurred due to a retracted or failed chargeback will be the responsibility of the client.</strong> This policy shall be governed by and construed in accordance with the laws applicable in the jurisdiction of the business operations of Breculia AI.</p>
+<p>Email <a href="mailto:founder@breculia.tech">founder@breculia.tech</a> with subject line <strong>"Refund Request — [Your Business Name]"</strong> and include your invoice number and a brief description of the issue. We respond within 2 business days. Approved refunds are processed within 7 business days via the original payment method (Stripe or Wise).</p>
+
+<h2>6. Disputes & Chargebacks</h2>
+
+<p>If you believe you have been charged incorrectly, please contact <a href="mailto:founder@breculia.tech">founder@breculia.tech</a> before initiating a chargeback. We resolve all billing disputes promptly and fairly.</p>
+
+<p>Chargebacks initiated without prior written communication will result in immediate service suspension and may affect future eligibility. Any bank or payment processing fees incurred due to a retracted or failed chargeback are the responsibility of the client.</p>
+
+<p>This policy is governed by the laws of <strong>India</strong>, consistent with Breculia AI's operating jurisdiction (Chennai, Tamil Nadu). For US clients, disputes follow the resolution process outlined in the <a href="terms.html">Terms & Conditions</a>.</p>
 
 </div>
 </div>
 
 <footer>
 <div class="wrap">
-<div class="footer-inner">
   <p>© 2026 Breculia AI · Operated by Rishe S · Serving Manhattan, Brooklyn, Queens, Bronx · <a href="mailto:founder@breculia.tech">founder@breculia.tech</a></p>
   <p><a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms</a> · <a href="refund.html">Refund Policy</a></p>
 </div>
-</div>
 </footer>
+
 <script>
 (function(){
   var html=document.documentElement,toggle=document.getElementById('themeToggle'),meta=document.querySelector('meta[name="theme-color"]'),stored=localStorage.getItem('breculia-theme');
@@ -154,6 +175,5 @@
   if(toggle)toggle.addEventListener('click',function(){var n=html.classList.contains('light')?'dark':'light';apply(n);localStorage.setItem('breculia-theme',n)});
 })();
 </script>
-
 </body>
 </html>
