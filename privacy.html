@@ -43,10 +43,8 @@
     .theme-switch .knob{width:18px;height:18px;border-radius:50%;background:var(--green);position:absolute;top:50%;left:2px;transform:translateY(-50%);transition:left 0.3s cubic-bezier(0.68,-0.3,0.32,1.3);box-shadow:0 1px 4px rgba(0,0,0,0.3);}
     html.light .theme-switch .knob{left:22px;}
     .theme-switch .sw-icon{position:absolute;top:50%;transform:translateY(-50%);font-size:0.6rem;transition:opacity 0.3s ease;}
-    .theme-switch .sw-sun{left:5px;opacity:0.3;}
-    .theme-switch .sw-moon{right:5px;opacity:0.5;}
-    html.light .theme-switch .sw-sun{opacity:0.5;}
-    html.light .theme-switch .sw-moon{opacity:0.3;}
+    .theme-switch .sw-sun{left:5px;opacity:0.3;}.theme-switch .sw-moon{right:5px;opacity:0.5;}
+    html.light .theme-switch .sw-sun{opacity:0.5;}html.light .theme-switch .sw-moon{opacity:0.3;}
     .doc-hero{padding:64px 0 48px;border-bottom:1px solid var(--border);margin-bottom:56px;transition:border-color 0.3s ease;}
     .label{display:block;font-size:.68rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:#666;margin-bottom:14px;}
     html.light .label{color:#999;}
@@ -62,8 +60,7 @@
     .doc-body strong{color:var(--white);font-weight:600;}
     footer{border-top:1px solid var(--border);padding:28px 0;background:var(--bg);transition:background-color 0.3s ease,border-color 0.3s ease;}
     footer p{font-size:.76rem;color:var(--text-dim);text-align:center;line-height:1.8;}
-    footer a{color:var(--text);transition:color .2s;}
-    footer a:hover{color:var(--green);text-decoration:none;}
+    footer a{color:var(--text);transition:color .2s;}footer a:hover{color:var(--green);text-decoration:none;}
     @media(max-width:479px){.doc-hero{padding:48px 0 36px;margin-bottom:40px;}}
     @media(min-width:680px){.wrap{padding:0;}}
   </style>
@@ -74,9 +71,7 @@
   <div class="nav-right">
     <a href="index.html" class="nav-back">← Back to Home</a>
     <button class="theme-switch" id="themeToggle" aria-label="Toggle light/dark mode" title="Toggle theme">
-      <span class="sw-icon sw-sun">☀️</span>
-      <span class="sw-icon sw-moon">🌙</span>
-      <span class="knob"></span>
+      <span class="sw-icon sw-sun">☀️</span><span class="sw-icon sw-moon">🌙</span><span class="knob"></span>
     </button>
   </div>
 </div></div></nav>
@@ -87,11 +82,11 @@
   <h1>Privacy Policy</h1>
   <p>Last updated: March 3, 2026 · This policy explains how Breculia AI collects, uses, and protects your data.</p>
 </div>
-
 <div class="doc-body">
 
 <h2>1. Who We Are</h2>
-<p>Breculia AI is operated by Rishe S, Chennai. We provide AI-driven voice reception and automation services to plumbing businesses primarily in New York City (Manhattan, Brooklyn, Queens, Bronx, Staten Island). Contact: <a href="mailto:founder@breculia.tech">founder@breculia.tech</a></p>
+
+<p>Breculia AI is operated by <strong>Rishe S</strong>, Chennai, Tamil Nadu, India. We provide AI-driven voice reception and automation services to plumbing businesses primarily in New York City (Manhattan, Brooklyn, Queens, Bronx, Staten Island). Contact: <a href="mailto:founder@breculia.tech">founder@breculia.tech</a></p>
 
 <h2>2. Information We Collect</h2>
 <p><strong>From business clients (B2B):</strong></p>
@@ -99,13 +94,14 @@
   <li>Business name, address, phone number, email</li>
   <li>Owner and staff contact details for emergency escalation</li>
   <li>Google Calendar access credentials (OAuth — we never store passwords)</li>
-  <li>Payment information (processed via Stripe, Wise, or Xflow — we do not store card details or bank account details on our servers)</li>
+  <li>Payment information (processed via Stripe, Wise, or Xflow — we do not store card or bank details on our servers)</li>
 </ul>
 <p><strong>From callers (end customers of our clients):</strong></p>
 <ul>
   <li>Name, phone number, address, service request details</li>
-  <li>Call transcripts and recordings (stored in Airtable, accessible to the client)</li>
-  <li>Appointment booking data synchronized to the client's Google Calendar</li>
+  <!-- FIX: 'stored in Airtable' → 'stored in Google Sheets' -->
+  <li>Call transcripts (stored in Google Sheets, accessible to the client)</li>
+  <li>Appointment window data synchronised to the client's Google Calendar</li>
 </ul>
 <p><strong>From website visitors:</strong></p>
 <ul>
@@ -125,14 +121,15 @@
 
 <h2>4. Third-Party Services We Use</h2>
 <ul>
-  <li><strong>Retell AI</strong> — Voice AI platform (processes call audio). <a href="https://www.retellai.com/privacy" target="_blank">Privacy Policy</a></li>
-  <li><strong>Twilio</strong> — WhatsApp and SMS delivery. <a href="https://www.twilio.com/en-us/legal/privacy" target="_blank">Privacy Policy</a></li>
-  <li><strong>Telnyx</strong> — Telephony and SMS delivery. <a href="https://telnyx.com/privacy-policy" target="_blank">Privacy Policy</a></li>
-  <li><strong>Google Calendar API</strong> — Appointment synchronization. <a href="https://policies.google.com/privacy" target="_blank">Privacy Policy</a></li>
-  <li><strong>DigitalOcean</strong> — Secure server hosting (n8n instance). <a href="https://www.digitalocean.com/legal/privacy-policy" target="_blank">Privacy Policy</a></li>
-  <li><strong>Airtable</strong> — Secure storage for call logs and transcripts. <a href="https://www.airtable.com/privacy" target="_blank">Privacy Policy</a></li>
-  <li><strong>n8n</strong> — Workflow automation (self-hosted)</li>
-  <li><strong>Stripe / Xflow</strong> — Payment processing and compliance.</li>
+  <li><strong>Retell AI</strong> — Voice AI platform (processes call audio and generates transcripts). <a href="https://www.retellai.com/privacy" target="_blank">Privacy Policy</a></li>
+  <!-- FIX: Twilio removed — Telnyx is the actual telephony provider per JSON workflows -->
+  <li><strong>Telnyx</strong> — Telephony, SMS, and WhatsApp delivery. <a href="https://telnyx.com/privacy-policy" target="_blank">Privacy Policy</a></li>
+  <li><strong>Google Calendar API</strong> — Appointment window synchronisation. <a href="https://policies.google.com/privacy" target="_blank">Privacy Policy</a></li>
+  <li><strong>Google Sheets</strong> — Call log and transcript storage. <a href="https://policies.google.com/privacy" target="_blank">Privacy Policy</a></li>
+  <li><strong>DigitalOcean</strong> — Secure server hosting (n8n automation instance). <a href="https://www.digitalocean.com/legal/privacy-policy" target="_blank">Privacy Policy</a></li>
+  <li><strong>n8n</strong> — Workflow automation (self-hosted on DigitalOcean)</li>
+  <li><strong>Stripe / Wise / Xflow</strong> — Payment processing and compliance.</li>
+  <!-- FIX: Airtable removed — not used in production. Google Sheets is the actual storage layer. -->
 </ul>
 <p>All third-party services are industry-standard and GDPR-aware. Caller data transmitted to these services is limited to what is necessary for service delivery.</p>
 
@@ -147,7 +144,7 @@
 <h2>6. Data Security</h2>
 <p>We implement industry-standard security measures including SSL/TLS encryption for all data in transit, OAuth 2.0 for third-party integrations (meaning we never see or store your passwords), and isolated Docker environments for our self-hosted automation workflows on DigitalOcean.</p>
 
-<h2>7. Your Rights (GDPR & CCPA)</h2>
+<h2>7. Your Rights (GDPR &amp; CCPA)</h2>
 <p>If you are located in the EU or California, you have the right to:</p>
 <ul>
   <li>Access the personal data we hold about you</li>
@@ -163,17 +160,14 @@
 
 </div>
 </div>
+
+<!-- FIX: 'Rishe S' → 'Rishe S' -->
 <footer><div class="wrap">
   <p>© 2026 Breculia AI · Operated by Rishe S · Serving Manhattan, Brooklyn, Queens, Bronx · <a href="mailto:founder@breculia.tech">founder@breculia.tech</a></p>
   <p><a href="index.html">Home</a> · <a href="terms.html">Terms</a> · <a href="refund.html">Refund Policy</a></p>
 </div></footer>
 <script>
-(function(){
-  var html=document.documentElement,toggle=document.getElementById('themeToggle'),meta=document.querySelector('meta[name="theme-color"]'),stored=localStorage.getItem('breculia-theme');
-  function apply(t){if(t==='light'){html.classList.add('light');if(meta)meta.setAttribute('content','#f5f5f5')}else{html.classList.remove('light');if(meta)meta.setAttribute('content','#0a0a0a')}}
-  if(stored)apply(stored);else if(window.matchMedia&&window.matchMedia('(prefers-color-scheme:light)').matches)apply('light');
-  if(toggle)toggle.addEventListener('click',function(){var n=html.classList.contains('light')?'dark':'light';apply(n);localStorage.setItem('breculia-theme',n)});
-})();
+(function(){var html=document.documentElement,toggle=document.getElementById('themeToggle'),meta=document.querySelector('meta[name="theme-color"]'),stored=localStorage.getItem('breculia-theme');function apply(t){if(t==='light'){html.classList.add('light');if(meta)meta.setAttribute('content','#f5f5f5')}else{html.classList.remove('light');if(meta)meta.setAttribute('content','#0a0a0a')}}if(stored)apply(stored);else if(window.matchMedia&&window.matchMedia('(prefers-color-scheme:light)').matches)apply('light');if(toggle)toggle.addEventListener('click',function(){var n=html.classList.contains('light')?'dark':'light';apply(n);localStorage.setItem('breculia-theme',n)});})();
 </script>
 </body>
 </html>
