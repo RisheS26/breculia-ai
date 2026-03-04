@@ -21,8 +21,7 @@
   <style>
     :root{--bg:#0a0a0a;--bg2:#111111;--green:#22c55e;--green-dim:#166534;--white:#fff;--text:#aaaaaa;--text-dim:#555555;--border:#222222;--fh:'Syne',ui-sans-serif,system-ui,-apple-system,sans-serif;--fb:'DM Sans',ui-sans-serif,system-ui,-apple-system,sans-serif;color-scheme:dark;}
     html.light{--bg:#f5f5f5;--bg2:#ffffff;--green:#16a34a;--green-dim:#bbf7d0;--white:#111111;--text:#555555;--text-dim:#888888;--border:#d4d4d4;color-scheme:light;}
-    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-    html{scroll-behavior:smooth;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}html{scroll-behavior:smooth;}
     body{background:var(--bg);color:var(--white);font-family:var(--fb);line-height:1.7;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;transition:background-color 0.3s ease,color 0.3s ease;}
     body::after{content:'';position:fixed;inset:0;z-index:9999;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");pointer-events:none;opacity:0.5;}
     html.light body::after{opacity:0.15;}
@@ -43,10 +42,8 @@
     .theme-switch .knob{width:18px;height:18px;border-radius:50%;background:var(--green);position:absolute;top:50%;left:2px;transform:translateY(-50%);transition:left 0.3s cubic-bezier(0.68,-0.3,0.32,1.3);box-shadow:0 1px 4px rgba(0,0,0,0.3);}
     html.light .theme-switch .knob{left:22px;}
     .theme-switch .sw-icon{position:absolute;top:50%;transform:translateY(-50%);font-size:0.6rem;transition:opacity 0.3s ease;}
-    .theme-switch .sw-sun{left:5px;opacity:0.3;}
-    .theme-switch .sw-moon{right:5px;opacity:0.5;}
-    html.light .theme-switch .sw-sun{opacity:0.5;}
-    html.light .theme-switch .sw-moon{opacity:0.3;}
+    .theme-switch .sw-sun{left:5px;opacity:0.3;}.theme-switch .sw-moon{right:5px;opacity:0.5;}
+    html.light .theme-switch .sw-sun{opacity:0.5;}html.light .theme-switch .sw-moon{opacity:0.3;}
     .doc-hero{padding:64px 0 48px;border-bottom:1px solid var(--border);margin-bottom:56px;transition:border-color 0.3s ease;}
     .label{display:block;font-size:.68rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:#666;margin-bottom:14px;}
     html.light .label{color:#999;}
@@ -64,12 +61,10 @@
     .highlight p{margin:0;color:var(--white);}
     html.light .highlight{background:rgba(22,163,74,0.05);border-color:rgba(22,163,74,0.2);}
     .warn-box{background:var(--bg2);border:1px solid var(--border);border-left:3px solid #f59e0b;padding:16px 20px;margin:20px 0;border-radius:4px;}
-    .warn-box p{margin:0;color:var(--text);}
-    .warn-box strong{color:#f59e0b;}
+    .warn-box p{margin:0;color:var(--text);}.warn-box strong{color:#f59e0b;}
     footer{border-top:1px solid var(--border);padding:28px 0;background:var(--bg);transition:background-color 0.3s ease,border-color 0.3s ease;}
     footer p{font-size:.76rem;color:var(--text-dim);text-align:center;line-height:1.8;}
-    footer a{color:var(--text);transition:color .2s;}
-    footer a:hover{color:var(--green);text-decoration:none;}
+    footer a{color:var(--text);transition:color .2s;}footer a:hover{color:var(--green);text-decoration:none;}
     @media(max-width:479px){.doc-hero{padding:48px 0 36px;margin-bottom:40px;}}
     @media(min-width:680px){.wrap{padding:0;}}
   </style>
@@ -80,9 +75,7 @@
   <div class="nav-right">
     <a href="index.html" class="nav-back">← Back to Home</a>
     <button class="theme-switch" id="themeToggle" aria-label="Toggle light/dark mode" title="Toggle theme">
-      <span class="sw-icon sw-sun">☀️</span>
-      <span class="sw-icon sw-moon">🌙</span>
-      <span class="knob"></span>
+      <span class="sw-icon sw-sun">☀️</span><span class="sw-icon sw-moon">🌙</span><span class="knob"></span>
     </button>
   </div>
 </div></div></nav>
@@ -93,29 +86,27 @@
   <h1>Refund Policy</h1>
   <p>Last updated: March 3, 2026 · Please read before purchasing any Breculia AI service.</p>
 </div>
-
 <div class="doc-body">
 
 <div class="highlight">
   <p><strong>Summary:</strong> The standard $2,500 setup fee is waived ($0) for the first 10 early adopters. Our $997/month All-In Package is strictly month-to-month and protected by our <strong>30-Day ROI Guarantee</strong>. If we fail to capture at least one valid emergency job in your first 30 days, Month 1 is fully refunded.</p>
 </div>
 
+<!-- FIX: 'Rishe S' → 'Rishe S' -->
 <div class="warn-box">
-  <p><strong>Note:</strong> Breculia AI is operated by Rishe S as an unregistered sole proprietorship. You are contracting with an individual service provider, not a registered company.</p>
+  <p><strong>Note:</strong> Breculia AI is operated by <strong>Rishe S</strong> as an unregistered sole proprietorship. You are contracting with an individual service provider, not a registered company.</p>
 </div>
 
 <h2>1. One-Time Setup Fees</h2>
-
-<p>Setup fees (when applicable) cover custom build time, integration work, testing, and deployment of your AI voice receptionist. Because this work begins immediately after payment and onboarding form submission:</p>
-
+<!-- FIX: Added Retell AI + Telnyx + n8n cost justification -->
+<p>Setup fees (when applicable) cover the full cost of building and deploying your AI voice receptionist: <strong>Retell AI developer licensing and voice agent configuration</strong>, dedicated phone number provisioning via Telnyx, custom n8n automation workflow build (job card routing, SMS/WhatsApp alerts, missed-call follow-up logic), and end-to-end testing on your live call flow. These are real hard costs incurred on your behalf — not just service time. Because this work begins immediately after payment and onboarding form submission:</p>
 <ul>
   <li><strong>Early Adopter Offer:</strong> The setup fee is $0 for the first 10 clients.</li>
   <li><strong>Standard Pricing (after 10 clients):</strong> $2,500 setup fee.</li>
   <li><strong>Refunds on Setup Fees:</strong> If a setup fee is paid, a full refund is only available if requested within 48 hours of payment, provided no agent build work has begun. Once the onboarding form is submitted or a number provisioned, setup fees are non-refundable.</li>
 </ul>
 
-<h2>2. Monthly Retainer Fees & ROI Guarantee</h2>
-
+<h2>2. Monthly Retainer Fees &amp; ROI Guarantee</h2>
 <ul>
   <li>Monthly retainers ($997/mo) are generally non-refundable once a billing period has started, with the following exceptions:</li>
   <li><strong>30-Day ROI Guarantee:</strong> We survive on results. If the Breculia AI system fails to capture at least one valid emergency job within the first 30 days of go-live, you may request a full refund of the Month 1 retainer. Written request required within 30 days of your go-live date.</li>
@@ -125,7 +116,6 @@
 </ul>
 
 <h2>3. What Qualifies for a Refund or Credit</h2>
-
 <ul>
   <li>Setup fee cancellation within 48 hours of payment, before onboarding form is submitted and before any build work has begun (if applicable).</li>
   <li>Month 1 retainer refund under the 30-Day ROI Guarantee (failing to capture a valid job in the first 30 days).</li>
@@ -134,7 +124,6 @@
 </ul>
 
 <h2>4. What Does Not Qualify for a Refund</h2>
-
 <ul>
   <li>Setup fees after deployment has begun (onboarding form submitted, agent configured, or number provisioned).</li>
   <li>Monthly retainer fees beyond Month 1 (no refund for partial months or cancellations mid-cycle).</li>
@@ -144,34 +133,23 @@
 </ul>
 
 <h2>5. How to Request a Refund</h2>
-
 <p>Email <a href="mailto:founder@breculia.tech">founder@breculia.tech</a> with subject line <strong>"Refund Request — [Your Business Name]"</strong> and include your invoice number and a brief description of the issue. We respond within 2 business days. Approved refunds are processed within 7 business days via the original payment method.</p>
 
-<h2>6. Disputes & Chargebacks</h2>
-
+<h2>6. Disputes &amp; Chargebacks</h2>
 <p>If you believe you have been charged incorrectly, please contact <a href="mailto:founder@breculia.tech">founder@breculia.tech</a> before initiating a chargeback. We resolve all billing disputes promptly and fairly.</p>
-
 <p>Chargebacks initiated without prior written communication will result in immediate service suspension and may affect future eligibility. Any bank or payment processing fees incurred due to a retracted or failed chargeback are the responsibility of the client.</p>
-
-<p>This policy is governed by the laws of <strong>India</strong>, consistent with Breculia AI's operating jurisdiction (Chennai, Tamil Nadu). For US clients, disputes follow the resolution process outlined in the <a href="terms.html">Terms & Conditions</a>.</p>
+<p>This policy is governed by the laws of <strong>India</strong>, consistent with Breculia AI's operating jurisdiction (Chennai, Tamil Nadu). For US clients, disputes follow the resolution process outlined in the <a href="terms.html">Terms &amp; Conditions</a>.</p>
 
 </div>
 </div>
 
-<footer>
-<div class="wrap">
+
+<footer><div class="wrap">
   <p>© 2026 Breculia AI · Operated by Rishe S · Serving Manhattan, Brooklyn, Queens, Bronx · <a href="mailto:founder@breculia.tech">founder@breculia.tech</a></p>
   <p><a href="index.html">Home</a> · <a href="terms.html">Terms</a> · <a href="privacy.html">Privacy Policy</a></p>
-</div>
-</footer>
-
+</div></footer>
 <script>
-(function(){
-  var html=document.documentElement,toggle=document.getElementById('themeToggle'),meta=document.querySelector('meta[name="theme-color"]'),stored=localStorage.getItem('breculia-theme');
-  function apply(t){if(t==='light'){html.classList.add('light');if(meta)meta.setAttribute('content','#f5f5f5')}else{html.classList.remove('light');if(meta)meta.setAttribute('content','#0a0a0a')}}
-  if(stored)apply(stored);else if(window.matchMedia&&window.matchMedia('(prefers-color-scheme:light)').matches)apply('light');
-  if(toggle)toggle.addEventListener('click',function(){var n=html.classList.contains('light')?'dark':'light';apply(n);localStorage.setItem('breculia-theme',n)});
-})();
+(function(){var html=document.documentElement,toggle=document.getElementById('themeToggle'),meta=document.querySelector('meta[name="theme-color"]'),stored=localStorage.getItem('breculia-theme');function apply(t){if(t==='light'){html.classList.add('light');if(meta)meta.setAttribute('content','#f5f5f5')}else{html.classList.remove('light');if(meta)meta.setAttribute('content','#0a0a0a')}}if(stored)apply(stored);else if(window.matchMedia&&window.matchMedia('(prefers-color-scheme:light)').matches)apply('light');if(toggle)toggle.addEventListener('click',function(){var n=html.classList.contains('light')?'dark':'light';apply(n);localStorage.setItem('breculia-theme',n)});})();
 </script>
 </body>
 </html>
