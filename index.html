@@ -9,7 +9,9 @@
 <meta name="keywords" content="NYC plumber answering service, AI receptionist plumber, plumbing emergency calls NYC, 24/7 plumber receptionist, Manhattan plumber AI, Brooklyn plumbing calls, Queens plumber automation, Bronx plumber answering, after hours plumber NYC, plumber missed calls, AI voice agent plumber">
 <meta name="author" content="Breculia AI">
 <meta name="theme-color" content="#0a0a0a">
-<meta property="og:title" content="NYC Plumbers: Stop Losing $95,000/Year to Missed Emergency Calls">
+
+<!-- CHANGE 1: Updated og/twitter titles to match new positioning -->
+<meta property="og:title" content="The Only AI Receptionist for NYC Plumbers — Integrates With ServiceTitan &amp; Housecall Pro">
 <meta property="og:description" content="24/7 AI voice receptionist for NYC plumbers. Answers burst pipe calls at 2am, captures the job, sends instant SMS job cards. Zero setup fee for the first 10.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://breculia.tech">
@@ -17,7 +19,7 @@
 <meta property="og:site_name" content="Breculia AI">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="NYC Plumbers: Stop Losing $95,000/Year to Missed Emergency Calls">
+<meta name="twitter:title" content="The Only AI Receptionist for NYC Plumbers — Integrates With ServiceTitan &amp; Housecall Pro">
 <meta name="twitter:description" content="24/7 AI voice receptionist. Answers emergency plumbing calls, captures job details, alerts your phone — while you sleep.">
 <meta name="twitter:image" content="https://breculia.tech/logo and favicon.png">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -28,7 +30,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <script>(function(){var t=localStorage.getItem('breculia-theme');if(t==='light'||((!t)&&window.matchMedia&&window.matchMedia('(prefers-color-scheme:light)').matches)){document.documentElement.classList.add('light')}})();</script>
-
 
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"LocalBusiness","name":"Breculia AI","description":"24/7 AI voice receptionist for NYC plumbers. Answers emergency calls, captures job info, sends WhatsApp/SMS job cards instantly.","url":"https://breculia.tech","email":"founder@breculia.tech","areaServed":[{"@type":"City","name":"Manhattan, New York"},{"@type":"City","name":"Brooklyn, New York"},{"@type":"City","name":"Queens, New York"},{"@type":"City","name":"Bronx, New York"}],"priceRange":"$$$","image":"https://breculia.tech/logo and favicon.png","sameAs":["https://breculia.tech"]}
@@ -104,7 +105,6 @@ html.light .theme-switch{background:var(--bg3);border-color:var(--border)}
 .phone-frame{background:#111;border:1.5px solid #333;border-radius:28px;padding:12px;max-width:300px;margin:0 auto;box-shadow:0 0 60px rgba(34,197,94,0.15);position:relative}
 html.light .phone-frame{background:#1a1a1a;border-color:#444;box-shadow:0 0 40px rgba(0,0,0,0.15)}
 .phone-notch{width:100px;height:24px;background:#000;border-radius:0 0 14px 14px;margin:0 auto 12px;position:relative}
-/* FIX: was content:'absolute' — now content:'' with position:absolute restored */
 .phone-notch::after{content:'';position:absolute;top:8px;left:50%;transform:translateX(-50%);width:40px;height:6px;border-radius:3px;background:#1a1a1a}
 html.light .phone-notch{background:#222}html.light .phone-notch::after{background:#444}
 .phone-screen{background:#0a0a0a;border-radius:16px;overflow:hidden}html.light .phone-screen{background:#111}
@@ -142,8 +142,27 @@ html.light .chat-msg-cust .chat-bubble{background:#d1fae5;border-color:#86efac}
 .chat-ts{font-size:0.6rem;color:var(--text-dim);margin-top:4px;display:block}
 .chat-result{margin:20px 14px 18px;background:rgba(34,197,94,0.08);border:1px solid rgba(34,197,94,0.2);border-radius:10px;padding:12px 16px;text-align:center;font-size:0.82rem;color:var(--green);font-weight:500}
 html.light .chat-result{background:rgba(22,163,74,0.08);border-color:rgba(22,163,74,0.25)}
+
+/* CHANGE 7: CSS for competitor table section */
+#competitor-table{background:var(--bg)}
+.comp-table-wrap{margin-top:32px;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.comp-table{width:100%;border-collapse:collapse;font-size:0.85rem}
+.comp-table th{padding:12px 16px;text-align:left;font-family:var(--fh);font-size:0.7rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-dim);border-bottom:2px solid var(--border)}
+.comp-table th.col-us{color:var(--green)}
+.comp-table td{padding:12px 16px;border-bottom:1px solid var(--border);color:var(--text);vertical-align:middle}
+.comp-table td.col-us{color:var(--white);font-weight:500}
+.comp-table tr:last-child td{border-bottom:none}
+.comp-table .check{color:var(--green);font-size:1rem}
+.comp-table .cross{color:var(--text-dim)}
+.comp-table tr:hover td{background:rgba(255,255,255,0.02)}
+html.light .comp-table tr:hover td{background:rgba(0,0,0,0.02)}
+.comp-tag{font-size:0.75rem;background:var(--green);color:#000;padding:2px 8px;border-radius:10px;font-weight:700;margin-left:6px;vertical-align:middle}
+html.light .comp-tag{color:#fff}
+.comp-note{margin-top:20px;font-size:0.85rem;color:var(--text-dim);border-left:2px solid var(--border);padding-left:14px;line-height:1.6}
+.comp-note strong{color:var(--green)}
+
 /* VALUE ANCHOR */
-#value-anchor{background:var(--bg)}
+#value-anchor{background:var(--bg2)}
 .va-grid{display:grid;grid-template-columns:1fr;gap:0;margin-top:32px;border:1px solid var(--border);border-radius:12px;overflow:hidden}
 @media(min-width:480px){.va-grid{grid-template-columns:1fr 1fr}}
 .va-cell{padding:28px 24px;border-bottom:1px solid var(--border)}
@@ -157,6 +176,15 @@ html.light .chat-result{background:rgba(22,163,74,0.08);border-color:rgba(22,163
 .va-conclusion p{font-size:0.95rem;color:var(--white);margin:0;line-height:1.6}
 .va-conclusion strong{color:var(--green)}
 html.light .va-conclusion{background:rgba(22,163,74,0.06);border-color:rgba(22,163,74,0.2)}
+
+/* CHANGE 11: Founder above pricing */
+.founder-above{padding:0 0 0;margin-bottom:-40px;position:relative;z-index:1}
+.founder-above-inner{background:rgba(34,197,94,0.04);border:1px solid rgba(34,197,94,0.15);border-radius:8px;padding:16px 20px;display:flex;align-items:center;gap:12px}
+.founder-above-inner .founder-avatar{width:36px;height:36px;border-radius:50%;background:var(--green-dim);border:1.5px solid var(--green);display:flex;align-items:center;justify-content:center;font-family:var(--fh);font-size:0.75rem;font-weight:800;color:var(--green);flex-shrink:0}
+.founder-above-inner p{font-size:0.82rem;color:var(--text);margin:0;line-height:1.5}
+.founder-above-inner strong{color:var(--white)}
+html.light .founder-above-inner{background:rgba(22,163,74,0.04);border-color:rgba(22,163,74,0.15)}
+
 /* PRICING */
 #pricing{background:var(--bg2)}
 .pricing-sub{color:var(--text);font-size:0.9rem;margin-top:8px;text-align:center}
@@ -169,17 +197,16 @@ html.light .price-badge{color:#fff}
 .price-tier{font-family:var(--fh);font-size:0.75rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--text-dim);margin-bottom:8px}
 .price-amount{font-family:var(--fh);font-size:2.4rem;font-weight:800;color:var(--white);margin-bottom:4px}
 .price-amount span{font-size:1rem;font-weight:400;color:var(--text)}
-/* FIX: price-annual now a proper class */
 .price-annual{font-size:0.85rem;color:var(--green);margin-bottom:12px;font-weight:500}
 .price-setup{font-size:0.9rem;color:var(--text);margin-bottom:4px}
-/* FIX: overage line class updated */
 .price-calls{font-size:0.85rem;color:var(--text-dim);margin-bottom:24px}
-.price-features{margin-bottom:16px}
+.price-features{margin-bottom:24px}
 .price-features li{font-size:0.9rem;color:var(--text);padding:8px 0;padding-left:24px;position:relative}
 .price-features li::before{content:'✓';position:absolute;left:0;color:var(--green);font-weight:700;font-size:0.9rem}
-.price-features.price-excludes{margin-top:16px;border-top:1px solid var(--border);padding-top:16px;margin-bottom:24px}
-.price-features.price-excludes li.exclude{padding-left:0;color:var(--text-dim)}
-.price-features.price-excludes li.exclude::before{content:none}
+
+/* CHANGE 7: price-focus-line replaces the ❌ excludes list */
+.price-focus-line{font-size:0.85rem;color:var(--text-dim);border-top:1px solid var(--border);padding-top:16px;margin-top:4px;margin-bottom:24px;font-style:italic;line-height:1.5}
+
 .price-cta{width:100%}
 .roi-line{text-align:center;margin-top:32px;font-size:0.95rem;font-weight:500;color:var(--green)}
 #objections{background:var(--bg)}
@@ -195,23 +222,24 @@ html.light .test-quote{color:#444}
 .test-author{display:flex;align-items:center;gap:14px}
 .test-avatar{width:44px;height:44px;border-radius:50%;background:var(--green-dim);border:2px solid var(--green);display:flex;align-items:center;justify-content:center;font-family:var(--fh);font-size:0.85rem;font-weight:800;color:var(--green)}
 .test-name{font-size:0.95rem;font-weight:500;color:var(--white)}.test-detail{font-size:0.78rem;color:var(--text-dim)}
+
+/* CHANGE 9: pilot momentum line below testimonial */
+.test-pilot-line{margin-top:20px;font-size:0.82rem;color:var(--text-dim);background:rgba(34,197,94,0.04);border:1px solid rgba(34,197,94,0.12);border-radius:6px;padding:12px 16px;line-height:1.6}
+.test-pilot-line strong{color:var(--green)}
+html.light .test-pilot-line{background:rgba(22,163,74,0.04);border-color:rgba(22,163,74,0.12)}
+
+/* CHANGE 12: new booking section styles */
 #qualify-form{background:var(--bg);padding:80px 0 40px}
 .form-wrapper{max-width:480px}
-.form-title{font-family:var(--fh);font-size:1.3rem;font-weight:700;color:var(--white);margin-bottom:24px}
-.form-group{margin-bottom:16px;position:relative}
-.form-group label{display:block;font-size:0.85rem;color:var(--text);margin-bottom:6px;font-weight:400}
-.form-group select{width:100%;padding:13px 16px;background:var(--bg3);border:1.5px solid #333;border-radius:8px;color:var(--white);font-family:var(--fb);font-size:0.95rem;appearance:none;-webkit-appearance:none;cursor:pointer;transition:border-color 0.2s;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23555' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
-.form-group select option{background:var(--bg3);color:var(--white)}
-html.light .form-group select{border-color:#bbb;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23888' stroke-width='1.5' fill='none'/%3E%3C/svg%3E")}
-.form-group select:focus{outline:none;border-color:var(--green)}
-.form-group select:focus-visible{outline:2px solid var(--green);outline-offset:2px}
-.form-group select.error{border-color:var(--red);animation:shake 0.4s ease}
-.form-error{font-size:0.72rem;color:var(--red);margin-top:4px;display:none}
-.form-group select.error~.form-error{display:block}
-@keyframes shake{0%,100%{transform:translateX(0)}20%{transform:translateX(-6px)}40%{transform:translateX(6px)}60%{transform:translateX(-4px)}80%{transform:translateX(4px)}}
-.form-submit{margin-top:20px}.form-submit .cta-btn{width:100%}
-.form-status{font-size:0.88rem;color:var(--green);margin-top:14px;display:none}
-.founder-line{font-size:0.82rem;color:var(--text-dim);margin-top:24px;line-height:1.6}
+.booking-title{font-family:var(--fh);font-size:1.3rem;font-weight:700;color:var(--white);margin-bottom:8px}
+.booking-sub{font-size:0.9rem;color:var(--text);margin-bottom:32px;line-height:1.65}
+.booking-options{display:flex;flex-direction:column;gap:16px}
+.booking-option{display:flex;align-items:center;gap:16px;background:var(--bg2);border:1.5px solid var(--border);border-radius:10px;padding:20px 24px;transition:border-color 0.2s,box-shadow 0.2s;text-decoration:none}
+.booking-option:hover{border-color:var(--green);box-shadow:0 0 20px rgba(34,197,94,0.08)}
+.booking-option-icon{font-size:1.4rem;flex-shrink:0;width:40px;text-align:center}
+.booking-option-text strong{display:block;font-size:0.95rem;font-weight:600;color:var(--white);margin-bottom:2px}
+.booking-option-text span{font-size:0.82rem;color:var(--text-dim)}
+html.light .booking-option{background:var(--bg3)}
 #calendar-section{display:none;padding:40px 0 80px;background:var(--bg2)}
 .cal-label{font-size:1rem;font-weight:500;color:var(--white);margin-bottom:8px}
 .cal-note{font-size:0.82rem;color:var(--text-dim);margin-bottom:20px}
@@ -221,7 +249,7 @@ footer{border-top:1px solid var(--border);padding:32px 0;background:var(--bg)}
 .footer-inner p{font-size:0.76rem;color:var(--text-dim);line-height:1.8}
 .footer-inner a{color:var(--text);transition:color 0.2s;text-decoration:none}
 .footer-inner a:hover{color:var(--green);text-decoration:underline}
-@media(max-width:479px){section{padding:56px 0}.phone-frame{max-width:260px}.price-card{padding:24px}.test-card{padding:24px}.objection-card{padding:20px}.topbar-scarcity{font-size:0.65rem}}
+@media(max-width:479px){section{padding:56px 0}.phone-frame{max-width:260px}.price-card{padding:24px}.test-card{padding:24px}.objection-card{padding:20px}.topbar-scarcity{font-size:0.65rem}.comp-table{font-size:0.75rem}.comp-table th,.comp-table td{padding:10px 10px}}
 @media(min-width:480px){h1{font-size:clamp(2.4rem,6vw,3.4rem)}}
 @media(min-width:680px){.wrap{padding:0}}
 #sticky-bar{display:none;position:fixed;bottom:0;left:0;right:0;background:var(--green);padding:14px 24px;text-align:center;z-index:800;box-shadow:0 -4px 20px rgba(34,197,94,0.25)}
@@ -252,8 +280,10 @@ footer{border-top:1px solid var(--border);padding:32px 0;background:var(--bg)}
 <section id="hero">
 <div class="wrap"><div class="hero-grid">
   <div class="hero-text">
-    <h1 id="hero-h1">NYC Plumbers: Stop Losing $95,000/Year to Missed Emergency Calls</h1>
-    <p class="hero-sub">We capture the emergency jobs you are currently missing. Your AI answers 24/7, captures the job details, and pings your phone. You call back to confirm.</p>
+    <!-- CHANGE 2: New hero headline — ServiceTitan/HCP positioning -->
+    <h1 id="hero-h1">The Only AI Receptionist Built for NYC Plumbers — Integrates With ServiceTitan &amp; Housecall Pro</h1>
+    <!-- CHANGE 3: Updated hero sub copy -->
+    <p class="hero-sub">Emma answers every call, captures the emergency, and fires a job card to your phone — logged directly in your ServiceTitan or Housecall Pro. 48 hours from yes to live. White-glove setup included.</p>
     <a href="#qualify-form" class="cta-btn">Book My Free 15-Min Demo</a>
     <span class="cta-sub">See it live — call our AI from your own phone, right now</span>
   </div>
@@ -312,6 +342,76 @@ footer{border-top:1px solid var(--border);padding:32px 0;background:var(--bg)}
 </div>
 </section>
 
+<!-- CHANGE 10: Competitor comparison table — new section -->
+<section id="competitor-table">
+<div class="wrap">
+  <span class="sec-label">Why Breculia</span>
+  <h2>Built for Plumbers. Not Generic SMBs.</h2>
+  <div class="comp-table-wrap fade-in">
+    <table class="comp-table">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Goodcall</th>
+          <th>Smith.ai</th>
+          <th class="col-us">Breculia <span class="comp-tag">You</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Price/month</td>
+          <td>$59</td>
+          <td>$240</td>
+          <td class="col-us">$997</td>
+        </tr>
+        <tr>
+          <td>Emergency detection</td>
+          <td><span class="cross">✗</span></td>
+          <td><span class="cross">✗</span></td>
+          <td class="col-us"><span class="check">✓</span> 4-sec escalation</td>
+        </tr>
+        <tr>
+          <td>WhatsApp job cards</td>
+          <td><span class="cross">✗</span></td>
+          <td><span class="cross">✗</span></td>
+          <td class="col-us"><span class="check">✓</span> With map link</td>
+        </tr>
+        <tr>
+          <td>ServiceTitan integration</td>
+          <td><span class="cross">✗</span></td>
+          <td>Basic</td>
+          <td class="col-us"><span class="check">✓</span> Native</td>
+        </tr>
+        <tr>
+          <td>Housecall Pro integration</td>
+          <td><span class="cross">✗</span></td>
+          <td>Basic</td>
+          <td class="col-us"><span class="check">✓</span> Native</td>
+        </tr>
+        <tr>
+          <td>Setup</td>
+          <td>Self-serve</td>
+          <td>3 days</td>
+          <td class="col-us"><span class="check">✓</span> 48hr white-glove</td>
+        </tr>
+        <tr>
+          <td>NYC-specific</td>
+          <td><span class="cross">✗</span></td>
+          <td><span class="cross">✗</span></td>
+          <td class="col-us"><span class="check">✓</span> Borough routing</td>
+        </tr>
+        <tr>
+          <td>Missed-call SMS follow-up</td>
+          <td><span class="cross">✗</span></td>
+          <td><span class="cross">✗</span></td>
+          <td class="col-us"><span class="check">✓</span> Automatic</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="comp-note">If you're doing under $300K/year, Goodcall works fine. If you're running a real emergency operation with ServiceTitan or Housecall Pro, <strong>you need Breculia.</strong></p>
+</div>
+</section>
 
 <section id="value-anchor">
 <div class="wrap">
@@ -323,10 +423,11 @@ footer{border-top:1px solid var(--border);padding:32px 0;background:var(--bg)}
       <div class="va-num loss">$39,000–$65,000</div>
       <div class="va-desc">Missing 3–5 emergency calls/week at $750 avg = money sitting in voicemail every single year</div>
     </div>
+    <!-- CHANGE 4+5: va-num and va-desc updated -->
     <div class="va-cell">
       <div class="va-label">What Breculia costs</div>
-      <div class="va-num cost">$11,964/yr</div>
-      <div class="va-desc">$997/month. That's $33/day. One captured emergency covers the entire month.</div>
+      <div class="va-num cost">$997/mo</div>
+      <div class="va-desc">$33/day. One captured emergency covers the entire month.</div>
     </div>
   </div>
   <div class="va-conclusion fade-in">
@@ -334,6 +435,14 @@ footer{border-top:1px solid var(--border);padding:32px 0;background:var(--bg)}
   </div>
 </div>
 </section>
+
+<!-- CHANGE 11: Founder line moved above pricing -->
+<div class="wrap founder-above">
+  <div class="founder-above-inner">
+    <div class="founder-avatar">RS</div>
+    <p><strong>Built by Rishe S</strong> — founder-run, direct support. I personally handle every onboarding, every deployment, every question.</p>
+  </div>
+</div>
 
 <section id="pricing">
 <div class="wrap">
@@ -345,10 +454,8 @@ footer{border-top:1px solid var(--border);padding:32px 0;background:var(--bg)}
       <div class="price-badge">30-Day ROI Guarantee</div>
       <div class="price-tier">All-In Package</div>
       <div class="price-amount">$997<span>/mo</span></div>
-
       <div class="price-annual">⚡ Or pay annually: $9,970/yr — 2 months free</div>
       <div class="price-setup"><strong style="color:var(--green)">$0 Setup Fee (First 10 Plumbers)</strong> · Month-to-Month</div>
-
       <div class="price-calls">600 mins included (~220 calls). Need more? We'll talk.</div>
       <ul class="price-features">
         <li>24/7 AI voice receptionist</li>
@@ -357,13 +464,11 @@ footer{border-top:1px solid var(--border);padding:32px 0;background:var(--bg)}
         <li>Instant SMS &amp; WhatsApp job card with map link</li>
         <li>Customer SMS confirmation</li>
         <li>Missed-call automatic SMS follow-up</li>
+        <li>ServiceTitan &amp; Housecall Pro integration</li>
+        <li>White-glove 48-hour deployment</li>
       </ul>
-      <ul class="price-features price-excludes">
-        <li class="exclude">❌ No bilingual processing</li>
-        <li class="exclude">❌ No Slack or Telegram</li>
-        <li class="exclude">❌ No email integrations</li>
-        <li class="exclude">❌ No feature tiers or complexity</li>
-      </ul>
+      <!-- CHANGE 6: Removed ❌ excludes list, replaced with focus line -->
+      <p class="price-focus-line">Focused on one outcome — capturing emergency jobs. Nothing else.</p>
       <a href="#qualify-form" class="cta-btn price-cta">Book My Free 15-Min Demo</a>
     </div>
   </div>
@@ -395,7 +500,8 @@ footer{border-top:1px solid var(--border);padding:32px 0;background:var(--bg)}
 <section id="testimonial">
 <div class="wrap">
   <span class="sec-label">Results</span>
-  <h2>From a Real NYC Plumber</h2>
+  <!-- CHANGE 8: "From a Real NYC Plumber" → "What Happens in the First Week" -->
+  <h2>What Happens in the First Week</h2>
   <div class="test-card fade-in">
     <div class="test-stars">★★★★★</div>
     <p class="test-quote">"I missed a sewage backup call in Astoria on a Saturday night — $800 job, gone to the next guy on Google. Set up Breculia that Monday. By Thursday it had captured two after-hours emergencies. Paid for itself immediately."</p>
@@ -404,43 +510,41 @@ footer{border-top:1px solid var(--border);padding:32px 0;background:var(--bg)}
       <div><div class="test-name">Tony V.</div><div class="test-detail">Master Plumber · 8 years · Queens, NY · Sewage &amp; drain specialist</div></div>
     </div>
   </div>
+  <!-- CHANGE 9: Pilot momentum line below testimonial -->
+  <p class="test-pilot-line">Currently deployed with NYC plumbers capturing live emergencies. <strong>Pilot spots open</strong> — direct founder onboarding, first-mover pricing locked in.</p>
 </div>
 </section>
 
+<!-- CHANGE 12: Booking section — replaced 2-dropdown form with direct CTA + Calendly -->
 <section id="qualify-form">
 <div class="wrap">
   <div class="form-wrapper">
     <span class="sec-label">Book Your Demo</span>
-    <div class="form-title">Quick — 2 questions before you book:</div>
-    <form id="qualifyForm" novalidate aria-label="Qualify for demo booking">
-      <div class="form-group">
-        <label for="missed-calls">How many emergency calls do you miss per week?</label>
-        <select id="missed-calls" name="missed-calls">
-          <option value="">Select...</option>
-          <option value="1-2">1–2 per week</option>
-          <option value="3-5">3–5 per week</option>
-          <option value="6+">6+ per week (I'm losing $$$)</option>
-        </select>
-        <div class="form-error">Required</div>
-      </div>
-      <div class="form-group">
-        <label for="borough">Your borough:</label>
-        <select id="borough" name="borough">
-          <option value="">Select...</option>
-          <option value="Manhattan">Manhattan</option>
-          <option value="Brooklyn">Brooklyn</option>
-          <option value="Queens">Queens</option>
-          <option value="Bronx">Bronx</option>
-          <option value="Other">Other NYC area</option>
-        </select>
-        <div class="form-error">Required</div>
-      </div>
-      <div class="form-submit">
-        <button type="submit" class="cta-btn">Show Me Available Times →</button>
-      </div>
-    </form>
-    <div class="form-status" id="formStatus"></div>
-    <p class="founder-line">Built by Rishe S — founder-run, direct support. I personally handle every onboarding.</p>
+    <div class="booking-title">See Emma capture a real emergency — live, from your own phone.</div>
+    <p class="booking-sub">Pick the fastest way to connect. The demo takes 15 minutes. You'll call Emma directly and see the job card hit your phone in real time.</p>
+    <div class="booking-options">
+      <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3iTx2DnWIYJw8dxUYGvbvG_2H0-9Ydc9NFHeGThZwVxzYew0xB1vN61xEhvQaVscCpwHKL0YOK?gv=true" target="_blank" rel="noopener" class="booking-option" id="calBookBtn">
+        <div class="booking-option-icon">📅</div>
+        <div class="booking-option-text">
+          <strong>Pick a time — Google Calendar</strong>
+          <span>Choose a 15-min slot. Google Meet link sent instantly.</span>
+        </div>
+      </a>
+      <a href="sms:+[YOUR_NUMBER]?body=Hi Rishe, I want to see a live Emma demo for my plumbing business." class="booking-option">
+        <div class="booking-option-icon">💬</div>
+        <div class="booking-option-text">
+          <strong>Text Rishe directly</strong>
+          <span>Fastest response — reply within minutes during US business hours.</span>
+        </div>
+      </a>
+      <a href="mailto:founder@breculia.tech?subject=Demo Request&body=Hi Rishe, I want to see a live Emma demo." class="booking-option">
+        <div class="booking-option-icon">✉️</div>
+        <div class="booking-option-text">
+          <strong>Email founder@breculia.tech</strong>
+          <span>Include your borough and how many calls you miss per week.</span>
+        </div>
+      </a>
+    </div>
   </div>
 </div>
 </section>
@@ -457,7 +561,6 @@ footer{border-top:1px solid var(--border);padding:32px 0;background:var(--bg)}
 
 </main>
 
-
 <footer>
 <div class="wrap"><div class="footer-inner">
   <p>© 2026 Breculia AI · Operated by Rishe S · Serving Manhattan, Brooklyn, Queens, Bronx · <a href="mailto:founder@breculia.tech">founder@breculia.tech</a></p>
@@ -468,7 +571,6 @@ footer{border-top:1px solid var(--border);padding:32px 0;background:var(--bg)}
 <script>
 (function(){var h1=document.getElementById('hero-h1');if(!h1)return;var words=h1.textContent.split(' ');h1.innerHTML='';words.forEach(function(w,i){var s=document.createElement('span');s.className='h1-word';s.textContent=w+' ';s.style.animationDelay=(300+i*80)+'ms';h1.appendChild(s);});})();
 (function(){var els=document.querySelectorAll('.fade-in');if(!('IntersectionObserver' in window)){els.forEach(function(el){el.classList.add('visible')});return;}var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});},{threshold:0.15});els.forEach(function(el){obs.observe(el)});})();
-(function(){var form=document.getElementById('qualifyForm'),cal=document.getElementById('calendar-section'),status=document.getElementById('formStatus');if(!form||!cal)return;form.addEventListener('submit',function(e){e.preventDefault();var mc=document.getElementById('missed-calls'),bo=document.getElementById('borough'),valid=true;mc.classList.remove('error');bo.classList.remove('error');void mc.offsetWidth;if(!mc.value){mc.classList.add('error');valid=false}if(!bo.value){bo.classList.add('error');valid=false}if(!valid)return;form.style.display='none';status.style.display='block';status.textContent='\u2713 Qualifying plumbers in '+bo.value+'...';setTimeout(function(){status.textContent='\u2713 Checking availability...';cal.style.display='block';setTimeout(function(){cal.scrollIntoView({behavior:'smooth',block:'start'});},100);},800);});document.getElementById('missed-calls').addEventListener('change',function(){this.classList.remove('error')});document.getElementById('borough').addEventListener('change',function(){this.classList.remove('error')});})();
 (function(){document.querySelectorAll('a[href="#qualify-form"]').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();document.getElementById('qualify-form').scrollIntoView({behavior:'smooth',block:'start'});});});})();
 (function(){var html=document.documentElement,toggle=document.getElementById('themeToggle'),meta=document.querySelector('meta[name="theme-color"]'),tooltip=document.getElementById('toggleTooltip'),stored=localStorage.getItem('breculia-theme');function applyTheme(t){if(t==='light'){html.classList.add('light');if(meta)meta.setAttribute('content','#f5f5f5');}else{html.classList.remove('light');if(meta)meta.setAttribute('content','#0a0a0a');}}if(stored)applyTheme(stored);else if(window.matchMedia&&window.matchMedia('(prefers-color-scheme:light)').matches)applyTheme('light');if(toggle){toggle.addEventListener('click',function(){var next=html.classList.contains('light')?'dark':'light';applyTheme(next);localStorage.setItem('breculia-theme',next);if(tooltip){tooltip.classList.remove('show');tooltip.classList.add('fade-out');}});}if(window.matchMedia){window.matchMedia('(prefers-color-scheme:light)').addEventListener('change',function(e){if(!localStorage.getItem('breculia-theme'))applyTheme(e.matches?'light':'dark');});}if(tooltip&&!stored){setTimeout(function(){tooltip.classList.add('show');setTimeout(function(){tooltip.classList.remove('show');tooltip.classList.add('fade-out');},5000);},1500);}})();
 (function(){var toast=document.getElementById('scarcityToast');if(!toast)return;window.addEventListener('scroll',function onScroll(){if(window.scrollY>document.getElementById('hero').offsetHeight){toast.classList.add('pop-in');setTimeout(function(){toast.classList.remove('pop-in');toast.classList.add('pop-out');},4000);window.removeEventListener('scroll',onScroll);}});})();
