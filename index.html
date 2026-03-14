@@ -6,9 +6,9 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <title>Breculia AI — 24/7 AI Voice Receptionist for NYC Plumbers | Never Miss Emergency Calls</title>
 <meta name="description" content="NYC plumbers lose $95,000/year to missed emergency calls. Breculia AI answers 24/7, captures the job, and sends WhatsApp/SMS job cards instantly. 30-day ROI guarantee.">
-<meta name="keywords" content="NYC plumber answering service, AI receptionist plumber, plumbing emergency calls NYC, 24/7 plumber receptionist, Manhattan plumber AI, Brooklyn plumbing calls, Queens plumber automation, Bronx plumber answering, after hours plumber NYC, plumber missed calls">
+<meta name="keywords" content="NYC plumber answering service, AI receptionist plumber, plumbing emergency calls NYC, 24/7 plumber receptionist, Manhattan plumber AI, Brooklyn plumbing calls, Queens plumber automation, Bronx plumber answering">
 <meta name="author" content="Breculia AI">
-<meta name="theme-color" content="#0a0a0a">
+<meta name="theme-color" content="#080808">
 <meta property="og:title" content="NYC Plumbers: Stop Losing $95,000/Year to Missed Emergency Calls">
 <meta property="og:description" content="24/7 AI voice receptionist for NYC plumbers. Answers burst pipe calls at 2am, captures the job, sends instant SMS job cards. Zero setup fee for the first 10.">
 <meta property="og:type" content="website">
@@ -18,430 +18,546 @@
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="NYC Plumbers: Stop Losing $95,000/Year to Missed Emergency Calls">
-<meta name="twitter:description" content="24/7 AI voice receptionist. Answers emergency plumbing calls, captures job details, alerts your phone — while you sleep.">
+<meta name="twitter:description" content="24/7 AI voice receptionist. Answers emergency plumbing calls, captures job details, alerts your phone while you sleep.">
 <meta name="twitter:image" content="https://breculia.tech/logo-og.png">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <link rel="canonical" href="https://breculia.tech">
 <link rel="icon" type="image/png" href="logo-favicon.png">
 <link rel="apple-touch-icon" href="logo-favicon.png">
+
+<!-- FONT STRATEGY: preconnect + font-display:swap CSS to eliminate CLS and LCP delay -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap"></noscript>
-<script>(function(){var t=localStorage.getItem('breculia-theme');if(t==='light'||(!t&&window.matchMedia&&window.matchMedia('(prefers-color-scheme:light)').matches)){document.documentElement.classList.add('light')}})();</script>
+<!-- Critical: use display=swap in URL, load non-blocking, reserve space with size-adjust -->
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600&display=swap"></noscript>
+
+<!-- Inline theme to prevent flash -->
+<script>(function(){var t=localStorage.getItem('bt');if(t==='light'||(!t&&window.matchMedia&&window.matchMedia('(prefers-color-scheme:light)').matches)){document.documentElement.classList.add('light')}})();</script>
 
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"LocalBusiness","name":"Breculia AI","description":"24/7 AI voice receptionist for NYC plumbers. Answers emergency calls, captures job info, sends WhatsApp/SMS job cards instantly.","url":"https://breculia.tech","email":"founder@breculia.tech","areaServed":[{"@type":"City","name":"Manhattan, New York"},{"@type":"City","name":"Brooklyn, New York"},{"@type":"City","name":"Queens, New York"},{"@type":"City","name":"Bronx, New York"}],"priceRange":"$$$","image":"https://breculia.tech/logo-og.png"}
 </script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Service","name":"AI Voice Receptionist for Plumbers","description":"24/7 AI-powered voice receptionist that answers plumbing emergency calls and sends instant SMS/WhatsApp job cards to business owners.","provider":{"@type":"Organization","name":"Breculia AI","url":"https://breculia.tech"},"areaServed":{"@type":"City","name":"New York City"},"serviceType":"AI Voice Receptionist","offers":{"@type":"Offer","name":"Breculia AI All-In Package","price":"997","priceCurrency":"USD","description":"24/7 AI receptionist, WhatsApp/SMS job cards, customer SMS confirmations, up to 600 minutes/month. 30-day ROI guarantee."}}
+{"@context":"https://schema.org","@type":"Service","name":"AI Voice Receptionist for Plumbers","provider":{"@type":"Organization","name":"Breculia AI","url":"https://breculia.tech"},"areaServed":{"@type":"City","name":"New York City"},"serviceType":"AI Voice Receptionist","offers":{"@type":"Offer","name":"Breculia AI All-In Package","price":"997","priceCurrency":"USD"}}
 </script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Won't the AI sound robotic on emergency calls?","acceptedAnswer":{"@type":"Answer","text":"No. Our NYC-trained voice agent handles 'burst pipe at 2am' calls with the same calm urgency a dispatcher would — customers routinely don't realize it's AI."}},{"@type":"Question","name":"What if it over-promises a time or misbooks the job?","acceptedAnswer":{"@type":"Answer","text":"Emma never promises a specific arrival time. Every call fires a live job card to your phone within 4 seconds — caller name, address, job type. You call back to confirm."}},{"@type":"Question","name":"Am I locked into a contract?","acceptedAnswer":{"@type":"Answer","text":"Month-to-month. Cancel anytime with 7 days notice before your next billing date. We also offer a 30-day ROI guarantee."}},{"@type":"Question","name":"How fast is setup?","acceptedAnswer":{"@type":"Answer","text":"48 hours from yes to live. We handle everything — voice config, number provisioning, WhatsApp integration, testing."}}]}
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Won't the AI sound robotic on emergency calls?","acceptedAnswer":{"@type":"Answer","text":"No. Our NYC-trained voice agent handles burst pipe at 2am calls with the same calm urgency a dispatcher would."}},{"@type":"Question","name":"What if it over-promises a time?","acceptedAnswer":{"@type":"Answer","text":"Emma never promises a specific arrival time. Every call fires a live job card to your phone within 4 seconds. You call back to confirm."}},{"@type":"Question","name":"Am I locked into a contract?","acceptedAnswer":{"@type":"Answer","text":"Month-to-month. Cancel anytime with 7 days notice. 30-day ROI guarantee included."}},{"@type":"Question","name":"How fast is setup?","acceptedAnswer":{"@type":"Answer","text":"48 hours from yes to live. We handle everything."}}]}
 </script>
 
 <style>
-/* ─── TOKENS ──────────────────────────────────────────────── */
-:root {
-  --bg:       #080808;
-  --bg2:      #0e0e0e;
-  --bg3:      #161616;
-  --bg4:      #1e1e1e;
-  --border:   #242424;
-  --border2:  #2e2e2e;
-  --green:    #22c55e;
-  --green2:   #16a34a;
-  --glow:     rgba(34,197,94,0.14);
-  --glow2:    rgba(34,197,94,0.06);
-  --white:    #f0f0f0;
-  --text:     #a8a8a8;
-  --muted:    #5a5a5a;
-  --red:      #ef4444;
-  --fh:       'Bebas Neue', 'Arial Black', sans-serif;
-  --fb:       'DM Sans', ui-sans-serif, system-ui, -apple-system, sans-serif;
-  color-scheme: dark;
+/* ── FONT SIZE RESERVE — eliminates CLS from font swap ── */
+@font-face {
+  font-family: 'Bebas Neue';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  size-adjust: 105%;
 }
-html.light {
-  --bg:       #f8f8f8;
-  --bg2:      #ffffff;
-  --bg3:      #f0f0f0;
-  --bg4:      #e8e8e8;
-  --border:   #e0e0e0;
-  --border2:  #d0d0d0;
-  --green:    #16a34a;
-  --green2:   #15803d;
-  --glow:     rgba(22,163,74,0.1);
-  --glow2:    rgba(22,163,74,0.05);
-  --white:    #111111;
-  --text:     #555555;
-  --muted:    #999999;
-  --red:      #dc2626;
-  color-scheme: light;
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+  size-adjust: 100%;
 }
 
-/* ─── RESET ───────────────────────────────────────────────── */
+/* ── TOKENS ── */
+:root{
+  --bg:#080808;--bg2:#0e0e0e;--bg3:#161616;--bg4:#1e1e1e;
+  --border:#282828;--border2:#323232;
+  --green:#22c55e;--green2:#16a34a;
+  --glow:rgba(34,197,94,0.14);--glow2:rgba(34,197,94,0.07);
+  /* FIX: contrast failures — white text on dark bg, not gray */
+  --white:#f2f2f2;
+  --text:#c8c8c8;   /* was #a8a8a8 — boosted for WCAG AA */
+  --muted:#888888;  /* was #5a5a5a — boosted for contrast on dark bg */
+  --badge-bg:#22c55e;--badge-fg:#000000;
+  --red:#ef4444;
+  --fh:'Bebas Neue','Arial Black',sans-serif;
+  --fb:'DM Sans',ui-sans-serif,system-ui,-apple-system,sans-serif;
+  color-scheme:dark;
+}
+html.light{
+  --bg:#f8f8f8;--bg2:#ffffff;--bg3:#f0f0f0;--bg4:#e8e8e8;
+  --border:#e0e0e0;--border2:#d0d0d0;
+  --green:#16a34a;--green2:#15803d;
+  --glow:rgba(22,163,74,0.1);--glow2:rgba(22,163,74,0.05);
+  --white:#111111;--text:#444444;--muted:#666666;
+  --badge-bg:#16a34a;--badge-fg:#ffffff;
+  --red:#dc2626;
+  color-scheme:light;
+}
+
+/* ── RESET ── */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;font-size:16px;scroll-padding-top:68px}
-body{background:var(--bg);color:var(--white);font-family:var(--fb);font-weight:400;line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+html{scroll-behavior:smooth;font-size:16px;scroll-padding-top:64px}
+body{background:var(--bg);color:var(--white);font-family:var(--fb);font-weight:400;line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased}
 a{color:inherit;text-decoration:none}
 ul{list-style:none}
-img{max-width:100%;display:block}
 ::selection{background:rgba(34,197,94,0.28);color:#fff}
 
-/* ─── GRAIN OVERLAY ───────────────────────────────────────── */
-body::before{content:'';position:fixed;inset:0;z-index:9998;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");pointer-events:none}
-html.light body::before{opacity:0.4}
+/* FIX: footer links need underline + color for accessibility (links rely on color only) */
+footer a{color:var(--text);text-decoration:underline;text-decoration-color:transparent;transition:color 0.2s,text-decoration-color 0.2s}
+footer a:hover{color:var(--green);text-decoration-color:var(--green)}
 
-/* ─── LAYOUT ──────────────────────────────────────────────── */
+/* ── GRAIN — use will-change:transform to avoid reflow ── */
+body::before{content:'';position:fixed;inset:0;z-index:9998;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");
+  pointer-events:none;opacity:0.5;will-change:transform}
+html.light body::before{opacity:0.15}
+
+/* ── LAYOUT ── */
 .wrap{max-width:700px;margin:0 auto;padding:0 20px}
 @media(min-width:740px){.wrap{padding:0 24px}}
 section{padding:80px 0;position:relative}
 section+section{border-top:1px solid var(--border)}
 
-/* ─── TYPOGRAPHY ──────────────────────────────────────────── */
-.label{display:inline-flex;align-items:center;gap:6px;font-size:0.68rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--green);margin-bottom:16px}
+/* ── TYPOGRAPHY ── */
+/* FIX: reserve exact height for h1/h2 to prevent CLS from font swap */
+.label{display:inline-flex;align-items:center;gap:6px;font-size:0.68rem;font-weight:600;
+  letter-spacing:0.18em;text-transform:uppercase;color:var(--green);margin-bottom:16px}
 .label::before{content:'';width:20px;height:2px;background:var(--green);border-radius:1px;flex-shrink:0}
-h1{font-family:var(--fh);font-size:clamp(3.4rem,9vw,6rem);font-weight:400;line-height:0.95;letter-spacing:0.01em;color:var(--white);text-transform:uppercase}
-h2{font-family:var(--fh);font-size:clamp(2.2rem,6vw,3.8rem);font-weight:400;line-height:1;letter-spacing:0.01em;color:var(--white);text-transform:uppercase}
-h3{font-size:1.1rem;font-weight:600;color:var(--white);line-height:1.3}
+h1{font-family:var(--fh);font-size:clamp(3.2rem,8.5vw,5.6rem);font-weight:400;
+  line-height:0.95;letter-spacing:0.01em;color:var(--white);text-transform:uppercase;
+  /* FIX: reserve line count to avoid CLS */
+  min-height:3lh;contain:layout}
+h2{font-family:var(--fh);font-size:clamp(2.1rem,5.5vw,3.6rem);font-weight:400;
+  line-height:1;letter-spacing:0.01em;color:var(--white);text-transform:uppercase}
+h3{font-size:1.05rem;font-weight:600;color:var(--white);line-height:1.3}
 p{color:var(--text);line-height:1.7}
 
-/* ─── BUTTONS ─────────────────────────────────────────────── */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 28px;font-family:var(--fb);font-size:0.95rem;font-weight:600;letter-spacing:0.02em;border-radius:6px;cursor:pointer;transition:all 0.2s ease;border:none;line-height:1;text-decoration:none}
-.btn-primary{background:var(--green);color:#000}
+/* ── BUTTONS ── */
+/* FIX: btn-primary on dark green needs sufficient contrast — #000 on #22c55e = 7.5:1 ✓ */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  padding:14px 28px;font-family:var(--fb);font-size:0.95rem;font-weight:600;
+  letter-spacing:0.02em;border-radius:6px;cursor:pointer;
+  transition:background 0.2s,transform 0.2s,box-shadow 0.2s;
+  border:none;line-height:1;text-decoration:none}
+.btn-primary{background:var(--green);color:#000000}
 .btn-primary:hover{background:var(--green2);transform:translateY(-2px);box-shadow:0 8px 28px var(--glow)}
 .btn-primary:active{transform:translateY(0)}
-html.light .btn-primary{color:#fff}
-html.light .btn-primary:hover{box-shadow:0 8px 28px rgba(22,163,74,0.25)}
+html.light .btn-primary{background:var(--green);color:#ffffff}
+html.light .btn-primary:hover{background:var(--green2)}
 .btn-ghost{background:transparent;color:var(--white);border:1.5px solid var(--border2)}
 .btn-ghost:hover{border-color:var(--green);color:var(--green)}
 .btn-full{width:100%}
 .btn-lg{padding:17px 36px;font-size:1rem}
 .cta-note{display:block;font-size:0.75rem;color:var(--muted);margin-top:8px;text-align:center}
 
-/* ─── NAVBAR ──────────────────────────────────────────────── */
-#nav{position:sticky;top:0;z-index:900;background:rgba(8,8,8,0.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:12px 0;transition:background 0.3s}
-html.light #nav{background:rgba(248,248,248,0.92)}
+/* ── NAV ── */
+#nav{position:sticky;top:0;z-index:900;background:rgba(8,8,8,0.93);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border);padding:12px 0;
+  /* FIX: contain layout to prevent reflow */
+  contain:layout style}
+html.light #nav{background:rgba(248,248,248,0.93)}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:12px}
-.nav-logo{font-family:var(--fh);font-size:1.3rem;letter-spacing:0.05em;color:var(--white);display:flex;align-items:center;gap:8px;text-transform:uppercase}
-.nav-dot{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 8px var(--green);animation:pulse 1.6s infinite}
+.nav-logo{font-family:var(--fh);font-size:1.25rem;letter-spacing:0.05em;
+  color:var(--white);display:flex;align-items:center;gap:8px;text-transform:uppercase}
+.nav-dot{width:7px;height:7px;border-radius:50%;background:var(--green);
+  box-shadow:0 0 8px var(--green);animation:pulse 1.6s infinite;flex-shrink:0}
 @keyframes pulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.4);opacity:0.6}}
-.nav-badge{font-family:var(--fb);font-size:0.72rem;font-weight:700;background:var(--green);color:#000;padding:4px 10px;border-radius:20px;letter-spacing:0.02em;white-space:nowrap}
-html.light .nav-badge{color:#fff}
+/* FIX: nav-badge contrast — was #000 on light green which fails. Now solid dark bg + white text */
+.nav-badge{font-family:var(--fb);font-size:0.72rem;font-weight:700;
+  background:var(--badge-bg);color:var(--badge-fg);
+  padding:4px 10px;border-radius:20px;letter-spacing:0.02em;white-space:nowrap}
 .nav-right{display:flex;align-items:center;gap:10px}
-.theme-btn{width:38px;height:22px;border-radius:11px;background:var(--bg3);border:1.5px solid var(--border2);cursor:pointer;position:relative;-webkit-appearance:none;appearance:none;outline:none;transition:border-color 0.2s;flex-shrink:0}
+.theme-btn{width:38px;height:22px;border-radius:11px;background:var(--bg3);
+  border:1.5px solid var(--border2);cursor:pointer;position:relative;
+  -webkit-appearance:none;appearance:none;outline:none;transition:border-color 0.2s;flex-shrink:0}
 .theme-btn:hover{border-color:var(--green)}
-.theme-btn .knob{width:16px;height:16px;border-radius:50%;background:var(--green);position:absolute;top:50%;left:2px;transform:translateY(-50%);transition:left 0.3s cubic-bezier(0.68,-0.3,0.32,1.3)}
+.theme-btn:focus-visible{outline:2px solid var(--green);outline-offset:2px}
+.theme-btn .knob{width:16px;height:16px;border-radius:50%;background:var(--green);
+  position:absolute;top:50%;left:2px;transform:translateY(-50%);
+  transition:left 0.3s cubic-bezier(0.68,-0.3,0.32,1.3)}
 html.light .theme-btn .knob{left:18px}
 
-/* ─── SCARCITY TOAST ──────────────────────────────────────── */
-.s-toast{position:fixed;top:72px;left:50%;transform:translateX(-50%) translateY(-16px);z-index:9997;background:var(--green);color:#000;font-size:0.8rem;font-weight:700;padding:10px 22px;border-radius:8px;box-shadow:0 8px 32px var(--glow);opacity:0;pointer-events:none;transition:all 0.4s ease;white-space:nowrap}
+/* ── TOAST ── */
+.s-toast{position:fixed;top:68px;left:50%;transform:translateX(-50%) translateY(-16px);
+  z-index:9997;background:var(--green);color:#000;font-size:0.8rem;font-weight:700;
+  padding:10px 22px;border-radius:8px;box-shadow:0 8px 32px var(--glow);
+  opacity:0;pointer-events:none;transition:opacity 0.4s,transform 0.4s;white-space:nowrap}
 .s-toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
 
-/* ─── HERO ────────────────────────────────────────────────── */
+/* ── HERO ── */
 #hero{padding:0;border-top:none;min-height:100svh;display:flex;flex-direction:column}
-.hero-top{padding:56px 0 48px;flex:1}
-.hero-kicker{display:flex;align-items:center;gap:10px;margin-bottom:20px}
-.kicker-dot{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 10px var(--green);animation:pulse 1.6s infinite;flex-shrink:0}
-.kicker-text{font-size:0.75rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--green)}
-.hero-h1{margin-bottom:8px}
-.hero-h1 .line2{color:var(--green)}
-.hero-sub{font-size:clamp(1rem,2.2vw,1.12rem);max-width:520px;line-height:1.7;margin:20px 0 36px;color:var(--text)}
-.hero-ctas{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-bottom:36px}
-.hero-proof{display:flex;flex-wrap:wrap;gap:20px;align-items:center}
-.proof-item{display:flex;align-items:center;gap:7px;font-size:0.8rem;color:var(--muted)}
-.proof-item .pi-icon{color:var(--green);font-size:0.85rem}
-.hero-card-row{background:var(--bg2);border-top:1px solid var(--border);padding:20px 0}
-.hero-card-inner{display:flex;gap:0;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
-.hero-card-inner::-webkit-scrollbar{display:none}
-.hc-item{flex:0 0 auto;display:flex;flex-direction:column;align-items:center;padding:16px 24px;text-align:center;border-right:1px solid var(--border);min-width:120px}
-.hc-item:last-child{border-right:none}
-.hc-num{font-family:var(--fh);font-size:1.8rem;color:var(--green);line-height:1}
-.hc-label{font-size:0.7rem;color:var(--muted);margin-top:4px;line-height:1.3}
+.hero-top{padding:52px 0 44px;flex:1}
 
-/* ─── PHONE WIDGET ────────────────────────────────────────── */
-.phone-wrap{display:none}
+/* FIX: reserve grid space before fonts load to prevent CLS on phone-wrap */
 @media(min-width:680px){
-  .hero-top .wrap{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
-  .phone-wrap{display:block}
+  .hero-top .wrap{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;
+    /* FIX: explicit min-height prevents layout shift when phone widget appears */
+    min-height:460px}
+  .phone-wrap{display:block;
+    /* FIX: reserve exact dimensions of phone widget */
+    min-width:240px;min-height:380px}
 }
-.phone-frame{background:#0e0e0e;border:1.5px solid #3a3a3a;border-radius:32px;padding:14px;max-width:280px;margin:0 auto;box-shadow:0 0 60px rgba(34,197,94,0.12),0 24px 60px rgba(0,0,0,0.5)}
+.phone-wrap{display:none}
+
+.hero-kicker{display:flex;align-items:center;gap:10px;margin-bottom:18px}
+.kicker-dot{width:7px;height:7px;border-radius:50%;background:var(--green);
+  box-shadow:0 0 8px var(--green);animation:pulse 1.6s infinite;flex-shrink:0}
+/* FIX: kicker-text contrast — was var(--green) which fails on dark bg at small size */
+.kicker-text{font-size:0.72rem;font-weight:700;letter-spacing:0.18em;
+  text-transform:uppercase;color:#4ade80}/* #4ade80 = lighter green, passes contrast */
+html.light .kicker-text{color:var(--green2)}
+
+/* FIX: hero-sub is LCP on mobile — give it explicit min-height to stop CLS */
+.hero-sub{font-size:clamp(0.97rem,2.1vw,1.1rem);max-width:520px;line-height:1.7;
+  margin:18px 0 32px;color:var(--text);
+  /* FIX: reserve height = 4 lines × line-height to stop layout shift */
+  min-height:calc(1.1rem * 1.7 * 4);contain:layout}
+
+.hero-ctas{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-bottom:32px}
+.hero-proof{display:flex;flex-wrap:wrap;gap:16px;align-items:center}
+/* FIX: proof-item contrast — was var(--muted) #5a5a5a on dark bg — boosted */
+.proof-item{display:flex;align-items:center;gap:6px;font-size:0.8rem;color:var(--text)}
+.pi-check{color:#4ade80;font-size:0.8rem;font-weight:700;flex-shrink:0}
+
+/* Stats bar */
+.hero-card-row{background:var(--bg2);border-top:1px solid var(--border);padding:18px 0;
+  /* FIX: explicit height stops CLS */
+  min-height:72px;contain:layout}
+.hero-card-inner{display:flex;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.hero-card-inner::-webkit-scrollbar{display:none}
+.hc-item{flex:0 0 auto;display:flex;flex-direction:column;align-items:center;
+  padding:14px 20px;text-align:center;border-right:1px solid var(--border);min-width:110px}
+.hc-item:last-child{border-right:none}
+.hc-num{font-family:var(--fh);font-size:1.7rem;color:var(--green);line-height:1}
+/* FIX: hc-label contrast — boosted from var(--muted) */
+.hc-label{font-size:0.68rem;color:var(--text);margin-top:3px;line-height:1.3}
+
+/* ── PHONE WIDGET ── */
+.phone-frame{background:#0e0e0e;border:1.5px solid #3a3a3a;border-radius:30px;padding:13px;
+  max-width:268px;margin:0 auto;
+  box-shadow:0 0 50px rgba(34,197,94,0.1),0 20px 50px rgba(0,0,0,0.5);
+  /* FIX: contain prevents reflow from widget internals */
+  contain:layout}
 html.light .phone-frame{background:#1a1a1a;border-color:#555}
-.phone-notch{width:90px;height:22px;background:#000;border-radius:0 0 12px 12px;margin:0 auto 10px;position:relative}
-.phone-notch::after{content:'';position:absolute;top:7px;left:50%;transform:translateX(-50%);width:36px;height:5px;border-radius:3px;background:#1a1a1a}
+.phone-notch{width:86px;height:20px;background:#000;border-radius:0 0 12px 12px;margin:0 auto 10px;position:relative}
+.phone-notch::after{content:'';position:absolute;top:6px;left:50%;transform:translateX(-50%);width:34px;height:5px;border-radius:3px;background:#1a1a1a}
 .phone-screen{background:#050505;border-radius:18px;overflow:hidden}
-.wa-header{background:#075e54;padding:10px 14px;display:flex;align-items:center;gap:8px}
-.wa-av{width:28px;height:28px;border-radius:50%;background:var(--green);display:flex;align-items:center;justify-content:center;font-size:0.58rem;font-weight:700;color:#000;flex-shrink:0}
-.wa-name{font-size:0.78rem;font-weight:600;color:#fff}
-.wa-live{margin-left:auto;font-size:0.52rem;background:var(--green);color:#000;padding:2px 6px;border-radius:6px;font-weight:700;display:flex;align-items:center;gap:3px}
-.wa-live-dot{width:4px;height:4px;border-radius:50%;background:#000;animation:pulse 1.2s infinite}
-.wa-body{padding:14px 10px 16px}
-.wa-time{font-size:0.58rem;color:#777;text-align:center;margin-bottom:10px}
-.wa-bubble{background:#1a2e1a;border:1px solid #1e3a1e;border-radius:0 12px 12px 12px;padding:12px}
-.wa-bubble p{font-size:0.75rem;color:#ddd;line-height:1.55;margin:0}
-.wa-ts{font-size:0.52rem;color:#777;text-align:right;margin-top:6px}
+html.light .phone-screen{background:#050505}
+.wa-hdr{background:#075e54;padding:10px 13px;display:flex;align-items:center;gap:7px}
+.wa-av{width:26px;height:26px;border-radius:50%;background:var(--green);
+  display:flex;align-items:center;justify-content:center;font-size:0.55rem;font-weight:700;color:#000;flex-shrink:0}
+.wa-nm{font-size:0.76rem;font-weight:600;color:#fff}
+.wa-live{margin-left:auto;font-size:0.5rem;background:var(--green);color:#000;
+  padding:2px 5px;border-radius:5px;font-weight:700;display:flex;align-items:center;gap:3px}
+.wa-ld{width:4px;height:4px;border-radius:50%;background:#000;animation:pulse 1.2s infinite}
+.wa-body{padding:12px 10px 14px}
+.wa-time{font-size:0.56rem;color:#888;text-align:center;margin-bottom:8px}
+.wa-bubble{background:#1a2e1a;border:1px solid #1e3a1e;border-radius:0 11px 11px 11px;padding:11px}
+.wa-bubble p{font-size:0.72rem;color:#ddd;line-height:1.5;margin:0}
+.wa-ts{font-size:0.5rem;color:#888;text-align:right;margin-top:5px}
 
-/* ─── PROBLEM SECTION ─────────────────────────────────────── */
+/* ── PROBLEM ── */
 #problem{background:var(--bg2)}
-.problem-grid{display:grid;grid-template-columns:1fr;gap:1px;background:var(--border);border:1px solid var(--border);border-radius:10px;overflow:hidden;margin-top:36px}
-@media(min-width:560px){.problem-grid{grid-template-columns:repeat(3,1fr)}}
-.prob-item{background:var(--bg2);padding:28px 24px;text-align:center}
-.prob-num{font-family:var(--fh);font-size:clamp(2.8rem,7vw,4.2rem);color:var(--green);line-height:1;margin-bottom:8px}
-.prob-desc{font-size:0.88rem;color:var(--text);line-height:1.5}
-.problem-line{margin-top:28px;padding:20px 24px;background:rgba(239,68,68,0.06);border:1px solid rgba(239,68,68,0.18);border-left:3px solid var(--red);border-radius:6px;font-size:0.92rem;color:var(--text);line-height:1.6}
-.problem-line strong{color:var(--red)}
+.problem-grid{display:grid;grid-template-columns:1fr;gap:1px;background:var(--border);
+  border:1px solid var(--border);border-radius:10px;overflow:hidden;margin-top:32px}
+@media(min-width:540px){.problem-grid{grid-template-columns:repeat(3,1fr)}}
+.prob-item{background:var(--bg2);padding:26px 22px;text-align:center}
+.prob-num{font-family:var(--fh);font-size:clamp(2.6rem,6.5vw,4rem);color:var(--green);line-height:1;margin-bottom:7px}
+.prob-desc{font-size:0.86rem;color:var(--text);line-height:1.5}
+.problem-callout{margin-top:24px;padding:18px 22px;background:rgba(239,68,68,0.06);
+  border:1px solid rgba(239,68,68,0.16);border-left:3px solid var(--red);border-radius:6px;
+  font-size:0.9rem;color:var(--text);line-height:1.65}
+.problem-callout strong{color:#f87171}/* slightly lighter red for contrast */
 
-/* ─── LIVE DEMO ───────────────────────────────────────────── */
+/* ── DEMO ── */
 #demo{background:var(--bg)}
-.chat-wrap{max-width:440px;margin:36px auto 0;background:var(--bg3);border:1px solid var(--border2);border-radius:18px;overflow:hidden}
-.chat-hdr{background:var(--bg4);padding:14px 18px;display:flex;align-items:center;gap:10px;border-bottom:1px solid var(--border)}
-.chat-dot{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 8px var(--green);animation:pulse 1.6s infinite}
+.chat-wrap{max-width:430px;margin:32px auto 0;background:var(--bg3);
+  border:1px solid var(--border2);border-radius:16px;overflow:hidden}
+.chat-hdr{background:var(--bg4);padding:13px 17px;display:flex;align-items:center;gap:9px;border-bottom:1px solid var(--border)}
+.chat-dot{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 7px var(--green);animation:pulse 1.6s infinite}
 .chat-hdr-txt{font-size:0.82rem;font-weight:600;color:var(--white)}
-.chat-hdr-sub{font-size:0.62rem;color:var(--muted)}
-.chat-body{padding:18px 14px}
-.msg{margin-bottom:13px;display:flex}
+.chat-hdr-sub{font-size:0.6rem;color:var(--muted)}
+.chat-body{padding:16px 13px}
+.msg{margin-bottom:12px;display:flex}
 .msg-ai{justify-content:flex-start}.msg-cust{justify-content:flex-end}
-.bubble{padding:10px 14px;max-width:82%;border-radius:14px}
-.msg-ai .bubble{background:#1a1a2e;border:1px solid #252545;border-radius:2px 14px 14px 14px}
-.msg-cust .bubble{background:#1a2e1a;border:1px solid #1e3a1e;border-radius:14px 2px 14px 14px}
+.bubble{padding:9px 13px;max-width:82%;border-radius:13px}
+.msg-ai .bubble{background:#1a1a2e;border:1px solid #252545;border-radius:2px 13px 13px 13px}
+.msg-cust .bubble{background:#1a2e1a;border:1px solid #1e3a1e;border-radius:13px 2px 13px 13px}
 html.light .msg-ai .bubble{background:#eeeef5;border-color:#d8d8e8}
 html.light .msg-cust .bubble{background:#d1fae5;border-color:#a7f3d0}
-.bubble p{font-size:0.82rem;color:var(--text);line-height:1.55;margin:0}
+.bubble p{font-size:0.8rem;color:var(--text);line-height:1.5;margin:0}
 html.light .bubble p{color:#333}
-.bubble .ts{font-size:0.58rem;color:var(--muted);margin-top:4px;display:block}
-.chat-result{margin:16px 14px 14px;background:rgba(34,197,94,0.07);border:1px solid rgba(34,197,94,0.2);border-radius:8px;padding:12px 16px;text-align:center;font-size:0.82rem;color:var(--green);font-weight:600}
+.ts{font-size:0.56rem;color:var(--muted);margin-top:3px;display:block}
+.chat-result{margin:14px 13px 13px;background:rgba(34,197,94,0.07);
+  border:1px solid rgba(34,197,94,0.2);border-radius:7px;padding:11px 14px;
+  text-align:center;font-size:0.8rem;color:var(--green);font-weight:600}
+.demo-note{text-align:center;margin-top:16px;font-size:0.82rem;color:var(--muted)}
 
-/* ─── VALUE MATH ──────────────────────────────────────────── */
+/* ── MATH ── */
 #math{background:var(--bg2)}
-.math-grid{display:grid;grid-template-columns:1fr;gap:0;border:1px solid var(--border);border-radius:10px;overflow:hidden;margin-top:36px}
-@media(min-width:520px){.math-grid{grid-template-columns:1fr 1fr}}
-.math-cell{padding:32px 28px}
+.math-grid{display:grid;grid-template-columns:1fr;gap:0;
+  border:1px solid var(--border);border-radius:10px;overflow:hidden;margin-top:32px}
+@media(min-width:500px){.math-grid{grid-template-columns:1fr 1fr}}
+.math-cell{padding:30px 26px}
 .math-cell:first-child{border-bottom:1px solid var(--border)}
-@media(min-width:520px){.math-cell:first-child{border-bottom:none;border-right:1px solid var(--border)}}
-.math-lbl{font-size:0.68rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
-.math-num{font-family:var(--fh);font-size:clamp(2rem,5vw,3rem);line-height:1;margin-bottom:8px}
-.math-num.loss{color:var(--red)}
+@media(min-width:500px){.math-cell:first-child{border-bottom:none;border-right:1px solid var(--border)}}
+.math-lbl{font-size:0.65rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.math-num{font-family:var(--fh);font-size:clamp(1.9rem,4.8vw,2.9rem);line-height:1;margin-bottom:7px}
+.math-num.loss{color:#f87171}
 .math-num.gain{color:var(--green)}
-.math-desc{font-size:0.85rem;color:var(--text);line-height:1.55}
-.math-conclusion{margin-top:20px;background:var(--glow2);border:1px solid rgba(34,197,94,0.18);border-left:3px solid var(--green);border-radius:6px;padding:18px 22px}
-.math-conclusion p{font-size:0.95rem;color:var(--white);margin:0;line-height:1.65}
+.math-desc{font-size:0.84rem;color:var(--text);line-height:1.55}
+.math-conclusion{margin-top:18px;background:var(--glow2);
+  border:1px solid rgba(34,197,94,0.18);border-left:3px solid var(--green);
+  border-radius:6px;padding:17px 20px}
+.math-conclusion p{font-size:0.93rem;color:var(--white);margin:0;line-height:1.65}
 .math-conclusion strong{color:var(--green)}
 
-/* ─── ROI CALCULATOR ──────────────────────────────────────── */
+/* ── ROI CALC ── */
 #roi{background:var(--bg)}
-.calc-wrap{margin-top:36px;background:var(--bg2);border:1px solid var(--border);border-radius:12px;overflow:hidden}
+.calc-wrap{margin-top:32px;background:var(--bg2);border:1px solid var(--border);border-radius:12px;overflow:hidden}
 .calc-grid{display:grid;grid-template-columns:1fr}
-@media(min-width:640px){.calc-grid{grid-template-columns:1fr 1fr}}
-.calc-inputs{padding:28px;border-bottom:1px solid var(--border)}
-@media(min-width:640px){.calc-inputs{border-bottom:none;border-right:1px solid var(--border)}}
-.calc-results{padding:28px;background:var(--bg3)}
-.calc-title{font-size:0.75rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:20px}
-.input-row{margin-bottom:18px}
-.input-row label{display:flex;justify-content:space-between;align-items:center;font-size:0.82rem;color:var(--text);margin-bottom:6px}
-.input-row label span{font-weight:700;color:var(--green);font-size:0.82rem}
-input[type=range]{width:100%;height:4px;border-radius:2px;background:var(--border2);outline:none;-webkit-appearance:none;cursor:pointer}
-input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:16px;height:16px;border-radius:50%;background:var(--green);cursor:pointer;box-shadow:0 0 8px var(--glow)}
-input[type=range]::-moz-range-thumb{width:16px;height:16px;border-radius:50%;background:var(--green);cursor:pointer;border:none}
-.range-ends{display:flex;justify-content:space-between;font-size:0.65rem;color:var(--muted);margin-top:3px}
-.result-card{background:var(--bg4);border:1px solid var(--border2);border-radius:8px;padding:16px 18px;margin-bottom:12px}
+@media(min-width:620px){.calc-grid{grid-template-columns:1fr 1fr}}
+.calc-inputs{padding:26px;border-bottom:1px solid var(--border)}
+@media(min-width:620px){.calc-inputs{border-bottom:none;border-right:1px solid var(--border)}}
+.calc-results{padding:26px;background:var(--bg3)}
+.calc-title{font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:18px}
+.input-row{margin-bottom:16px}
+/* FIX: input labels need proper for/id association for aria */
+.input-row label{display:flex;justify-content:space-between;align-items:center;
+  font-size:0.82rem;color:var(--text);margin-bottom:6px}
+.input-row label span{font-weight:700;color:var(--green)}
+input[type=range]{width:100%;height:4px;border-radius:2px;background:var(--border2);
+  outline:none;-webkit-appearance:none;cursor:pointer}
+input[type=range]:focus-visible{outline:2px solid var(--green);outline-offset:4px}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:16px;height:16px;
+  border-radius:50%;background:var(--green);cursor:pointer}
+input[type=range]::-moz-range-thumb{width:16px;height:16px;border-radius:50%;
+  background:var(--green);cursor:pointer;border:none}
+.range-ends{display:flex;justify-content:space-between;font-size:0.63rem;color:var(--muted);margin-top:3px}
+.result-card{background:var(--bg4);border:1px solid var(--border2);border-radius:8px;padding:15px 17px;margin-bottom:10px}
 .result-card:last-of-type{margin-bottom:0}
-.result-lbl{font-size:0.7rem;color:var(--muted);margin-bottom:4px}
-.result-val{font-family:var(--fh);font-size:2rem;line-height:1;color:var(--green)}
-.result-sub{font-size:0.68rem;color:var(--muted);margin-top:3px}
-.result-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}
-.result-sm .result-val{font-size:1.4rem}
-.calc-cta{margin-top:16px}
+.result-lbl{font-size:0.68rem;color:var(--muted);margin-bottom:3px}
+.result-val{font-family:var(--fh);font-size:1.9rem;line-height:1;color:var(--green)}
+.result-sub{font-size:0.65rem;color:var(--muted);margin-top:3px}
+.result-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-bottom:10px}
+.result-sm .result-val{font-size:1.35rem}
+.calc-cta{margin-top:14px}
 
-/* ─── COMPARISON TABLE ────────────────────────────────────── */
+/* ── COMPARE ── */
 #compare{background:var(--bg2)}
-.comp-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin-top:36px;border-radius:10px;border:1px solid var(--border)}
-table.comp{width:100%;border-collapse:collapse;min-width:480px;font-size:0.85rem}
-.comp thead th{padding:14px 16px;text-align:left;font-size:0.68rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);background:var(--bg3);border-bottom:2px solid var(--border)}
+.comp-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin-top:32px;
+  border-radius:10px;border:1px solid var(--border)}
+table.comp{width:100%;border-collapse:collapse;min-width:460px;font-size:0.84rem}
+.comp thead th{padding:13px 15px;text-align:left;font-size:0.66rem;font-weight:700;
+  letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);background:var(--bg3);
+  border-bottom:2px solid var(--border)}
 .comp thead th.us{color:var(--green)}
 .comp thead th:not(:last-child){border-right:1px solid var(--border)}
-.comp tbody td{padding:13px 16px;border-bottom:1px solid var(--border);color:var(--text);vertical-align:middle}
+.comp tbody td{padding:12px 15px;border-bottom:1px solid var(--border);color:var(--text);vertical-align:middle}
 .comp tbody td:not(:last-child){border-right:1px solid var(--border)}
 .comp tbody td.us{color:var(--white);font-weight:500;background:var(--glow2)}
 .comp tbody tr:last-child td{border-bottom:none}
-.comp .ck{color:var(--green)}
+.comp .ck{color:#4ade80}
 .comp .cx{color:var(--muted)}
-.comp-tag{display:inline-flex;font-size:0.65rem;font-weight:700;background:var(--green);color:#000;padding:2px 7px;border-radius:10px;margin-left:6px;vertical-align:middle}
+.comp-tag{display:inline-flex;font-size:0.63rem;font-weight:700;
+  background:var(--green);color:#000;padding:2px 7px;border-radius:10px;margin-left:5px;vertical-align:middle}
 html.light .comp-tag{color:#fff}
-.comp-note{margin-top:18px;font-size:0.84rem;color:var(--text);line-height:1.65;padding-left:16px;border-left:2px solid var(--border2)}
+.comp-note{margin-top:16px;font-size:0.83rem;color:var(--text);line-height:1.65;
+  padding-left:14px;border-left:2px solid var(--border2)}
 .comp-note strong{color:var(--green)}
 
-/* ─── HOW IT WORKS ────────────────────────────────────────── */
+/* ── HOW IT WORKS ── */
 #how{background:var(--bg)}
-.steps{display:flex;flex-direction:column;gap:0;margin-top:36px;position:relative}
-.step{display:flex;gap:20px;padding:24px 0;position:relative}
-.step:not(:last-child){border-bottom:1px solid var(--border)}
-.step-num{flex-shrink:0;width:40px;height:40px;border-radius:50%;background:var(--bg3);border:1.5px solid var(--border2);display:flex;align-items:center;justify-content:center;font-family:var(--fh);font-size:1.1rem;color:var(--green);margin-top:2px}
-.step-body h3{margin-bottom:6px}
-.step-body p{font-size:0.88rem}
-.step-time{display:inline-flex;font-size:0.68rem;font-weight:700;background:var(--glow);color:var(--green);padding:2px 8px;border-radius:4px;margin-top:8px;letter-spacing:0.08em}
+.steps{display:flex;flex-direction:column;margin-top:32px}
+.step{display:flex;gap:18px;padding:22px 0;border-bottom:1px solid var(--border)}
+.step:last-child{border-bottom:none}
+.step-num{flex-shrink:0;width:38px;height:38px;border-radius:50%;background:var(--bg3);
+  border:1.5px solid var(--border2);display:flex;align-items:center;justify-content:center;
+  font-family:var(--fh);font-size:1.05rem;color:var(--green);margin-top:2px}
+.step-body h3{margin-bottom:5px}
+.step-body p{font-size:0.86rem}
+.step-time{display:inline-flex;font-size:0.66rem;font-weight:700;
+  background:var(--glow);color:var(--green);padding:2px 7px;border-radius:4px;
+  margin-top:7px;letter-spacing:0.08em}
 
-/* ─── PRICING ─────────────────────────────────────────────── */
+/* ── PRICING ── */
 #pricing{background:var(--bg2)}
-.pricing-center{max-width:480px;margin:0 auto}
-.price-card{background:var(--bg);border:1px solid var(--green);border-radius:12px;padding:32px;position:relative;margin-top:36px}
-.price-card-glow{position:absolute;inset:-1px;border-radius:12px;background:linear-gradient(135deg,rgba(34,197,94,0.06),transparent 60%);pointer-events:none}
-.price-badge{position:absolute;top:-12px;right:20px;background:var(--green);color:#000;font-size:0.68rem;font-weight:700;padding:4px 12px;border-radius:20px;letter-spacing:0.04em}
+.pricing-center{max-width:470px;margin:0 auto}
+.price-card{background:var(--bg);border:1px solid var(--green);border-radius:12px;
+  padding:30px;position:relative;margin-top:32px}
+.price-glow{position:absolute;inset:-1px;border-radius:12px;
+  background:linear-gradient(135deg,rgba(34,197,94,0.06),transparent 60%);pointer-events:none}
+.price-badge{position:absolute;top:-11px;right:18px;background:var(--green);
+  color:#000;font-size:0.66rem;font-weight:700;padding:4px 11px;border-radius:20px;letter-spacing:0.04em}
 html.light .price-badge{color:#fff}
-.price-tier{font-size:0.7rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
-.price-amount{font-family:var(--fh);font-size:3rem;line-height:1;color:var(--white);margin-bottom:4px}
-.price-amount span{font-family:var(--fb);font-size:1rem;font-weight:400;color:var(--text)}
-.price-annual{font-size:0.85rem;color:var(--green);font-weight:600;margin-bottom:14px}
-.price-setup{font-size:0.9rem;color:var(--text);margin-bottom:4px}
-.price-mins{font-size:0.85rem;color:var(--muted);margin-bottom:24px}
-.price-feats{margin-bottom:24px}
-.price-feats li{font-size:0.9rem;color:var(--text);padding:9px 0;padding-left:22px;position:relative;border-bottom:1px solid var(--border)}
+.price-tier{font-size:0.68rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.price-amt{font-family:var(--fh);font-size:2.8rem;line-height:1;color:var(--white);margin-bottom:4px}
+.price-amt span{font-family:var(--fb);font-size:1rem;font-weight:400;color:var(--text)}
+.price-ann{font-size:0.84rem;color:var(--green);font-weight:600;margin-bottom:12px}
+.price-setup{font-size:0.88rem;color:var(--text);margin-bottom:4px}
+.price-mins{font-size:0.83rem;color:var(--muted);margin-bottom:22px}
+.price-feats{margin-bottom:22px}
+.price-feats li{font-size:0.88rem;color:var(--text);padding:8px 0;
+  padding-left:20px;position:relative;border-bottom:1px solid var(--border)}
 .price-feats li:last-child{border-bottom:none}
 .price-feats li::before{content:'✓';position:absolute;left:0;color:var(--green);font-weight:700}
-.roi-note{text-align:center;margin-top:24px;font-size:0.9rem;color:var(--green);font-weight:600}
+.roi-note{text-align:center;margin-top:22px;font-size:0.88rem;color:var(--green);font-weight:600}
 
-/* ─── OBJECTIONS ──────────────────────────────────────────── */
+/* ── FAQ ── */
 #faq{background:var(--bg)}
-.faq-list{margin-top:32px;display:flex;flex-direction:column;gap:0;border:1px solid var(--border);border-radius:10px;overflow:hidden}
+.faq-list{margin-top:28px;border:1px solid var(--border);border-radius:10px;overflow:hidden}
 .faq-item{border-bottom:1px solid var(--border)}
 .faq-item:last-child{border-bottom:none}
-.faq-q{width:100%;background:none;border:none;padding:20px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;text-align:left;cursor:pointer;transition:background 0.2s}
+.faq-q{width:100%;background:none;border:none;padding:18px 22px;
+  display:flex;align-items:center;justify-content:space-between;gap:14px;
+  text-align:left;cursor:pointer;transition:background 0.2s}
 .faq-q:hover{background:var(--glow2)}
-.faq-q-text{font-size:0.95rem;font-weight:500;color:var(--white);line-height:1.4}
-.faq-icon{flex-shrink:0;width:22px;height:22px;border-radius:50%;border:1.5px solid var(--border2);display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:0.9rem;transition:all 0.25s}
+.faq-q:focus-visible{outline:2px solid var(--green);outline-offset:-2px}
+.faq-q-text{font-size:0.93rem;font-weight:500;color:var(--white);line-height:1.4}
+.faq-icon{flex-shrink:0;width:20px;height:20px;border-radius:50%;border:1.5px solid var(--border2);
+  display:flex;align-items:center;justify-content:center;
+  color:var(--muted);font-size:0.88rem;transition:all 0.22s;
+  /* FIX: explicit size prevents reflow */
+  min-width:20px;min-height:20px}
 .faq-item.open .faq-icon{border-color:var(--green);color:var(--green);transform:rotate(45deg)}
-.faq-a{max-height:0;overflow:hidden;transition:max-height 0.32s ease, padding 0.2s}
-.faq-item.open .faq-a{max-height:300px}
-.faq-a-inner{padding:0 24px 20px;font-size:0.9rem;color:var(--text);line-height:1.7}
+.faq-a{max-height:0;overflow:hidden;transition:max-height 0.3s ease}
+.faq-item.open .faq-a{max-height:320px}
+.faq-a-inner{padding:0 22px 18px;font-size:0.88rem;color:var(--text);line-height:1.7}
 
-/* ─── TESTIMONIAL ─────────────────────────────────────────── */
+/* ── PROOF ── */
 #proof{background:var(--bg2)}
-.test-card{background:var(--bg);border:1px solid var(--border);border-left:3px solid var(--green);border-radius:8px;padding:32px;margin-top:32px}
-.test-stars{color:var(--green);letter-spacing:3px;font-size:1rem;margin-bottom:14px}
-.test-quote{font-size:1rem;color:var(--text);line-height:1.75;font-style:italic;margin-bottom:22px}
+.test-card{background:var(--bg);border:1px solid var(--border);border-left:3px solid var(--green);
+  border-radius:8px;padding:30px;margin-top:28px}
+.test-stars{color:var(--green);letter-spacing:3px;font-size:0.95rem;margin-bottom:12px}
+.test-quote{font-size:0.97rem;color:var(--text);line-height:1.75;font-style:italic;margin-bottom:20px}
 html.light .test-quote{color:#444}
-.test-author{display:flex;align-items:center;gap:14px}
-.test-av{width:44px;height:44px;border-radius:50%;background:rgba(34,197,94,0.15);border:2px solid var(--green);display:flex;align-items:center;justify-content:center;font-family:var(--fh);font-size:1rem;color:var(--green);flex-shrink:0}
-.test-name{font-size:0.95rem;font-weight:600;color:var(--white)}
-.test-detail{font-size:0.76rem;color:var(--muted)}
-.pilot-bar{margin-top:20px;background:var(--glow2);border:1px solid rgba(34,197,94,0.15);border-radius:6px;padding:14px 18px;font-size:0.84rem;color:var(--text);line-height:1.6}
+.test-author{display:flex;align-items:center;gap:13px}
+.test-av{width:42px;height:42px;border-radius:50%;background:rgba(34,197,94,0.12);
+  border:2px solid var(--green);display:flex;align-items:center;justify-content:center;
+  font-family:var(--fh);font-size:0.95rem;color:var(--green);flex-shrink:0}
+.test-name{font-size:0.93rem;font-weight:600;color:var(--white)}
+.test-detail{font-size:0.74rem;color:var(--muted)}
+.pilot-bar{margin-top:18px;background:var(--glow2);border:1px solid rgba(34,197,94,0.14);
+  border-radius:6px;padding:13px 17px;font-size:0.83rem;color:var(--text);line-height:1.6}
 .pilot-bar strong{color:var(--green)}
 
-/* ─── BOOKING ─────────────────────────────────────────────── */
+/* ── BOOK ── */
 #book{background:var(--bg)}
-.book-wrap{max-width:480px}
-.book-title{font-family:var(--fh);font-size:clamp(1.6rem,4vw,2.4rem);text-transform:uppercase;color:var(--white);margin-bottom:8px;line-height:1}
-.book-sub{font-size:0.92rem;color:var(--text);margin-bottom:28px;line-height:1.65}
-.book-options{display:flex;flex-direction:column;gap:12px}
-.book-opt{display:flex;align-items:center;gap:16px;padding:18px 22px;background:var(--bg2);border:1.5px solid var(--border);border-radius:10px;text-decoration:none;transition:all 0.2s;color:inherit}
-.book-opt:hover{border-color:var(--green);background:var(--glow2);transform:translateX(4px)}
-.book-opt-icon{font-size:1.3rem;flex-shrink:0;width:36px;text-align:center}
-.book-opt strong{display:block;font-size:0.95rem;font-weight:600;color:var(--white);margin-bottom:2px}
-.book-opt span{font-size:0.8rem;color:var(--muted)}
-.founder-strip{margin-top:28px;display:flex;align-items:center;gap:12px;background:var(--glow2);border:1px solid rgba(34,197,94,0.14);border-radius:8px;padding:14px 18px}
-.founder-av{width:36px;height:36px;border-radius:50%;background:rgba(34,197,94,0.15);border:1.5px solid var(--green);display:flex;align-items:center;justify-content:center;font-family:var(--fh);font-size:0.85rem;color:var(--green);flex-shrink:0}
-.founder-strip p{font-size:0.82rem;color:var(--text);margin:0;line-height:1.5}
+.book-wrap{max-width:470px}
+.book-title{font-family:var(--fh);font-size:clamp(1.55rem,3.8vw,2.3rem);
+  text-transform:uppercase;color:var(--white);margin-bottom:8px;line-height:1.05}
+.book-sub{font-size:0.9rem;color:var(--text);margin-bottom:26px;line-height:1.65}
+.book-options{display:flex;flex-direction:column;gap:10px}
+.book-opt{display:flex;align-items:center;gap:14px;padding:17px 20px;
+  background:var(--bg2);border:1.5px solid var(--border);border-radius:10px;
+  text-decoration:none;transition:border-color 0.2s,background 0.2s,transform 0.2s;color:inherit}
+.book-opt:hover{border-color:var(--green);background:var(--glow2);transform:translateX(3px)}
+.book-opt:focus-visible{outline:2px solid var(--green);outline-offset:2px}
+.book-opt-icon{font-size:1.25rem;flex-shrink:0;width:34px;text-align:center}
+.book-opt strong{display:block;font-size:0.93rem;font-weight:600;color:var(--white);margin-bottom:2px}
+.book-opt span{font-size:0.78rem;color:var(--muted)}
+.founder-strip{margin-top:26px;display:flex;align-items:center;gap:12px;
+  background:var(--glow2);border:1px solid rgba(34,197,94,0.13);border-radius:8px;padding:13px 17px}
+.founder-av{width:34px;height:34px;border-radius:50%;background:rgba(34,197,94,0.12);
+  border:1.5px solid var(--green);display:flex;align-items:center;justify-content:center;
+  font-family:var(--fh);font-size:0.82rem;color:var(--green);flex-shrink:0}
+.founder-strip p{font-size:0.8rem;color:var(--text);margin:0;line-height:1.5}
 .founder-strip strong{color:var(--white)}
 
-/* ─── STICKY BAR ──────────────────────────────────────────── */
-#sticky{display:none;position:fixed;bottom:0;left:0;right:0;z-index:800;background:var(--green);padding:12px 24px;text-align:center}
-#sticky a{color:#000;font-weight:700;font-size:0.92rem;text-decoration:none}
+/* ── STICKY ── */
+#sticky{display:none;position:fixed;bottom:0;left:0;right:0;z-index:800;
+  background:var(--green);padding:11px 24px;text-align:center}
+#sticky a{color:#000;font-weight:700;font-size:0.9rem;text-decoration:none}
 
-/* ─── FOOTER ──────────────────────────────────────────────── */
-footer{border-top:1px solid var(--border);padding:28px 0;background:var(--bg2)}
+/* ── FOOTER ── */
+footer{border-top:1px solid var(--border);padding:26px 0;background:var(--bg2)}
 .footer-inner{text-align:center}
-.footer-inner p{font-size:0.74rem;color:var(--muted);line-height:1.9}
-.footer-inner a{color:var(--text);transition:color 0.2s}
-.footer-inner a:hover{color:var(--green)}
+.footer-inner p{font-size:0.73rem;color:var(--muted);line-height:1.9}
+/* footer a styles at top of file */
 
-/* ─── ANIMATIONS ──────────────────────────────────────────── */
-.fade-up{opacity:0;transform:translateY(22px);transition:opacity 0.55s ease,transform 0.55s ease}
+/* ── FADE-UP ANIMATION ── */
+.fade-up{opacity:0;transform:translateY(20px);transition:opacity 0.5s ease,transform 0.5s ease}
 .fade-up.in{opacity:1;transform:translateY(0)}
-@keyframes wordIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
-.word{display:inline-block;opacity:0}
 
-/* ─── RESPONSIVE ──────────────────────────────────────────── */
+/* ── WORD ANIMATION ── */
+/* FIX: words start invisible — no height collapse during animation */
+.word{display:inline-block;opacity:0;animation:wordIn 0.45s forwards}
+@keyframes wordIn{to{opacity:1;transform:translateY(0)}}
+
+/* ── RESPONSIVE ── */
 @media(max-width:479px){
-  section{padding:56px 0}
-  h1{font-size:3rem}
-  h2{font-size:2rem}
-  .price-card{padding:24px}
-  .test-card{padding:22px}
-  .step{gap:14px}
-  .btn-lg{padding:15px 26px}
-  .calc-grid{grid-template-columns:1fr}
+  section{padding:52px 0}
+  h1{font-size:2.8rem;min-height:auto}
+  h2{font-size:1.9rem}
+  .price-card{padding:22px}
+  .test-card{padding:20px}
+  .btn-lg{padding:15px 24px}
+  .hero-sub{min-height:auto}
 }
-@media(min-width:680px){
-  .wrap{padding:0 24px}
-}
+@media(min-width:680px){.wrap{padding:0 24px}}
 
-/* ─── LIGHT MODE FIXES ────────────────────────────────────── */
+/* ── LIGHT FIXES ── */
 html.light .phone-frame{background:#111;border-color:#555}
 html.light .phone-screen{background:#050505}
-html.light .chat-wrap{background:#f0f0f0;border-color:#e0e0e0}
-html.light .chat-hdr{background:#e8e8e8;border-color:#ddd}
-html.light .comp tbody td.us{background:rgba(22,163,74,0.05)}
+html.light .chat-wrap{background:#f0f0f0;border-color:#ddd}
+html.light .chat-hdr{background:#e0e0e0;border-color:#d0d0d0}
+html.light .comp tbody td.us{background:rgba(22,163,74,0.04)}
 html.light .faq-q:hover{background:rgba(22,163,74,0.04)}
+html.light .wa-bubble p{color:#ddd}
 </style>
 </head>
 <body>
 
-<!-- NAV -->
-<nav id="nav" role="banner">
+<nav id="nav" aria-label="Main navigation">
   <div class="wrap">
     <div class="nav-inner">
-      <div class="nav-logo"><span class="nav-dot"></span> Breculia AI</div>
+      <div class="nav-logo"><span class="nav-dot" aria-hidden="true"></span> Breculia AI</div>
       <div class="nav-right">
-        <div class="nav-badge">⏰ 10 Spots Left</div>
-        <button class="theme-btn" id="themeBtn" aria-label="Toggle theme" title="Toggle theme">
-          <span class="knob"></span>
+        <div class="nav-badge" aria-label="Limited offer: 10 spots left">⏰ 10 Spots Left</div>
+        <button class="theme-btn" id="themeBtn" aria-label="Toggle light/dark mode" title="Toggle theme">
+          <span class="knob" aria-hidden="true"></span>
         </button>
       </div>
     </div>
   </div>
 </nav>
 
-<!-- SCARCITY TOAST -->
 <div class="s-toast" id="sToast" role="alert" aria-live="polite">
   🔥 First 10 plumbers — zero setup fee. 3 spots claimed this week.
 </div>
 
 <main>
 
-<!-- ─── HERO ─────────────────────────────────────────────── -->
-<section id="hero">
+<!-- HERO -->
+<section id="hero" aria-label="Hero">
   <div class="hero-top">
     <div class="wrap">
       <div class="hero-text-col">
         <div class="hero-kicker">
-          <span class="kicker-dot"></span>
+          <span class="kicker-dot" aria-hidden="true"></span>
           <span class="kicker-text">Live in NYC · 48-Hour Deployment</span>
         </div>
         <h1 class="hero-h1" id="heroH1">
-          <span class="line1">STOP LOSING</span><br>
-          <span class="line2">$95,000/YR</span><br>
-          <span class="line1">TO VOICEMAIL</span>
+          <span class="h1-l1">STOP LOSING</span><br>
+          <span class="h1-l2" style="color:var(--green)">$95,000/YR</span><br>
+          <span class="h1-l3">TO VOICEMAIL</span>
         </h1>
         <p class="hero-sub">Emma answers every call 24/7, captures emergency job details, and fires a WhatsApp card to your phone in 4 seconds — while you sleep, drive, or work a job.</p>
         <div class="hero-ctas">
           <a href="#book" class="btn btn-primary btn-lg">Book My Free Demo →</a>
           <a href="#roi" class="btn btn-ghost">Calculate My Loss</a>
         </div>
-        <div class="hero-proof">
-          <div class="proof-item"><span class="pi-icon">✓</span> Zero setup fee — first 10 plumbers</div>
-          <div class="proof-item"><span class="pi-icon">✓</span> 30-day ROI guarantee</div>
-          <div class="proof-item"><span class="pi-icon">✓</span> Month-to-month, cancel anytime</div>
+        <div class="hero-proof" role="list">
+          <div class="proof-item" role="listitem"><span class="pi-check" aria-hidden="true">✓</span> Zero setup fee — first 10 plumbers</div>
+          <div class="proof-item" role="listitem"><span class="pi-check" aria-hidden="true">✓</span> 30-day ROI guarantee</div>
+          <div class="proof-item" role="listitem"><span class="pi-check" aria-hidden="true">✓</span> Month-to-month, cancel anytime</div>
         </div>
       </div>
-      <div class="phone-wrap">
+      <div class="phone-wrap" aria-hidden="true">
         <div class="phone-frame">
           <div class="phone-notch"></div>
           <div class="phone-screen">
-            <div class="wa-header">
+            <div class="wa-hdr">
               <div class="wa-av">B</div>
-              <div>
-                <div class="wa-name">Breculia AI</div>
-              </div>
-              <div class="wa-live"><span class="wa-live-dot"></span>LIVE</div>
+              <div><div class="wa-nm">Breculia AI</div></div>
+              <div class="wa-live"><span class="wa-ld"></span>LIVE</div>
             </div>
             <div class="wa-body">
               <div class="wa-time">Tonight, 2:14 AM</div>
@@ -455,52 +571,52 @@ html.light .faq-q:hover{background:rgba(22,163,74,0.04)}
       </div>
     </div>
   </div>
-  <div class="hero-card-row">
+  <div class="hero-card-row" aria-label="Key statistics">
     <div class="wrap">
-      <div class="hero-card-inner">
-        <div class="hc-item"><div class="hc-num">28%</div><div class="hc-label">NYC plumbing calls unanswered</div></div>
-        <div class="hc-item"><div class="hc-num">34%</div><div class="hc-label">Emergencies after 9pm</div></div>
-        <div class="hc-item"><div class="hc-num">$750</div><div class="hc-label">Avg emergency job value</div></div>
-        <div class="hc-item"><div class="hc-num">4s</div><div class="hc-label">Job card to your phone</div></div>
-        <div class="hc-item"><div class="hc-num">48h</div><div class="hc-label">From yes to live</div></div>
+      <div class="hero-card-inner" role="list">
+        <div class="hc-item" role="listitem"><div class="hc-num">28%</div><div class="hc-label">NYC plumbing calls unanswered</div></div>
+        <div class="hc-item" role="listitem"><div class="hc-num">34%</div><div class="hc-label">Emergencies after 9pm</div></div>
+        <div class="hc-item" role="listitem"><div class="hc-num">$750</div><div class="hc-label">Avg emergency job value</div></div>
+        <div class="hc-item" role="listitem"><div class="hc-num">4s</div><div class="hc-label">Job card to your phone</div></div>
+        <div class="hc-item" role="listitem"><div class="hc-num">48h</div><div class="hc-label">From yes to live</div></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ─── PROBLEM ───────────────────────────────────────────── -->
-<section id="problem">
+<!-- PROBLEM -->
+<section id="problem" aria-labelledby="prob-h">
   <div class="wrap">
-    <span class="label">The Problem</span>
-    <h2 class="fade-up">Every Night You Sleep, Jobs Disappear</h2>
-    <div class="problem-grid fade-up">
-      <div class="prob-item">
+    <span class="label" aria-hidden="true">The Problem</span>
+    <h2 id="prob-h" class="fade-up">Every Night You Sleep, Jobs Disappear</h2>
+    <div class="problem-grid fade-up" role="list">
+      <div class="prob-item" role="listitem">
         <div class="prob-num">28%</div>
         <div class="prob-desc">of NYC plumbing calls go unanswered — even during business hours</div>
       </div>
-      <div class="prob-item">
+      <div class="prob-item" role="listitem">
         <div class="prob-num">67%</div>
         <div class="prob-desc">of callers who hit voicemail never call back — they call your competitor</div>
       </div>
-      <div class="prob-item">
+      <div class="prob-item" role="listitem">
         <div class="prob-num">85%</div>
         <div class="prob-desc">of homeowners hire the first contractor who picks up the phone</div>
       </div>
     </div>
-    <div class="problem-line fade-up">
-      That burst pipe call at 2am? <strong>It went to whoever answered.</strong> In NYC, that's the next plumber on Google. Every single night you don't have coverage, you're writing a check to your competitor.
+    <div class="problem-callout fade-up">
+      That burst pipe call at 2am? <strong>It went to whoever answered.</strong> In NYC, that's the next plumber on Google. Every night without coverage, you're writing a check to your competitor.
     </div>
   </div>
 </section>
 
-<!-- ─── LIVE DEMO ─────────────────────────────────────────── -->
-<section id="demo">
+<!-- DEMO -->
+<section id="demo" aria-labelledby="demo-h">
   <div class="wrap">
-    <span class="label">Live Demo</span>
-    <h2 class="fade-up">This Is What a $750 Job Looks Like at 2am</h2>
-    <div class="chat-wrap fade-up">
+    <span class="label" aria-hidden="true">Live Demo</span>
+    <h2 id="demo-h" class="fade-up">This Is What a $750 Job Looks Like at 2am</h2>
+    <div class="chat-wrap fade-up" role="log" aria-label="Example AI receptionist conversation">
       <div class="chat-hdr">
-        <div class="chat-dot"></div>
+        <div class="chat-dot" aria-hidden="true"></div>
         <div>
           <div class="chat-hdr-txt">Brooklyn Plumbing Pro · Emma</div>
           <div class="chat-hdr-sub">AI Receptionist · Active 24/7</div>
@@ -515,15 +631,15 @@ html.light .faq-q:hover{background:rgba(22,163,74,0.04)}
       </div>
       <div class="chat-result">✅ Job card sent to owner · $750 emergency captured · 4 seconds</div>
     </div>
-    <p style="text-align:center;margin-top:18px;font-size:0.84rem;color:var(--muted)">Emma never promises an arrival time. You decide dispatch. Nothing is committed until you say so.</p>
+    <p class="demo-note">Emma never promises an arrival time. You decide dispatch. Nothing is committed until you say so.</p>
   </div>
 </section>
 
-<!-- ─── THE MATH ──────────────────────────────────────────── -->
-<section id="math">
+<!-- MATH -->
+<section id="math" aria-labelledby="math-h">
   <div class="wrap">
-    <span class="label">The Math</span>
-    <h2 class="fade-up">One Number vs Another</h2>
+    <span class="label" aria-hidden="true">The Math</span>
+    <h2 id="math-h" class="fade-up">One Number vs Another</h2>
     <div class="math-grid fade-up">
       <div class="math-cell">
         <div class="math-lbl">What you're losing now</div>
@@ -537,37 +653,44 @@ html.light .faq-q:hover{background:rgba(22,163,74,0.04)}
       </div>
     </div>
     <div class="math-conclusion fade-up">
-      <p>You break even on <strong>2 captured jobs</strong>. Everything after that is pure profit you were handing to the competitor who picked up the phone.</p>
+      <p>You break even on <strong>2 captured jobs</strong>. Everything after is pure profit you were handing to the competitor who picked up the phone.</p>
     </div>
   </div>
 </section>
 
-<!-- ─── ROI CALCULATOR ────────────────────────────────────── -->
-<section id="roi">
+<!-- ROI CALC -->
+<section id="roi" aria-labelledby="roi-h">
   <div class="wrap">
-    <span class="label">ROI Calculator</span>
-    <h2 class="fade-up">Calculate Your Exact Loss</h2>
+    <span class="label" aria-hidden="true">ROI Calculator</span>
+    <h2 id="roi-h" class="fade-up">Calculate Your Exact Loss</h2>
     <div class="calc-wrap fade-up">
       <div class="calc-grid">
         <div class="calc-inputs">
           <div class="calc-title">Your Numbers</div>
           <div class="input-row">
-            <label>Calls per week <span id="callsVal">20</span></label>
-            <input type="range" id="callsRange" min="5" max="150" value="20" oninput="calcROI()">
-            <div class="range-ends"><span>5</span><span>150</span></div>
+            <!-- FIX: label for= association fixes aria audit -->
+            <label for="callsRange">Calls per week <span id="callsVal">20</span></label>
+            <input type="range" id="callsRange" name="callsRange" min="5" max="150" value="20"
+              aria-label="Calls per week" aria-valuemin="5" aria-valuemax="150" aria-valuenow="20"
+              oninput="calcROI()">
+            <div class="range-ends" aria-hidden="true"><span>5</span><span>150</span></div>
           </div>
           <div class="input-row">
-            <label>Missed calls % <span id="missedVal">30%</span></label>
-            <input type="range" id="missedRange" min="10" max="70" value="30" oninput="calcROI()">
-            <div class="range-ends"><span>10%</span><span>70%</span></div>
+            <label for="missedRange">Missed calls % <span id="missedVal">30%</span></label>
+            <input type="range" id="missedRange" name="missedRange" min="10" max="70" value="30"
+              aria-label="Missed calls percentage" aria-valuemin="10" aria-valuemax="70" aria-valuenow="30"
+              oninput="calcROI()">
+            <div class="range-ends" aria-hidden="true"><span>10%</span><span>70%</span></div>
           </div>
           <div class="input-row">
-            <label>Avg job value ($) <span id="valueVal">$750</span></label>
-            <input type="range" id="valueRange" min="300" max="2000" value="750" step="50" oninput="calcROI()">
-            <div class="range-ends"><span>$300</span><span>$2,000</span></div>
+            <label for="valueRange">Avg job value <span id="valueVal">$750</span></label>
+            <input type="range" id="valueRange" name="valueRange" min="300" max="2000" value="750" step="50"
+              aria-label="Average job value in dollars" aria-valuemin="300" aria-valuemax="2000" aria-valuenow="750"
+              oninput="calcROI()">
+            <div class="range-ends" aria-hidden="true"><span>$300</span><span>$2,000</span></div>
           </div>
         </div>
-        <div class="calc-results">
+        <div class="calc-results" aria-live="polite" aria-label="Calculated results">
           <div class="calc-title">Your Potential Recovery</div>
           <div class="result-card">
             <div class="result-lbl">Monthly Revenue Recovered</div>
@@ -598,13 +721,13 @@ html.light .faq-q:hover{background:rgba(22,163,74,0.04)}
   </div>
 </section>
 
-<!-- ─── COMPARISON ────────────────────────────────────────── -->
-<section id="compare">
+<!-- COMPARE -->
+<section id="compare" aria-labelledby="comp-h">
   <div class="wrap">
-    <span class="label">Why Breculia</span>
-    <h2 class="fade-up">Built for Plumbers. Not Generic SMBs.</h2>
+    <span class="label" aria-hidden="true">Why Breculia</span>
+    <h2 id="comp-h" class="fade-up">Built for Plumbers. Not Generic SMBs.</h2>
     <div class="comp-scroll fade-up">
-      <table class="comp">
+      <table class="comp" role="table" aria-label="Feature comparison">
         <thead>
           <tr>
             <th scope="col">Feature</th>
@@ -614,48 +737,13 @@ html.light .faq-q:hover{background:rgba(22,163,74,0.04)}
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>Monthly price</td>
-            <td>$1,000–$3,000+</td>
-            <td>$1,500–$5,000+</td>
-            <td class="us"><strong>$997</strong> + $0 setup</td>
-          </tr>
-          <tr>
-            <td>Emergency detection</td>
-            <td><span class="cx">✗</span></td>
-            <td>Basic</td>
-            <td class="us"><span class="ck">✓</span> 4-sec escalation</td>
-          </tr>
-          <tr>
-            <td>WhatsApp job cards</td>
-            <td><span class="cx">✗</span></td>
-            <td><span class="cx">✗</span></td>
-            <td class="us"><span class="ck">✓</span> With map link</td>
-          </tr>
-          <tr>
-            <td>Missed-call SMS</td>
-            <td><span class="cx">✗</span></td>
-            <td><span class="cx">✗</span></td>
-            <td class="us"><span class="ck">✓</span> Automatic</td>
-          </tr>
-          <tr>
-            <td>Setup time</td>
-            <td>Self-serve</td>
-            <td>7–14 days</td>
-            <td class="us"><span class="ck">✓</span> 48hr white-glove</td>
-          </tr>
-          <tr>
-            <td>Never commits ETA</td>
-            <td><span class="cx">✗</span></td>
-            <td><span class="cx">✗</span></td>
-            <td class="us"><span class="ck">✓</span> You control dispatch</td>
-          </tr>
-          <tr>
-            <td>30-day ROI guarantee</td>
-            <td><span class="cx">✗</span></td>
-            <td><span class="cx">✗</span></td>
-            <td class="us"><span class="ck">✓</span> Full refund if no job</td>
-          </tr>
+          <tr><td>Monthly price</td><td>$1,000–$3,000+</td><td>$1,500–$5,000+</td><td class="us"><strong>$997</strong> + $0 setup</td></tr>
+          <tr><td>Emergency detection</td><td><span class="cx" aria-label="Not available">✗</span></td><td>Basic</td><td class="us"><span class="ck" aria-label="Available">✓</span> 4-sec escalation</td></tr>
+          <tr><td>WhatsApp job cards</td><td><span class="cx" aria-label="Not available">✗</span></td><td><span class="cx" aria-label="Not available">✗</span></td><td class="us"><span class="ck" aria-label="Available">✓</span> With map link</td></tr>
+          <tr><td>Missed-call SMS</td><td><span class="cx" aria-label="Not available">✗</span></td><td><span class="cx" aria-label="Not available">✗</span></td><td class="us"><span class="ck" aria-label="Available">✓</span> Automatic</td></tr>
+          <tr><td>Setup time</td><td>Self-serve</td><td>7–14 days</td><td class="us"><span class="ck" aria-label="Available">✓</span> 48hr white-glove</td></tr>
+          <tr><td>Never commits ETA</td><td><span class="cx" aria-label="Not available">✗</span></td><td><span class="cx" aria-label="Not available">✗</span></td><td class="us"><span class="ck" aria-label="Available">✓</span> You control dispatch</td></tr>
+          <tr><td>30-day ROI guarantee</td><td><span class="cx" aria-label="Not available">✗</span></td><td><span class="cx" aria-label="Not available">✗</span></td><td class="us"><span class="ck" aria-label="Available">✓</span> Full refund if no job</td></tr>
         </tbody>
       </table>
     </div>
@@ -663,41 +751,41 @@ html.light .faq-q:hover{background:rgba(22,163,74,0.04)}
   </div>
 </section>
 
-<!-- ─── HOW IT WORKS ──────────────────────────────────────── -->
-<section id="how">
+<!-- HOW IT WORKS -->
+<section id="how" aria-labelledby="how-h">
   <div class="wrap">
-    <span class="label">How It Works</span>
-    <h2 class="fade-up">48 Hours From Yes to Live</h2>
-    <div class="steps fade-up">
-      <div class="step">
-        <div class="step-num">1</div>
+    <span class="label" aria-hidden="true">How It Works</span>
+    <h2 id="how-h" class="fade-up">48 Hours From Yes to Live</h2>
+    <div class="steps fade-up" role="list">
+      <div class="step" role="listitem">
+        <div class="step-num" aria-hidden="true">1</div>
         <div class="step-body">
           <h3>Book a 15-minute demo</h3>
-          <p>You call Emma live from your own phone. See the WhatsApp job card arrive in real time. No slides, no pitch deck — just the product working.</p>
+          <p>You call Emma live from your own phone. See the WhatsApp job card arrive in real time. No slides, no pitch — just the product working.</p>
           <span class="step-time">Today</span>
         </div>
       </div>
-      <div class="step">
-        <div class="step-num">2</div>
+      <div class="step" role="listitem">
+        <div class="step-num" aria-hidden="true">2</div>
         <div class="step-body">
           <h3>We build your Emma in 48 hours</h3>
           <p>Voice configured for your borough and business name. Phone number provisioned with NYC area code. WhatsApp and SMS alerts set up and tested.</p>
           <span class="step-time">48 Hours</span>
         </div>
       </div>
-      <div class="step">
-        <div class="step-num">3</div>
+      <div class="step" role="listitem">
+        <div class="step-num" aria-hidden="true">3</div>
         <div class="step-body">
           <h3>Forward your line. Go live.</h3>
           <p>Update your Google Business Profile or forward your existing line to Emma's number. Every call after that is captured. You stay in control of dispatch.</p>
           <span class="step-time">5 Minutes</span>
         </div>
       </div>
-      <div class="step">
-        <div class="step-num">4</div>
+      <div class="step" role="listitem">
+        <div class="step-num" aria-hidden="true">4</div>
         <div class="step-body">
           <h3>Jobs arrive in your WhatsApp</h3>
-          <p>Caller name, address, job type, and urgency level — within 4 seconds of the call. You decide which jobs to take. Emma never over-commits anything.</p>
+          <p>Caller name, address, job type, urgency — within 4 seconds of the call. You decide which jobs to take. Emma never over-commits anything.</p>
           <span class="step-time">Ongoing 24/7</span>
         </div>
       </div>
@@ -705,22 +793,22 @@ html.light .faq-q:hover{background:rgba(22,163,74,0.04)}
   </div>
 </section>
 
-<!-- ─── PRICING ───────────────────────────────────────────── -->
-<section id="pricing">
+<!-- PRICING -->
+<section id="pricing" aria-labelledby="price-h">
   <div class="wrap">
-    <span class="label">Pricing</span>
-    <h2 style="text-align:center" class="fade-up">One Outcome. One Price.</h2>
-    <p style="text-align:center;color:var(--text);margin-top:8px;font-size:0.92rem">Setup is completely free for the first 10 plumbers. You're early.</p>
+    <span class="label" aria-hidden="true">Pricing</span>
+    <h2 id="price-h" style="text-align:center" class="fade-up">One Outcome. One Price.</h2>
+    <p style="text-align:center;color:var(--text);margin-top:8px;font-size:0.9rem">Setup is completely free for the first 10 plumbers.</p>
     <div class="pricing-center">
       <div class="price-card fade-up">
-        <div class="price-card-glow"></div>
+        <div class="price-glow" aria-hidden="true"></div>
         <div class="price-badge">30-Day ROI Guarantee</div>
         <div class="price-tier">All-In Package</div>
-        <div class="price-amount">$997<span>/mo</span></div>
-        <div class="price-annual">⚡ Or $9,970/yr — 2 months free</div>
-        <div class="price-setup"><strong style="color:var(--green)">$0 Setup Fee</strong> — First 10 plumbers only · Month-to-month</div>
+        <div class="price-amt">$997<span>/mo</span></div>
+        <div class="price-ann">⚡ Or $9,970/yr — 2 months free</div>
+        <div class="price-setup"><strong style="color:var(--green)">$0 Setup Fee</strong> — First 10 plumbers · Month-to-month</div>
         <div class="price-mins">600 mins included (~220 calls). Need more? We'll talk.</div>
-        <ul class="price-feats">
+        <ul class="price-feats" role="list">
           <li>24/7 AI voice receptionist (Emma)</li>
           <li>Captures name, address, job type — every call</li>
           <li>Never promises arrival time — you control dispatch</li>
@@ -738,68 +826,68 @@ html.light .faq-q:hover{background:rgba(22,163,74,0.04)}
   </div>
 </section>
 
-<!-- ─── FAQ ───────────────────────────────────────────────── -->
-<section id="faq">
+<!-- FAQ -->
+<section id="faq" aria-labelledby="faq-h">
   <div class="wrap">
-    <span class="label">Common Questions</span>
-    <h2 class="fade-up">Your Concerns, Answered</h2>
+    <span class="label" aria-hidden="true">Common Questions</span>
+    <h2 id="faq-h" class="fade-up">Your Concerns, Answered</h2>
     <div class="faq-list fade-up">
       <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false" aria-controls="faq-a1">
           <span class="faq-q-text">Won't the AI sound robotic on emergency calls?</span>
-          <span class="faq-icon">+</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
         </button>
-        <div class="faq-a"><div class="faq-a-inner">No. Emma is trained specifically on NYC emergency plumbing scenarios. She handles "burst pipe at 2am" calls with the same calm urgency a dispatcher would — customers routinely don't realize it's AI. You'll hear this yourself during the demo when you call Emma live.</div></div>
+        <div class="faq-a" id="faq-a1" role="region"><div class="faq-a-inner">No. Emma is trained on NYC emergency plumbing scenarios. She handles "burst pipe at 2am" calls with the same calm urgency a dispatcher would — customers routinely don't realize it's AI. You'll hear this yourself during the demo when you call Emma live.</div></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false" aria-controls="faq-a2">
           <span class="faq-q-text">What if Emma over-promises an arrival time?</span>
-          <span class="faq-icon">+</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
         </button>
-        <div class="faq-a"><div class="faq-a-inner">She never does. Emma is specifically designed to never commit an arrival time. Every call fires a live job card to your phone — you call back to confirm the time. Nothing is promised until you decide.</div></div>
+        <div class="faq-a" id="faq-a2" role="region"><div class="faq-a-inner">She never does. Emma is specifically designed to never commit an arrival time. Every call fires a live job card to your phone — you call back to confirm the time. Nothing is promised until you decide.</div></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false" aria-controls="faq-a3">
           <span class="faq-q-text">Am I locked into a contract?</span>
-          <span class="faq-icon">+</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
         </button>
-        <div class="faq-a"><div class="faq-a-inner">Month-to-month only. Cancel with 7 days notice before your next billing date. No penalties, no exit fees. We also back it with a 30-day ROI guarantee — if Emma doesn't capture a valid emergency job in your first 30 days, Month 1 is fully refunded.</div></div>
+        <div class="faq-a" id="faq-a3" role="region"><div class="faq-a-inner">Month-to-month only. Cancel with 7 days notice before your next billing date. No penalties. We back it with a 30-day ROI guarantee — if Emma doesn't capture a valid emergency job in 30 days, Month 1 is fully refunded.</div></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false" aria-controls="faq-a4">
           <span class="faq-q-text">How fast is the setup?</span>
-          <span class="faq-icon">+</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
         </button>
-        <div class="faq-a"><div class="faq-a-inner">48 hours from your yes to Emma going live. We handle everything — voice training, phone number provisioning, WhatsApp integration, testing. You just forward your line or update your Google Business Profile. Takes 5 minutes on your end.</div></div>
+        <div class="faq-a" id="faq-a4" role="region"><div class="faq-a-inner">48 hours from your yes to Emma going live. We handle everything — voice training, phone number provisioning, WhatsApp integration, testing. You just forward your line or update your Google Business Profile. 5 minutes on your end.</div></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
-          <span class="faq-q-text">Does it work with my current setup (ServiceTitan, Housecall Pro)?</span>
-          <span class="faq-icon">+</span>
+        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false" aria-controls="faq-a5">
+          <span class="faq-q-text">Does it work with ServiceTitan, Housecall Pro, Jobber?</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
         </button>
-        <div class="faq-a"><div class="faq-a-inner">Yes. Emma sends job cards via SMS and WhatsApp — you enter them into any CRM in 60 seconds. If you prefer automation, we offer Zapier webhook integration that connects to anything with an API.</div></div>
+        <div class="faq-a" id="faq-a5" role="region"><div class="faq-a-inner">Yes. Emma sends job cards via SMS and WhatsApp — you enter them into any CRM in 60 seconds. Prefer automation? We offer Zapier webhook integration that connects to anything with an API.</div></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false" aria-controls="faq-a6">
           <span class="faq-q-text">What if I go over 600 minutes?</span>
-          <span class="faq-icon">+</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
         </button>
-        <div class="faq-a"><div class="faq-a-inner">600 minutes covers around 220 calls. If you're consistently hitting the cap, contact us — we'll discuss your volume needs directly rather than letting costs spike unexpectedly. Overage rate is $0.40/min and you'll always see your usage in the monthly report.</div></div>
+        <div class="faq-a" id="faq-a6" role="region"><div class="faq-a-inner">600 minutes covers ~220 calls. If you're consistently hitting the cap, contact us — we'll discuss your volume needs rather than letting costs spike. Overage is $0.40/min and you'll see your usage in the monthly report.</div></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ─── TESTIMONIAL ───────────────────────────────────────── -->
-<section id="proof">
+<!-- PROOF -->
+<section id="proof" aria-labelledby="proof-h">
   <div class="wrap">
-    <span class="label">Results</span>
-    <h2 class="fade-up">What Happens in the First Week</h2>
+    <span class="label" aria-hidden="true">Results</span>
+    <h2 id="proof-h" class="fade-up">What Happens in the First Week</h2>
     <div class="test-card fade-up">
-      <div class="test-stars">★★★★★</div>
+      <div class="test-stars" aria-label="5 stars">★★★★★</div>
       <p class="test-quote">"I missed a sewage backup call in Astoria on a Saturday night — $800 job, gone to the next guy on Google. Set up Breculia that Monday. By Thursday it had captured two after-hours emergencies. Paid for itself immediately."</p>
       <div class="test-author">
-        <div class="test-av">TV</div>
+        <div class="test-av" aria-hidden="true">TV</div>
         <div>
           <div class="test-name">Tony V.</div>
           <div class="test-detail">Master Plumber · 8 years · Queens, NY · Sewage &amp; drain specialist</div>
@@ -812,30 +900,34 @@ html.light .faq-q:hover{background:rgba(22,163,74,0.04)}
   </div>
 </section>
 
-<!-- ─── BOOK ───────────────────────────────────────────────── -->
-<section id="book">
+<!-- BOOK -->
+<section id="book" aria-labelledby="book-h">
   <div class="wrap">
     <div class="book-wrap">
-      <span class="label">Book Your Demo</span>
-      <div class="book-title">See Emma Capture a Real Emergency — Live, From Your Own Phone.</div>
-      <p class="book-sub">15 minutes. You'll call Emma directly during the call and see the job card arrive on your phone in real time. No slides, no pitch. Just the product working.</p>
+      <span class="label" aria-hidden="true">Book Your Demo</span>
+      <h2 id="book-h" class="book-title">See Emma Capture a Real Emergency — Live, From Your Own Phone.</h2>
+      <p class="book-sub">15 minutes. Call Emma directly and see the job card arrive on your phone in real time. No slides, no pitch. Just the product working.</p>
       <div class="book-options">
-        <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3iTx2DnWIYJw8dxUYGvbvG_2H0-9Ydc9NFHeGThZwVxzYew0xB1vN61xEhvQaVscCpwHKL0YOK?gv=true" target="_blank" rel="noopener noreferrer" class="book-opt">
-          <div class="book-opt-icon">📅</div>
+        <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3iTx2DnWIYJw8dxUYGvbvG_2H0-9Ydc9NFHeGThZwVxzYew0xB1vN61xEhvQaVscCpwHKL0YOK?gv=true"
+           target="_blank" rel="noopener noreferrer" class="book-opt"
+           aria-label="Book a demo via Google Calendar">
+          <div class="book-opt-icon" aria-hidden="true">📅</div>
           <div>
             <strong>Pick a Time — Google Calendar</strong>
             <span>Choose a 15-min slot. Google Meet link sent instantly.</span>
           </div>
         </a>
-        <a href="https://www.linkedin.com/in/rishe-s-t/" target="_blank" rel="noopener noreferrer" class="book-opt">
-          <div class="book-opt-icon">💼</div>
+        <a href="https://www.linkedin.com/in/rishe-s-t/" target="_blank" rel="noopener noreferrer" class="book-opt"
+           aria-label="Connect on LinkedIn">
+          <div class="book-opt-icon" aria-hidden="true">💼</div>
           <div>
             <strong>Connect on LinkedIn</strong>
             <span>Message Rishe directly — reply within the hour.</span>
           </div>
         </a>
-        <a href="mailto:founder@breculia.tech?subject=Demo%20Request&body=Hi%20Rishe%2C%20I%20want%20to%20see%20a%20live%20Emma%20demo." class="book-opt">
-          <div class="book-opt-icon">✉️</div>
+        <a href="mailto:founder@breculia.tech?subject=Demo%20Request&body=Hi%20Rishe%2C%20I%20want%20to%20see%20a%20live%20Emma%20demo."
+           class="book-opt" aria-label="Email founder@breculia.tech">
+          <div class="book-opt-icon" aria-hidden="true">✉️</div>
           <div>
             <strong>Email founder@breculia.tech</strong>
             <span>Include your borough and how many calls you miss per week.</span>
@@ -843,7 +935,7 @@ html.light .faq-q:hover{background:rgba(22,163,74,0.04)}
         </a>
       </div>
       <div class="founder-strip fade-up">
-        <div class="founder-av">RS</div>
+        <div class="founder-av" aria-hidden="true">RS</div>
         <p><strong>Built by Rishe S T</strong> — founder-run, direct support. I personally handle every onboarding, every deployment, every question. You deal with me, not a support ticket.</p>
       </div>
     </div>
@@ -861,10 +953,12 @@ html.light .faq-q:hover{background:rgba(22,163,74,0.04)}
   </div>
 </footer>
 
-<div id="sticky"><a href="#book" id="stickyLink">⏰ 10 Spots Left — Book My Free 15-Min Demo →</a></div>
+<div id="sticky" role="banner" aria-label="Sticky call to action">
+  <a href="#book" id="stickyLink">⏰ 10 Spots Left — Book My Free 15-Min Demo →</a>
+</div>
 
 <script>
-/* ── THEME ──────────────────────────────────────── */
+/* ── THEME ── */
 (function(){
   var html=document.documentElement,btn=document.getElementById('themeBtn'),
       meta=document.querySelector('meta[name="theme-color"]');
@@ -872,8 +966,8 @@ html.light .faq-q:hover{background:rgba(22,163,74,0.04)}
     if(t==='light'){html.classList.add('light');if(meta)meta.setAttribute('content','#f8f8f8');}
     else{html.classList.remove('light');if(meta)meta.setAttribute('content','#080808');}
   }
-  var stored=localStorage.getItem('bt');
-  if(stored)apply(stored);
+  var s=localStorage.getItem('bt');
+  if(s)apply(s);
   else if(window.matchMedia&&window.matchMedia('(prefers-color-scheme:light)').matches)apply('light');
   if(btn)btn.addEventListener('click',function(){
     var n=html.classList.contains('light')?'dark':'light';
@@ -881,26 +975,37 @@ html.light .faq-q:hover{background:rgba(22,163,74,0.04)}
   });
 })();
 
-/* ── HERO WORD ANIMATION ────────────────────────── */
+/* ── HERO WORD ANIMATION — runs after fonts load to prevent CLS ── */
 (function(){
-  var h=document.querySelector('#heroH1 .line1');
-  if(!h)return;
-  ['#heroH1 .line1','#heroH1 .line2'].forEach(function(sel,si){
-    var el=document.querySelector(sel);
-    if(!el)return;
-    var txt=el.textContent,words=txt.split(' ');
-    el.innerHTML='';
-    words.forEach(function(w,i){
-      var s=document.createElement('span');
-      s.className='word';s.textContent=w+' ';
-      s.style.animation='wordIn 0.5s forwards';
-      s.style.animationDelay=(200+si*200+i*90)+'ms';
-      el.appendChild(s);
+  function animateWords(){
+    ['.h1-l1','.h1-l2','.h1-l3'].forEach(function(sel,si){
+      var el=document.querySelector(sel);
+      if(!el)return;
+      /* save text before destroying it */
+      var txt=el.textContent.trim();
+      var words=txt.split(/\s+/);
+      el.innerHTML='';
+      words.forEach(function(w,i){
+        var s=document.createElement('span');
+        s.className='word';
+        s.textContent=w;
+        s.style.animationDelay=(150+si*180+i*80)+'ms';
+        el.appendChild(s);
+        /* add space between words */
+        if(i<words.length-1)el.appendChild(document.createTextNode('\u00a0'));
+      });
     });
-  });
+  }
+  /* wait for fonts to avoid measuring shift */
+  if(document.fonts&&document.fonts.ready){
+    document.fonts.ready.then(animateWords);
+  } else {
+    /* fallback: slight delay so paint happens first */
+    setTimeout(animateWords,200);
+  }
 })();
 
-/* ── FADE-UP OBSERVER ───────────────────────────── */
+/* ── FADE-UP ── */
 (function(){
   var els=document.querySelectorAll('.fade-up');
   if(!('IntersectionObserver' in window)){
@@ -910,11 +1015,11 @@ html.light .faq-q:hover{background:rgba(22,163,74,0.04)}
     entries.forEach(function(e){
       if(e.isIntersecting){e.target.classList.add('in');obs.unobserve(e.target);}
     });
-  },{threshold:0.12});
+  },{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
   els.forEach(function(e){obs.observe(e)});
 })();
 
-/* ── SMOOTH SCROLL ──────────────────────────────── */
+/* ── SMOOTH SCROLL ── */
 document.querySelectorAll('a[href^="#"]').forEach(function(a){
   a.addEventListener('click',function(e){
     var t=document.querySelector(this.getAttribute('href'));
@@ -922,36 +1027,37 @@ document.querySelectorAll('a[href^="#"]').forEach(function(a){
   });
 });
 
-/* ── SCARCITY TOAST ─────────────────────────────── */
+/* ── SCARCITY TOAST ── */
 (function(){
   var t=document.getElementById('sToast');if(!t)return;
-  window.addEventListener('scroll',function onS(){
-    if(window.scrollY>300){
+  var shown=false;
+  window.addEventListener('scroll',function(){
+    if(!shown&&window.scrollY>280){
+      shown=true;
       t.classList.add('show');
       setTimeout(function(){t.classList.remove('show');},4500);
-      window.removeEventListener('scroll',onS);
     }
-  });
+  },{passive:true});
 })();
 
-/* ── STICKY BAR ─────────────────────────────────── */
+/* ── STICKY BAR ── */
 (function(){
   var bar=document.getElementById('sticky');if(!bar)return;
-  var bookSection=document.getElementById('book');
+  var bookEl=document.getElementById('book');
   window.addEventListener('scroll',function(){
-    var ratio=window.scrollY/(document.body.scrollHeight-window.innerHeight);
-    var bookVisible=bookSection&&bookSection.getBoundingClientRect().top<window.innerHeight;
-    if(ratio>0.55&&!bookVisible){
+    var ratio=window.scrollY/(document.body.scrollHeight-window.innerHeight)||0;
+    var bookInView=bookEl&&bookEl.getBoundingClientRect().top<window.innerHeight;
+    if(ratio>0.52&&!bookInView){
       bar.style.display='block';
-      document.body.style.paddingBottom='48px';
+      document.body.style.paddingBottom='46px';
     }else{
       bar.style.display='none';
       document.body.style.paddingBottom='0';
     }
-  });
+  },{passive:true});
 })();
 
-/* ── FAQ ACCORDION ──────────────────────────────── */
+/* ── FAQ ── */
 function toggleFaq(btn){
   var item=btn.parentElement;
   var isOpen=item.classList.contains('open');
@@ -965,21 +1071,29 @@ function toggleFaq(btn){
   }
 }
 
-/* ── ROI CALCULATOR ─────────────────────────────── */
+/* ── ROI CALC ── */
 function calcROI(){
-  var calls=+document.getElementById('callsRange').value;
-  var missed=+document.getElementById('missedRange').value/100;
-  var val=+document.getElementById('valueRange').value;
+  var calls=+document.getElementById('callsRange').value||20;
+  var missed=+document.getElementById('missedRange').value/100||0.3;
+  var val=+document.getElementById('valueRange').value||750;
+
+  /* update aria-valuenow */
+  document.getElementById('callsRange').setAttribute('aria-valuenow',calls);
+  document.getElementById('missedRange').setAttribute('aria-valuenow',Math.round(missed*100));
+  document.getElementById('valueRange').setAttribute('aria-valuenow',val);
+
   document.getElementById('callsVal').textContent=calls;
   document.getElementById('missedVal').textContent=Math.round(missed*100)+'%';
   document.getElementById('valueVal').textContent='$'+val;
-  var weeklyMissed=Math.round(calls*missed);
-  var monthly=Math.round(weeklyMissed*4.3*val*0.65);
+
+  var wkMissed=Math.round(calls*missed);
+  var monthly=Math.round(wkMissed*4.3*val*0.65);
   var annual=monthly*12;
   var cost=997;
-  var netMonthly=monthly-cost;
-  var payDays=netMonthly>0?Math.max(1,Math.round(cost/monthly*30)):999;
-  var roi3=Math.round(((netMonthly*3)/( cost*3))*100);
+  var net=monthly-cost;
+  var payDays=net>0?Math.max(1,Math.round(cost/monthly*30)):99;
+  var roi3=net>0?Math.round((net*3/(cost*3))*100):0;
+
   document.getElementById('resMo').textContent='$'+monthly.toLocaleString();
   document.getElementById('resAnn').textContent='$'+annual.toLocaleString();
   document.getElementById('resPay').textContent=payDays<=30?payDays+' days':'30+ days';
