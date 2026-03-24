@@ -43,7 +43,7 @@
 {"@context":"https://schema.org","@type":"Service","name":"AI Voice Receptionist for Plumbers","provider":{"@type":"Organization","name":"Breculia AI","url":"https://breculia.tech"},"areaServed":{"@type":"City","name":"New York City"},"serviceType":"AI Voice Receptionist","offers":{"@type":"Offer","name":"Breculia AI All-In Package","price":"997","priceCurrency":"USD"}}
 </script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Won't the AI sound robotic on emergency calls?","acceptedAnswer":{"@type":"Answer","text":"No. Our NYC-trained voice agent handles burst pipe at 2am calls with the same calm urgency a dispatcher would."}},{"@type":"Question","name":"What if it over-promises a time?","acceptedAnswer":{"@type":"Answer","text":"Emma never promises a specific arrival time. Every call fires a live job card to your phone within 4 seconds. You call back to confirm."}},{"@type":"Question","name":"Am I locked into a contract?","acceptedAnswer":{"@type":"Answer","text":"Month-to-month. Cancel anytime with 7 days notice. 30-day ROI guarantee included."}},{"@type":"Question","name":"How fast is setup?","acceptedAnswer":{"@type":"Answer","text":"48 hours from yes to live. We handle everything."}}]}
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Won't the AI sound robotic on emergency calls?","acceptedAnswer":{"@type":"Answer","text":"No. Our NYC-trained voice agent handles burst pipe at 2am calls with the same calm urgency a dispatcher would."}},{"@type":"Question","name":"What if it over-promises a time?","acceptedAnswer":{"@type":"Answer","text":"Emma never promises a specific arrival time. Every call fires a live job card to your phone within 4 seconds. You call back to confirm."}},{"@type":"Question","name":"Am I locked into a contract?","acceptedAnswer":{"@type":"Answer","text":"Month-to-month. Cancel anytime with 7 days notice. 30-day ROI guarantee included."}},{"@type":"Question","name":"How fast is setup?","acceptedAnswer":{"@type":"Answer","text":"48 hours from yes to live. We handle everything."}},{"@type":"Question","name":"How do I know this is legitimate?","acceptedAnswer":{"@type":"Answer","text":"Search 'Rishe S' on Google — you'll find the founder's LinkedIn, background in tech (5+ years), and history building automation systems. You can also book a free demo to live test before paying a single dollar."}}]}
 </script>
 
 <style>
@@ -493,6 +493,30 @@ footer{border-top:1px solid var(--border);padding:26px 0;background:var(--bg2)}
 }
 @media(min-width:680px){.wrap{padding:0 24px}}
 
+/* ── FOUNDER TRUST SECTION ── */
+#founder-trust{background:var(--bg2)}
+.founder-card{display:flex;flex-direction:column;align-items:center;gap:28px;margin-top:32px;
+  background:var(--bg);border:1px solid var(--border);border-radius:12px;padding:32px;text-align:center}
+@media(min-width:560px){.founder-card{flex-direction:row;text-align:left;align-items:flex-start}}
+.founder-photo{flex-shrink:0;width:96px;height:96px;border-radius:50%;object-fit:cover;
+  border:2.5px solid var(--green);box-shadow:0 0 20px var(--glow)}
+.founder-info h3{font-size:1.1rem;margin-bottom:6px}
+.founder-info p{font-size:0.88rem;line-height:1.7;margin-bottom:16px}
+.founder-links{display:flex;flex-wrap:wrap;gap:10px}
+.founder-link{display:inline-flex;align-items:center;gap:6px;font-size:0.82rem;font-weight:600;
+  padding:8px 14px;border-radius:6px;border:1.5px solid var(--border2);color:var(--text);
+  transition:border-color 0.2s,color 0.2s}
+.founder-link:hover{border-color:var(--green);color:var(--green)}
+.founder-av-img{width:34px;height:34px;border-radius:50%;object-fit:cover;
+  border:1.5px solid var(--green);flex-shrink:0}
+
+/* ── YOUTUBE EMBED ── */
+.yt-wrap{margin:28px auto 0;max-width:640px;padding:0 0 8px}
+.yt-embed{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;
+  border-radius:10px;border:1px solid var(--border)}
+.yt-embed iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
+.yt-caption{text-align:center;font-size:0.8rem;color:var(--muted);margin-top:10px}
+
 /* ── LIGHT FIXES ── */
 html.light .phone-frame{background:#111;border-color:#555}
 html.light .phone-screen{background:#050505}
@@ -580,6 +604,17 @@ html.light .wa-bubble p{color:#ddd}
         <div class="hc-item" role="listitem"><div class="hc-num">4s</div><div class="hc-label">Job card to your phone</div></div>
         <div class="hc-item" role="listitem"><div class="hc-num">48h</div><div class="hc-label">From yes to live</div></div>
       </div>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="yt-wrap fade-up">
+      <div class="yt-embed">
+        <iframe src="https://www.youtube-nocookie.com/embed/h_0QtuDmib8"
+          title="Emma AI Receptionist — Live Demo for NYC Plumbers"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen loading="lazy"></iframe>
+      </div>
+      <p class="yt-caption">▶ Watch Emma capture a real emergency call — live demo</p>
     </div>
   </div>
 </section>
@@ -874,6 +909,13 @@ html.light .wa-bubble p{color:#ddd}
         </button>
         <div class="faq-a" id="faq-a6" role="region"><div class="faq-a-inner">600 minutes covers ~220 calls. If you're consistently hitting the cap, contact us — we'll discuss your volume needs rather than letting costs spike. Overage is $0.60/min and you'll see your usage in the monthly report.</div></div>
       </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false" aria-controls="faq-a7">
+          <span class="faq-q-text">How do I know this is legitimate?</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a" id="faq-a7" role="region"><div class="faq-a-inner">Search "Rishe S" on Google — you'll find my LinkedIn, my background in tech (5+ years), and my history building automation systems. My LinkedIn is also linked at the bottom of this page. You can also book a free demo call with me to live test before giving me a single dollar. No scam in history lets you test the product for free. That's my confidence in Emma AI.</div></div>
+      </div>
     </div>
   </div>
 </section>
@@ -896,6 +938,25 @@ html.light .wa-bubble p{color:#ddd}
     </div>
     <div class="pilot-bar fade-up">
       Currently deployed with NYC plumbers capturing live emergencies. <strong>Pilot spots open — direct founder onboarding, first-mover pricing locked in.</strong>
+    </div>
+  </div>
+</section>
+
+<!-- FOUNDER TRUST -->
+<section id="founder-trust" aria-labelledby="founder-h">
+  <div class="wrap">
+    <span class="label" aria-hidden="true">Founder</span>
+    <h2 id="founder-h" class="fade-up">Built By a Real Person, Not a Brand</h2>
+    <div class="founder-card fade-up">
+      <img src="rishe.jpg" alt="Rishe S, Founder of Breculia AI" class="founder-photo" width="96" height="96" loading="lazy">
+      <div class="founder-info">
+        <h3>👤 Rishe S — Founder</h3>
+        <p>I personally build and deploy every Emma agent within 48 hours of your yes. You get my direct LinkedIn or email — not a support ticket. NYC plumbers buy from people, not brands, and I'm right here. Search "Rishe S" on Google and you'll find exactly who you're dealing with.</p>
+        <div class="founder-links">
+          <a href="https://www.linkedin.com/in/rishe-s-t/" target="_blank" rel="noopener noreferrer" class="founder-link">💼 Message me on LinkedIn</a>
+          <a href="mailto:founder@breculia.tech" class="founder-link">✉️ founder@breculia.tech</a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -935,7 +996,7 @@ html.light .wa-bubble p{color:#ddd}
         </a>
       </div>
       <div class="founder-strip fade-up">
-        <div class="founder-av" aria-hidden="true">RS</div>
+        <img src="rishe.jpg" alt="Rishe S, Founder" class="founder-av-img" width="34" height="34" loading="lazy">
         <p><strong>Built by Rishe S</strong> — founder-run, direct support. I personally handle every onboarding, every deployment, every question. You deal with me, not a support ticket.</p>
       </div>
     </div>
