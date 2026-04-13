@@ -8,7 +8,7 @@
 <meta name="description" content="Emma answers every missed call 24/7, captures job details, and sends a WhatsApp job card in under 5 seconds. Built for HVAC, plumbing, roofing, and electrical contractors. 30-day satisfaction guarantee.">
 <meta name="keywords" content="AI receptionist contractor, HVAC answering service, plumbing AI receptionist, roofing call answering, electrical contractor AI, 24/7 contractor receptionist, missed call recovery contractor, Emma AI voice agent">
 <meta name="author" content="Breculia AI">
-<meta name="theme-color" content="#080808">
+<meta name="theme-color" content="#ffffff">
 <meta property="og:title" content="Every Call Answered. Every Job Captured. 24/7. — Breculia AI">
 <meta property="og:description" content="Emma answers your missed calls, captures job details, and sends you a WhatsApp job card in under 5 seconds. While you're on a job, under a sink, or asleep.">
 <meta property="og:type" content="website">
@@ -33,7 +33,7 @@
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"></noscript>
 
 <!-- Inline theme to prevent flash -->
-<script>(function(){var t=localStorage.getItem('bt');if(t==='light'||(!t&&window.matchMedia&&window.matchMedia('(prefers-color-scheme:light)').matches)){document.documentElement.classList.add('light')}})();</script>
+<script>(function(){var t=localStorage.getItem('bt');if(t!=='dark'){document.documentElement.classList.add('light')}})();</script>
 
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"ProfessionalService","name":"Breculia AI","description":"24/7 AI voice receptionist for contractors. Emma answers every missed call, captures job details, and sends WhatsApp job cards instantly. Built for HVAC, plumbing, roofing, and electrical businesses.","url":"https://breculia.tech","email":"founder@breculia.tech","serviceType":["HVAC","Plumbing","Roofing","Electrical"],"image":"https://breculia.tech/logo-og.png"}
@@ -62,13 +62,13 @@
   color-scheme:dark;
 }
 html.light{
-  --bg:#f5f5f7;--bg2:#ffffff;--bg3:#f2f2f2;--bg4:#e5e5ea;
-  --border:#d2d2d7;--border2:#c7c7cc;
-  --green:#1d9e44;--green2:#158236;
-  --glow:rgba(29,158,68,0.1);--glow2:rgba(29,158,68,0.05);
-  --white:#1d1d1f;--text:#424245;--muted:#86868b;
-  --badge-bg:#1d9e44;--badge-fg:#ffffff;
-  --red:#d70015;
+  --bg:#ffffff;--bg2:#fafafa;--bg3:#f5f5f7;--bg4:#e8e8ed;
+  --border:#e5e5e7;--border2:#d1d1d6;
+  --green:#22c55e;--green2:#16a34a;
+  --glow:rgba(34,197,94,0.14);--glow2:rgba(34,197,94,0.07);
+  --white:#1d1d1f;--text:#6e6e73;--muted:#a1a1aa;
+  --badge-bg:#22c55e;--badge-fg:#ffffff;
+  --red:#dc2626;
   color-scheme:light;
 }
 
@@ -219,7 +219,7 @@ html.light .phone-screen{background:#050505}
 .problem-grid{display:grid;grid-template-columns:1fr;gap:16px;margin-top:48px}
 @media(min-width:640px){.problem-grid{grid-template-columns:repeat(3,1fr)}}
 .prob-item{background:var(--bg3);border:1px solid var(--border);border-radius:20px;padding:32px 28px;text-align:center;
-  transition:transform 0.2s,box-shadow 0.2s}
+  transition:transform 0.35s cubic-bezier(0.34,1.56,0.64,1),box-shadow 0.35s ease}
 .prob-item:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,0.3)}
 .prob-num{font-family:var(--fh);font-size:clamp(2.6rem,6.5vw,4rem);font-weight:800;color:var(--green);line-height:1;margin-bottom:10px;letter-spacing:-0.02em}
 .prob-desc{font-size:0.88rem;color:var(--text);line-height:1.55}
@@ -482,9 +482,83 @@ html.light .phone-frame{background:#111;border-color:#555}
 html.light .phone-screen{background:#050505}
 html.light .chat-wrap{background:#f0f0f0;border-color:#ddd}
 html.light .chat-hdr{background:#e0e0e0;border-color:#d0d0d0}
-html.light .comp tbody td.us{background:rgba(29,158,68,0.03)}
-html.light .faq-q:hover{background:rgba(29,158,68,0.04)}
+html.light .comp tbody td.us{background:rgba(34,197,94,0.03)}
+html.light .faq-q:hover{background:rgba(34,197,94,0.04)}
 html.light .wa-bubble p{color:#ddd}
+
+/* ── PREMIUM LIGHT THEME REFINEMENTS ── */
+html.light #nav{background:rgba(255,255,255,0.92);backdrop-filter:saturate(180%) blur(24px);-webkit-backdrop-filter:saturate(180%) blur(24px);border-bottom-color:rgba(0,0,0,0.06)}
+html.light section+section{border-top-color:#ebebeb}
+html.light #problem{background:#fafafa}
+html.light #math{background:#fafafa}
+html.light #proof{background:#fafafa}
+html.light #founder-trust{background:#fafafa}
+html.light footer{background:#fafafa;border-top-color:#ebebeb}
+html.light .price-card{background:#ffffff;border-color:rgba(34,197,94,0.35);box-shadow:0 4px 32px rgba(0,0,0,0.05),0 0 0 1px rgba(34,197,94,0.1)}
+html.light .test-card{background:#ffffff;box-shadow:0 4px 24px rgba(0,0,0,0.04)}
+html.light .prob-item{background:#ffffff;box-shadow:0 2px 16px rgba(0,0,0,0.04)}
+html.light .chat-wrap{box-shadow:0 8px 40px rgba(0,0,0,0.06)}
+html.light .result-card{background:#ffffff;border-color:#e5e5e7;box-shadow:0 2px 12px rgba(0,0,0,0.04)}
+html.light .calc-wrap{box-shadow:0 4px 32px rgba(0,0,0,0.05)}
+html.light .btn-primary{color:#ffffff}
+html.light .btn-ghost{color:var(--white);border-color:rgba(29,29,31,0.25)}
+html.light .btn-ghost:hover{border-color:rgba(29,29,31,0.5);background:rgba(0,0,0,0.04)}
+
+/* ── HERO GRADIENT (premium depth) ── */
+#hero{background:radial-gradient(ellipse 90% 55% at 50% -5%,rgba(34,197,94,0.08) 0%,transparent 65%)}
+html.light #hero{background:radial-gradient(ellipse 90% 55% at 50% -5%,rgba(34,197,94,0.05) 0%,transparent 65%)}
+
+/* ── FLOAT ANIMATION (phone widget) ── */
+@keyframes floatY{0%,100%{transform:translateY(0)}50%{transform:translateY(-11px)}}
+.phone-wrap{animation:floatY 6.5s ease-in-out infinite}
+
+/* ── PREMIUM FADE-UP (blur + slide) ── */
+.fade-up{opacity:0;transform:translateY(28px);filter:blur(4px);
+  transition:opacity 0.75s cubic-bezier(0.16,1,0.3,1),transform 0.75s cubic-bezier(0.16,1,0.3,1),filter 0.75s cubic-bezier(0.16,1,0.3,1)}
+.fade-up.in{opacity:1;transform:translateY(0);filter:blur(0)}
+
+/* ── STEP STAGGER (when parent .fade-up gets .in) ── */
+.steps .step{opacity:0;transform:translateX(-14px);
+  transition:opacity 0.6s cubic-bezier(0.16,1,0.3,1),transform 0.6s cubic-bezier(0.16,1,0.3,1)}
+.steps.in .step{opacity:1;transform:translateX(0)}
+.steps.in .step:nth-child(2){transition-delay:0.09s}
+.steps.in .step:nth-child(3){transition-delay:0.18s}
+.steps.in .step:nth-child(4){transition-delay:0.27s}
+
+/* ── PROB CARD STAGGER ── */
+.problem-grid .prob-item{opacity:0;transform:translateY(16px);
+  transition:opacity 0.55s cubic-bezier(0.16,1,0.3,1),transform 0.55s cubic-bezier(0.16,1,0.3,1),box-shadow 0.35s ease}
+.problem-grid.in .prob-item{opacity:1;transform:translateY(0)}
+.problem-grid.in .prob-item:nth-child(2){transition-delay:0.1s}
+.problem-grid.in .prob-item:nth-child(3){transition-delay:0.2s}
+
+/* ── CARD SPRING HOVER ── */
+/* Override the basic hover defined earlier with a spring effect */
+.prob-item:hover{transform:translateY(-6px) scale(1.025);box-shadow:0 20px 60px rgba(0,0,0,0.2)}
+html.light .prob-item:hover{box-shadow:0 20px 60px rgba(0,0,0,0.08)}
+
+/* ── CTA BUTTON GLOW PULSE ── */
+@keyframes ctaPulse{0%,100%{box-shadow:0 4px 20px rgba(34,197,94,0.2)}50%{box-shadow:0 4px 32px rgba(34,197,94,0.45)}}
+html.light .btn-primary{animation:ctaPulse 3s ease-in-out infinite}
+html.light .btn-primary:hover{animation:none;box-shadow:0 6px 28px rgba(34,197,94,0.5)}
+
+/* ── TRADE IMAGE STRIP ── */
+section#trades{padding:0;border-top:none}
+.trades-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:0;overflow:hidden}
+@media(max-width:640px){.trades-strip{grid-template-columns:repeat(2,1fr)}}
+.trade-img-wrap{position:relative;overflow:hidden;aspect-ratio:4/3}
+.trade-img-wrap img{width:100%;height:100%;object-fit:cover;display:block;filter:brightness(0.75) saturate(0.85);transition:transform 0.75s cubic-bezier(0.16,1,0.3,1),filter 0.5s ease}
+.trade-img-wrap:hover img{transform:scale(1.07);filter:brightness(0.92) saturate(1.1)}
+.trade-img-lbl{position:absolute;bottom:0;left:0;right:0;padding:36px 18px 16px;background:linear-gradient(transparent,rgba(0,0,0,0.72));font-family:var(--fh);font-size:0.78rem;font-weight:700;color:#fff;letter-spacing:0.14em;text-transform:uppercase;pointer-events:none}
+
+/* ── SHOWCASE IMAGE ── */
+.showcase-img-wrap{position:relative;overflow:hidden;max-height:500px;line-height:0}
+/* brightness(0.35) ensures white text (#fff) meets WCAG AA contrast (>4.5:1) against darkened image */
+.showcase-img-wrap img{width:100%;height:100%;object-fit:cover;display:block;filter:brightness(0.35) saturate(0.75);transition:transform 10s ease}
+.showcase-img-wrap:hover img{transform:scale(1.03)}
+.showcase-overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:48px 24px}
+.showcase-quote{font-family:var(--fh);font-size:clamp(1.5rem,4vw,2.6rem);font-weight:700;color:#ffffff;text-align:center;line-height:1.2;letter-spacing:-0.025em;max-width:680px;text-shadow:0 2px 20px rgba(0,0,0,0.4)}
+.showcase-quote span{color:#4ade80}
 </style>
 </head>
 <body>
@@ -561,6 +635,28 @@ html.light .wa-bubble p{color:#ddd}
         <div class="hc-item" role="listitem"><div class="hc-num">4s</div><div class="hc-label">to owner notification</div></div>
         <div class="hc-item" role="listitem"><div class="hc-num">48hr</div><div class="hc-label">from yes to live</div></div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRADES SERVED (Unsplash imagery) -->
+<section id="trades" aria-label="Trade industries we serve">
+  <div class="trades-strip">
+    <div class="trade-img-wrap">
+      <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=700&h=525&q=80" alt="Professional plumber fixing pipes under a sink" loading="lazy" width="700" height="525" referrerpolicy="no-referrer">
+      <div class="trade-img-lbl">Plumbing</div>
+    </div>
+    <div class="trade-img-wrap">
+      <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=700&h=525&q=80" alt="HVAC technician servicing an air conditioning unit" loading="lazy" width="700" height="525" referrerpolicy="no-referrer">
+      <div class="trade-img-lbl">HVAC</div>
+    </div>
+    <div class="trade-img-wrap">
+      <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=700&h=525&q=80" alt="Roofing contractor working on a residential roof" loading="lazy" width="700" height="525" referrerpolicy="no-referrer">
+      <div class="trade-img-lbl">Roofing</div>
+    </div>
+    <div class="trade-img-wrap">
+      <img src="https://images.unsplash.com/photo-1581244277943-fe4a9c777189?auto=format&fit=crop&w=700&h=525&q=80" alt="Electrical contractor working on wiring panel" loading="lazy" width="700" height="525" referrerpolicy="no-referrer">
+      <div class="trade-img-lbl">Electrical</div>
     </div>
   </div>
 </section>
@@ -837,6 +933,14 @@ html.light .wa-bubble p{color:#ddd}
   </div>
 </section>
 
+<!-- SHOWCASE IMAGE (full-width visual break) -->
+<div class="showcase-img-wrap" aria-hidden="true">
+  <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1600&h=500&q=80" alt="" loading="lazy" width="1600" height="500" referrerpolicy="no-referrer">
+  <div class="showcase-overlay">
+    <p class="showcase-quote">Every call answered.<br><span>Every job captured.</span></p>
+  </div>
+</div>
+
 <!-- PRICING -->
 <section id="pricing" aria-labelledby="price-h">
   <div class="wrap">
@@ -1092,12 +1196,12 @@ html.light .wa-bubble p{color:#ddd}
   var html=document.documentElement,btn=document.getElementById('themeBtn'),
       meta=document.querySelector('meta[name="theme-color"]');
   function apply(t){
-    if(t==='light'){html.classList.add('light');if(meta)meta.setAttribute('content','#f8f8f8');}
+    if(t==='light'){html.classList.add('light');if(meta)meta.setAttribute('content','#ffffff');}
     else{html.classList.remove('light');if(meta)meta.setAttribute('content','#080808');}
   }
   var s=localStorage.getItem('bt');
-  if(s)apply(s);
-  else if(window.matchMedia&&window.matchMedia('(prefers-color-scheme:light)').matches)apply('light');
+  if(s==='dark')apply('dark');
+  else apply('light');
   if(btn)btn.addEventListener('click',function(){
     var n=html.classList.contains('light')?'dark':'light';
     apply(n);localStorage.setItem('bt',n);
