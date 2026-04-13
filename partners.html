@@ -20,7 +20,7 @@
 <script>(function(){var t=localStorage.getItem('bt');if(t==='light'||(!t&&window.matchMedia&&window.matchMedia('(prefers-color-scheme:light)').matches)){document.documentElement.classList.add('light')}})();</script>
 
 <style>
-@font-face{font-family:'Bebas Neue';font-style:normal;font-weight:400;font-display:swap;size-adjust:105%}
+
 @font-face{font-family:'DM Sans';font-style:normal;font-weight:400 600;font-display:swap;size-adjust:100%}
 
 :root{
@@ -32,7 +32,7 @@
   --badge-bg:#22c55e;--badge-fg:#000000;
   --red:#ef4444;
   --fh:'Bebas Neue','Arial Black',sans-serif;
-  --fb:'DM Sans',ui-sans-serif,system-ui,-apple-system,sans-serif;
+  --fb:'Inter',-apple-system,BlinkMacSystemFont,'SF Pro Text','Helvetica Neue',Arial,sans-serif;
   color-scheme:dark;
 }
 html.light{
@@ -61,7 +61,7 @@ body::before{content:'';position:fixed;inset:0;z-index:9998;
   pointer-events:none;opacity:0.5;will-change:transform}
 html.light body::before{opacity:0.15}
 
-.wrap{max-width:700px;margin:0 auto;padding:0 20px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
 @media(min-width:740px){.wrap{padding:0 24px}}
 section{padding:80px 0;position:relative}
 section+section{border-top:1px solid var(--border)}
@@ -78,7 +78,7 @@ p{color:var(--text);line-height:1.7}
 
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;
   padding:14px 28px;font-family:var(--fb);font-size:0.95rem;font-weight:600;
-  letter-spacing:0.02em;border-radius:6px;cursor:pointer;
+  letter-spacing:0.02em;border-radius:40px;cursor:pointer;
   transition:background 0.2s,transform 0.2s,box-shadow 0.2s;
   border:none;line-height:1;text-decoration:none}
 .btn-primary{background:var(--green);color:#000000}
@@ -131,7 +131,7 @@ html.light .kicker-text{color:var(--green2)}
 /* ── STAT BLOCK ── */
 .stat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
   gap:1px;background:var(--border);border:1px solid var(--border);
-  border-radius:10px;overflow:hidden;margin-top:32px}
+  border-radius:20px;overflow:hidden;margin-top:40px}
 .stat-item{background:var(--bg2);padding:24px 20px;text-align:center}
 .stat-num{font-family:var(--fh);font-size:clamp(2rem,5vw,2.8rem);color:var(--green);line-height:1;margin-bottom:6px}
 .stat-desc{font-size:0.82rem;color:var(--text);line-height:1.45}
@@ -149,7 +149,7 @@ html.light .kicker-text{color:var(--green2)}
 /* ── FEATURE CARDS ── */
 .feat-grid{display:grid;grid-template-columns:1fr;gap:16px;margin-top:32px}
 @media(min-width:520px){.feat-grid{grid-template-columns:repeat(3,1fr)}}
-.feat-card{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:24px 20px}
+.feat-card{background:var(--bg2);border:1px solid var(--border);border-radius:18px;padding:28px 24px}
 .feat-icon{font-size:1.6rem;margin-bottom:12px}
 .feat-card h3{margin-bottom:8px;font-size:0.97rem}
 .feat-card p{font-size:0.84rem;color:var(--text);line-height:1.6}
@@ -157,7 +157,7 @@ html.light .kicker-text{color:var(--green2)}
 /* ── PARTNER FORM ── */
 #apply{background:var(--bg2)}
 .form-wrap{max-width:560px;margin:32px auto 0}
-.form-card{background:var(--bg);border:1px solid var(--green);border-radius:12px;
+.form-card{background:var(--bg);border:1px solid rgba(34,197,94,0.4);border-radius:24px;
   padding:30px;position:relative}
 .form-glow{position:absolute;inset:-1px;border-radius:12px;
   background:linear-gradient(135deg,rgba(34,197,94,0.06),transparent 60%);pointer-events:none}
@@ -191,7 +191,7 @@ footer{border-top:1px solid var(--border);padding:26px 0;background:var(--bg2)}
 .footer-inner p{font-size:0.73rem;color:var(--muted);line-height:1.9}
 
 @media(max-width:479px){
-  section{padding:52px 0}
+  section{padding:72px 0}
   h1{font-size:2.4rem}
   h2{font-size:1.8rem}
   .btn-lg{padding:15px 24px}
@@ -223,7 +223,7 @@ footer{border-top:1px solid var(--border);padding:26px 0;background:var(--bg2)}
       <span class="kicker-dot" aria-hidden="true"></span>
       <span class="kicker-text">SMMA &amp; Agency Partner Program</span>
     </div>
-    <h1>Earn Recurring Income Every Time Your Contractor Clients Stop Losing Calls.</h1>
+    <h1>Earn recurring income every time your contractor clients stop losing calls.</h1>
     <p class="hero-sub">If you work with HVAC, plumbing, roofing, or electrical businesses — your clients are leaving thousands on the table every month. You fix that. We split the revenue.</p>
     <div class="hero-ctas">
       <a href="#apply" class="btn btn-primary btn-lg">Apply to Become a Partner →</a>
@@ -383,7 +383,7 @@ footer{border-top:1px solid var(--border);padding:26px 0;background:var(--bg2)}
 <footer>
   <div class="wrap">
     <div class="footer-inner">
-      <p>© 2026 Breculia AI · Built &amp; Operated by Rishe S · <a href="mailto:founder@breculia.tech">founder@breculia.tech</a></p>
+      <p>© 2026 Breculia AI · Built &amp; Operated by Rishe S · Serving Contractors Across TX, FL, GA, TN, NC, IN &amp; OH · <a href="mailto:founder@breculia.tech">founder@breculia.tech</a></p>
       <p><a href="index.html">Home</a> · <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms</a> · <a href="refund.html">Refund Policy</a></p>
     </div>
   </div>
