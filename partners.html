@@ -13,11 +13,11 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'">
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"></noscript>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Caveat:wght@600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Caveat:wght@600;700&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Caveat:wght@600;700&display=swap"></noscript>
 
-<script>(function(){var t=localStorage.getItem('bt');if(t==='light'||(!t&&window.matchMedia&&window.matchMedia('(prefers-color-scheme:light)').matches)){document.documentElement.classList.add('light')}})();</script>
+<script>(function(){var t=localStorage.getItem('bt');if(t==='dark'){document.documentElement.classList.remove('light')}else{document.documentElement.classList.add('light')}})();</script>
 
 <style>
 
@@ -35,13 +35,13 @@
   color-scheme:dark;
 }
 html.light{
-  --bg:#f5f5f7;--bg2:#ffffff;--bg3:#f2f2f2;--bg4:#e5e5ea;
-  --border:#d2d2d7;--border2:#c7c7cc;
-  --green:#1d9e44;--green2:#158236;
-  --glow:rgba(29,158,68,0.1);--glow2:rgba(29,158,68,0.05);
-  --white:#1d1d1f;--text:#424245;--muted:#86868b;
-  --badge-bg:#1d9e44;--badge-fg:#ffffff;
-  --red:#d70015;
+  --bg:#ffffff;--bg2:#fafafa;--bg3:#f5f5f7;--bg4:#e8e8ed;
+  --border:#e5e5e7;--border2:#d1d1d6;
+  --green:#22c55e;--green2:#16a34a;
+  --glow:rgba(34,197,94,0.14);--glow2:rgba(34,197,94,0.07);
+  --white:#1d1d1f;--text:#6e6e73;--muted:#a1a1aa;
+  --badge-bg:#22c55e;--badge-fg:#ffffff;
+  --red:#dc2626;
   color-scheme:light;
 }
 
@@ -61,8 +61,9 @@ footer a:hover{color:var(--green);text-decoration-color:var(--green)}
 section{padding:120px 0;position:relative}
 section+section{border-top:1px solid var(--border)}
 
-.label{display:inline-flex;align-items:center;gap:6px;font-size:0.68rem;font-weight:600;
-  letter-spacing:0.18em;text-transform:uppercase;color:var(--green);margin-bottom:16px}
+.label{display:inline-flex;align-items:center;gap:6px;
+  font-family:'Caveat',cursive;font-size:1.05rem;font-weight:700;
+  letter-spacing:0.06em;color:var(--green);margin-bottom:16px}
 .label::before{content:'';width:20px;height:2px;background:var(--green);border-radius:1px;flex-shrink:0}
 h1{font-family:var(--fh);font-size:clamp(2.8rem,7vw,5rem);font-weight:800;
   line-height:1.02;letter-spacing:-0.025em;color:var(--white)}
@@ -191,6 +192,145 @@ footer{border-top:1px solid var(--border);padding:26px 0;background:var(--bg2)}
   h2{font-size:1.8rem}
   .btn-lg{padding:15px 24px}
 }
+
+/* ── GLASSMORPHISM / LIQUID GLASS ── */
+@keyframes liquidShimmer{0%{left:-75%;opacity:1}100%{left:125%;opacity:0}}
+
+/* Background gradient orbs */
+html.light body::before{content:'';position:fixed;top:-120px;right:-120px;
+  width:700px;height:700px;border-radius:50%;pointer-events:none;z-index:-1;
+  background:radial-gradient(ellipse,rgba(34,197,94,0.09) 0%,transparent 62%);
+  filter:blur(60px);}
+html.light body::after{content:'';position:fixed;bottom:-100px;left:-100px;
+  width:580px;height:580px;border-radius:50%;pointer-events:none;z-index:-1;
+  background:radial-gradient(ellipse,rgba(34,197,94,0.06) 0%,transparent 62%);
+  filter:blur(60px);}
+
+/* Glass cards */
+html.light .feat-card{
+  background:rgba(255,255,255,0.62);
+  backdrop-filter:blur(18px) saturate(160%);
+  -webkit-backdrop-filter:blur(18px) saturate(160%);
+  border:1px solid rgba(255,255,255,0.75);
+  box-shadow:0 8px 32px rgba(0,0,0,0.06),0 2px 8px rgba(0,0,0,0.03);
+  position:relative;overflow:hidden;}
+html.light .feat-card::before{content:'';position:absolute;inset:0;border-radius:inherit;
+  pointer-events:none;background:linear-gradient(135deg,rgba(255,255,255,0.14) 0%,transparent 55%);}
+html.light .feat-card::after{content:'';position:absolute;
+  top:-50%;left:-75%;width:50%;height:200%;
+  background:linear-gradient(105deg,transparent 35%,rgba(255,255,255,0.24) 50%,transparent 65%);
+  transform:skewX(-15deg);opacity:0;pointer-events:none;}
+html.light .feat-card:hover::after{opacity:1;animation:liquidShimmer 0.65s ease-out forwards;}
+
+html.light .stat-grid{
+  background:rgba(255,255,255,0.55);
+  backdrop-filter:blur(18px) saturate(160%);
+  -webkit-backdrop-filter:blur(18px) saturate(160%);
+  border-color:rgba(255,255,255,0.72);}
+html.light .stat-item{background:transparent;}
+
+html.light .form-card{
+  background:rgba(255,255,255,0.7);
+  backdrop-filter:blur(20px) saturate(170%);
+  -webkit-backdrop-filter:blur(20px) saturate(170%);
+  border:1px solid rgba(255,255,255,0.82);
+  box-shadow:0 12px 40px rgba(0,0,0,0.06),0 0 0 1px rgba(34,197,94,0.1);
+  position:relative;overflow:hidden;}
+html.light .form-card::before{content:'';position:absolute;inset:0;border-radius:inherit;
+  pointer-events:none;background:linear-gradient(135deg,rgba(255,255,255,0.16) 0%,transparent 55%);}
+
+/* Commission pill */
+.commission-pill{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:10px 22px;background:var(--glow);
+  border:1.5px solid rgba(34,197,94,0.3);
+  border-radius:40px;margin-bottom:24px;
+  font-size:0.95rem;color:var(--green);}
+html.light .commission-pill{
+  background:rgba(34,197,94,0.08);border-color:rgba(34,197,94,0.25);}
+.commission-dot{width:8px;height:8px;border-radius:50%;background:var(--green);
+  box-shadow:0 0 8px var(--green);animation:pulse 1.6s infinite;flex-shrink:0}
+
+/* Commission grid */
+.comm-grid{display:grid;grid-template-columns:1fr;gap:16px;margin-top:40px}
+@media(min-width:520px){.comm-grid{grid-template-columns:repeat(3,1fr)}}
+.comm-card{
+  background:var(--bg3);border:1px solid var(--border);border-radius:20px;
+  padding:28px 24px;text-align:center;
+  transition:transform 0.35s cubic-bezier(0.34,1.56,0.64,1),box-shadow 0.35s ease;
+  position:relative;overflow:hidden;}
+.comm-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,0.12)}
+.comm-card--highlight{border-color:rgba(34,197,94,0.4);background:var(--glow2)}
+.comm-clients{font-family:var(--fh);font-size:0.75rem;font-weight:700;letter-spacing:0.12em;
+  text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.comm-earn{font-family:var(--fh);font-size:clamp(1.8rem,4vw,2.6rem);font-weight:800;
+  color:var(--green);line-height:1;letter-spacing:-0.02em;margin-bottom:6px}
+.comm-earn span{font-size:1rem;font-weight:500;color:var(--text)}
+.comm-desc{font-size:0.78rem;color:var(--text)}
+html.light .comm-card{
+  background:rgba(255,255,255,0.62);
+  backdrop-filter:blur(18px) saturate(160%);
+  -webkit-backdrop-filter:blur(18px) saturate(160%);
+  border:1px solid rgba(255,255,255,0.75);
+  box-shadow:0 8px 32px rgba(0,0,0,0.06);}
+html.light .comm-card--highlight{
+  background:rgba(34,197,94,0.07);
+  border-color:rgba(34,197,94,0.35);}
+html.light .comm-card::before{content:'';position:absolute;inset:0;border-radius:inherit;
+  pointer-events:none;background:linear-gradient(135deg,rgba(255,255,255,0.14) 0%,transparent 55%);}
+
+/* Retention callout */
+.ret-callout{
+  margin:28px 0;padding:24px 28px;
+  background:rgba(34,197,94,0.06);
+  border:1px solid rgba(34,197,94,0.18);
+  border-left:3px solid var(--green);
+  border-radius:16px;}
+.ret-callout p{font-size:1rem;color:var(--white);line-height:1.75;margin:0}
+.ret-callout strong{color:var(--green)}
+html.light .ret-callout p{color:var(--white)}
+
+/* Demo CTA section */
+#demo-cta{background:var(--bg)}
+.demo-cta-box{
+  max-width:620px;margin:0 auto;text-align:center;
+  padding:56px 40px;
+  background:var(--bg3);
+  border:1px solid rgba(34,197,94,0.35);
+  border-radius:28px;margin-top:48px;
+  box-shadow:0 0 0 1px rgba(34,197,94,0.08),0 24px 60px rgba(0,0,0,0.35);
+  position:relative;overflow:hidden;}
+html.light .demo-cta-box{
+  background:rgba(255,255,255,0.72);
+  backdrop-filter:blur(24px) saturate(180%);
+  -webkit-backdrop-filter:blur(24px) saturate(180%);
+  border:1px solid rgba(255,255,255,0.85);
+  box-shadow:0 16px 56px rgba(0,0,0,0.07),0 0 0 1px rgba(34,197,94,0.12);}
+html.light .demo-cta-box::before{content:'';position:absolute;inset:0;border-radius:inherit;
+  pointer-events:none;background:linear-gradient(135deg,rgba(255,255,255,0.18) 0%,transparent 55%);}
+.demo-cta-box h2{font-family:var(--fh);font-size:clamp(1.7rem,4vw,2.6rem);font-weight:800;
+  color:var(--white);margin-bottom:14px;line-height:1.1;letter-spacing:-0.02em}
+.demo-cta-box p{font-size:0.97rem;color:var(--text);line-height:1.7;margin-bottom:28px;max-width:480px;margin-left:auto;margin-right:auto}
+.demo-cta-note{display:block;font-size:0.78rem;color:var(--muted);margin-top:14px;text-align:center;line-height:1.55}
+
+/* Nav light mode */
+html.light #nav{background:rgba(255,255,255,0.9);backdrop-filter:saturate(180%) blur(24px);
+  -webkit-backdrop-filter:saturate(180%) blur(24px);border-bottom-color:rgba(0,0,0,0.06)}
+/* Hero gradient */
+#hero{background:radial-gradient(ellipse 90% 55% at 50% -5%,rgba(34,197,94,0.07) 0%,transparent 65%)}
+html.light #hero{background:radial-gradient(ellipse 90% 55% at 50% -5%,rgba(34,197,94,0.05) 0%,transparent 65%)}
+/* CTA glow pulse light mode */
+html.light .btn-primary{animation:ctaPulse 3s ease-in-out infinite}
+html.light .btn-primary:hover{animation:none;box-shadow:0 6px 28px rgba(34,197,94,0.5)}
+@keyframes ctaPulse{0%,100%{box-shadow:0 4px 20px rgba(34,197,94,0.2)}50%{box-shadow:0 4px 32px rgba(34,197,94,0.45)}}
+/* Fade up */
+.fade-up{opacity:0;transform:translateY(20px);transition:opacity 0.5s ease,transform 0.5s ease}
+.fade-up.in{opacity:1;transform:translateY(0)}
+/* Section borders in light */
+html.light section+section{border-top-color:#ebebeb}
+html.light footer{background:#fafafa;border-top-color:#ebebeb}
+html.light .callout p{color:var(--white)}
+
 </style>
 </head>
 <body>
@@ -214,15 +354,54 @@ footer{border-top:1px solid var(--border);padding:26px 0;background:var(--bg2)}
 <!-- HERO -->
 <section id="hero" aria-label="Partner Hero">
   <div class="wrap">
+    <!-- Commission pill — FIRST thing an agency founder reads -->
+    <div class="commission-pill" role="note">
+      <span class="commission-dot" aria-hidden="true"></span>
+      <strong>20% recurring commission</strong> — every month they stay
+    </div>
     <div class="hero-kicker">
       <span class="kicker-dot" aria-hidden="true"></span>
       <span class="kicker-text">SMMA &amp; Agency Partner Program</span>
     </div>
-    <h1>Earn recurring income every time your contractor clients stop losing calls.</h1>
-    <p class="hero-sub">If you work with HVAC, plumbing, roofing, or electrical businesses — your clients are leaving thousands on the table every month. You fix that. We split the revenue.</p>
+    <h1>Stop your clients from blaming your marketing when they fail to answer the phone.</h1>
+    <p class="hero-sub">You're driving traffic that generates calls. Your contractor client isn't answering. Now they say your ads don't work — and you lose the account. Emma answers every call 24/7, fires a WhatsApp job card in 5 seconds, and plugs the leak. You earn 20% every month they stay.</p>
     <div class="hero-ctas">
-      <a href="#apply" class="btn btn-primary btn-lg">Apply to Become a Partner →</a>
-      <a href="index.html" class="btn btn-ghost">See How Emma Works</a>
+      <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3iTx2DnWIYJw8dxUYGvbvG_2H0-9Ydc9NFHeGThZwVxzYew0xB1vN61xEhvQaVscCpwHKL0YOK?gv=true"
+         target="_blank" rel="noopener noreferrer"
+         class="btn btn-primary btn-lg"
+         aria-label="Book a Google Meet to hear Emma interact live">
+        📅 Book a Google Meet — Hear Emma Interact Live →
+      </a>
+      <span class="cta-note" style="text-align:left;display:block;margin-top:8px">15 minutes. No pitch. No slides. You'll hear Emma handle a real contractor call and decide for yourself.</span>
+    </div>
+  </div>
+</section>
+
+<!-- COMMISSION MATH -->
+<section id="commission" aria-labelledby="comm-h" style="background:var(--bg2)">
+  <div class="wrap">
+    <span class="label" aria-hidden="true">Your Recurring Revenue</span>
+    <h2 id="comm-h" class="fade-up">Your Recurring Revenue Stack</h2>
+    <p style="color:var(--text);margin-top:8px;font-size:0.95rem;max-width:540px;line-height:1.7">You earn 20% of every month your referred client pays. Typically <strong style="color:var(--white)">$150–$200 per client, per month, forever</strong>. Zero delivery work after the referral.</p>
+    <div class="comm-grid fade-up" role="list">
+      <div class="comm-card" role="listitem">
+        <div class="comm-clients">5 clients</div>
+        <div class="comm-earn">$150–$200<span>/mo</span></div>
+        <div class="comm-desc">passive recurring income</div>
+      </div>
+      <div class="comm-card comm-card--highlight" role="listitem">
+        <div class="comm-clients">10 clients</div>
+        <div class="comm-earn">$300–$400<span>/mo</span></div>
+        <div class="comm-desc">passive recurring income</div>
+      </div>
+      <div class="comm-card" role="listitem">
+        <div class="comm-clients">20 clients</div>
+        <div class="comm-earn">$600–$800<span>/mo</span></div>
+        <div class="comm-desc">passive recurring income</div>
+      </div>
+    </div>
+    <div class="callout fade-up">
+      <p><strong>Zero delivery work.</strong> You introduce them — we handle voice configuration, phone number, WhatsApp integration, onboarding, and support. Everything. You just earn every month they stay active.</p>
     </div>
   </div>
 </section>
@@ -262,9 +441,12 @@ footer{border-top:1px solid var(--border);padding:26px 0;background:var(--bg2)}
 <!-- WHY IT WORKS FOR YOUR CLIENTS -->
 <section id="why" aria-labelledby="why-h" style="background:var(--bg2)">
   <div class="wrap">
-    <span class="label" aria-hidden="true">The Problem Your Clients Have</span>
-    <h2 id="why-h" class="fade-up">Why It Works for Your Clients</h2>
-    <p style="color:var(--text);margin-top:8px;font-size:0.95rem;max-width:520px;line-height:1.7">The numbers are brutal. Every contractor you work with faces the same problem — and most don't know the scale of what they're losing.</p>
+    <span class="label" aria-hidden="true">The Problem You Inherit</span>
+    <h2 id="why-h" class="fade-up">When Your Clients Don't Answer, Your Marketing Gets the Blame.</h2>
+    <div class="ret-callout fade-up">
+      <p>You run the campaign. You drive the traffic. Calls come in. The contractor doesn't pick up. Now they tell you your ads "don't convert." <strong>Emma ends that conversation.</strong> Every call gets answered. Every lead gets captured. Your campaign proves it works.</p>
+    </div>
+    <p style="color:var(--text);margin-top:28px;font-size:0.95rem;max-width:520px;line-height:1.7">The numbers behind every contractor you work with. Most don't know the scale of what they're losing.</p>
     <div class="stat-grid fade-up" role="list">
       <div class="stat-item" role="listitem">
         <div class="stat-num">74%</div>
@@ -284,7 +466,7 @@ footer{border-top:1px solid var(--border);padding:26px 0;background:var(--bg2)}
       </div>
     </div>
     <div class="callout fade-up">
-      <p>When you present these numbers to a contractor client, they already know it's true — they just don't have a number on it. <strong>You show them the number. Emma fixes it. You earn every month they stay.</strong></p>
+      <p>When you present these numbers to a contractor client, they already know it's true — they just don't have a number on it. <strong>You show them the number. Emma fixes it. You protect the client relationship — and earn 20% while you do it.</strong></p>
     </div>
   </div>
 </section>
@@ -314,61 +496,21 @@ footer{border-top:1px solid var(--border);padding:26px 0;background:var(--bg2)}
   </div>
 </section>
 
-<!-- APPLY FORM -->
-<section id="apply" aria-labelledby="apply-h">
+<!-- LIVE DEMO CTA -->
+<section id="demo-cta" aria-labelledby="demo-cta-h">
   <div class="wrap">
-    <span class="label" aria-hidden="true">Apply Now</span>
-    <h2 id="apply-h" style="text-align:center" class="fade-up">Apply to Become a Breculia Partner</h2>
-    <p style="text-align:center;color:var(--text);margin-top:8px;font-size:0.92rem;max-width:480px;margin-left:auto;margin-right:auto;line-height:1.7">Tell us about your agency and the clients you serve. Rishe reviews every application personally and responds within 24 hours.</p>
-    <div class="form-wrap">
-      <div class="form-card fade-up">
-        <div class="form-glow" aria-hidden="true"></div>
-        <form id="partnerForm" onsubmit="submitPartnerForm(event)" novalidate>
-          <div class="form-row">
-            <label for="partnerName">Your Full Name <span style="color:var(--red)">*</span></label>
-            <input type="text" id="partnerName" name="name" placeholder="Jane Smith" required autocomplete="name">
-          </div>
-          <div class="form-row">
-            <label for="agencyName">Agency / Company Name <span style="color:var(--red)">*</span></label>
-            <input type="text" id="agencyName" name="agency" placeholder="Growth Co." required>
-          </div>
-          <div class="form-row">
-            <label for="website">Website</label>
-            <input type="url" id="website" name="website" placeholder="https://yourwebsite.com" autocomplete="url">
-          </div>
-          <div class="form-row">
-            <label for="clientTypes">Types of clients you serve <span style="color:var(--red)">*</span></label>
-            <select id="clientTypes" name="clientTypes" required>
-              <option value="" disabled selected>Select primary focus</option>
-              <option value="HVAC">HVAC contractors</option>
-              <option value="Plumbing">Plumbing contractors</option>
-              <option value="Roofing">Roofing contractors</option>
-              <option value="Electrical">Electrical contractors</option>
-              <option value="Mixed home services">Mixed home services</option>
-              <option value="Other">Other trades / mixed</option>
-            </select>
-          </div>
-          <div class="form-row">
-            <label for="monthlyClients">Monthly active home service clients <span style="color:var(--red)">*</span></label>
-            <select id="monthlyClients" name="monthlyClients" required>
-              <option value="" disabled selected>Select range</option>
-              <option value="1-5">1–5 clients</option>
-              <option value="6-15">6–15 clients</option>
-              <option value="16-30">16–30 clients</option>
-              <option value="30+">30+ clients</option>
-            </select>
-          </div>
-          <div class="form-row">
-            <label for="partnerEmail">Best Email <span style="color:var(--red)">*</span></label>
-            <input type="email" id="partnerEmail" name="email" placeholder="you@agency.com" required autocomplete="email">
-          </div>
-          <div style="margin-top:24px">
-            <button type="submit" class="btn btn-primary btn-full btn-lg">Submit Partner Application →</button>
-            <span class="cta-note">Rishe reviews every application personally. Response within 24 hours.</span>
-          </div>
-          <div id="formStatus" role="alert" aria-live="polite" style="display:none;margin-top:14px;padding:12px 16px;border-radius:6px;font-size:0.88rem;font-weight:600;text-align:center"></div>
-        </form>
-      </div>
+    <div class="demo-cta-box fade-up">
+      <span class="label" aria-hidden="true">Book the Demo</span>
+      <h2 id="demo-cta-h">You need to hear Emma before you can sell Emma.</h2>
+      <p>15 minutes on Google Meet. You'll hear Emma handle a real contractor call from first ring to WhatsApp job card delivery. No slides. No pitch. Just Emma working. You decide.</p>
+      <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3iTx2DnWIYJw8dxUYGvbvG_2H0-9Ydc9NFHeGThZwVxzYew0xB1vN61xEhvQaVscCpwHKL0YOK?gv=true"
+         target="_blank" rel="noopener noreferrer"
+         class="btn btn-primary btn-lg"
+         style="font-size:1.05rem;padding:20px 40px;"
+         aria-label="Book a Google Meet to hear Emma interact live">
+        📅 Book Your Google Meet — Hear Emma Live →
+      </a>
+      <span class="demo-cta-note">Pick a slot that works for you. Rishe joins live. You'll hear Emma handle real calls, ask it anything, and make the decision with your own ears.</span>
     </div>
   </div>
 </section>
@@ -390,12 +532,12 @@ footer{border-top:1px solid var(--border);padding:26px 0;background:var(--bg2)}
   var html=document.documentElement,btn=document.getElementById('themeBtn'),
       meta=document.querySelector('meta[name="theme-color"]');
   function apply(t){
-    if(t==='light'){html.classList.add('light');if(meta)meta.setAttribute('content','#f8f8f8');}
-    else{html.classList.remove('light');if(meta)meta.setAttribute('content','#080808');}
+    if(t==='dark'){html.classList.remove('light');if(meta)meta.setAttribute('content','#080808');}
+    else{html.classList.add('light');if(meta)meta.setAttribute('content','#ffffff');}
   }
   var s=localStorage.getItem('bt');
-  if(s)apply(s);
-  else if(window.matchMedia&&window.matchMedia('(prefers-color-scheme:light)').matches)apply('light');
+  if(s==='dark')apply('dark');
+  else apply('light');
   if(btn)btn.addEventListener('click',function(){
     var n=html.classList.contains('light')?'dark':'light';
     apply(n);localStorage.setItem('bt',n);
@@ -423,55 +565,6 @@ document.querySelectorAll('a[href^="#"]').forEach(function(a){
     if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'});}
   });
 });
-
-/* ── PARTNER FORM SUBMIT ── */
-function submitPartnerForm(e){
-  e.preventDefault();
-  var form=document.getElementById('partnerForm');
-  var status=document.getElementById('formStatus');
-  var name=document.getElementById('partnerName').value.trim();
-  var agency=document.getElementById('agencyName').value.trim();
-  var email=document.getElementById('partnerEmail').value.trim();
-  var clientTypes=document.getElementById('clientTypes').value;
-  var monthlyClients=document.getElementById('monthlyClients').value;
-  var website=document.getElementById('website').value.trim();
-
-  if(!name||!agency||!email||!clientTypes||!monthlyClients){
-    status.style.display='block';
-    status.style.background='rgba(239,68,68,0.1)';
-    status.style.border='1px solid rgba(239,68,68,0.3)';
-    status.style.color='#f87171';
-    status.textContent='Please fill in all required fields.';
-    return;
-  }
-  var emailRe=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if(!emailRe.test(email)){
-    status.style.display='block';
-    status.style.background='rgba(239,68,68,0.1)';
-    status.style.border='1px solid rgba(239,68,68,0.3)';
-    status.style.color='#f87171';
-    status.textContent='Please enter a valid email address.';
-    return;
-  }
-
-  var subject=encodeURIComponent('Breculia Partner Application — '+agency);
-  var body=encodeURIComponent(
-    'Partner Application\n\n'
-    +'Name: '+name+'\n'
-    +'Agency: '+agency+'\n'
-    +'Website: '+(website||'—')+'\n'
-    +'Client types: '+clientTypes+'\n'
-    +'Monthly home service clients: '+monthlyClients+'\n'
-    +'Email: '+email
-  );
-  window.location.href='mailto:founder@breculia.tech?subject='+subject+'&body='+body;
-
-  status.style.display='block';
-  status.style.background='rgba(34,197,94,0.08)';
-  status.style.border='1px solid rgba(34,197,94,0.25)';
-  status.style.color='#4ade80';
-  status.textContent='✅ Opening your email client — your application will be sent to founder@breculia.tech';
-}
 </script>
 </body>
 </html>
