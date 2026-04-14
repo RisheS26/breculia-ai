@@ -11,13 +11,13 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://breculia.tech/terms.html" />
   <meta property="og:site_name" content="Breculia AI" />
-  <meta name="theme-color" content="#0a0a0a" />
+  <meta name="theme-color" content="#ffffff" />
   <link rel="icon" type="image/png" href="logo-favicon.png" />
   <link rel="apple-touch-icon" href="logo-favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <script>(function(){var t=localStorage.getItem('breculia-theme');if(t==='light'||((!t)&&window.matchMedia&&window.matchMedia('(prefers-color-scheme:light)').matches)){document.documentElement.classList.add('light')}})();</script>
+  <script>(function(){var t=localStorage.getItem('bt');if(t==='dark'){document.documentElement.classList.remove('light')}else{document.documentElement.classList.add('light')}})();</script>
   <style>
     :root{--bg:#000000;--bg2:#111111;--green:#22c55e;--green-dim:#166534;--white:#f5f5f7;--text:#a1a1a6;--text-dim:#636366;--border:#2c2c2e;--fh:'Inter',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif;--fb:'Inter',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif;color-scheme:dark;}
     html.light{--bg:#f5f5f7;--bg2:#ffffff;--green:#1d9e44;--green-dim:#bbf7d0;--white:#1d1d1f;--text:#424245;--text-dim:#86868b;--border:#d2d2d7;color-scheme:light;}
@@ -311,7 +311,7 @@ Chennai, Tamil Nadu, India<br>
 </div></footer>
 
 <script>
-(function(){var html=document.documentElement,toggle=document.getElementById('themeToggle'),meta=document.querySelector('meta[name="theme-color"]'),stored=localStorage.getItem('breculia-theme');function apply(t){if(t==='light'){html.classList.add('light');if(meta)meta.setAttribute('content','#f5f5f5')}else{html.classList.remove('light');if(meta)meta.setAttribute('content','#0a0a0a')}}if(stored)apply(stored);else if(window.matchMedia&&window.matchMedia('(prefers-color-scheme:light)').matches)apply('light');if(toggle)toggle.addEventListener('click',function(){var n=html.classList.contains('light')?'dark':'light';apply(n);localStorage.setItem('breculia-theme',n)});})();
+(function(){var html=document.documentElement,toggle=document.getElementById('themeToggle'),meta=document.querySelector('meta[name="theme-color"]'),stored=localStorage.getItem('bt');function apply(t){if(t==='light'){html.classList.add('light');if(meta)meta.setAttribute('content','#f5f5f5')}else{html.classList.remove('light');if(meta)meta.setAttribute('content','#0a0a0a')}}if(stored==='dark')apply('dark');else apply('light');if(toggle)toggle.addEventListener('click',function(){var n=html.classList.contains('light')?'dark':'light';apply(n);localStorage.setItem('bt',n)});})();
 </script>
 </body>
 </html>

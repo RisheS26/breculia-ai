@@ -28,9 +28,9 @@
 <!-- FONT STRATEGY: preconnect + font-display:swap CSS to eliminate CLS and LCP delay -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'">
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"></noscript>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Caveat:wght@600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Caveat:wght@600;700&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Caveat:wght@600;700&display=swap"></noscript>
 
 <!-- Inline theme to prevent flash -->
 <script>(function(){var t=localStorage.getItem('bt');if(t!=='dark'){document.documentElement.classList.add('light')}})();</script>
@@ -91,8 +91,9 @@ section{padding:120px 0;position:relative}
 section+section{border-top:1px solid var(--border)}
 
 /* ── TYPOGRAPHY ── */
-.label{display:inline-flex;align-items:center;gap:8px;font-size:0.68rem;font-weight:700;
-  letter-spacing:0.18em;text-transform:uppercase;color:var(--green);margin-bottom:20px}
+.label{display:inline-flex;align-items:center;gap:8px;
+  font-family:'Caveat',cursive;font-size:1.05rem;font-weight:700;
+  letter-spacing:0.06em;color:var(--green);margin-bottom:20px}
 .label::before{content:'';width:22px;height:2px;background:var(--green);border-radius:1px;flex-shrink:0}
 h1{font-family:var(--fh);font-size:clamp(2.8rem,8vw,6rem);font-weight:800;
   line-height:1.02;letter-spacing:-0.025em;color:var(--white);
@@ -470,8 +471,118 @@ footer{border-top:1px solid var(--border);padding:48px 0;background:var(--bg2)}
 .founder-av-img{width:36px;height:36px;border-radius:50%;object-fit:cover;
   border:1.5px solid var(--green);flex-shrink:0}
 
-/* ── YOUTUBE EMBED ── */
-.yt-wrap{margin:40px auto 0;max-width:700px;padding:0 0 8px}
+/* ── GLASSMORPHISM / LIQUID GLASS ── */
+/* Background gradient orbs — give glass cards visual depth to reflect against */
+html.light body::before{content:'';position:fixed;top:-120px;right:-120px;
+  width:700px;height:700px;border-radius:50%;pointer-events:none;z-index:-1;
+  background:radial-gradient(ellipse,rgba(34,197,94,0.09) 0%,transparent 62%);
+  filter:blur(60px);}
+html.light body::after{content:'';position:fixed;bottom:-100px;left:-100px;
+  width:580px;height:580px;border-radius:50%;pointer-events:none;z-index:-1;
+  background:radial-gradient(ellipse,rgba(34,197,94,0.06) 0%,transparent 62%);
+  filter:blur(60px);}
+
+/* Liquid glass shimmer keyframe */
+@keyframes liquidShimmer{0%{left:-75%;opacity:1}100%{left:125%;opacity:0}}
+
+/* Problem cards — frosted glass */
+html.light .prob-item{
+  background:rgba(255,255,255,0.62);
+  backdrop-filter:blur(18px) saturate(160%);
+  -webkit-backdrop-filter:blur(18px) saturate(160%);
+  border:1px solid rgba(255,255,255,0.75);
+  box-shadow:0 8px 32px rgba(0,0,0,0.06),0 2px 8px rgba(0,0,0,0.03);
+  position:relative;overflow:hidden;}
+html.light .prob-item::before{content:'';position:absolute;
+  top:-50%;left:-75%;width:50%;height:200%;
+  background:linear-gradient(105deg,transparent 35%,rgba(255,255,255,0.28) 50%,transparent 65%);
+  transform:skewX(-15deg);opacity:0;pointer-events:none;}
+html.light .prob-item:hover::before{opacity:1;animation:liquidShimmer 0.65s ease-out forwards;}
+
+/* Price card — deeper glass */
+html.light .price-card{
+  background:rgba(255,255,255,0.72);
+  backdrop-filter:blur(24px) saturate(180%);
+  -webkit-backdrop-filter:blur(24px) saturate(180%);
+  border:1px solid rgba(255,255,255,0.85);
+  box-shadow:0 16px 56px rgba(0,0,0,0.07),0 0 0 1px rgba(34,197,94,0.12);
+  position:relative;overflow:hidden;}
+html.light .price-card::before{content:'';position:absolute;inset:0;border-radius:inherit;
+  pointer-events:none;background:linear-gradient(135deg,rgba(255,255,255,0.18) 0%,transparent 55%);}
+
+/* Result / ROI cards */
+html.light .result-card{
+  background:rgba(255,255,255,0.65);
+  backdrop-filter:blur(16px) saturate(160%);
+  -webkit-backdrop-filter:blur(16px) saturate(160%);
+  border:1px solid rgba(255,255,255,0.8);
+  box-shadow:0 4px 16px rgba(0,0,0,0.05);}
+
+/* Testimonial card */
+html.light .test-card{
+  background:rgba(255,255,255,0.65);
+  backdrop-filter:blur(18px) saturate(160%);
+  -webkit-backdrop-filter:blur(18px) saturate(160%);
+  border:1px solid rgba(255,255,255,0.78);
+  box-shadow:0 8px 32px rgba(0,0,0,0.06);
+  position:relative;overflow:hidden;}
+html.light .test-card::before{content:'';position:absolute;inset:0;border-radius:inherit;
+  pointer-events:none;background:linear-gradient(135deg,rgba(255,255,255,0.12) 0%,transparent 50%);}
+
+/* Founder card */
+html.light .founder-card{
+  background:rgba(255,255,255,0.65);
+  backdrop-filter:blur(18px) saturate(160%);
+  -webkit-backdrop-filter:blur(18px) saturate(160%);
+  border:1px solid rgba(255,255,255,0.78);
+  box-shadow:0 8px 32px rgba(0,0,0,0.06);
+  position:relative;overflow:hidden;}
+html.light .founder-card::before{content:'';position:absolute;inset:0;border-radius:inherit;
+  pointer-events:none;background:linear-gradient(135deg,rgba(255,255,255,0.14) 0%,transparent 55%);}
+
+/* Book options — glass */
+html.light .book-opt{
+  background:rgba(255,255,255,0.62);
+  backdrop-filter:blur(16px) saturate(160%);
+  -webkit-backdrop-filter:blur(16px) saturate(160%);
+  border:1.5px solid rgba(255,255,255,0.75);
+  box-shadow:0 4px 20px rgba(0,0,0,0.05);
+  position:relative;overflow:hidden;}
+html.light .book-opt::before{content:'';position:absolute;inset:0;border-radius:inherit;
+  pointer-events:none;background:linear-gradient(135deg,rgba(255,255,255,0.14) 0%,transparent 55%);
+  opacity:0;transition:opacity 0.3s;}
+html.light .book-opt:hover::before{opacity:1;}
+
+/* Math grid — glass surface */
+html.light .math-grid{
+  border-color:rgba(255,255,255,0.7);
+  background:rgba(255,255,255,0.55);
+  backdrop-filter:blur(18px) saturate(160%);
+  -webkit-backdrop-filter:blur(18px) saturate(160%);
+  box-shadow:0 8px 32px rgba(0,0,0,0.05);}
+
+/* Chat widget — glass tint in light */
+html.light .chat-wrap{
+  background:rgba(240,240,243,0.72);
+  backdrop-filter:blur(16px) saturate(150%);
+  -webkit-backdrop-filter:blur(16px) saturate(150%);}
+
+/* Hero card row stats */
+html.light .hero-card-row{background:rgba(250,250,252,0.7);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);}
+html.light .hc-item{background:transparent;}
+
+/* ── AD SPEND PROTECTION CALLOUT ── */
+.ad-spend-hook{display:flex;align-items:flex-start;gap:14px;
+  margin-top:28px;padding:18px 22px;
+  background:rgba(34,197,94,0.06);
+  border:1px solid rgba(34,197,94,0.18);
+  border-left:3px solid var(--green);
+  border-radius:14px;}
+.ad-spend-hook .asi{font-size:1.4rem;flex-shrink:0;margin-top:2px}
+.ad-spend-hook p{font-size:0.88rem;color:var(--text);line-height:1.65;margin:0}
+.ad-spend-hook strong{color:var(--white)}
+
 .yt-embed{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;
   border-radius:18px;border:1px solid var(--border)}
 .yt-embed iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
@@ -591,11 +702,11 @@ section#trades{padding:0;border-top:none}
           <span class="kicker-text">For HVAC · Plumbing · Roofing · Electrical · TX · FL · GA · TN · NC · IN · OH</span>
         </div>
         <h1 class="hero-h1" id="heroH1">
-          <span class="h1-l1">Every call answered.</span><br>
-          <span class="h1-l2" style="color:var(--green)">Every job captured.</span><br>
-          <span class="h1-l3">24/7.</span>
+          <span class="h1-l1">Emma answers the call.</span><br>
+          <span class="h1-l2" style="color:var(--green)">Job card fires to your WhatsApp</span><br>
+          <span class="h1-l3">in 5 seconds.</span>
         </h1>
-        <p class="hero-sub">Emma answers your missed calls, captures job details, and sends you a WhatsApp job card in under 5 seconds. While you're on a job, under a sink, or asleep.</p>
+        <p class="hero-sub">You're paying for every ad click that calls you. Emma makes sure none of them ring out — answering 24/7, capturing every job detail, and firing a WhatsApp notification to your phone in under 5 seconds. While you're on a job, under a sink, or asleep.</p>
         <div class="hero-ctas">
           <a href="#demo-video" class="btn btn-primary btn-lg">Watch Emma Handle a Real Emergency Call →</a>
           <a href="partners.html" class="btn btn-ghost">Partner With Us</a>
@@ -604,6 +715,10 @@ section#trades{padding:0;border-top:none}
           <div class="proof-item" role="listitem"><span class="pi-check" aria-hidden="true">✓</span> 30-day satisfaction guarantee</div>
           <div class="proof-item" role="listitem"><span class="pi-check" aria-hidden="true">✓</span> Live in 48 hours</div>
           <div class="proof-item" role="listitem"><span class="pi-check" aria-hidden="true">✓</span> Month-to-month, cancel anytime</div>
+        </div>
+        <div class="ad-spend-hook fade-up">
+          <span class="asi" aria-hidden="true">💸</span>
+          <p><strong>Your ad clicks deserve an answer.</strong> Every call that rings out is ad spend wasted. Emma plugs that leak — every click gets a real voice on the line, not voicemail.</p>
         </div>
       </div>
       <div class="phone-wrap" aria-hidden="true">
@@ -632,7 +747,7 @@ section#trades{padding:0;border-top:none}
       <div class="hero-card-inner" role="list">
         <div class="hc-item" role="listitem"><div class="hc-num">74%</div><div class="hc-label">of contractor calls go unanswered</div></div>
         <div class="hc-item" role="listitem"><div class="hc-num">85%</div><div class="hc-label">of callers never call back</div></div>
-        <div class="hc-item" role="listitem"><div class="hc-num">4s</div><div class="hc-label">to owner notification</div></div>
+        <div class="hc-item" role="listitem"><div class="hc-num">5s</div><div class="hc-label">WhatsApp job card delivery</div></div>
         <div class="hc-item" role="listitem"><div class="hc-num">48hr</div><div class="hc-label">from yes to live</div></div>
       </div>
     </div>
@@ -681,7 +796,7 @@ section#trades{padding:0;border-top:none}
       </div>
     </div>
     <div class="problem-callout fade-up">
-      That emergency call at 2am? <strong>It went to whoever answered.</strong> Every day without coverage, you're handing jobs directly to the next contractor on Google.
+      That emergency call at 2am? <strong>It went to whoever answered.</strong> Every missed call is an ad click you already paid for — handed directly to whatever contractor picked up next. Emma answers all of them, 24/7.
     </div>
   </div>
 </section>
