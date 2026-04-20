@@ -1,0 +1,19 @@
+# Breculia AI
+
+> AI voice receptionists for US immigration law firms and home service contractors. Two products: Elena (bilingual Spanish/English legal intake) and Emma (contractor job capture).
+
+## Verticals
+
+- <a href="https://breculia.tech/legal/">Legal — Elena</a>: Bilingual AI intake for immigration law firms. Emergency triage. $1,500 setup + $299/month.
+- <a href="https://breculia.tech/hserv/">Home Services — Emma</a>: 24/7 AI voice receptionist for HVAC, plumbing, roofing, electrical contractors.
+
+## Legal Compliance
+
+- <a href="https://breculia.tech/legal/privacy/">Legal Privacy Policy</a>
+- <a href="https://breculia.tech/legal/terms/">Legal Terms of Service</a>
+- <a href="https://breculia.tech/hserv/privacy/">Home Services Privacy Policy</a>
+- <a href="https://breculia.tech/hserv/terms/">Home Services Terms of Service</a>
+
+## Contact
+
+founder@breculia.tech | Rishe S, Founder | breculia.tech
