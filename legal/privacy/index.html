@@ -12,21 +12,27 @@
     :root{--bg:#f7f8f8;--card:#fff;--text:#111;--muted:#5f6368;--accent:#1D9E75;--border:#e5e7eb;--placeholder:#ff4d4f}
     html.dark{--bg:#0f0f0f;--card:#171717;--text:#f0f0f0;--muted:#a0a0a0;--border:#2a2a2a}
     *{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif;line-height:1.65}
-    .wrap{max-width:900px;margin:0 auto;padding:24px} .box{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:24px}
-    h1{margin:0 0 10px;font-size:2rem} h2{margin:26px 0 10px} p,li{color:var(--muted)} ul{padding-left:18px}
-    .placeholder{color:var(--placeholder);font-weight:700} .disclaimer{font-weight:700;color:var(--text)}
+    .wrap{max-width:960px;margin:0 auto;padding:24px}.box{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:24px}
+    .top{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:18px}.top a{color:var(--muted);text-decoration:none;font-weight:600}.top a:hover{color:var(--accent)}
+    h1{margin:0 0 8px;font-size:2rem}h2{margin:24px 0 10px}p,li{color:var(--muted)}ul{padding-left:18px}
+    .placeholder{color:var(--placeholder);font-weight:700}.notice{font-weight:700;color:var(--text)}
     footer{margin-top:18px;padding-top:14px;border-top:1px solid var(--border);display:flex;gap:12px;flex-wrap:wrap}
-    footer a{color:var(--muted);text-decoration:none} footer a:hover{color:var(--accent)}
+    footer a{color:var(--muted);text-decoration:none}footer a:hover{color:var(--accent)}
     .theme{position:fixed;top:16px;right:16px;border:1px solid var(--border);background:var(--card);color:var(--text);border-radius:999px;padding:8px 12px;cursor:pointer}
   </style>
 </head>
 <body>
   <button class="theme" id="themeToggle" aria-label="Toggle theme">☀️/🌙</button>
   <main class="wrap">
+    <div class="top">
+      <a href="../">← Legal Vertical</a>
+      <a href="../../hserv/privacy/">View Home Services Privacy</a>
+    </div>
+
     <article class="box">
       <h1>Privacy Policy — Elena (Legal Vertical)</h1>
       <p>Last updated: April 2026</p>
-      <p class="disclaimer">Elena is an intake tool only. She is not an attorney and does not provide legal advice.</p>
+      <p class="notice">Elena is an intake tool only. She is not an attorney and does not provide legal advice.</p>
 
       <h2>1) What Elena collects</h2>
       <ul>
