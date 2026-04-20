@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Emma for Home Service Contractors | Breculia AI</title>
+  <meta name="description" content="Emma is a 24/7 AI voice receptionist for HVAC, plumbing, roofing, and electrical contractors." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root{--bg:#f7f8f8;--card:#ffffff;--text:#111111;--muted:#5f6368;--accent:#1D9E75;--border:#e5e7eb;--placeholder:#ff4d4f;color-scheme:light}
+    html.dark{--bg:#0f0f0f;--card:#171717;--text:#f0f0f0;--muted:#a0a0a0;--border:#2a2a2a;color-scheme:dark}
+    *{box-sizing:border-box} body{margin:0;font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+    .wrap{max-width:1000px;margin:0 auto;padding:24px}
+    h1{font-size:clamp(2rem,4vw,3rem);line-height:1.15;margin:0 0 14px}
+    h2{font-size:1.35rem;margin:38px 0 12px}
+    p{margin:0 0 14px;color:var(--muted)}
+    .hero,.card,.cta{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:24px}
+    .stats{display:grid;grid-template-columns:1fr;gap:14px;margin-top:18px}
+    .card strong{display:block;font-size:1.05rem;color:var(--text)}
+    ul{padding-left:18px;margin:12px 0}
+    li{margin:8px 0;color:var(--muted)}
+    .pricing{font-weight:700;color:var(--text);font-size:1.08rem}
+    .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:12px}
+    .btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;padding:12px 18px;border-radius:10px;font-weight:700}
+    .btn.alt{background:transparent;color:var(--text);border:1px solid var(--border)}
+    .note{font-size:.95rem;color:var(--muted)}
+    footer{margin-top:30px;padding-top:18px;border-top:1px solid var(--border);display:flex;gap:12px;flex-wrap:wrap}
+    footer a{color:var(--muted);text-decoration:none} footer a:hover{color:var(--accent)}
+    .theme{position:fixed;top:16px;right:16px;border:1px solid var(--border);background:var(--card);color:var(--text);border-radius:999px;padding:8px 12px;cursor:pointer}
+    .placeholder{color:var(--placeholder);font-weight:700}
+    @media(min-width:780px){.stats{grid-template-columns:repeat(3,1fr)}}
+  </style>
+</head>
+<body>
+  <button class="theme" id="themeToggle" aria-label="Toggle theme">☀️/🌙</button>
+  <main class="wrap">
+    <section class="hero">
+      <h1>Emma answers every contractor call 24/7. Job card to your phone in 5 seconds.</h1>
+      <p class="note">Emma is an intake tool only. She does not provide professional trade advice.</p>
+    </section>
+
+    <section>
+      <h2>Why this matters</h2>
+      <div class="stats">
+        <article class="card"><strong>74% of contractor calls go unanswered</strong></article>
+        <article class="card"><strong>85% of callers never call back</strong></article>
+        <article class="card"><strong>Emma captures the job while you're on the job</strong></article>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top:20px;">
+      <h2>What Emma does</h2>
+      <ul>
+        <li>Answers every inbound call 24/7 for HVAC, plumbing, roofing, and electrical teams.</li>
+        <li>Captures caller details, address, job type, and urgency in one flow.</li>
+        <li>Flags emergency calls for immediate live transfer when required.</li>
+        <li>Sends a WhatsApp job card to your team in 5 seconds.</li>
+        <li>Schedules non-emergency requests to your booking flow.</li>
+      </ul>
+    </section>
+
+    <section class="cta" style="margin-top:20px;">
+      <h2>Pricing</h2>
+      <p class="pricing">Custom pricing · Live in 48 hours · 30-day guarantee</p>
+      <p><strong>Call Emma:</strong> <span class="placeholder">[DEMO_NUMBER_PLACEHOLDER]</span></p>
+      <div class="cta-row">
+        <a class="btn alt" href="tel:[DEMO_NUMBER_PLACEHOLDER]">Call Demo</a>
+        <a class="btn" href="[GOOGLE_CALENDAR_LINK_PLACEHOLDER]">Book a 15-min demo</a>
+      </div>
+    </section>
+
+    <footer>
+      <a href="./privacy/">Privacy</a>
+      <a href="./terms/">Terms</a>
+      <a href="./refund/">Refund</a>
+      <a href="../">Home</a>
+    </footer>
+  </main>
+  <script>
+    (function(){var k='breculia-theme',s=localStorage.getItem(k);if(s==='dark'){document.documentElement.classList.add('dark');}document.getElementById('themeToggle').addEventListener('click',function(){document.documentElement.classList.toggle('dark');localStorage.setItem(k,document.documentElement.classList.contains('dark')?'dark':'light');});})();
+  </script>
+</body>
+</html>
