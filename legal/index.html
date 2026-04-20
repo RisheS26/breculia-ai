@@ -33,6 +33,21 @@
     .theme{position:fixed;top:16px;right:16px;border:1px solid var(--border);background:var(--card);color:var(--text);border-radius:999px;padding:8px 12px;cursor:pointer}
     .placeholder{color:var(--placeholder);font-weight:700}
     @media(min-width:780px){.stats{grid-template-columns:repeat(3,1fr)}}
+    /* Pricing table */
+    .plans{display:grid;grid-template-columns:1fr;gap:16px;margin:20px 0}
+    @media(min-width:780px){.plans{grid-template-columns:repeat(3,1fr)}}
+    .plan{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:22px 20px;display:flex;flex-direction:column;gap:8px;transition:border-color .2s,box-shadow .2s}
+    .plan:hover{border-color:var(--accent);box-shadow:0 6px 24px rgba(29,158,117,.12)}
+    .plan.featured{border-color:var(--accent);box-shadow:0 6px 24px rgba(29,158,117,.15)}
+    .plan-badge{display:inline-block;font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;background:var(--accent);color:#fff;border-radius:999px;padding:3px 10px;margin-bottom:4px;align-self:flex-start}
+    .plan-name{font-size:1.1rem;font-weight:800;color:var(--text)}
+    .plan-best{font-size:.82rem;color:var(--muted)}
+    .plan-setup{font-size:.9rem;color:var(--muted)}.plan-setup strong{color:var(--text)}
+    .plan-price{font-size:2rem;font-weight:800;color:var(--text);line-height:1;margin:6px 0 2px}
+    .plan-price span{font-size:.9rem;font-weight:500;color:var(--muted)}
+    .plan-mins{font-size:.85rem;color:var(--muted)}
+    .plan-divider{border:none;border-top:1px solid var(--border);margin:8px 0}
+    .overage-note{font-size:.82rem;color:var(--muted);text-align:center;margin-top:8px}
   </style>
 </head>
 <body>
@@ -63,9 +78,44 @@
       </ul>
     </section>
 
+    <section style="margin-top:20px;">
+      <h2>Pricing Plans</h2>
+      <div class="plans">
+
+        <article class="plan">
+          <span class="plan-name">Solo Defender</span>
+          <span class="plan-best">Best for solo practitioners</span>
+          <hr class="plan-divider" />
+          <div class="plan-setup"><strong>$1,500</strong> one-time setup</div>
+          <div class="plan-price">$399<span>/month</span></div>
+          <div class="plan-mins">150 minutes included</div>
+        </article>
+
+        <article class="plan featured">
+          <span class="plan-badge">Most Popular</span>
+          <span class="plan-name">Growth Firm</span>
+          <span class="plan-best">Best for small firms (3–5 attorneys)</span>
+          <hr class="plan-divider" />
+          <div class="plan-setup"><strong>$2,500</strong> one-time setup</div>
+          <div class="plan-price">$799<span>/month</span></div>
+          <div class="plan-mins">500 minutes included</div>
+        </article>
+
+        <article class="plan">
+          <span class="plan-name">Enterprise Triage</span>
+          <span class="plan-best">Best for large multi-city firms</span>
+          <hr class="plan-divider" />
+          <div class="plan-setup"><strong>$5,000</strong> one-time setup</div>
+          <div class="plan-price">$1,499<span>/month</span></div>
+          <div class="plan-mins">1,500 minutes included</div>
+        </article>
+
+      </div>
+      <p class="overage-note">Overage on all plans: <strong>$0.85 / min</strong> · Live in 48 hours · 30-day guarantee</p>
+    </section>
+
     <section class="cta" style="margin-top:20px;">
-      <h2>Pricing</h2>
-      <p class="pricing">$1,500 one-time setup · $299/month · Live in 48 hours · 30-day guarantee</p>
+      <h2>Ready to deploy Elena?</h2>
       <p><strong>Call Elena:</strong> <span class="placeholder">[DEMO_NUMBER_PLACEHOLDER]</span> — speak English or Spanish.</p>
       <div class="cta-row">
         <a class="btn" href="[GOOGLE_CALENDAR_LINK_PLACEHOLDER]">Book a 15-min demo</a>
