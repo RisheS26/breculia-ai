@@ -14,7 +14,7 @@ B2B SaaS, consulting, agencies, and coaching businesses · $500K–$5M ARR · 1�
 
 ## Tool Stack
 
-Clay · Instantly · Apollo.io · Hunter.io · Prospeo · Smartlead · Stripe · Airtable · Cal.com · Notion
+Clay · Instantly · Apollo.io · Hunter.io · Prospeo · Smartlead · Xflow · Airtable · Google Calendar · Notion
 
 ## Results
 
