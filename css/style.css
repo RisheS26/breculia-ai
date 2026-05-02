@@ -1,0 +1,347 @@
+/**
+ * Breculia AI — Design System Reference
+ * ======================================
+ * This file documents the shared design tokens and base styles for the
+ * Breculia AI website. All pages use these tokens via inline <style> blocks
+ * for zero-dependency GitHub Pages deployment.
+ *
+ * If you are extending the site, use these exact values for consistency.
+ *
+ * Font loading (add to <head>):
+ *   <link rel="preconnect" href="https://fonts.googleapis.com">
+ *   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ *   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+ */
+
+/* ─────────────────────────────────────────────
+   DESIGN TOKENS — Dark mode (default)
+───────────────────────────────────────────── */
+:root {
+  /* Backgrounds */
+  --bg:      #000000;   /* page background */
+  --bg2:     #111111;   /* section / card background */
+  --bg3:     #1c1c1e;   /* elevated card */
+  --bg4:     #2c2c2e;   /* input / tag background */
+
+  /* Borders */
+  --border:  #2c2c2e;
+  --border2: #3a3a3c;
+
+  /* Brand accent */
+  --green:   #22c55e;   /* primary CTA, icons, highlights */
+  --green2:  #16a34a;   /* hover state */
+  --glow:    rgba(34, 197, 94, 0.12);
+
+  /* Text */
+  --white:   #f5f5f7;   /* primary text / headings */
+  --text:    #a1a1a6;   /* body text */
+  --muted:   #636366;   /* captions, timestamps, placeholders */
+
+  /* Status */
+  --red:     #ff453a;
+
+  /* Typography stacks */
+  --fh: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif;
+  --fb: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Text',    'Helvetica Neue', Arial, sans-serif;
+
+  color-scheme: dark;
+}
+
+/* ─────────────────────────────────────────────
+   DESIGN TOKENS — Light mode
+   Applied when <html class="light"> is set
+───────────────────────────────────────────── */
+html.light {
+  --bg:      #ffffff;
+  --bg2:     #fafafa;
+  --bg3:     #f5f5f7;
+  --bg4:     #e8e8ed;
+  --border:  #e5e5e7;
+  --border2: #d1d1d6;
+  --green:   #1d9e44;
+  --green2:  #15803d;
+  --glow:    rgba(22, 163, 74, 0.10);
+  --white:   #1d1d1f;
+  --text:    #424245;
+  --muted:   #86868b;
+  --red:     #dc2626;
+  color-scheme: light;
+}
+
+/* ─────────────────────────────────────────────
+   RESET
+───────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 17px;
+  scroll-padding-top: 52px;
+}
+
+body {
+  background: var(--bg);
+  color: var(--white);
+  font-family: var(--fb);
+  font-weight: 400;
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+::selection {
+  background: rgba(34, 197, 94, 0.25);
+  color: #fff;
+}
+
+/* ─────────────────────────────────────────────
+   LAYOUT
+───────────────────────────────────────────── */
+.wrap {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+@media (min-width: 800px)  { .wrap { padding: 0 40px; } }
+@media (min-width: 1100px) { .wrap { padding: 0 48px; } }
+
+section {
+  padding: 120px 0;
+  position: relative;
+}
+
+section + section {
+  border-top: 1px solid var(--border);
+}
+
+/* ─────────────────────────────────────────────
+   TYPOGRAPHY
+───────────────────────────────────────────── */
+h1 {
+  font-family: var(--fh);
+  font-size: clamp(2.8rem, 8vw, 6rem);
+  font-weight: 800;
+  line-height: 1.02;
+  letter-spacing: -0.025em;
+  color: var(--white);
+}
+
+h2 {
+  font-family: var(--fh);
+  font-size: clamp(2rem, 5vw, 3.6rem);
+  font-weight: 700;
+  line-height: 1.06;
+  letter-spacing: -0.02em;
+  color: var(--white);
+}
+
+h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--white);
+  line-height: 1.35;
+}
+
+p {
+  color: var(--text);
+  line-height: 1.75;
+}
+
+/* Section label */
+.label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--green);
+  margin-bottom: 20px;
+}
+
+.label::before {
+  content: '';
+  width: 20px;
+  height: 2px;
+  background: var(--green);
+  flex-shrink: 0;
+}
+
+/* ─────────────────────────────────────────────
+   BUTTONS
+───────────────────────────────────────────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 15px 32px;
+  font-family: var(--fb);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: background 0.22s, transform 0.22s, box-shadow 0.22s, opacity 0.22s;
+  border: none;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: var(--green);
+  color: #000;
+}
+.btn-primary:hover {
+  background: var(--green2);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 24px var(--glow);
+}
+html.light .btn-primary { color: #fff; }
+
+.btn-ghost {
+  background: transparent;
+  color: var(--white);
+  border: 1.5px solid rgba(255, 255, 255, 0.2);
+}
+.btn-ghost:hover {
+  border-color: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.btn-full { width: 100%; }
+.btn-lg   { padding: 18px 40px; font-size: 1rem; }
+
+/* ─────────────────────────────────────────────
+   NAVIGATION
+───────────────────────────────────────────── */
+#nav {
+  position: sticky;
+  top: 0;
+  z-index: 900;
+  background: rgba(0, 0, 0, 0.82);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 0;
+}
+
+html.light #nav {
+  background: rgba(245, 245, 247, 0.85);
+  border-bottom-color: rgba(0, 0, 0, 0.08);
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  height: 52px;
+}
+
+.nav-logo {
+  font-family: var(--fh);
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--green);
+  box-shadow: 0 0 8px var(--green);
+  animation: pulse 1.6s infinite;
+  flex-shrink: 0;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50%       { transform: scale(1.4); opacity: 0.6; }
+}
+
+/* ─────────────────────────────────────────────
+   FOOTER
+───────────────────────────────────────────── */
+footer {
+  border-top: 1px solid var(--border);
+  padding: 32px 0;
+  background: var(--bg);
+}
+
+footer .footer-inner {
+  text-align: center;
+}
+
+footer p {
+  font-size: 0.76rem;
+  color: var(--muted);
+  line-height: 1.9;
+}
+
+footer a {
+  color: var(--text);
+  transition: color 0.2s;
+}
+
+footer a:hover {
+  color: var(--green);
+}
+
+/* ─────────────────────────────────────────────
+   UTILITY: FADE-UP ANIMATION
+   (scroll reveal — toggled by JS via IntersectionObserver)
+───────────────────────────────────────────── */
+.fade-up {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-up.in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ─────────────────────────────────────────────
+   PAGES MAP
+   All pages are standalone HTML with inline styles.
+   Below is the inventory of all site pages.
+───────────────────────────────────────────── */
+/*
+  index.html          Homepage (hero, services, how it works, pricing, FAQ, contact)
+  services.html       Services & pricing detail page
+  how-it-works.html   Process walkthrough page
+  contact.html        Booking / contact page
+  partners.html       Partner referral program
+  privacy.html        Privacy Policy
+  terms.html          Terms & Conditions
+  refund.html         Refund Policy
+  llms.txt            AI-readable service description
+  robots.txt          Search engine crawl directives
+  sitemap.xml         XML sitemap for all pages
+  css/style.css       This file — design system reference
+*/
