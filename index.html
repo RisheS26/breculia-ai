@@ -744,6 +744,61 @@ html.light .pc--pop{border-color:rgba(34,197,94,0.4);box-shadow:0 8px 40px rgba(
 .metric-desc{font-size:0.82rem;color:var(--text);line-height:1.6}
 html.light .metric-card{background:rgba(255,255,255,0.65);backdrop-filter:blur(16px) saturate(150%);
   border:1px solid rgba(255,255,255,0.78);box-shadow:0 4px 16px rgba(0,0,0,0.04)}
+
+/* ── AMBIENT HERO ORBS ── */
+@keyframes orbDrift{0%,100%{transform:translate(0,0) scale(1)}40%{transform:translate(32px,-26px) scale(1.04)}70%{transform:translate(-16px,18px) scale(0.97)}}
+@keyframes orbDrift2{0%,100%{transform:translate(0,0) scale(1)}35%{transform:translate(-24px,34px) scale(1.03)}65%{transform:translate(18px,-14px) scale(0.96)}}
+.hero-orb{position:absolute;border-radius:50%;pointer-events:none;z-index:0;filter:blur(80px)}
+.hero-orb-1{width:700px;height:700px;top:-220px;right:-180px;background:radial-gradient(ellipse at 50% 50%,rgba(34,197,94,0.09),transparent 68%);animation:orbDrift 20s ease-in-out infinite}
+.hero-orb-2{width:450px;height:450px;bottom:-100px;left:-100px;background:radial-gradient(ellipse at 50% 50%,rgba(34,197,94,0.06),transparent 68%);animation:orbDrift2 26s ease-in-out infinite}
+html.light .hero-orb-1{background:radial-gradient(ellipse at 50% 50%,rgba(34,197,94,0.11),transparent 68%)}
+html.light .hero-orb-2{background:radial-gradient(ellipse at 50% 50%,rgba(34,197,94,0.08),transparent 68%)}
+.hero-top,.hero-card-row{position:relative;z-index:1}
+
+/* ── SCROLL PROGRESS BAR ── */
+#scroll-progress{position:fixed;top:0;left:0;z-index:9999;height:2px;background:linear-gradient(90deg,var(--green),rgba(34,197,94,0.4));width:0%;pointer-events:none;box-shadow:0 0 8px rgba(34,197,94,0.5)}
+
+/* ── TECH STACK SECTION ── */
+#stack{background:var(--bg2)}
+.stack-intro{margin-top:14px;font-size:0.95rem;color:var(--text);max-width:520px;line-height:1.7}
+.stack-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:40px}
+@media(min-width:540px){.stack-grid{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:900px){.stack-grid{grid-template-columns:repeat(6,1fr);gap:12px}}
+.stack-card{position:relative;overflow:hidden;background:var(--bg3);border:1px solid var(--border);border-radius:20px;padding:24px 14px 18px;text-align:center;transition:transform 0.4s cubic-bezier(0.16,1,0.3,1),box-shadow 0.4s cubic-bezier(0.16,1,0.3,1),border-color 0.3s;transform-style:preserve-3d;will-change:transform;cursor:default}
+.stack-card::after{content:'';position:absolute;inset:0;border-radius:inherit;background:var(--sc-shine,none);opacity:0;transition:opacity 0.35s;pointer-events:none}
+.stack-card:hover{transform:translateY(-6px)}
+.stack-card:hover::after{opacity:1}
+.sc-logo{width:52px;height:52px;border-radius:14px;margin:0 auto 14px;transition:transform 0.35s cubic-bezier(0.34,1.56,0.64,1),box-shadow 0.35s;display:block}
+.sc-logo svg{width:52px;height:52px;display:block;border-radius:14px;overflow:hidden}
+.stack-card:hover .sc-logo{transform:scale(1.12) translateY(-2px)}
+.sc-name{font-size:0.84rem;font-weight:700;color:var(--white);margin-bottom:3px;letter-spacing:-0.01em}
+.sc-role{font-size:0.68rem;color:var(--muted);line-height:1.45}
+html.light .stack-card{background:rgba(255,255,255,0.75);backdrop-filter:blur(20px) saturate(170%);-webkit-backdrop-filter:blur(20px) saturate(170%);border:1px solid rgba(255,255,255,0.88);box-shadow:0 4px 24px rgba(0,0,0,0.05)}
+html.light .stack-card:hover{box-shadow:0 20px 56px rgba(0,0,0,0.1);border-color:rgba(255,255,255,0.98)}
+
+/* ── 3D TILT (pricing + metric cards) ── */
+.pricing-grid{perspective:1400px}
+.pc,.metric-card{transform-style:preserve-3d;will-change:transform}
+.metric-num{display:block;font-variant-numeric:tabular-nums}
+
+/* ── ENHANCED STEP NUMBERS ── */
+.step-num{background:linear-gradient(135deg,var(--bg3),var(--bg4));box-shadow:0 4px 16px rgba(0,0,0,0.2),inset 0 1px 0 rgba(255,255,255,0.05)}
+html.light .step-num{background:rgba(255,255,255,0.9);box-shadow:0 4px 16px rgba(0,0,0,0.08),0 0 0 1px rgba(34,197,94,0.2)}
+
+/* ── ENHANCED FOOTER ── */
+footer{border-top:none;position:relative}
+footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--green),transparent);opacity:0.4}
+
+/* ── ENHANCED HERO GRADIENT ── */
+#hero{background:radial-gradient(ellipse 110% 60% at 50% -10%,rgba(34,197,94,0.1) 0%,transparent 60%)}
+html.light #hero{background:radial-gradient(ellipse 110% 60% at 50% -10%,rgba(34,197,94,0.06) 0%,transparent 60%)}
+
+/* ── CARD GLOW ON HOVER (pricing) ── */
+.pc:hover{box-shadow:0 24px 64px rgba(0,0,0,0.35),0 0 0 1px rgba(34,197,94,0.12)}
+.pc--pop:hover{box-shadow:0 24px 64px rgba(0,0,0,0.4),0 0 40px rgba(34,197,94,0.1),0 0 0 1px rgba(34,197,94,0.25)}
+
+/* ── REDUCED MOTION: disable new animations ── */
+@media(prefers-reduced-motion:reduce){.hero-orb{animation:none!important}.stack-card,.pc,.metric-card{transform:none!important;transition:box-shadow 0.2s!important}}
 </style>
 </head>
 <body>
@@ -766,10 +821,13 @@ html.light .metric-card{background:rgba(255,255,255,0.65);backdrop-filter:blur(1
   </div>
 </nav>
 
+<div id="scroll-progress" aria-hidden="true"></div>
 <main>
 
 <!-- HERO -->
 <section id="hero" aria-label="Hero">
+  <div class="hero-orb hero-orb-1" aria-hidden="true"></div>
+  <div class="hero-orb hero-orb-2" aria-hidden="true"></div>
   <div class="hero-top">
     <div class="wrap">
       <div class="hero-text-col">
@@ -935,6 +993,72 @@ html.light .metric-card{background:rgba(255,255,255,0.65);backdrop-filter:blur(1
   </div>
 </section>
 
+<!-- TECH STACK -->
+<section id="stack" aria-labelledby="stack-h">
+  <div class="wrap">
+    <span class="label" aria-hidden="true">The Stack</span>
+    <h2 id="stack-h" class="fade-up">Best-in-class outbound infrastructure.</h2>
+    <p class="stack-intro fade-up">Every system runs on the same proven toolkit — the one that makes 61% open rates and 4.2% reply rates possible.</p>
+    <div class="stack-grid fade-up" role="list">
+
+      <!-- Clay -->
+      <div class="stack-card" role="listitem" style="--sc-shine:linear-gradient(135deg,rgba(249,115,22,0.1),transparent 60%)">
+        <div class="sc-logo">
+          <svg viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Clay logo"><rect width="52" height="52" rx="13" fill="#F97316"/><path d="M33 17C30 14.5 25.5 14 21.5 15.8C15 18.8 12.5 26.5 15.5 33C18 38.5 25 41.5 31 40" stroke="white" stroke-width="3.5" stroke-linecap="round" fill="none"/><circle cx="35" cy="22" r="3" fill="white"/></svg>
+        </div>
+        <div class="sc-name">Clay</div>
+        <div class="sc-role">Data enrichment & waterfall</div>
+      </div>
+
+      <!-- Instantly -->
+      <div class="stack-card" role="listitem" style="--sc-shine:linear-gradient(135deg,rgba(14,165,233,0.1),transparent 60%)">
+        <div class="sc-logo">
+          <svg viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Instantly logo"><rect width="52" height="52" rx="13" fill="#0EA5E9"/><path d="M28 13L18 27h9l-5 12L37 25h-9z" fill="white"/></svg>
+        </div>
+        <div class="sc-name">Instantly</div>
+        <div class="sc-role">Cold email sending & sequences</div>
+      </div>
+
+      <!-- Apollo -->
+      <div class="stack-card" role="listitem" style="--sc-shine:linear-gradient(135deg,rgba(124,58,237,0.1),transparent 60%)">
+        <div class="sc-logo">
+          <svg viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Apollo logo"><rect width="52" height="52" rx="13" fill="#7C3AED"/><circle cx="26" cy="26" r="6" fill="white"/><ellipse cx="26" cy="26" rx="13" ry="5.5" stroke="white" stroke-width="2" fill="none" transform="rotate(-35 26 26)"/><ellipse cx="26" cy="26" rx="13" ry="5.5" stroke="white" stroke-width="2" fill="none" transform="rotate(35 26 26)"/></svg>
+        </div>
+        <div class="sc-name">Apollo</div>
+        <div class="sc-role">Lead database & contact data</div>
+      </div>
+
+      <!-- Hunter -->
+      <div class="stack-card" role="listitem" style="--sc-shine:linear-gradient(135deg,rgba(245,158,11,0.1),transparent 60%)">
+        <div class="sc-logo">
+          <svg viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Hunter logo"><rect width="52" height="52" rx="13" fill="#F59E0B"/><circle cx="23" cy="23" r="9" stroke="white" stroke-width="3" fill="none"/><circle cx="23" cy="23" r="3.5" fill="white"/><line x1="30" y1="30" x2="39" y2="39" stroke="white" stroke-width="3" stroke-linecap="round"/></svg>
+        </div>
+        <div class="sc-name">Hunter</div>
+        <div class="sc-role">Email finder & verification</div>
+      </div>
+
+      <!-- Prospeo -->
+      <div class="stack-card" role="listitem" style="--sc-shine:linear-gradient(135deg,rgba(99,102,241,0.1),transparent 60%)">
+        <div class="sc-logo">
+          <svg viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Prospeo logo"><rect width="52" height="52" rx="13" fill="#6366F1"/><rect x="11" y="16" width="30" height="22" rx="4" stroke="white" stroke-width="2.5" fill="none"/><path d="M11 20L26 30L41 20" stroke="white" stroke-width="2.5" stroke-linecap="round" fill="none"/></svg>
+        </div>
+        <div class="sc-name">Prospeo</div>
+        <div class="sc-role">Email waterfall fallback</div>
+      </div>
+
+      <!-- LinkedIn -->
+      <div class="stack-card" role="listitem" style="--sc-shine:linear-gradient(135deg,rgba(10,102,194,0.1),transparent 60%)">
+        <div class="sc-logo">
+          <svg viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="LinkedIn logo"><rect width="52" height="52" rx="13" fill="#0A66C2"/><rect x="13" y="22" width="7" height="17" rx="1" fill="white"/><circle cx="16.5" cy="15.5" r="4" fill="white"/><rect x="24" y="22" width="7" height="17" rx="1" fill="white"/><path d="M24 27C24 23.7 26.7 21 30 21H31V22C34.3 22 37 24.7 37 28V39H30V29C30 27.3 28.7 26 27 26H24Z" fill="white"/></svg>
+        </div>
+        <div class="sc-name">LinkedIn</div>
+        <div class="sc-role">Profile enrichment & ABM</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- RESULTS -->
 <section id="results" aria-labelledby="results-h">
   <div class="wrap">
@@ -943,22 +1067,22 @@ html.light .metric-card{background:rgba(255,255,255,0.65);backdrop-filter:blur(1
     <p style="color:var(--text);margin-top:8px;font-size:0.95rem;max-width:540px">Real numbers from real campaigns. Industry averages shown for context.</p>
     <div class="metric-grid fade-up" role="list">
       <div class="metric-card" role="listitem">
-        <div class="metric-num">61%</div>
+        <div class="metric-num" data-count="61" data-suffix="%">61%</div>
         <div class="metric-lbl">Average open rate</div>
         <div class="metric-desc">Industry average is 28%. The difference is domain warming, sending reputation, and subject line A/B testing built into the system from day one.</div>
       </div>
       <div class="metric-card" role="listitem">
-        <div class="metric-num">4.2%</div>
+        <div class="metric-num" data-count="4.2" data-suffix="%">4.2%</div>
         <div class="metric-lbl">Reply rate</div>
         <div class="metric-desc">Generic cold email averages 1%. AI-personalized openers based on company research — not mail-merge — drive real engagement.</div>
       </div>
       <div class="metric-card" role="listitem">
-        <div class="metric-num">18</div>
+        <div class="metric-num" data-count="18">18</div>
         <div class="metric-lbl">Meetings in Month 1</div>
         <div class="metric-desc">From 1,847 emails sent. That's one meeting per ~100 emails — a benchmark most SDR teams spend months trying to reach.</div>
       </div>
       <div class="metric-card" role="listitem">
-        <div class="metric-num">48h</div>
+        <div class="metric-num" data-count="48" data-suffix="h">48h</div>
         <div class="metric-lbl">Call to live campaign</div>
         <div class="metric-desc">Discovery call on Monday. First emails sending by Wednesday. Loom walkthrough delivered. No 6-week onboarding. No slide decks.</div>
       </div>
@@ -1331,6 +1455,67 @@ function toggleFaq(btn){
     btn.setAttribute('aria-expanded','true');
   }
 }
+
+/* ── SCROLL PROGRESS BAR ── */
+(function(){
+  var bar=document.getElementById('scroll-progress');
+  if(!bar)return;
+  window.addEventListener('scroll',function(){
+    var pct=window.scrollY/(document.body.scrollHeight-window.innerHeight)*100;
+    bar.style.width=Math.min(pct,100)+'%';
+  },{passive:true});
+})();
+
+/* ── COUNTER ANIMATION ── */
+(function(){
+  if(!('IntersectionObserver' in window))return;
+  if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+  function animateCount(el,target,suffix,dur){
+    var start=Date.now(),isFloat=target!==Math.floor(target);
+    function step(){
+      var p=Math.min((Date.now()-start)/dur,1);
+      var ease=1-Math.pow(1-p,4);
+      var val=target*ease;
+      el.textContent=(isFloat?val.toFixed(1):Math.round(val))+(suffix||'');
+      if(p<1)requestAnimationFrame(step);
+      else el.textContent=target+(suffix||'');
+    }
+    requestAnimationFrame(step);
+  }
+  var obs=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        var el=e.target,t=parseFloat(el.dataset.count),s=el.dataset.suffix||'';
+        if(!isNaN(t))animateCount(el,t,s,1400);
+        obs.unobserve(el);
+      }
+    });
+  },{threshold:0.5});
+  document.querySelectorAll('[data-count]').forEach(function(el){obs.observe(el)});
+})();
+
+/* ── 3D TILT EFFECT ── */
+(function(){
+  if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+  function addTilt(sel,intensity){
+    document.querySelectorAll(sel).forEach(function(card){
+      card.addEventListener('mousemove',function(e){
+        var r=card.getBoundingClientRect();
+        var x=(e.clientX-r.left)/r.width-0.5;
+        var y=(e.clientY-r.top)/r.height-0.5;
+        card.style.transform='translateY(-8px) rotateX('+(-y*intensity)+'deg) rotateY('+(x*intensity)+'deg)';
+        card.style.boxShadow='0 24px 60px rgba(0,0,0,0.3),'+(-x*12)+'px '+(-y*12)+'px 20px rgba(0,0,0,0.1)';
+      });
+      card.addEventListener('mouseleave',function(){
+        card.style.transform='';
+        card.style.boxShadow='';
+      });
+    });
+  }
+  addTilt('.stack-card',16);
+  addTilt('.pc',10);
+  addTilt('.metric-card',8);
+})();
 </script>
 </body>
 </html>

@@ -26,8 +26,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <script>(function(){var t=localStorage.getItem('bt');if(t==='dark'){document.documentElement.classList.remove('light')}else{document.documentElement.classList.add('light')}})();</script>
   <style>
-    :root{--bg:#000000;--bg2:#111111;--bg3:#1c1c1e;--bg4:#2c2c2e;--green:#22c55e;--green2:#16a34a;--glow:rgba(34,197,94,0.12);--white:#f5f5f7;--text:#a1a1a6;--text-dim:#636366;--border:#2c2c2e;--border2:#3a3a3c;--fh:'Inter',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif;--fb:'Inter',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif;color-scheme:dark;}
-    html.light{--bg:#f5f5f7;--bg2:#ffffff;--bg3:#f0f0f5;--bg4:#e8e8ed;--green:#1d9e44;--green2:#15803d;--glow:rgba(22,163,74,0.1);--white:#1d1d1f;--text:#424245;--text-dim:#86868b;--border:#d2d2d7;--border2:#c7c7cc;color-scheme:light;}
+    :root{--bg:#000000;--bg2:#111111;--bg3:#1c1c1e;--bg4:#2c2c2e;--green:#22c55e;--green2:#16a34a;--glow:rgba(34,197,94,0.12);--glow2:rgba(34,197,94,0.06);--white:#f5f5f7;--text:#a1a1a6;--text-dim:#636366;--muted:#636366;--border:#2c2c2e;--border2:#3a3a3c;--fh:'Inter',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif;--fb:'Inter',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif;color-scheme:dark;}
+    html.light{--bg:#ffffff;--bg2:#fafafa;--bg3:#f5f5f7;--bg4:#e8e8ed;--green:#22c55e;--green2:#16a34a;--glow:rgba(34,197,94,0.14);--glow2:rgba(34,197,94,0.07);--white:#1d1d1f;--text:#6e6e73;--text-dim:#86868b;--muted:#a1a1aa;--border:#e5e5e7;--border2:#d1d1d6;color-scheme:light;}
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
     html{scroll-behavior:smooth;}
     body{background:var(--bg);color:var(--white);font-family:var(--fb);line-height:1.7;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;transition:background-color 0.3s,color 0.3s;}
@@ -134,10 +134,25 @@
     footer a{color:var(--text);text-decoration:none;transition:color .2s;}
     footer a:hover{color:var(--green);text-decoration:none;}
 
+    /* SCROLL PROGRESS */
+    #scroll-progress{position:fixed;top:0;left:0;z-index:9999;height:2px;background:linear-gradient(90deg,var(--green),rgba(34,197,94,0.4));width:0%;pointer-events:none;box-shadow:0 0 8px rgba(34,197,94,0.4)}
+    /* FADE-UP */
+    .fade-up{opacity:0;transform:translateY(24px);filter:blur(3px);transition:opacity 0.7s cubic-bezier(0.16,1,0.3,1),transform 0.7s cubic-bezier(0.16,1,0.3,1),filter 0.7s cubic-bezier(0.16,1,0.3,1)}
+    .fade-up.in{opacity:1;transform:translateY(0);filter:blur(0)}
+    @media(prefers-reduced-motion:reduce){.fade-up{opacity:1!important;transform:none!important;filter:none!important;transition:none!important}}
+    /* 3D TIER CARDS */
+    .tier{transform-style:preserve-3d;will-change:transform}
+    .tier:hover{transform:translateY(-6px);box-shadow:0 24px 64px rgba(0,0,0,0.35)}
+    html.light .tier{background:rgba(255,255,255,0.75);backdrop-filter:blur(18px) saturate(160%);-webkit-backdrop-filter:blur(18px) saturate(160%);border:1px solid rgba(255,255,255,0.85);box-shadow:0 4px 20px rgba(0,0,0,0.05)}
+    html.light .tier:hover{box-shadow:0 20px 56px rgba(0,0,0,0.1);border-color:rgba(255,255,255,0.95)}
+    html.light .tier--pop{border-color:rgba(34,197,94,0.4);box-shadow:0 8px 40px rgba(0,0,0,0.06),0 0 0 1px rgba(34,197,94,0.1)}
+    footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--green),transparent);opacity:0.4}
+    footer{position:relative;border-top:none}
     @media(max-width:480px){.page-hero{padding:52px 0 40px;}}
   </style>
 </head>
 <body>
+<div id="scroll-progress" aria-hidden="true"></div>
 
 <nav>
   <div class="wrap">
@@ -158,15 +173,15 @@
 
   <div class="page-hero">
     <span class="pg-label">Services &amp; Pricing</span>
-    <h1>Clay outbound, done for you.</h1>
+    <h1 class="fade-up">Clay outbound, done for you.</h1>
     <p>Three flat-rate tiers — from a one-time system build to full weekly management. All plans require active Clay and Instantly accounts (~$600/mo paid directly to the tools). You pay for operator expertise, not tool subscriptions.</p>
   </div>
 
   <!-- TIER CARDS -->
   <div class="section">
-    <h2>Choose your tier</h2>
+    <h2 class="fade-up">Choose your tier</h2>
     <p class="sec-sub">Start with Setup, add Managed if you want weekly management, or go straight to Growth for full-stack ABM + CRM sync.</p>
-    <div class="tier-grid">
+    <div class="tier-grid fade-up">
 
       <!-- SETUP -->
       <div class="tier">
@@ -227,7 +242,7 @@
 
   <!-- WHAT'S INCLUDED COMPARISON -->
   <div class="section">
-    <h2>What's included in each tier</h2>
+    <h2 class="fade-up">What's included in each tier</h2>
     <p class="sec-sub">Exact deliverables by plan, so you know what you're getting before the discovery call.</p>
     <div class="comp-scroll">
       <table class="comp" role="table" aria-label="Tier feature comparison">
@@ -331,7 +346,7 @@
 
   <!-- WHO THIS IS FOR -->
   <div class="section">
-    <h2>Who this is for</h2>
+    <h2 class="fade-up">Who this is for</h2>
     <p class="sec-sub">Breculia AI serves a specific type of founder. If this is you, the system works.</p>
     <div class="icp-grid">
       <div class="icp-item">
@@ -366,7 +381,7 @@
 
   <!-- PAYMENT -->
   <div class="section">
-    <h2>Payment &amp; billing</h2>
+    <h2 class="fade-up">Payment &amp; billing</h2>
     <p class="sec-sub">Flat USD pricing. No hidden fees. One payment method.</p>
     <div class="pay-box">
       <div class="pay-icon" aria-hidden="true">🏦</div>
@@ -382,7 +397,7 @@
 
   <!-- CTA -->
   <div class="section" style="text-align:center;padding-bottom:80px;">
-    <h2>Book a free 15-min discovery call</h2>
+    <h2 class="fade-up">Book a free 15-min discovery call</h2>
     <p class="sec-sub" style="margin-left:auto;margin-right:auto;text-align:center">I'll audit your current outbound stack for free. No pitch until you see the gaps yourself. Pick a slot that works.</p>
     <a href="https://cal.com/rishe/audit" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:8px;padding:18px 40px;background:var(--green);color:#000;font-size:1rem;font-weight:600;border-radius:40px;text-decoration:none;transition:background 0.2s,transform 0.2s;" onmouseover="this.style.background='var(--green2)';this.style.transform='translateY(-2px)'" onmouseout="this.style.background='var(--green)';this.style.transform='none'">📅 Book free 15-min call →</a>
     <p style="font-size:.78rem;color:var(--text-dim);margin-top:14px">Or email <a href="mailto:founder@breculia.tech" style="color:var(--text);">founder@breculia.tech</a> directly.</p>
@@ -399,20 +414,14 @@
 </footer>
 
 <script>
-(function(){
-  var html=document.documentElement,toggle=document.getElementById('themeToggle'),
-      meta=document.querySelector('meta[name="theme-color"]'),
-      stored=localStorage.getItem('bt');
-  function apply(t){
-    if(t==='light'){html.classList.add('light');if(meta)meta.setAttribute('content','#f5f5f5')}
-    else{html.classList.remove('light');if(meta)meta.setAttribute('content','#0a0a0a')}
-  }
-  if(stored==='dark')apply('dark');else apply('light');
-  if(toggle)toggle.addEventListener('click',function(){
-    var n=html.classList.contains('light')?'dark':'light';
-    apply(n);localStorage.setItem('bt',n);
-  });
-})();
+/* ── THEME ── */
+(function(){var html=document.documentElement,toggle=document.getElementById('themeToggle'),meta=document.querySelector('meta[name="theme-color"]'),stored=localStorage.getItem('bt');function apply(t){if(t==='light'){html.classList.add('light');if(meta)meta.setAttribute('content','#ffffff')}else{html.classList.remove('light');if(meta)meta.setAttribute('content','#0a0a0a')}}if(stored==='dark')apply('dark');else apply('light');if(toggle)toggle.addEventListener('click',function(){var n=html.classList.contains('light')?'dark':'light';apply(n);localStorage.setItem('bt',n)})})();
+/* ── FADE-UP ── */
+(function(){var els=document.querySelectorAll('.fade-up');if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return;}var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');obs.unobserve(e.target)}})},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});els.forEach(function(e){obs.observe(e)})})();
+/* ── SCROLL PROGRESS ── */
+(function(){var bar=document.getElementById('scroll-progress');if(!bar)return;window.addEventListener('scroll',function(){bar.style.width=Math.min(window.scrollY/(document.body.scrollHeight-window.innerHeight)*100,100)+'%'},{passive:true})})();
+/* ── 3D TILT ── */
+(function(){if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion:reduce)').matches)return;document.querySelectorAll('.tier').forEach(function(c){c.addEventListener('mousemove',function(e){var r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-0.5,y=(e.clientY-r.top)/r.height-0.5;c.style.transform='translateY(-6px) rotateX('+(-y*10)+'deg) rotateY('+(x*10)+'deg)'});c.addEventListener('mouseleave',function(){c.style.transform=''})})})();
 </script>
 </body>
 </html>
