@@ -34,17 +34,17 @@
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Caveat:wght@600;700&display=swap"></noscript>
 
 <!-- Inline theme to prevent flash -->
-<script>(function(){var t=localStorage.getItem('bt');if(t!=='dark'){document.documentElement.classList.add('light')}})();<\/script>
+<script>(function(){var t=localStorage.getItem('bt');if(t!=='dark'){document.documentElement.classList.add('light')}})();</script>
 
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"ProfessionalService","name":"Breculia AI","description":"Clay + Instantly outbound pipeline operator for US B2B SaaS founders. Builds and runs cold email systems that book meetings automatically.","url":"https://breculia.tech","email":"founder@breculia.tech","serviceType":["Cold Email Outbound","Clay Enrichment","Instantly Campaigns","B2B Lead Generation"],"image":"https://breculia.tech/logo-favicon.png","areaServed":"US"}
-<\/script>
+</script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Service","name":"Clay + Instantly Outbound Pipeline","provider":{"@type":"Organization","name":"Breculia AI","url":"https://breculia.tech"},"serviceType":"B2B Cold Email Outbound System","description":"Builds and manages Clay waterfall enrichment tables and Instantly cold email campaigns for US B2B SaaS founders. Setup in 48 hours. Managed weekly."}
-<\/script>
+</script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How fast is setup?","acceptedAnswer":{"@type":"Answer","text":"48 hours from our discovery call to your first emails sending. Clay table built, Instantly campaign live, domains warmed, AI openers written — all done."}},{"@type":"Question","name":"Do I need a Clay or Instantly account?","acceptedAnswer":{"@type":"Answer","text":"Yes. Clients pay Clay and Instantly directly (~$600/mo combined). I charge for operator expertise — building and running the system — not for the tools themselves."}},{"@type":"Question","name":"What's the 30-day guarantee?","acceptedAnswer":{"@type":"Answer","text":"If there's no measurable improvement in your campaign metrics (open rate or reply rate vs baseline) in the first 30 days, Month 2 is at no charge."}},{"@type":"Question","name":"Am I locked into a contract?","acceptedAnswer":{"@type":"Answer","text":"Month-to-month managed plans. Cancel with 7 days notice. The $1,500 setup is one-time — it's fully refundable before any build work begins."}},{"@type":"Question","name":"How do I pay?","acceptedAnswer":{"@type":"Answer","text":"ACH bank transfer only, processed through Xflow. No credit card, PayPal, Venmo, or Zelle."}}]}
-<\/script>
+</script>
 
 <style>
 /* ── TOKENS (Apple-inspired premium dark theme) ── */
@@ -649,6 +649,18 @@ html.light #hero{background:radial-gradient(ellipse 90% 55% at 50% -5%,rgba(34,1
 .prob-item:hover{transform:translateY(-6px) scale(1.025);box-shadow:0 20px 60px rgba(0,0,0,0.2)}
 html.light .prob-item:hover{box-shadow:0 20px 60px rgba(0,0,0,0.08)}
 
+/* ── REDUCED MOTION FALLBACK ── */
+@media(prefers-reduced-motion:reduce){
+  .word{opacity:1!important;animation:none!important}
+  .fade-up{opacity:1!important;transform:none!important;filter:none!important;transition:none!important}
+  .fade-up.in{opacity:1;transform:none;filter:none}
+  .steps .step{opacity:1!important;transform:none!important;transition:none!important}
+  .problem-grid .prob-item{opacity:1!important;transform:none!important;transition:box-shadow 0.35s ease!important}
+  .nav-dot,.kicker-dot,.chat-dot,.wa-ld,.term-cursor{animation:none!important}
+  .phone-wrap{animation:none!important}
+  html.light .btn-primary{animation:none!important}
+}
+
 /* ── CTA BUTTON GLOW PULSE ── */
 @keyframes ctaPulse{0%,100%{box-shadow:0 4px 20px rgba(34,197,94,0.2)}50%{box-shadow:0 4px 32px rgba(34,197,94,0.45)}}
 html.light .btn-primary{animation:ctaPulse 3s ease-in-out infinite}
@@ -1234,31 +1246,36 @@ html.light .metric-card{background:rgba(255,255,255,0.65);backdrop-filter:blur(1
 
 /* ── HERO WORD ANIMATION — runs after fonts load to prevent CLS ── */
 (function(){
+  /* Skip animation entirely if user prefers reduced motion */
+  if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion:reduce)').matches)return;
   function animateWords(){
     ['.h1-l1','.h1-l2','.h1-l3'].forEach(function(sel,si){
       var el=document.querySelector(sel);
       if(!el)return;
-      /* save text before destroying it */
+      /* save inline color style before replacing content */
+      var inlineColor=el.style.color||'';
       var txt=el.textContent.trim();
       var words=txt.split(/\s+/);
       el.innerHTML='';
+      if(inlineColor)el.style.color=inlineColor;
       words.forEach(function(w,i){
         var s=document.createElement('span');
         s.className='word';
         s.textContent=w;
-        s.style.animationDelay=(150+si*180+i*80)+'ms';
+        s.style.animationDelay=(100+si*140+i*70)+'ms';
         el.appendChild(s);
         /* add space between words */
         if(i<words.length-1)el.appendChild(document.createTextNode('\u00a0'));
       });
     });
   }
-  /* wait for fonts to avoid measuring shift */
+  /* Run immediately — script is at bottom of body, DOM is ready.
+     document.fonts.ready is used only as an enhancement to avoid
+     a brief fallback-font render before Inter loads. */
   if(document.fonts&&document.fonts.ready){
     document.fonts.ready.then(animateWords);
   } else {
-    /* fallback: slight delay so paint happens first */
-    setTimeout(animateWords,200);
+    setTimeout(animateWords,100);
   }
 })();
 
@@ -1314,6 +1331,6 @@ function toggleFaq(btn){
     btn.setAttribute('aria-expanded','true');
   }
 }
-<\/script>
+</script>
 </body>
 </html>
