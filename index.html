@@ -1,456 +1,1317 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Breculia AI | Outbound Systems That Book Meetings Automatically</title>
-  <meta name="description" content="I build Clay + Instantly outbound pipelines for US B2B founders. Setup in 48 hours. 200 personalized emails/day. No SDR hiring. No 6-week DIY learning curve." />
-  <link rel="canonical" href="https://breculia.tech/" />
-  <meta property="og:title" content="Breculia AI | Outbound Systems That Book Meetings" />
-  <meta property="og:description" content="Clay + Instantly pipelines for US B2B founders. Setup in 48h. 200 emails/day. 30-day guarantee." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://breculia.tech/" />
-  <meta property="og:image" content="https://breculia.tech/logo-favicon.png" />
-  <meta property="og:site_name" content="Breculia AI" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Breculia AI | Outbound Systems That Book Meetings" />
-  <meta name="twitter:description" content="Clay + Instantly pipelines for US B2B founders. Setup in 48h. 200 emails/day." />
-  <link rel="icon" type="image/png" href="logo-favicon.png" />
-  <link rel="apple-touch-icon" href="logo-favicon.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <style>
-    /* ── Variables ─────────────────────────────────── */
-    :root {
-      --bg:#ffffff; --bg2:#f7f8f8; --card:#f7f8f8;
-      --text:#111111; --muted:#5f6368;
-      --accent:#1D9E75; --accent-dim:rgba(29,158,117,.12); --accent-border:rgba(29,158,117,.25);
-      --border:#e5e7eb;
-      --term-bg:#0d1117; --term-text:#e6edf3; --term-green:#3fb950; --term-muted:#8b949e;
-      --placeholder:#ff4d4f;
-      color-scheme:light;
-    }
-    html.dark {
-      --bg:#0a0a0a; --bg2:#111111; --card:#111111;
-      --text:#f0f0f0; --muted:#a0a0a0; --border:#2a2a2a;
-      --accent-dim:rgba(29,158,117,.18); --accent-border:rgba(29,158,117,.35);
-      color-scheme:dark;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Breculia AI — Clay + Instantly Outbound Pipeline for B2B SaaS Founders</title>
+<meta name="description" content="Breculia AI builds and runs Clay + Instantly cold email outbound systems for US B2B SaaS founders. Setup in 48 hours. 61% open rate. 18 meetings/month. No SDR hiring.">
+<meta name="keywords" content="Clay outbound, Instantly cold email, B2B SaaS outbound, cold email pipeline, outbound automation, Clay enrichment, lead generation SaaS founders">
+<meta name="author" content="Breculia AI">
+<meta name="theme-color" content="#ffffff">
+<meta property="og:title" content="Outbound systems that book meetings automatically. — Breculia AI">
+<meta property="og:description" content="I build Clay + Instantly pipelines for US B2B founders. Setup in 48 hours. No SDR hiring. No 6-week DIY learning curve.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://breculia.tech">
+<meta property="og:image" content="https://breculia.tech/logo-favicon.png">
+<meta property="og:image:alt" content="Breculia AI logo">
+<meta property="og:site_name" content="Breculia AI">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Outbound systems that book meetings automatically. — Breculia AI">
+<meta name="twitter:description" content="I build Clay + Instantly cold email pipelines for US B2B SaaS founders. 61% open rate, 4.2% reply rate. Setup in 48h.">
+<meta name="twitter:image" content="https://breculia.tech/logo-favicon.png">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<link rel="canonical" href="https://breculia.tech">
+<link rel="icon" type="image/png" href="logo-favicon.png">
+<link rel="apple-touch-icon" href="logo-favicon.png">
 
-    /* ── Reset ─────────────────────────────────────── */
-    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-    html{scroll-behavior:smooth;}
-    body{font-family:Inter,system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased;}
+<!-- FONT STRATEGY: preconnect + font-display:swap CSS to eliminate CLS and LCP delay -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Caveat:wght@600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Caveat:wght@600;700&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Caveat:wght@600;700&display=swap"></noscript>
 
-    /* ── Layout ────────────────────────────────────── */
-    .container{max-width:1100px;margin:0 auto;padding:0 24px;}
-    section{padding:80px 0;}
+<!-- Inline theme to prevent flash -->
+<script>(function(){var t=localStorage.getItem('bt');if(t!=='dark'){document.documentElement.classList.add('light')}})();<\/script>
 
-    /* ── Nav ───────────────────────────────────────── */
-    nav{position:sticky;top:0;z-index:100;background:var(--bg);border-bottom:1px solid var(--border);}
-    .nav-inner{display:flex;align-items:center;justify-content:space-between;height:60px;gap:24px;}
-    .nav-logo{display:flex;align-items:center;gap:8px;font-weight:800;font-size:1.05rem;color:var(--text);text-decoration:none;flex-shrink:0;}
-    .nav-logo .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 8px var(--accent);}
-    .nav-links{display:flex;align-items:center;gap:28px;list-style:none;}
-    .nav-links a{color:var(--muted);text-decoration:none;font-size:.9rem;font-weight:500;transition:color .2s;}
-    .nav-links a:hover{color:var(--text);}
-    .nav-right{display:flex;align-items:center;gap:10px;}
-    .btn-nav{background:var(--accent);color:#fff;text-decoration:none;padding:8px 18px;border-radius:8px;font-weight:700;font-size:.88rem;transition:opacity .2s;border:none;cursor:pointer;white-space:nowrap;}
-    .btn-nav:hover{opacity:.88;}
-    .theme-btn{background:none;border:1px solid var(--border);color:var(--text);border-radius:8px;padding:6px 10px;cursor:pointer;font-size:.88rem;transition:border-color .2s;line-height:1;}
-    .theme-btn:hover{border-color:var(--accent);}
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"Breculia AI","description":"Clay + Instantly outbound pipeline operator for US B2B SaaS founders. Builds and runs cold email systems that book meetings automatically.","url":"https://breculia.tech","email":"founder@breculia.tech","serviceType":["Cold Email Outbound","Clay Enrichment","Instantly Campaigns","B2B Lead Generation"],"image":"https://breculia.tech/logo-favicon.png","areaServed":"US"}
+<\/script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Service","name":"Clay + Instantly Outbound Pipeline","provider":{"@type":"Organization","name":"Breculia AI","url":"https://breculia.tech"},"serviceType":"B2B Cold Email Outbound System","description":"Builds and manages Clay waterfall enrichment tables and Instantly cold email campaigns for US B2B SaaS founders. Setup in 48 hours. Managed weekly."}
+<\/script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How fast is setup?","acceptedAnswer":{"@type":"Answer","text":"48 hours from our discovery call to your first emails sending. Clay table built, Instantly campaign live, domains warmed, AI openers written — all done."}},{"@type":"Question","name":"Do I need a Clay or Instantly account?","acceptedAnswer":{"@type":"Answer","text":"Yes. Clients pay Clay and Instantly directly (~$600/mo combined). I charge for operator expertise — building and running the system — not for the tools themselves."}},{"@type":"Question","name":"What's the 30-day guarantee?","acceptedAnswer":{"@type":"Answer","text":"If there's no measurable improvement in your campaign metrics (open rate or reply rate vs baseline) in the first 30 days, Month 2 is at no charge."}},{"@type":"Question","name":"Am I locked into a contract?","acceptedAnswer":{"@type":"Answer","text":"Month-to-month managed plans. Cancel with 7 days notice. The $1,500 setup is one-time — it's fully refundable before any build work begins."}},{"@type":"Question","name":"How do I pay?","acceptedAnswer":{"@type":"Answer","text":"ACH bank transfer only, processed through Xflow. No credit card, PayPal, Venmo, or Zelle."}}]}
+<\/script>
 
-    /* ── Buttons ───────────────────────────────────── */
-    .btn-primary{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;padding:14px 28px;border-radius:10px;font-weight:700;font-size:1rem;transition:opacity .2s,transform .15s;border:none;cursor:pointer;}
-    .btn-primary:hover{opacity:.88;transform:translateY(-1px);}
-    .btn-secondary{display:inline-block;background:transparent;color:var(--text);text-decoration:none;padding:14px 28px;border-radius:10px;font-weight:600;font-size:1rem;border:1px solid var(--border);transition:border-color .2s,transform .15s;}
-    .btn-secondary:hover{border-color:var(--accent);transform:translateY(-1px);}
+<style>
+/* ── TOKENS (Apple-inspired premium dark theme) ── */
+:root{
+  --bg:#000000;--bg2:#111111;--bg3:#1c1c1e;--bg4:#2c2c2e;
+  --border:#2c2c2e;--border2:#3a3a3c;
+  --green:#22c55e;--green2:#16a34a;
+  --glow:rgba(34,197,94,0.12);--glow2:rgba(34,197,94,0.06);
+  --white:#f5f5f7;
+  --text:#a1a1a6;
+  --muted:#636366;
+  --badge-bg:#22c55e;--badge-fg:#000000;
+  --red:#ff453a;
+  --fh:'Inter',-apple-system,BlinkMacSystemFont,'SF Pro Display','Helvetica Neue',Arial,sans-serif;
+  --fb:'Inter',-apple-system,BlinkMacSystemFont,'SF Pro Text','Helvetica Neue',Arial,sans-serif;
+  color-scheme:dark;
+}
+html.light{
+  --bg:#ffffff;--bg2:#fafafa;--bg3:#f5f5f7;--bg4:#e8e8ed;
+  --border:#e5e5e7;--border2:#d1d1d6;
+  --green:#22c55e;--green2:#16a34a;
+  --glow:rgba(34,197,94,0.14);--glow2:rgba(34,197,94,0.07);
+  --white:#1d1d1f;--text:#6e6e73;--muted:#a1a1aa;
+  --badge-bg:#22c55e;--badge-fg:#ffffff;
+  --red:#dc2626;
+  color-scheme:light;
+}
 
-    /* ── Section labels / headings ─────────────────── */
-    .section-label{display:block;font-size:.72rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--accent);margin-bottom:12px;}
-    h2.section-title{font-size:clamp(1.7rem,3.5vw,2.5rem);font-weight:800;letter-spacing:-.025em;color:var(--text);margin-bottom:10px;}
-    .section-sub{font-size:1rem;color:var(--muted);max-width:520px;line-height:1.65;}
+/* ── RESET ── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:17px;scroll-padding-top:52px}
+body{background:var(--bg);color:var(--white);font-family:var(--fb);font-weight:400;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+::selection{background:rgba(34,197,94,0.25);color:#fff}
 
-    /* ── Hero ──────────────────────────────────────── */
-    .hero{padding:96px 0 80px;text-align:center;}
-    .badge{display:inline-flex;align-items:center;gap:8px;background:var(--accent-dim);color:var(--accent);border:1px solid var(--accent-border);border-radius:999px;padding:6px 16px;font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:30px;}
-    .badge-dot{width:6px;height:6px;border-radius:50%;background:var(--accent);animation:pulse 1.5s infinite;}
-    @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
-    h1.hero-title{font-size:clamp(2.4rem,5vw,4rem);font-weight:800;letter-spacing:-.03em;line-height:1.1;margin-bottom:22px;color:var(--text);}
-    h1.hero-title .accent{color:var(--accent);}
-    .hero-sub{font-size:clamp(1rem,2vw,1.18rem);color:var(--muted);max-width:560px;margin:0 auto 38px;line-height:1.65;}
-    .hero-ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:56px;}
+footer a{color:var(--text);text-decoration:underline;text-decoration-color:transparent;transition:color 0.2s,text-decoration-color 0.2s}
+footer a:hover{color:var(--green);text-decoration-color:var(--green)}
 
-    /* Stats bar */
-    .stats-bar{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:14px;overflow:hidden;max-width:680px;margin:0 auto;}
-    .stat-item{background:var(--bg);padding:20px 12px;text-align:center;}
-    .stat-val{font-size:1.9rem;font-weight:800;color:var(--accent);line-height:1;margin-bottom:5px;}
-    .stat-label{font-size:.68rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);font-weight:600;}
+/* ── LAYOUT ── */
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+@media(min-width:800px){.wrap{padding:0 40px}}
+@media(min-width:1100px){.wrap{padding:0 48px}}
+section{padding:120px 0;position:relative}
+section+section{border-top:1px solid var(--border)}
 
-    /* ── Demo terminal ─────────────────────────────── */
-    .demo-section{background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
-    .demo-inner{display:grid;grid-template-columns:1fr;gap:48px;align-items:center;}
-    .terminal{background:var(--term-bg);border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,.07);box-shadow:0 24px 64px rgba(0,0,0,.35);font-family:'SF Mono','Fira Code',Consolas,'Courier New',monospace;font-size:.82rem;line-height:1.75;}
-    .term-bar{display:flex;align-items:center;gap:8px;padding:10px 16px;background:rgba(255,255,255,.04);border-bottom:1px solid rgba(255,255,255,.06);}
-    .term-dot{width:12px;height:12px;border-radius:50%;}
-    .term-dot.r{background:#ff5f57;}.term-dot.y{background:#febc2e;}.term-dot.g{background:#28c840;}
-    .term-title-bar{margin-left:8px;font-size:.73rem;color:rgba(255,255,255,.38);font-family:Inter,sans-serif;letter-spacing:.04em;}
-    .term-body{padding:20px 20px 24px;min-height:260px;}
-    .term-line{display:block;margin-bottom:1px;}
-    .tc-prompt{color:var(--term-green);}
-    .tc-comment{color:var(--term-muted);}
-    .tc-key{color:#79c0ff;}
-    .tc-val{color:#a5d6ff;}
-    .tc-label{color:var(--term-green);font-weight:700;}
-    .tc-quote{color:#ffa657;}
-    .tc-success{color:var(--term-green);font-weight:700;}
-    .tc-cursor{display:inline-block;width:8px;height:1.1em;background:var(--term-green);vertical-align:text-bottom;animation:blink .8s step-end infinite;margin-left:1px;}
-    @keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
+/* ── TYPOGRAPHY ── */
+.label{display:inline-flex;align-items:center;gap:8px;
+  font-family:'Caveat',cursive;font-size:1.05rem;font-weight:700;
+  letter-spacing:0.06em;color:var(--green);margin-bottom:20px}
+.label::before{content:'';width:22px;height:2px;background:var(--green);border-radius:1px;flex-shrink:0}
+h1{font-family:var(--fh);font-size:clamp(2.8rem,8vw,6rem);font-weight:800;
+  line-height:1.02;letter-spacing:-0.025em;color:var(--white);
+  min-height:3lh;contain:layout}
+h2{font-family:var(--fh);font-size:clamp(2rem,5vw,3.6rem);font-weight:700;
+  line-height:1.06;letter-spacing:-0.02em;color:var(--white)}
+h3{font-size:1.1rem;font-weight:600;color:var(--white);line-height:1.35}
+p{color:var(--text);line-height:1.75}
 
-    /* ── Steps ─────────────────────────────────────── */
-    .steps{display:grid;grid-template-columns:1fr;gap:20px;margin-top:48px;}
-    .step-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:28px;transition:border-color .2s,transform .2s;}
-    .step-card:hover{border-color:var(--accent);transform:translateY(-2px);}
-    .step-num{font-size:.7rem;font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:var(--accent);margin-bottom:12px;}
-    .step-card h3{font-size:1.05rem;font-weight:700;margin-bottom:10px;color:var(--text);}
-    .step-card p{font-size:.9rem;color:var(--muted);line-height:1.6;}
+/* ── BUTTONS ── */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  padding:15px 32px;font-family:var(--fb);font-size:0.95rem;font-weight:600;
+  letter-spacing:0.01em;border-radius:40px;cursor:pointer;
+  transition:background 0.22s,transform 0.22s,box-shadow 0.22s,opacity 0.22s;
+  border:none;line-height:1;text-decoration:none}
+.btn-primary{background:var(--green);color:#000000}
+.btn-primary:hover{background:var(--green2);transform:translateY(-1px);box-shadow:0 6px 24px var(--glow)}
+.btn-primary:active{transform:translateY(0)}
+html.light .btn-primary{background:var(--green);color:#ffffff}
+html.light .btn-primary:hover{background:var(--green2)}
+.btn-ghost{background:transparent;color:var(--white);border:1.5px solid rgba(255,255,255,0.2)}
+.btn-ghost:hover{border-color:rgba(255,255,255,0.5);background:rgba(255,255,255,0.05)}
+html.light .btn-ghost{color:var(--white);border-color:rgba(29,29,31,0.2)}
+html.light .btn-ghost:hover{border-color:rgba(29,29,31,0.5);background:rgba(0,0,0,0.04)}
+.btn-full{width:100%}
+.btn-lg{padding:18px 40px;font-size:1rem}
+.cta-note{display:block;font-size:0.74rem;color:var(--muted);margin-top:10px;text-align:center}
 
-    /* ── Pricing ───────────────────────────────────── */
-    .pricing-note{font-size:.9rem;color:var(--muted);margin-top:8px;}
-    .pricing-grid{display:grid;grid-template-columns:1fr;gap:20px;margin-top:48px;}
-    .price-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:32px 28px;display:flex;flex-direction:column;gap:4px;transition:border-color .2s,transform .2s,box-shadow .2s;}
-    .price-card:hover{border-color:var(--accent);transform:translateY(-2px);box-shadow:0 8px 32px var(--accent-dim);}
-    .price-card.featured{border-color:var(--accent);box-shadow:0 8px 32px var(--accent-dim);}
-    .price-badge{display:inline-block;background:var(--accent);color:#fff;font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:4px 12px;border-radius:999px;align-self:flex-start;margin-bottom:8px;}
-    .price-plan{font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);}
-    .price-amount{font-size:2.6rem;font-weight:800;color:var(--text);line-height:1;margin:10px 0 2px;}
-    .price-amount span{font-size:1rem;font-weight:500;color:var(--muted);}
-    .price-period{font-size:.84rem;color:var(--muted);margin-bottom:14px;}
-    .price-divider{border:none;border-top:1px solid var(--border);margin:14px 0;}
-    .price-features{list-style:none;padding:0;display:flex;flex-direction:column;gap:10px;flex:1;}
-    .price-features li{font-size:.88rem;color:var(--muted);padding-left:22px;position:relative;line-height:1.5;}
-    .price-features li::before{content:'✓';position:absolute;left:0;color:var(--accent);font-weight:700;}
-    .price-cta{margin-top:24px;display:block;text-align:center;background:var(--accent);color:#fff;text-decoration:none;padding:13px 20px;border-radius:10px;font-weight:700;font-size:.9rem;transition:opacity .2s;}
-    .price-cta:hover{opacity:.88;}
-    .price-cta.outline{background:transparent;color:var(--text);border:1px solid var(--border);}
-    .price-cta.outline:hover{border-color:var(--accent);color:var(--accent);opacity:1;}
-    .placeholder{color:var(--placeholder);font-weight:700;}
+/* ── NAV ── */
+#nav{position:sticky;top:0;z-index:900;background:rgba(0,0,0,0.82);
+  backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);
+  border-bottom:1px solid rgba(255,255,255,0.08);padding:0;
+  contain:layout style}
+html.light #nav{background:rgba(245,245,247,0.85);border-bottom-color:rgba(0,0,0,0.08)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;gap:12px;height:52px}
+.nav-logo{font-family:var(--fh);font-size:1.1rem;font-weight:700;letter-spacing:-0.01em;
+  color:var(--white);display:flex;align-items:center;gap:8px}
+.nav-dot{width:7px;height:7px;border-radius:50%;background:var(--green);
+  box-shadow:0 0 8px var(--green);animation:pulse 1.6s infinite;flex-shrink:0}
+@keyframes pulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.4);opacity:0.6}}
+.nav-badge{font-family:var(--fb);font-size:0.75rem;font-weight:600;
+  background:rgba(34,197,94,0.12);color:var(--green);
+  padding:6px 14px;border-radius:20px;letter-spacing:0.01em;white-space:nowrap;
+  border:1px solid rgba(34,197,94,0.25);
+  transition:background 0.2s,transform 0.2s;display:inline-flex;align-items:center}
+.nav-badge:hover{background:rgba(34,197,94,0.22);transform:translateY(-1px)}
+html.light .nav-badge{background:rgba(29,158,68,0.08);color:var(--green);border-color:rgba(29,158,68,0.25)}
+.nav-right{display:flex;align-items:center;gap:12px}
+.theme-btn{width:40px;height:24px;border-radius:12px;background:var(--bg3);
+  border:1.5px solid var(--border2);cursor:pointer;position:relative;
+  -webkit-appearance:none;appearance:none;outline:none;transition:border-color 0.2s;flex-shrink:0}
+.theme-btn:hover{border-color:var(--green)}
+.theme-btn:focus-visible{outline:2px solid var(--green);outline-offset:2px}
+.theme-btn .knob{width:18px;height:18px;border-radius:50%;background:var(--green);
+  position:absolute;top:50%;left:2px;transform:translateY(-50%);
+  transition:left 0.3s cubic-bezier(0.68,-0.3,0.32,1.3)}
+html.light .theme-btn .knob{left:18px}
 
-    /* ── Metrics ───────────────────────────────────── */
-    .metrics-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:48px;}
-    .metric-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:28px;}
-    .metric-val{font-size:2.8rem;font-weight:800;color:var(--accent);line-height:1;margin-bottom:8px;}
-    .metric-label{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--text);margin-bottom:8px;}
-    .metric-desc{font-size:.85rem;color:var(--muted);line-height:1.55;}
+/* ── TOAST ── */
+.s-toast{position:fixed;top:60px;left:50%;transform:translateX(-50%) translateY(-16px);
+  z-index:9997;background:var(--green);color:#000;font-size:0.8rem;font-weight:700;
+  padding:10px 22px;border-radius:40px;box-shadow:0 8px 32px var(--glow);
+  opacity:0;pointer-events:none;transition:opacity 0.4s,transform 0.4s;white-space:nowrap}
+.s-toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
 
-    /* ── CTA section ───────────────────────────────── */
-    .cta-section{background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);text-align:center;}
-    .cta-section h2{max-width:620px;margin:0 auto 16px;}
-    .cta-section .cta-sub{color:var(--muted);max-width:440px;margin:0 auto 32px;font-size:.95rem;}
-    .cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+/* ── HERO ── */
+#hero{padding:0;border-top:none;min-height:100svh;display:flex;flex-direction:column}
+.hero-top{padding:80px 0 64px;flex:1}
 
-    /* ── Footer ────────────────────────────────────── */
-    footer{border-top:1px solid var(--border);padding:32px 0;}
-    .footer-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;}
-    .footer-copy{font-size:.84rem;color:var(--muted);}
-    .footer-links{display:flex;gap:20px;list-style:none;}
-    .footer-links a{font-size:.84rem;color:var(--muted);text-decoration:none;font-weight:500;transition:color .2s;}
-    .footer-links a:hover{color:var(--accent);}
+@media(min-width:720px){
+  .hero-top .wrap{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;min-height:500px}
+  .phone-wrap{display:block;min-width:260px;min-height:420px}
+}
+.phone-wrap{display:none}
 
-    /* ── Responsive ────────────────────────────────── */
-    @media(min-width:640px){
-      .steps{grid-template-columns:1fr 1fr;}
-      .pricing-grid{grid-template-columns:1fr 1fr 1fr;}
-    }
-    @media(min-width:860px){
-      .demo-inner{grid-template-columns:1fr 1fr;}
-    }
-    @media(max-width:639px){
-      .nav-links{display:none;}
-      .metrics-grid{grid-template-columns:1fr;}
-      .stats-bar{grid-template-columns:repeat(2,1fr);}
-    }
-  </style>
+.hero-kicker{display:flex;align-items:center;gap:10px;margin-bottom:24px}
+.kicker-dot{width:7px;height:7px;border-radius:50%;background:var(--green);
+  box-shadow:0 0 8px var(--green);animation:pulse 1.6s infinite;flex-shrink:0}
+.kicker-text{font-size:0.7rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--green)}
+html.light .kicker-text{color:var(--green)}
+
+.hero-sub{font-size:clamp(1rem,2.2vw,1.15rem);max-width:540px;line-height:1.75;
+  margin:24px 0 36px;color:var(--text)}
+
+.hero-ctas{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-bottom:36px}
+.hero-proof{display:flex;flex-wrap:wrap;gap:18px;align-items:center}
+.proof-item{display:flex;align-items:center;gap:7px;font-size:0.82rem;color:var(--text)}
+.pi-check{color:var(--green);font-size:0.85rem;font-weight:700;flex-shrink:0}
+
+/* Stats bar */
+.hero-card-row{background:var(--bg2);border-top:1px solid var(--border);padding:0}
+.hero-card-inner{display:flex;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.hero-card-inner::-webkit-scrollbar{display:none}
+.hc-item{flex:0 0 auto;display:flex;flex-direction:column;align-items:center;
+  padding:22px 28px;text-align:center;border-right:1px solid var(--border);min-width:120px}
+.hc-item:last-child{border-right:none}
+.hc-num{font-family:var(--fh);font-size:1.8rem;font-weight:700;color:var(--green);line-height:1;letter-spacing:-0.02em}
+.hc-label{font-size:0.7rem;color:var(--text);margin-top:4px;line-height:1.4;max-width:100px}
+
+/* ── PHONE WIDGET ── */
+.phone-frame{background:#0e0e0e;border:1.5px solid #3a3a3a;border-radius:34px;padding:14px;
+  max-width:280px;margin:0 auto;
+  box-shadow:0 0 60px rgba(34,197,94,0.08),0 24px 60px rgba(0,0,0,0.6)}
+html.light .phone-frame{background:#1a1a1a;border-color:#555}
+.phone-notch{width:90px;height:22px;background:#000;border-radius:0 0 14px 14px;margin:0 auto 12px;position:relative}
+.phone-notch::after{content:'';position:absolute;top:6px;left:50%;transform:translateX(-50%);width:36px;height:5px;border-radius:3px;background:#1a1a1a}
+.phone-screen{background:#050505;border-radius:20px;overflow:hidden}
+html.light .phone-screen{background:#050505}
+.wa-hdr{background:#075e54;padding:12px 14px;display:flex;align-items:center;gap:8px}
+.wa-av{width:28px;height:28px;border-radius:50%;background:var(--green);
+  display:flex;align-items:center;justify-content:center;font-size:0.55rem;font-weight:700;color:#000;flex-shrink:0}
+.wa-nm{font-size:0.78rem;font-weight:600;color:#fff}
+.wa-live{margin-left:auto;font-size:0.5rem;background:var(--green);color:#000;
+  padding:2px 6px;border-radius:5px;font-weight:700;display:flex;align-items:center;gap:3px}
+.wa-ld{width:4px;height:4px;border-radius:50%;background:#000;animation:pulse 1.2s infinite}
+.wa-body{padding:14px 11px 16px}
+.wa-time{font-size:0.56rem;color:#888;text-align:center;margin-bottom:10px}
+.wa-bubble{background:#1a2e1a;border:1px solid #1e3a1e;border-radius:0 14px 14px 14px;padding:12px}
+.wa-bubble p{font-size:0.74rem;color:#ddd;line-height:1.5;margin:0}
+.wa-ts{font-size:0.5rem;color:#888;text-align:right;margin-top:5px}
+
+/* ── PROBLEM ── */
+#problem{background:var(--bg2)}
+.problem-grid{display:grid;grid-template-columns:1fr;gap:16px;margin-top:48px}
+@media(min-width:640px){.problem-grid{grid-template-columns:repeat(3,1fr)}}
+.prob-item{background:var(--bg3);border:1px solid var(--border);border-radius:20px;padding:32px 28px;text-align:center;
+  transition:transform 0.35s cubic-bezier(0.34,1.56,0.64,1),box-shadow 0.35s ease}
+.prob-item:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,0.3)}
+.prob-num{font-family:var(--fh);font-size:clamp(2.6rem,6.5vw,4rem);font-weight:800;color:var(--green);line-height:1;margin-bottom:10px;letter-spacing:-0.02em}
+.prob-desc{font-size:0.88rem;color:var(--text);line-height:1.55}
+.problem-callout{margin-top:32px;padding:22px 28px;background:rgba(255,69,58,0.05);
+  border:1px solid rgba(255,69,58,0.14);border-left:3px solid var(--red);border-radius:16px;
+  font-size:0.93rem;color:var(--text);line-height:1.65}
+.problem-callout strong{color:#ff6961}
+
+/* ── DEMO ── */
+#demo{background:var(--bg)}
+.chat-wrap{max-width:480px;margin:40px auto 0;background:var(--bg3);
+  border:1px solid var(--border2);border-radius:22px;overflow:hidden;
+  box-shadow:0 8px 40px rgba(0,0,0,0.4)}
+.chat-hdr{background:var(--bg4);padding:15px 20px;display:flex;align-items:center;gap:10px;border-bottom:1px solid var(--border)}
+.chat-dot{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 8px var(--green);animation:pulse 1.6s infinite}
+.chat-hdr-txt{font-size:0.85rem;font-weight:600;color:var(--white)}
+.chat-hdr-sub{font-size:0.62rem;color:var(--muted)}
+.chat-body{padding:18px 15px}
+.msg{margin-bottom:14px;display:flex}
+.msg-ai{justify-content:flex-start}.msg-cust{justify-content:flex-end}
+.bubble{padding:10px 15px;max-width:82%;border-radius:16px}
+.msg-ai .bubble{background:var(--bg4);border-radius:4px 16px 16px 16px}
+.msg-cust .bubble{background:rgba(34,197,94,0.12);border-radius:16px 4px 16px 16px}
+html.light .msg-ai .bubble{background:#e8e8ed}
+html.light .msg-cust .bubble{background:#d1fae5}
+.bubble p{font-size:0.82rem;color:var(--white);line-height:1.5;margin:0}
+html.light .bubble p{color:#1d1d1f}
+.ts{font-size:0.56rem;color:var(--muted);margin-top:4px;display:block}
+.chat-result{margin:14px 15px 15px;background:rgba(34,197,94,0.08);
+  border:1px solid rgba(34,197,94,0.2);border-radius:12px;padding:12px 16px;
+  text-align:center;font-size:0.82rem;color:var(--green);font-weight:600}
+.demo-note{text-align:center;margin-top:18px;font-size:0.84rem;color:var(--muted)}
+
+/* ── MATH ── */
+#math{background:var(--bg2)}
+.math-grid{display:grid;grid-template-columns:1fr;gap:0;
+  border:1px solid var(--border);border-radius:22px;overflow:hidden;margin-top:48px}
+@media(min-width:500px){.math-grid{grid-template-columns:1fr 1fr}}
+.math-cell{padding:40px 36px}
+.math-cell:first-child{border-bottom:1px solid var(--border)}
+@media(min-width:500px){.math-cell:first-child{border-bottom:none;border-right:1px solid var(--border)}}
+.math-lbl{font-size:0.68rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.math-num{font-family:var(--fh);font-size:clamp(2rem,5vw,3.2rem);font-weight:800;line-height:1;margin-bottom:10px;letter-spacing:-0.02em}
+.math-num.loss{color:#ff6961}
+.math-num.gain{color:var(--green)}
+.math-desc{font-size:0.88rem;color:var(--text);line-height:1.65}
+.math-conclusion{margin-top:24px;background:var(--glow2);
+  border:1px solid rgba(34,197,94,0.15);border-left:3px solid var(--green);
+  border-radius:16px;padding:22px 28px}
+.math-conclusion p{font-size:0.95rem;color:var(--white);margin:0;line-height:1.7}
+.math-conclusion strong{color:var(--green)}
+
+/* ── ROI CALC ── */
+#roi{background:var(--bg)}
+.calc-wrap{margin-top:40px;background:var(--bg2);border:1px solid var(--border);border-radius:22px;overflow:hidden}
+.calc-grid{display:grid;grid-template-columns:1fr}
+@media(min-width:640px){.calc-grid{grid-template-columns:1fr 1fr}}
+.calc-inputs{padding:32px;border-bottom:1px solid var(--border)}
+@media(min-width:640px){.calc-inputs{border-bottom:none;border-right:1px solid var(--border)}}
+.calc-results{padding:32px;background:var(--bg3)}
+.calc-title{font-size:0.7rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);margin-bottom:20px}
+.input-row{margin-bottom:20px}
+.input-row label{display:flex;justify-content:space-between;align-items:center;
+  font-size:0.84rem;color:var(--text);margin-bottom:8px}
+.input-row label span{font-weight:700;color:var(--green)}
+input[type=range]{width:100%;height:4px;border-radius:2px;background:var(--border2);
+  outline:none;-webkit-appearance:none;cursor:pointer}
+input[type=range]:focus-visible{outline:2px solid var(--green);outline-offset:4px}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;
+  border-radius:50%;background:var(--green);cursor:pointer}
+input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;
+  background:var(--green);cursor:pointer;border:none}
+.range-ends{display:flex;justify-content:space-between;font-size:0.65rem;color:var(--muted);margin-top:4px}
+.result-card{background:var(--bg4);border:1px solid var(--border2);border-radius:14px;padding:18px 20px;margin-bottom:12px}
+.result-card:last-of-type{margin-bottom:0}
+.result-lbl{font-size:0.7rem;color:var(--muted);margin-bottom:4px}
+.result-val{font-family:var(--fh);font-size:2rem;font-weight:700;line-height:1;color:var(--green);letter-spacing:-0.02em}
+.result-sub{font-size:0.67rem;color:var(--muted);margin-top:4px}
+.result-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
+.result-sm .result-val{font-size:1.4rem}
+.calc-cta{margin-top:16px}
+
+/* ── COMPARE ── */
+#compare{background:var(--bg2)}
+.comp-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin-top:40px;
+  border-radius:18px;border:1px solid var(--border)}
+table.comp{width:100%;border-collapse:collapse;min-width:480px;font-size:0.86rem}
+.comp thead th{padding:15px 18px;text-align:left;font-size:0.68rem;font-weight:700;
+  letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);background:var(--bg3);
+  border-bottom:2px solid var(--border)}
+.comp thead th.us{color:var(--green)}
+.comp thead th:not(:last-child){border-right:1px solid var(--border)}
+.comp tbody td{padding:14px 18px;border-bottom:1px solid var(--border);color:var(--text);vertical-align:middle}
+.comp tbody td:not(:last-child){border-right:1px solid var(--border)}
+.comp tbody td.us{color:var(--white);font-weight:500;background:rgba(34,197,94,0.04)}
+.comp tbody tr:last-child td{border-bottom:none}
+.comp .ck{color:#4ade80}
+.comp .cx{color:var(--muted)}
+.comp-tag{display:inline-flex;font-size:0.65rem;font-weight:700;
+  background:var(--green);color:#000;padding:2px 8px;border-radius:10px;margin-left:5px;vertical-align:middle}
+html.light .comp-tag{color:#fff}
+.comp-note{margin-top:18px;font-size:0.86rem;color:var(--text);line-height:1.7;
+  padding-left:16px;border-left:2px solid var(--border2)}
+.comp-note strong{color:var(--green)}
+
+/* ── HOW IT WORKS ── */
+#how{background:var(--bg)}
+.steps{display:flex;flex-direction:column;margin-top:40px}
+.step{display:flex;gap:22px;padding:28px 0;border-bottom:1px solid var(--border)}
+.step:last-child{border-bottom:none}
+.step-num{flex-shrink:0;width:42px;height:42px;border-radius:50%;background:var(--bg3);
+  border:1.5px solid var(--border2);display:flex;align-items:center;justify-content:center;
+  font-family:var(--fh);font-size:1rem;font-weight:700;color:var(--green);margin-top:2px}
+.step-body h3{margin-bottom:7px}
+.step-body p{font-size:0.88rem}
+.step-time{display:inline-flex;font-size:0.68rem;font-weight:700;
+  background:var(--glow);color:var(--green);padding:3px 9px;border-radius:6px;
+  margin-top:10px;letter-spacing:0.08em}
+
+/* ── PRICING ── */
+#pricing{background:var(--bg2)}
+.pricing-center{max-width:520px;margin:0 auto}
+.price-card{background:var(--bg);border:1px solid rgba(34,197,94,0.4);border-radius:24px;
+  padding:36px;position:relative;margin-top:40px;
+  box-shadow:0 0 0 1px rgba(34,197,94,0.1),0 24px 60px rgba(0,0,0,0.4)}
+.price-glow{position:absolute;inset:-1px;border-radius:24px;
+  background:linear-gradient(135deg,rgba(34,197,94,0.07),transparent 60%);pointer-events:none}
+.price-badge{position:absolute;top:-13px;right:22px;background:var(--green);
+  color:#000;font-size:0.68rem;font-weight:700;padding:5px 14px;border-radius:20px;letter-spacing:0.04em}
+html.light .price-badge{color:#fff}
+.price-tier{font-size:0.7rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.price-amt{font-family:var(--fh);font-size:3rem;font-weight:800;line-height:1;color:var(--white);margin-bottom:5px;letter-spacing:-0.02em}
+.price-amt span{font-family:var(--fb);font-size:1rem;font-weight:400;color:var(--text)}
+.price-ann{font-size:0.88rem;color:var(--green);font-weight:600;margin-bottom:14px}
+.price-setup{font-size:0.9rem;color:var(--text);margin-bottom:5px}
+.price-mins{font-size:0.86rem;color:var(--muted);margin-bottom:26px}
+.price-feats{margin-bottom:26px}
+.price-feats li{font-size:0.9rem;color:var(--text);padding:10px 0;
+  padding-left:22px;position:relative;border-bottom:1px solid var(--border)}
+.price-feats li:last-child{border-bottom:none}
+.price-feats li::before{content:'✓';position:absolute;left:0;color:var(--green);font-weight:700}
+.roi-note{text-align:center;margin-top:22px;font-size:0.9rem;color:var(--green);font-weight:600}
+
+/* ── FAQ ── */
+#faq{background:var(--bg)}
+.faq-list{margin-top:36px;border:1px solid var(--border);border-radius:22px;overflow:hidden}
+.faq-item{border-bottom:1px solid var(--border)}
+.faq-item:last-child{border-bottom:none}
+.faq-q{width:100%;background:none;border:none;padding:22px 28px;
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+  text-align:left;cursor:pointer;transition:background 0.2s}
+.faq-q:hover{background:var(--glow2)}
+.faq-q:focus-visible{outline:2px solid var(--green);outline-offset:-2px}
+.faq-q-text{font-size:0.95rem;font-weight:500;color:var(--white);line-height:1.4}
+.faq-icon{flex-shrink:0;width:22px;height:22px;border-radius:50%;border:1.5px solid var(--border2);
+  display:flex;align-items:center;justify-content:center;
+  color:var(--muted);font-size:0.9rem;transition:all 0.22s;
+  min-width:22px;min-height:22px}
+.faq-item.open .faq-icon{border-color:var(--green);color:var(--green);transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height 0.35s ease}
+.faq-item.open .faq-a{max-height:400px}
+.faq-a-inner{padding:0 28px 22px;font-size:0.9rem;color:var(--text);line-height:1.75}
+
+/* ── PROOF ── */
+#proof{background:var(--bg2)}
+.test-card{background:var(--bg);border:1px solid var(--border);border-left:3px solid var(--green);
+  border-radius:22px;padding:36px;margin-top:36px}
+.test-stars{color:var(--green);letter-spacing:3px;font-size:0.95rem;margin-bottom:14px}
+.test-quote{font-size:1rem;color:var(--text);line-height:1.8;font-style:italic;margin-bottom:22px}
+html.light .test-quote{color:#424245}
+.test-author{display:flex;align-items:center;gap:15px}
+.test-av{width:46px;height:46px;border-radius:50%;background:rgba(34,197,94,0.12);
+  border:2px solid var(--green);display:flex;align-items:center;justify-content:center;
+  font-family:var(--fh);font-size:1rem;font-weight:700;color:var(--green);flex-shrink:0}
+.test-name{font-size:0.95rem;font-weight:600;color:var(--white)}
+.test-detail{font-size:0.76rem;color:var(--muted)}
+.pilot-bar{margin-top:22px;background:var(--glow2);border:1px solid rgba(34,197,94,0.14);
+  border-radius:16px;padding:16px 22px;font-size:0.85rem;color:var(--text);line-height:1.65}
+.pilot-bar strong{color:var(--green)}
+
+/* ── BOOK ── */
+#book{background:var(--bg)}
+.book-wrap{max-width:540px}
+.book-title{font-family:var(--fh);font-size:clamp(1.7rem,4vw,2.6rem);font-weight:700;
+  color:var(--white);margin-bottom:10px;line-height:1.1;letter-spacing:-0.02em}
+.book-sub{font-size:0.93rem;color:var(--text);margin-bottom:30px;line-height:1.7}
+.book-options{display:flex;flex-direction:column;gap:12px}
+.book-opt{display:flex;align-items:center;gap:16px;padding:20px 24px;
+  background:var(--bg2);border:1.5px solid var(--border);border-radius:16px;
+  text-decoration:none;transition:border-color 0.2s,background 0.2s,transform 0.2s;color:inherit}
+.book-opt:hover{border-color:var(--green);background:var(--glow2);transform:translateX(4px)}
+.book-opt:focus-visible{outline:2px solid var(--green);outline-offset:2px}
+.book-opt-icon{font-size:1.3rem;flex-shrink:0;width:36px;text-align:center}
+.book-opt strong{display:block;font-size:0.95rem;font-weight:600;color:var(--white);margin-bottom:3px}
+.book-opt span{font-size:0.8rem;color:var(--muted)}
+.founder-strip{margin-top:30px;display:flex;align-items:center;gap:14px;
+  background:var(--glow2);border:1px solid rgba(34,197,94,0.12);border-radius:16px;padding:16px 20px}
+.founder-av{width:36px;height:36px;border-radius:50%;background:rgba(34,197,94,0.12);
+  border:1.5px solid var(--green);display:flex;align-items:center;justify-content:center;
+  font-family:var(--fh);font-size:0.88rem;font-weight:700;color:var(--green);flex-shrink:0}
+.founder-strip p{font-size:0.82rem;color:var(--text);margin:0;line-height:1.55}
+.founder-strip strong{color:var(--white)}
+
+/* ── STICKY ── */
+#sticky{display:none;position:fixed;bottom:0;left:0;right:0;z-index:800;
+  background:var(--green);padding:13px 24px;text-align:center}
+#sticky a{color:#000;font-weight:700;font-size:0.92rem;text-decoration:none}
+
+/* ── FOOTER ── */
+footer{border-top:1px solid var(--border);padding:48px 0;background:var(--bg2)}
+.footer-inner{text-align:center}
+.footer-inner p{font-size:0.76rem;color:var(--muted);line-height:2}
+
+/* ── FADE-UP ANIMATION ── */
+.fade-up{opacity:0;transform:translateY(24px);transition:opacity 0.6s ease,transform 0.6s ease}
+.fade-up.in{opacity:1;transform:translateY(0)}
+
+/* ── WORD ANIMATION ── */
+.word{display:inline-block;opacity:0;animation:wordIn 0.5s forwards}
+@keyframes wordIn{to{opacity:1;transform:translateY(0)}}
+
+/* ── RESPONSIVE ── */
+@media(max-width:479px){
+  section{padding:72px 0}
+  h1{font-size:2.6rem;min-height:auto}
+  h2{font-size:2rem}
+  .price-card{padding:26px}
+  .test-card{padding:24px}
+  .btn-lg{padding:16px 28px}
+  .hero-sub{min-height:auto}
+}
+@media(min-width:680px){.wrap{padding:0 40px}}
+
+/* ── FOUNDER TRUST SECTION ── */
+#founder-trust{background:var(--bg2)}
+.founder-card{display:flex;flex-direction:column;align-items:center;gap:32px;margin-top:40px;
+  background:var(--bg);border:1px solid var(--border);border-radius:24px;padding:36px;text-align:center}
+@media(min-width:560px){.founder-card{flex-direction:row;text-align:left;align-items:flex-start}}
+.founder-photo{flex-shrink:0;width:100px;height:100px;border-radius:50%;object-fit:cover;
+  border:2.5px solid var(--green);box-shadow:0 0 24px var(--glow)}
+.founder-info h3{font-size:1.15rem;margin-bottom:8px}
+.founder-info p{font-size:0.9rem;line-height:1.75;margin-bottom:18px}
+.founder-links{display:flex;flex-wrap:wrap;gap:12px}
+.founder-link{display:inline-flex;align-items:center;gap:7px;font-size:0.84rem;font-weight:600;
+  padding:9px 16px;border-radius:10px;border:1.5px solid var(--border2);color:var(--text);
+  transition:border-color 0.2s,color 0.2s}
+.founder-link:hover{border-color:var(--green);color:var(--green)}
+.founder-av-img{width:36px;height:36px;border-radius:50%;object-fit:cover;
+  border:1.5px solid var(--green);flex-shrink:0}
+
+/* ── GLASSMORPHISM / LIQUID GLASS ── */
+/* Background gradient orbs — give glass cards visual depth to reflect against */
+html.light body::before{content:'';position:fixed;top:-120px;right:-120px;
+  width:700px;height:700px;border-radius:50%;pointer-events:none;z-index:-1;
+  background:radial-gradient(ellipse,rgba(34,197,94,0.09) 0%,transparent 62%);
+  filter:blur(60px);}
+html.light body::after{content:'';position:fixed;bottom:-100px;left:-100px;
+  width:580px;height:580px;border-radius:50%;pointer-events:none;z-index:-1;
+  background:radial-gradient(ellipse,rgba(34,197,94,0.06) 0%,transparent 62%);
+  filter:blur(60px);}
+
+/* Liquid glass shimmer keyframe */
+@keyframes liquidShimmer{0%{left:-75%;opacity:1}100%{left:125%;opacity:0}}
+
+/* Problem cards — frosted glass */
+html.light .prob-item{
+  background:rgba(255,255,255,0.62);
+  backdrop-filter:blur(18px) saturate(160%);
+  -webkit-backdrop-filter:blur(18px) saturate(160%);
+  border:1px solid rgba(255,255,255,0.75);
+  box-shadow:0 8px 32px rgba(0,0,0,0.06),0 2px 8px rgba(0,0,0,0.03);
+  position:relative;overflow:hidden;}
+html.light .prob-item::before{content:'';position:absolute;
+  top:-50%;left:-75%;width:50%;height:200%;
+  background:linear-gradient(105deg,transparent 35%,rgba(255,255,255,0.28) 50%,transparent 65%);
+  transform:skewX(-15deg);opacity:0;pointer-events:none;}
+html.light .prob-item:hover::before{opacity:1;animation:liquidShimmer 0.65s ease-out forwards;}
+
+/* Price card — deeper glass */
+html.light .price-card{
+  background:rgba(255,255,255,0.72);
+  backdrop-filter:blur(24px) saturate(180%);
+  -webkit-backdrop-filter:blur(24px) saturate(180%);
+  border:1px solid rgba(255,255,255,0.85);
+  box-shadow:0 16px 56px rgba(0,0,0,0.07),0 0 0 1px rgba(34,197,94,0.12);
+  position:relative;overflow:hidden;}
+html.light .price-card::before{content:'';position:absolute;inset:0;border-radius:inherit;
+  pointer-events:none;background:linear-gradient(135deg,rgba(255,255,255,0.18) 0%,transparent 55%);}
+
+/* Result / ROI cards */
+html.light .result-card{
+  background:rgba(255,255,255,0.65);
+  backdrop-filter:blur(16px) saturate(160%);
+  -webkit-backdrop-filter:blur(16px) saturate(160%);
+  border:1px solid rgba(255,255,255,0.8);
+  box-shadow:0 4px 16px rgba(0,0,0,0.05);}
+
+/* Testimonial card */
+html.light .test-card{
+  background:rgba(255,255,255,0.65);
+  backdrop-filter:blur(18px) saturate(160%);
+  -webkit-backdrop-filter:blur(18px) saturate(160%);
+  border:1px solid rgba(255,255,255,0.78);
+  box-shadow:0 8px 32px rgba(0,0,0,0.06);
+  position:relative;overflow:hidden;}
+html.light .test-card::before{content:'';position:absolute;inset:0;border-radius:inherit;
+  pointer-events:none;background:linear-gradient(135deg,rgba(255,255,255,0.12) 0%,transparent 50%);}
+
+/* Founder card */
+html.light .founder-card{
+  background:rgba(255,255,255,0.65);
+  backdrop-filter:blur(18px) saturate(160%);
+  -webkit-backdrop-filter:blur(18px) saturate(160%);
+  border:1px solid rgba(255,255,255,0.78);
+  box-shadow:0 8px 32px rgba(0,0,0,0.06);
+  position:relative;overflow:hidden;}
+html.light .founder-card::before{content:'';position:absolute;inset:0;border-radius:inherit;
+  pointer-events:none;background:linear-gradient(135deg,rgba(255,255,255,0.14) 0%,transparent 55%);}
+
+/* Book options — glass */
+html.light .book-opt{
+  background:rgba(255,255,255,0.62);
+  backdrop-filter:blur(16px) saturate(160%);
+  -webkit-backdrop-filter:blur(16px) saturate(160%);
+  border:1.5px solid rgba(255,255,255,0.75);
+  box-shadow:0 4px 20px rgba(0,0,0,0.05);
+  position:relative;overflow:hidden;}
+html.light .book-opt::before{content:'';position:absolute;inset:0;border-radius:inherit;
+  pointer-events:none;background:linear-gradient(135deg,rgba(255,255,255,0.14) 0%,transparent 55%);
+  opacity:0;transition:opacity 0.3s;}
+html.light .book-opt:hover::before{opacity:1;}
+
+/* Math grid — glass surface */
+html.light .math-grid{
+  border-color:rgba(255,255,255,0.7);
+  background:rgba(255,255,255,0.55);
+  backdrop-filter:blur(18px) saturate(160%);
+  -webkit-backdrop-filter:blur(18px) saturate(160%);
+  box-shadow:0 8px 32px rgba(0,0,0,0.05);}
+
+/* Chat widget — glass tint in light */
+html.light .chat-wrap{
+  background:rgba(240,240,243,0.72);
+  backdrop-filter:blur(16px) saturate(150%);
+  -webkit-backdrop-filter:blur(16px) saturate(150%);}
+
+/* Hero card row stats */
+html.light .hero-card-row{background:rgba(250,250,252,0.7);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);}
+html.light .hc-item{background:transparent;}
+
+/* ── AD SPEND PROTECTION CALLOUT ── */
+.ad-spend-hook{display:flex;align-items:flex-start;gap:14px;
+  margin-top:28px;padding:18px 22px;
+  background:rgba(34,197,94,0.06);
+  border:1px solid rgba(34,197,94,0.18);
+  border-left:3px solid var(--green);
+  border-radius:14px;}
+.ad-spend-hook .asi{font-size:1.4rem;flex-shrink:0;margin-top:2px}
+.ad-spend-hook p{font-size:0.88rem;color:var(--text);line-height:1.65;margin:0}
+.ad-spend-hook strong{color:var(--white)}
+
+.yt-embed{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;
+  border-radius:18px;border:1px solid var(--border)}
+.yt-embed iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
+.yt-caption{text-align:center;font-size:0.82rem;color:var(--muted);margin-top:12px}
+
+/* ── LIGHT FIXES ── */
+html.light .phone-frame{background:#111;border-color:#555}
+html.light .phone-screen{background:#050505}
+html.light .chat-wrap{background:#f0f0f0;border-color:#ddd}
+html.light .chat-hdr{background:#e0e0e0;border-color:#d0d0d0}
+html.light .comp tbody td.us{background:rgba(34,197,94,0.03)}
+html.light .faq-q:hover{background:rgba(34,197,94,0.04)}
+html.light .wa-bubble p{color:#ddd}
+
+/* ── PREMIUM LIGHT THEME REFINEMENTS ── */
+html.light #nav{background:rgba(255,255,255,0.92);backdrop-filter:saturate(180%) blur(24px);-webkit-backdrop-filter:saturate(180%) blur(24px);border-bottom-color:rgba(0,0,0,0.06)}
+html.light section+section{border-top-color:#ebebeb}
+html.light #problem{background:#fafafa}
+html.light #math{background:#fafafa}
+html.light #proof{background:#fafafa}
+html.light #founder-trust{background:#fafafa}
+html.light footer{background:#fafafa;border-top-color:#ebebeb}
+html.light .price-card{background:#ffffff;border-color:rgba(34,197,94,0.35);box-shadow:0 4px 32px rgba(0,0,0,0.05),0 0 0 1px rgba(34,197,94,0.1)}
+html.light .test-card{background:#ffffff;box-shadow:0 4px 24px rgba(0,0,0,0.04)}
+html.light .prob-item{background:#ffffff;box-shadow:0 2px 16px rgba(0,0,0,0.04)}
+html.light .chat-wrap{box-shadow:0 8px 40px rgba(0,0,0,0.06)}
+html.light .result-card{background:#ffffff;border-color:#e5e5e7;box-shadow:0 2px 12px rgba(0,0,0,0.04)}
+html.light .calc-wrap{box-shadow:0 4px 32px rgba(0,0,0,0.05)}
+html.light .btn-primary{color:#ffffff}
+html.light .btn-ghost{color:var(--white);border-color:rgba(29,29,31,0.25)}
+html.light .btn-ghost:hover{border-color:rgba(29,29,31,0.5);background:rgba(0,0,0,0.04)}
+
+/* ── HERO GRADIENT (premium depth) ── */
+#hero{background:radial-gradient(ellipse 90% 55% at 50% -5%,rgba(34,197,94,0.08) 0%,transparent 65%)}
+html.light #hero{background:radial-gradient(ellipse 90% 55% at 50% -5%,rgba(34,197,94,0.05) 0%,transparent 65%)}
+
+/* ── FLOAT ANIMATION (phone widget) ── */
+@keyframes floatY{0%,100%{transform:translateY(0)}50%{transform:translateY(-11px)}}
+.phone-wrap{animation:floatY 6.5s ease-in-out infinite}
+
+/* ── PREMIUM FADE-UP (blur + slide) ── */
+.fade-up{opacity:0;transform:translateY(28px);filter:blur(4px);
+  transition:opacity 0.75s cubic-bezier(0.16,1,0.3,1),transform 0.75s cubic-bezier(0.16,1,0.3,1),filter 0.75s cubic-bezier(0.16,1,0.3,1)}
+.fade-up.in{opacity:1;transform:translateY(0);filter:blur(0)}
+
+/* ── STEP STAGGER (when parent .fade-up gets .in) ── */
+.steps .step{opacity:0;transform:translateX(-14px);
+  transition:opacity 0.6s cubic-bezier(0.16,1,0.3,1),transform 0.6s cubic-bezier(0.16,1,0.3,1)}
+.steps.in .step{opacity:1;transform:translateX(0)}
+.steps.in .step:nth-child(2){transition-delay:0.09s}
+.steps.in .step:nth-child(3){transition-delay:0.18s}
+.steps.in .step:nth-child(4){transition-delay:0.27s}
+
+/* ── PROB CARD STAGGER ── */
+.problem-grid .prob-item{opacity:0;transform:translateY(16px);
+  transition:opacity 0.55s cubic-bezier(0.16,1,0.3,1),transform 0.55s cubic-bezier(0.16,1,0.3,1),box-shadow 0.35s ease}
+.problem-grid.in .prob-item{opacity:1;transform:translateY(0)}
+.problem-grid.in .prob-item:nth-child(2){transition-delay:0.1s}
+.problem-grid.in .prob-item:nth-child(3){transition-delay:0.2s}
+
+/* ── CARD SPRING HOVER ── */
+/* Override the basic hover defined earlier with a spring effect */
+.prob-item:hover{transform:translateY(-6px) scale(1.025);box-shadow:0 20px 60px rgba(0,0,0,0.2)}
+html.light .prob-item:hover{box-shadow:0 20px 60px rgba(0,0,0,0.08)}
+
+/* ── CTA BUTTON GLOW PULSE ── */
+@keyframes ctaPulse{0%,100%{box-shadow:0 4px 20px rgba(34,197,94,0.2)}50%{box-shadow:0 4px 32px rgba(34,197,94,0.45)}}
+html.light .btn-primary{animation:ctaPulse 3s ease-in-out infinite}
+html.light .btn-primary:hover{animation:none;box-shadow:0 6px 28px rgba(34,197,94,0.5)}
+
+/* ── TRADE IMAGE STRIP ── */
+section#trades{padding:0;border-top:none}
+.trades-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:0;overflow:hidden}
+@media(max-width:640px){.trades-strip{grid-template-columns:repeat(2,1fr)}}
+.trade-img-wrap{position:relative;overflow:hidden;aspect-ratio:4/3}
+.trade-img-wrap img{width:100%;height:100%;object-fit:cover;display:block;filter:brightness(0.75) saturate(0.85);transition:transform 0.75s cubic-bezier(0.16,1,0.3,1),filter 0.5s ease}
+.trade-img-wrap:hover img{transform:scale(1.07);filter:brightness(0.92) saturate(1.1)}
+.trade-img-lbl{position:absolute;bottom:0;left:0;right:0;padding:36px 18px 16px;background:linear-gradient(transparent,rgba(0,0,0,0.72));font-family:var(--fh);font-size:0.78rem;font-weight:700;color:#fff;letter-spacing:0.14em;text-transform:uppercase;pointer-events:none}
+
+/* ── SHOWCASE IMAGE ── */
+.showcase-img-wrap{position:relative;overflow:hidden;max-height:500px;line-height:0}
+/* brightness(0.35) ensures white text (#fff) meets WCAG AA contrast (>4.5:1) against darkened image */
+.showcase-img-wrap img{width:100%;height:100%;object-fit:cover;display:block;filter:brightness(0.35) saturate(0.75);transition:transform 10s ease}
+.showcase-img-wrap:hover img{transform:scale(1.03)}
+.showcase-overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:48px 24px}
+.showcase-quote{font-family:var(--fh);font-size:clamp(1.5rem,4vw,2.6rem);font-weight:700;color:#ffffff;text-align:center;line-height:1.2;letter-spacing:-0.025em;max-width:680px;text-shadow:0 2px 20px rgba(0,0,0,0.4)}
+.showcase-quote span{color:#4ade80}
+
+/* ── TERMINAL WIDGET ── */
+.term-wrap{background:#0a0a0a;border:1.5px solid #2d2d2d;border-radius:12px;overflow:hidden;
+  box-shadow:0 0 60px rgba(34,197,94,0.1),0 24px 60px rgba(0,0,0,0.6);max-width:480px;font-family:'Courier New',Courier,monospace}
+.term-bar{background:#1c1c1e;padding:10px 16px;display:flex;align-items:center;gap:8px;border-bottom:1px solid #2d2d2d}
+.term-dot{width:11px;height:11px;border-radius:50%;flex-shrink:0}
+.term-dot.red{background:#ff5f56}
+.term-dot.yellow{background:#ffbd2e}
+.term-dot.green{background:#27c93f}
+.term-title{flex:1;text-align:center;font-size:0.7rem;color:#888;letter-spacing:0.05em}
+.term-body{padding:18px 20px;min-height:280px}
+.term-line{display:block;font-size:0.78rem;line-height:1.7;white-space:pre-wrap;word-break:break-word}
+.term-cmd{color:#4ade80}
+.term-comment{color:#555}
+.term-label{color:#f59e0b}
+.term-value{color:#e2e8f0}
+.term-accent{color:#22c55e;font-weight:700}
+.term-cursor{display:inline-block;width:8px;height:14px;background:#22c55e;
+  vertical-align:middle;animation:blink 1s step-end infinite;margin-left:2px}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
+.term-opener{color:#86efac;font-style:italic}
+
+/* ── PRICING GRID (3 cards) ── */
+.pricing-grid{display:grid;grid-template-columns:1fr;gap:20px;margin-top:40px}
+@media(min-width:740px){.pricing-grid{grid-template-columns:repeat(3,1fr)}}
+.pc{background:var(--bg);border:1px solid var(--border);border-radius:24px;padding:32px 28px;
+  position:relative;transition:transform 0.3s ease,box-shadow 0.3s ease}
+.pc:hover{transform:translateY(-4px);box-shadow:0 20px 60px rgba(0,0,0,0.25)}
+.pc--pop{border-color:rgba(34,197,94,0.5);box-shadow:0 0 0 1px rgba(34,197,94,0.12),0 24px 60px rgba(0,0,0,0.4)}
+.pc-badge{position:absolute;top:-13px;left:50%;transform:translateX(-50%);
+  background:var(--green);color:#000;font-size:0.68rem;font-weight:700;
+  padding:5px 16px;border-radius:20px;letter-spacing:0.04em;white-space:nowrap}
+html.light .pc-badge{color:#fff}
+.pc-tier{font-size:0.68rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;
+  color:var(--muted);margin-bottom:12px}
+.pc-price{font-family:var(--fh);font-size:2.8rem;font-weight:800;color:var(--white);
+  line-height:1;letter-spacing:-0.025em;margin-bottom:4px}
+.pc-price sup{font-size:1.4rem;font-weight:600;vertical-align:top;margin-top:6px;display:inline-block}
+.pc-period{font-size:0.88rem;color:var(--text);margin-bottom:6px}
+.pc-note{font-size:0.82rem;color:var(--muted);margin-bottom:22px;line-height:1.5}
+.pc-feats{margin-bottom:24px}
+.pc-feats li{font-size:0.86rem;color:var(--text);padding:8px 0;
+  padding-left:20px;position:relative;border-bottom:1px solid var(--border)}
+.pc-feats li:last-child{border-bottom:none}
+.pc-feats li::before{content:'\2713';position:absolute;left:0;color:var(--green);font-weight:700}
+html.light .pc{background:rgba(255,255,255,0.7);backdrop-filter:blur(16px) saturate(160%);
+  border:1px solid rgba(255,255,255,0.8);box-shadow:0 4px 20px rgba(0,0,0,0.05)}
+html.light .pc--pop{border-color:rgba(34,197,94,0.4);box-shadow:0 8px 40px rgba(0,0,0,0.08),0 0 0 1px rgba(34,197,94,0.12)}
+
+/* ── METRIC CARDS (2x2) ── */
+.metric-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:40px}
+@media(max-width:479px){.metric-grid{grid-template-columns:1fr}}
+.metric-card{background:var(--bg3);border:1px solid var(--border);border-radius:20px;
+  padding:32px 28px;transition:transform 0.3s ease}
+.metric-card:hover{transform:translateY(-3px)}
+.metric-num{font-family:var(--fh);font-size:clamp(2.2rem,5vw,3rem);font-weight:800;
+  color:var(--green);line-height:1;letter-spacing:-0.025em;margin-bottom:8px}
+.metric-lbl{font-size:0.92rem;font-weight:600;color:var(--white);margin-bottom:6px}
+.metric-desc{font-size:0.82rem;color:var(--text);line-height:1.6}
+html.light .metric-card{background:rgba(255,255,255,0.65);backdrop-filter:blur(16px) saturate(150%);
+  border:1px solid rgba(255,255,255,0.78);box-shadow:0 4px 16px rgba(0,0,0,0.04)}
+</style>
 </head>
 <body>
 
-  <!-- ── NAV ──────────────────────────────────────────── -->
-  <nav>
-    <div class="container">
-      <div class="nav-inner">
-        <a href="#" class="nav-logo"><span class="dot"></span> Breculia AI</a>
-        <ul class="nav-links">
-          <li><a href="#how-it-works">How it works</a></li>
-          <li><a href="#pricing">Pricing</a></li>
-          <li><a href="#results">Results</a></li>
-        </ul>
-        <div class="nav-right">
-          <a href="[GOOGLE_CALENDAR_LINK_PLACEHOLDER]" class="btn-nav placeholder">Book a call →</a>
-          <button class="theme-btn" id="themeToggle" aria-label="Toggle theme">☀️/🌙</button>
-        </div>
+<nav id="nav" aria-label="Main navigation">
+  <div class="wrap">
+    <div class="nav-inner">
+      <div class="nav-logo"><span class="nav-dot" aria-hidden="true"></span> Breculia AI</div>
+      <div class="nav-right">
+        <a href="#how" class="nav-badge" style="text-decoration:none">How it works</a>
+        <a href="#pricing" class="nav-badge" style="text-decoration:none;margin-left:2px">Pricing</a>
+        <a href="#results" class="nav-badge" style="text-decoration:none;margin-left:2px">Results</a>
+        <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3iTx2DnWIYJw8dxUYGvbvG_2H0-9Ydc9NFHeGThZwVxzYew0xB1vN61xEhvQaVscCpwHKL0YOK?gv=true" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="padding:8px 18px;font-size:0.82rem">Book a call →</a>
+        <button class="theme-btn" id="themeBtn" aria-label="Toggle light/dark mode" title="Toggle theme">
+          <span class="knob" aria-hidden="true"></span>
+        </button>
       </div>
     </div>
-  </nav>
+  </div>
+</nav>
 
-  <!-- ── HERO ─────────────────────────────────────────── -->
-  <section class="hero">
-    <div class="container">
-      <span class="badge"><span class="badge-dot"></span>Serving US B2B Founders — Live</span>
-      <h1 class="hero-title">Outbound systems that<br><span class="accent">book meetings</span> automatically.</h1>
-      <p class="hero-sub">I build Clay + Instantly pipelines for US B2B founders.<br>Setup in 48 hours. No SDR hiring. No 6-week DIY learning curve.</p>
-      <div class="hero-ctas">
-        <a href="[GOOGLE_CALENDAR_LINK_PLACEHOLDER]" class="btn-primary placeholder">Book 15-min call →</a>
-        <a href="#how-it-works" class="btn-secondary">See how it works</a>
-      </div>
-      <div class="stats-bar">
-        <div class="stat-item"><div class="stat-val">48h</div><div class="stat-label">Setup Time</div></div>
-        <div class="stat-item"><div class="stat-val">5+</div><div class="stat-label">Enrichment Sources</div></div>
-        <div class="stat-item"><div class="stat-val">200</div><div class="stat-label">Emails/Day</div></div>
-        <div class="stat-item"><div class="stat-val">30d</div><div class="stat-label">Guarantee</div></div>
-      </div>
-    </div>
-  </section>
+<main>
 
-  <!-- ── LIVE DEMO ─────────────────────────────────────── -->
-  <section class="demo-section">
-    <div class="container" style="padding:80px 24px;">
-      <div class="demo-inner">
-        <div>
-          <span class="section-label">Live System Demo</span>
-          <h2 class="section-title">clay-outbound-system — running</h2>
-          <p class="section-sub" style="margin-top:14px;">Watch the agent research a real company, detect the pain signal, and write a personalized opener — in under 5 seconds.</p>
+<!-- HERO -->
+<section id="hero" aria-label="Hero">
+  <div class="hero-top">
+    <div class="wrap">
+      <div class="hero-text-col">
+        <div class="hero-kicker">
+          <span class="kicker-dot" aria-hidden="true"></span>
+          <span class="kicker-text">SERVING US B2B FOUNDERS — LIVE</span>
         </div>
-        <div class="terminal">
+        <h1 class="hero-h1" id="heroH1">
+          <span class="h1-l1">Outbound systems that</span><br>
+          <span class="h1-l2" style="color:var(--green)">book meetings</span><br>
+          <span class="h1-l3">automatically.</span>
+        </h1>
+        <p class="hero-sub">I build Clay + Instantly pipelines for US B2B founders. Setup in 48 hours. No SDR hiring. No 6-week DIY learning curve.</p>
+        <div class="hero-ctas">
+          <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3iTx2DnWIYJw8dxUYGvbvG_2H0-9Ydc9NFHeGThZwVxzYew0xB1vN61xEhvQaVscCpwHKL0YOK?gv=true" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">Book 15-min call →</a>
+          <a href="#how" class="btn btn-ghost btn-lg">See how it works</a>
+        </div>
+        <div class="hero-proof" role="list">
+          <div class="proof-item" role="listitem"><span class="pi-check" aria-hidden="true">✓</span> 30-day improvement guarantee</div>
+          <div class="proof-item" role="listitem"><span class="pi-check" aria-hidden="true">✓</span> Setup in 48 hours</div>
+          <div class="proof-item" role="listitem"><span class="pi-check" aria-hidden="true">✓</span> Cancel managed plan anytime</div>
+        </div>
+      </div>
+      <div class="phone-wrap" aria-hidden="true">
+        <div class="term-wrap">
           <div class="term-bar">
-            <span class="term-dot r"></span>
-            <span class="term-dot y"></span>
-            <span class="term-dot g"></span>
-            <span class="term-title-bar">clay-outbound-system — running</span>
+            <span class="term-dot red"></span>
+            <span class="term-dot yellow"></span>
+            <span class="term-dot green"></span>
+            <span class="term-title">clay-outbound-system — running</span>
           </div>
           <div class="term-body">
-            <span class="term-line"><span class="tc-prompt">$ </span><span id="termCmd"></span><span class="tc-cursor" id="termCursor"></span></span>
-            <div id="termOutput" style="margin-top:10px;"></div>
+            <span class="term-line term-cmd">$ python3 agent.py "Sprinto" "Girish"</span>
+            <span class="term-line term-comment">// Researching company...</span>
+            <span class="term-line" style="color:#555">─────────────────────────</span>
+            <span class="term-line"><span class="term-label">COMPANY:</span> <span class="term-value">Sprinto</span></span>
+            <span class="term-line"><span class="term-label">STAGE:</span> <span class="term-value">Series B</span></span>
+            <span class="term-line"><span class="term-label">PAIN:</span> <span class="term-value">outbound not keeping up</span></span>
+            <span class="term-line" style="height:8px;display:block"></span>
+            <span class="term-line" style="color:#f59e0b">📧 PERSONALIZED OPENER:</span>
+            <span class="term-line term-opener">"Sprinto's autonomous compliance is<br>&nbsp;impressive. Most compliance-stage<br>&nbsp;SaaS founders hit the same wall:<br>&nbsp;outbound pipeline isn't keeping up."</span>
+            <span class="term-line" style="height:8px;display:block"></span>
+            <span class="term-line term-accent">// 500 leads enriched. Campaign live. ✓</span>
+            <span class="term-cursor"></span>
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+  <div class="hero-card-row" aria-label="Key statistics">
+    <div class="wrap">
+      <div class="hero-card-inner" role="list">
+        <div class="hc-item" role="listitem"><div class="hc-num">48h</div><div class="hc-label">setup time — call to live</div></div>
+        <div class="hc-item" role="listitem"><div class="hc-num">5+</div><div class="hc-label">enrichment sources per lead</div></div>
+        <div class="hc-item" role="listitem"><div class="hc-num">200</div><div class="hc-label">personalized emails per day</div></div>
+        <div class="hc-item" role="listitem"><div class="hc-num">30d</div><div class="hc-label">improvement guarantee</div></div>
+      </div>
+    </div>
+  </div>
+</section>
 
-  <!-- ── HOW IT WORKS ──────────────────────────────────── -->
-  <section id="how-it-works">
-    <div class="container">
-      <span class="section-label">How it works</span>
-      <h2 class="section-title">Built and running in 48 hours.</h2>
-      <p class="section-sub">You focus on closing deals. I handle everything else.</p>
-      <div class="steps">
-        <article class="step-card">
-          <div class="step-num">Step 01</div>
+<!-- PROBLEM -->
+<section id="problem" aria-labelledby="prob-h" style="background:var(--bg2)">
+  <div class="wrap">
+    <span class="label" aria-hidden="true">The Problem</span>
+    <h2 id="prob-h" class="fade-up">Your pipeline is manual. Your competitors aren't.</h2>
+    <div class="problem-grid fade-up" role="list">
+      <div class="prob-item" role="listitem">
+        <div class="prob-num">6wk</div>
+        <div class="prob-desc">Average time for a B2B founder to DIY a Clay + Instantly system — without the context on enrichment waterfalls, deliverability, and copy that converts</div>
+      </div>
+      <div class="prob-item" role="listitem">
+        <div class="prob-num">1%</div>
+        <div class="prob-desc">Average reply rate on generic cold email — when you're sending spray-and-pray with no ICP enrichment, no personalized openers, no deliverability setup</div>
+      </div>
+      <div class="prob-item" role="listitem">
+        <div class="prob-num">$8K</div>
+        <div class="prob-desc">Monthly cost of a junior SDR + tools — before they even know your product. No guarantee, no system, no leverage</div>
+      </div>
+    </div>
+    <div class="problem-callout fade-up">
+      You know Clay and Instantly are the answer. You just don't have 6 weeks to learn the waterfall, the domain warming, the copy angles, and the deliverability stack. <strong>That's exactly what I build in 48 hours.</strong>
+    </div>
+  </div>
+</section>
+
+<!-- TERMINAL DEMO -->
+<section id="demo" aria-labelledby="demo-h">
+  <div class="wrap">
+    <span class="label" aria-hidden="true">How the System Works</span>
+    <h2 id="demo-h" class="fade-up">This is what AI-personalized outbound looks like at scale.</h2>
+    <p style="color:var(--text);margin-top:8px;font-size:0.95rem;max-width:560px">Clay researches each prospect. The agent writes a personalized opener. Instantly sends it. You wake up to replies.</p>
+    <div class="fade-up" style="margin-top:36px;display:flex;justify-content:center">
+      <div class="term-wrap" style="max-width:640px;width:100%" role="region" aria-label="Terminal demo of Clay outbound system">
+        <div class="term-bar">
+          <span class="term-dot red"></span>
+          <span class="term-dot yellow"></span>
+          <span class="term-dot green"></span>
+          <span class="term-title">clay-outbound-system — running</span>
+        </div>
+        <div class="term-body" id="termDemo">
+          <span class="term-line term-cmd">$ python3 agent.py single "Sprinto" "sprinto.com" "Girish"</span>
+          <span class="term-line term-comment">// Researching company...</span>
+          <span class="term-line" style="height:6px;display:block"></span>
+          <span class="term-line"><span class="term-label">COMPANY:</span>  <span class="term-value">Sprinto</span></span>
+          <span class="term-line"><span class="term-label">WHAT THEY DO:</span>  <span class="term-value">Compliance automation for fast-growing SaaS</span></span>
+          <span class="term-line"><span class="term-label">STAGE:</span>  <span class="term-value">growth / Series B</span></span>
+          <span class="term-line"><span class="term-label">PAIN:</span>  <span class="term-value">Scaling compliance ops, outbound not keeping up</span></span>
+          <span class="term-line" style="height:10px;display:block"></span>
+          <span class="term-line" style="color:#f59e0b">📧 PERSONALIZED OPENER:</span>
+          <span class="term-line term-opener">"Sprinto's autonomous compliance is impressive —</span>
+          <span class="term-line term-opener">&nbsp;automating what used to require a 3-person GRC team.</span>
+          <span class="term-line term-opener">&nbsp;Most compliance-stage SaaS founders hit the same wall:</span>
+          <span class="term-line term-opener">&nbsp;great product, but outbound pipeline isn't keeping up."</span>
+          <span class="term-line" style="height:10px;display:block"></span>
+          <span class="term-line term-accent">// 500 leads enriched. Instantly campaign live. ✓</span>
+        </div>
+      </div>
+    </div>
+    <p class="demo-note">Clay pulls company data from Apollo, Hunter, and Prospeo. The AI writes a unique opener per prospect — not a template.</p>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how" aria-labelledby="how-h" style="background:var(--bg2)">
+  <div class="wrap">
+    <span class="label" aria-hidden="true">How It Works</span>
+    <h2 id="how-h" class="fade-up">48 hours from call to live campaign.</h2>
+    <div class="steps fade-up" role="list">
+      <div class="step" role="listitem">
+        <div class="step-num" aria-hidden="true">1</div>
+        <div class="step-body">
           <h3>15-min discovery call</h3>
-          <p>I learn your ICP, deal size, and current outbound gaps. You share access to your Clay + Instantly accounts.</p>
-        </article>
-        <article class="step-card">
-          <div class="step-num">Step 02</div>
+          <p>We talk through your ICP, deal size, and current outbound gaps. You share access to your Clay and Instantly accounts. I learn what "a good reply" means for your business.</p>
+          <span class="step-time">Day 0 — 15 minutes</span>
+        </div>
+      </div>
+      <div class="step" role="listitem">
+        <div class="step-num" aria-hidden="true">2</div>
+        <div class="step-body">
           <h3>System built in 48hrs</h3>
-          <p>Clay waterfall table with 5+ enrichment sources. Instantly campaign with warmed domains. AI-written openers per prospect.</p>
-        </article>
-        <article class="step-card">
-          <div class="step-num">Step 03</div>
+          <p>Clay waterfall table with 5+ enrichment sources (Apollo, Hunter, Prospeo, and more). Instantly campaign with warmed domains. AI-written personalized openers for 500 leads. Deliverability setup. Everything tested.</p>
+          <span class="step-time">48 Hours</span>
+        </div>
+      </div>
+      <div class="step" role="listitem">
+        <div class="step-num" aria-hidden="true">3</div>
+        <div class="step-body">
           <h3>First emails sent</h3>
-          <p>200 personalized emails/day hitting your ICP. You get a Loom walkthrough of everything built and how to track replies.</p>
-        </article>
-        <article class="step-card">
-          <div class="step-num">Step 04</div>
+          <p>200 personalized emails per day hitting your exact ICP. You get a 20-min Loom walkthrough showing exactly what was built and why. Campaign is live and sending.</p>
+          <span class="step-time">Day 2 — campaign live</span>
+        </div>
+      </div>
+      <div class="step" role="listitem">
+        <div class="step-num" aria-hidden="true">4</div>
+        <div class="step-body">
           <h3>I manage it weekly</h3>
-          <p>List refresh, copy updates, deliverability monitoring, A/B tests. Monthly report: emails sent, replies, meetings booked.</p>
-        </article>
+          <p>Weekly lead list refresh (500 new leads), email copy updates, deliverability and domain monitoring, A/B tests on subject lines and openers. Monthly report: emails sent, replies, meetings booked.</p>
+          <span class="step-time">Ongoing — weekly management</span>
+        </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ── PRICING ───────────────────────────────────────── -->
-  <section id="pricing" style="background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
-    <div class="container">
-      <span class="section-label">Pricing</span>
-      <h2 class="section-title">Simple. No surprises.</h2>
-      <p class="pricing-note">You pay for Clay + Instantly directly (~$600/mo). I charge for operator expertise.</p>
-      <div class="pricing-grid">
-
-        <article class="price-card">
-          <div class="price-plan">Setup — One Time</div>
-          <div class="price-amount">$1,500</div>
-          <div class="price-period">delivered in 48 hours</div>
-          <hr class="price-divider" />
-          <ul class="price-features">
-            <li>Clay table with waterfall enrichment</li>
-            <li>Apollo + Hunter + Prospeo fallback</li>
-            <li>Instantly campaign + domain warmup</li>
-            <li>AI personalized openers (500 leads)</li>
-            <li>20-min Loom walkthrough</li>
-            <li>First campaign live and sending</li>
-          </ul>
-          <a href="[GOOGLE_CALENDAR_LINK_PLACEHOLDER]" class="price-cta outline placeholder">Book discovery call</a>
-        </article>
-
-        <article class="price-card featured">
-          <span class="price-badge">Most Popular</span>
-          <div class="price-plan">Managed — Monthly</div>
-          <div class="price-amount">$1,000<span>/mo</span></div>
-          <div class="price-period">per month · cancel anytime</div>
-          <hr class="price-divider" />
-          <ul class="price-features">
-            <li>Weekly lead list refresh (500 new)</li>
-            <li>Email copy updates (prevents fatigue)</li>
-            <li>Deliverability + domain monitoring</li>
-            <li>A/B test subject lines + openers</li>
-            <li>Monthly performance report</li>
-            <li>30-day improvement guarantee</li>
-          </ul>
-          <a href="[GOOGLE_CALENDAR_LINK_PLACEHOLDER]" class="price-cta placeholder">Start with $1,500 setup →</a>
-        </article>
-
-        <article class="price-card">
-          <div class="price-plan">Growth — Monthly</div>
-          <div class="price-amount">$2,500<span>/mo</span></div>
-          <div class="price-period">per month</div>
-          <hr class="price-divider" />
-          <ul class="price-features">
-            <li>Everything in Managed</li>
-            <li>Top-500 ABM campaign</li>
-            <li>Custom research per account</li>
-            <li>CRM sync (HubSpot / Salesforce)</li>
-            <li>LinkedIn + email combined</li>
-            <li>Weekly 30-min strategy call</li>
-          </ul>
-          <a href="[GOOGLE_CALENDAR_LINK_PLACEHOLDER]" class="price-cta outline placeholder">Book discovery call</a>
-        </article>
-
+<!-- RESULTS -->
+<section id="results" aria-labelledby="results-h">
+  <div class="wrap">
+    <span class="label" aria-hidden="true">Results</span>
+    <h2 id="results-h" class="fade-up">What the system actually delivers.</h2>
+    <p style="color:var(--text);margin-top:8px;font-size:0.95rem;max-width:540px">Real numbers from real campaigns. Industry averages shown for context.</p>
+    <div class="metric-grid fade-up" role="list">
+      <div class="metric-card" role="listitem">
+        <div class="metric-num">61%</div>
+        <div class="metric-lbl">Average open rate</div>
+        <div class="metric-desc">Industry average is 28%. The difference is domain warming, sending reputation, and subject line A/B testing built into the system from day one.</div>
+      </div>
+      <div class="metric-card" role="listitem">
+        <div class="metric-num">4.2%</div>
+        <div class="metric-lbl">Reply rate</div>
+        <div class="metric-desc">Generic cold email averages 1%. AI-personalized openers based on company research — not mail-merge — drive real engagement.</div>
+      </div>
+      <div class="metric-card" role="listitem">
+        <div class="metric-num">18</div>
+        <div class="metric-lbl">Meetings in Month 1</div>
+        <div class="metric-desc">From 1,847 emails sent. That's one meeting per ~100 emails — a benchmark most SDR teams spend months trying to reach.</div>
+      </div>
+      <div class="metric-card" role="listitem">
+        <div class="metric-num">48h</div>
+        <div class="metric-lbl">Call to live campaign</div>
+        <div class="metric-desc">Discovery call on Monday. First emails sending by Wednesday. Loom walkthrough delivered. No 6-week onboarding. No slide decks.</div>
       </div>
     </div>
-  </section>
-
-  <!-- ── RESULTS ───────────────────────────────────────── -->
-  <section id="results">
-    <div class="container">
-      <span class="section-label">System Metrics</span>
-      <h2 class="section-title">What the system delivers.</h2>
-      <p class="section-sub">Real numbers from running Clay + Instantly campaigns for B2B SaaS founders.</p>
-      <div class="metrics-grid">
-        <article class="metric-card">
-          <div class="metric-val">61%</div>
-          <div class="metric-label">Average Open Rate</div>
-          <p class="metric-desc">Industry average is 28%. Waterfall enrichment + personalized subject lines = 2× open rate from day one.</p>
-        </article>
-        <article class="metric-card">
-          <div class="metric-val">4.2%</div>
-          <div class="metric-label">Reply Rate</div>
-          <p class="metric-desc">Generic cold email averages 1%. AI-written openers referencing specific company signals = 4× more replies.</p>
-        </article>
-        <article class="metric-card">
-          <div class="metric-val">18</div>
-          <div class="metric-label">Meetings / Month</div>
-          <p class="metric-desc">From 1,847 emails in Month 1. No SDR hired. No founder time spent on research or writing.</p>
-        </article>
-        <article class="metric-card">
-          <div class="metric-val">48h</div>
-          <div class="metric-label">From Call to Live</div>
-          <p class="metric-desc">Discovery call to first email sent. Most founders spend 6 weeks figuring out Clay alone. We skip that.</p>
-        </article>
-      </div>
+    <div class="math-conclusion fade-up" style="margin-top:28px">
+      <p>Clients pay <strong>Clay + Instantly directly (~$600/mo)</strong>. You own the tools, the data, the leads. I charge for the operator expertise — building the system correctly and keeping it running.</p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ── CTA ───────────────────────────────────────────── -->
-  <section class="cta-section">
-    <div class="container" style="padding:80px 24px;">
-      <h2 class="section-title">Ready to stop losing pipeline to manual research?</h2>
-      <p class="cta-sub">15-min call. I'll audit your current outbound stack for free.<br>No pitch until you see the gaps yourself.</p>
-      <div class="cta-btns">
-        <a href="[GOOGLE_CALENDAR_LINK_PLACEHOLDER]" class="btn-primary placeholder">Book free 15-min call →</a>
-        <a href="mailto:founder@breculia.tech" class="btn-secondary">Email me directly</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── FOOTER ────────────────────────────────────────── -->
-  <footer>
-    <div class="container">
-      <div class="footer-inner">
-        <p class="footer-copy">© 2026 Breculia AI · Chennai, India · Serving US market</p>
-        <ul class="footer-links">
-          <li><a href="[LINKEDIN_PLACEHOLDER]" class="placeholder">LinkedIn</a></li>
-          <li><a href="mailto:founder@breculia.tech">Email</a></li>
-          <li><a href="[GOOGLE_CALENDAR_LINK_PLACEHOLDER]" class="placeholder">Book a call</a></li>
+<!-- PRICING -->
+<section id="pricing" aria-labelledby="price-h" style="background:var(--bg2)">
+  <div class="wrap">
+    <span class="label" aria-hidden="true">Pricing</span>
+    <h2 id="price-h" class="fade-up" style="text-align:center">Transparent, flat pricing.</h2>
+    <p style="text-align:center;color:var(--text);margin-top:12px;font-size:0.95rem;max-width:560px;margin-left:auto;margin-right:auto;line-height:1.7">You pay Clay + Instantly directly (~$600/mo). I charge for operator expertise.</p>
+    <div class="pricing-grid fade-up">
+      <!-- SETUP -->
+      <div class="pc">
+        <div class="pc-tier">One-Time Setup</div>
+        <div class="pc-price"><sup>$</sup>1,500</div>
+        <div class="pc-period">one-time &middot; get started</div>
+        <div class="pc-note">Clay waterfall built, campaign live, Loom delivered.</div>
+        <ul class="pc-feats" role="list">
+          <li>Clay waterfall table — Apollo + Hunter + Prospeo fallback</li>
+          <li>Instantly campaign + domain warmup configured</li>
+          <li>AI-personalized openers for 500 leads</li>
+          <li>20-min Loom walkthrough of everything built</li>
+          <li>First campaign live and sending</li>
+          <li>Fully refundable before build begins</li>
         </ul>
+        <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3iTx2DnWIYJw8dxUYGvbvG_2H0-9Ydc9NFHeGThZwVxzYew0xB1vN61xEhvQaVscCpwHKL0YOK?gv=true" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-full">Book discovery call →</a>
+      </div>
+      <!-- MANAGED (popular) -->
+      <div class="pc pc--pop">
+        <div class="pc-badge">Most Popular</div>
+        <div class="pc-tier" style="margin-top:12px">Managed</div>
+        <div class="pc-price"><sup>$</sup>1,000</div>
+        <div class="pc-period">/month &middot; ongoing management</div>
+        <div class="pc-note">I run it weekly. You get leads and meetings.</div>
+        <ul class="pc-feats" role="list">
+          <li>Weekly lead list refresh — 500 new leads/week</li>
+          <li>Email copy updates based on reply data</li>
+          <li>Deliverability + domain monitoring</li>
+          <li>A/B test subject lines + openers</li>
+          <li>Monthly performance report</li>
+          <li>30-day improvement guarantee</li>
+          <li>Cancel with 7 days notice</li>
+        </ul>
+        <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3iTx2DnWIYJw8dxUYGvbvG_2H0-9Ydc9NFHeGThZwVxzYew0xB1vN61xEhvQaVscCpwHKL0YOK?gv=true" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-full">Book 15-min call →</a>
+      </div>
+      <!-- GROWTH -->
+      <div class="pc">
+        <div class="pc-tier">Growth</div>
+        <div class="pc-price"><sup>$</sup>2,500</div>
+        <div class="pc-period">/month &middot; full-stack outbound</div>
+        <div class="pc-note">Everything in Managed, plus ABM and CRM sync.</div>
+        <ul class="pc-feats" role="list">
+          <li>Everything in Managed</li>
+          <li>Top-500 ABM campaign — custom research per account</li>
+          <li>CRM sync — HubSpot or Salesforce</li>
+          <li>LinkedIn + email combined outbound</li>
+          <li>Weekly 30-min strategy call</li>
+          <li>Priority support — same-day response</li>
+        </ul>
+        <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3iTx2DnWIYJw8dxUYGvbvG_2H0-9Ydc9NFHeGThZwVxzYew0xB1vN61xEhvQaVscCpwHKL0YOK?gv=true" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-full">Book discovery call →</a>
       </div>
     </div>
-  </footer>
+    <p class="roi-note fade-up" style="margin-top:24px;text-align:center">All plans require active Clay + Instantly accounts (~$600/mo paid directly to tools). ACH via Xflow only.</p>
+  </div>
+</section>
 
-  <script>
-    // Theme toggle
-    (function(){
-      var key='breculia-theme';
-      var saved=localStorage.getItem(key);
-      if(saved==='dark'){document.documentElement.classList.add('dark');}
-      document.getElementById('themeToggle').addEventListener('click',function(){
-        document.documentElement.classList.toggle('dark');
-        localStorage.setItem(key,document.documentElement.classList.contains('dark')?'dark':'light');
+<!-- COMPARE -->
+<section id="compare" aria-labelledby="comp-h">
+  <div class="wrap">
+    <span class="label" aria-hidden="true">Why Breculia</span>
+    <h2 id="comp-h" class="fade-up">Vs. the alternatives</h2>
+    <div class="comp-scroll fade-up">
+      <table class="comp" role="table" aria-label="Feature comparison">
+        <thead>
+          <tr>
+            <th scope="col">Approach</th>
+            <th scope="col">DIY Clay + Instantly</th>
+            <th scope="col">Junior SDR</th>
+            <th scope="col" class="us">Breculia AI <span class="comp-tag">You</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Time to first email</td>
+            <td>4–8 weeks of learning curve</td>
+            <td>6–10 weeks (hire + ramp)</td>
+            <td class="us"><span class="ck">✓</span> 48 hours — call to live</td>
+          </tr>
+          <tr>
+            <td>Monthly cost</td>
+            <td>Your time + tool costs</td>
+            <td>$5,000–$8,000/mo salary + tools</td>
+            <td class="us"><span class="ck">✓</span> $1,000/mo + ~$600 tools</td>
+          </tr>
+          <tr>
+            <td>Enrichment depth</td>
+            <td>Single-source (if you know how)</td>
+            <td>Manual research</td>
+            <td class="us"><span class="ck">✓</span> 5+ source waterfall — Apollo, Hunter, Prospeo</td>
+          </tr>
+          <tr>
+            <td>Personalization</td>
+            <td>Mail-merge at best</td>
+            <td>Manual — doesn't scale</td>
+            <td class="us"><span class="ck">✓</span> AI-written opener per prospect based on research</td>
+          </tr>
+          <tr>
+            <td>Deliverability management</td>
+            <td>You figure it out</td>
+            <td>Rarely understood</td>
+            <td class="us"><span class="ck">✓</span> Domain warmup, monitoring, rotation built in</td>
+          </tr>
+          <tr>
+            <td>Weekly optimization</td>
+            <td>If you have time</td>
+            <td>Inconsistent</td>
+            <td class="us"><span class="ck">✓</span> Every week — copy, lists, A/B tests, reports</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="comp-note fade-up">You own your Clay and Instantly accounts. Your data, your leads, your campaigns. I just operate them better — and faster — than you'd be able to while also running your company.</p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" aria-labelledby="faq-h" style="background:var(--bg2)">
+  <div class="wrap">
+    <span class="label" aria-hidden="true">Common Questions</span>
+    <h2 id="faq-h" class="fade-up">Questions answered.</h2>
+    <div class="faq-list fade-up">
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false" aria-controls="faq-a1">
+          <span class="faq-q-text">Do I need my own Clay and Instantly accounts?</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a" id="faq-a1" role="region"><div class="faq-a-inner">Yes. You pay Clay and Instantly directly — approximately $600/mo combined. I charge for the operator expertise: building the enrichment waterfall, configuring campaigns correctly, writing copy that converts, and running it weekly. You own all accounts, data, and leads.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false" aria-controls="faq-a2">
+          <span class="faq-q-text">What's the 30-day improvement guarantee?</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a" id="faq-a2" role="region"><div class="faq-a-inner">If there is no measurable improvement in your campaign metrics — open rate or reply rate vs your baseline — in the first 30 days, Month 2 is at no charge. You submit a written request to founder@breculia.tech, I verify the data, and we resolve it within 3 business days.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false" aria-controls="faq-a3">
+          <span class="faq-q-text">How fast is setup really?</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a" id="faq-a3" role="region"><div class="faq-a-inner">48 hours from our discovery call. Day 0: we talk for 15 minutes about your ICP and you grant access to your Clay and Instantly accounts. Day 2: Clay table built, Instantly campaign live, domains configured, 500 leads enriched with AI-written openers, Loom walkthrough delivered. First emails sending.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false" aria-controls="faq-a4">
+          <span class="faq-q-text">Am I locked into a contract?</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a" id="faq-a4" role="region"><div class="faq-a-inner">Managed and Growth plans are month-to-month. Cancel with 7 days written notice before your next billing date. The $1,500 setup fee is fully refundable before any build work begins (before the Clay table is built or any enrichment run).</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false" aria-controls="faq-a5">
+          <span class="faq-q-text">What if I already have a Clay or Instantly setup?</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a" id="faq-a5" role="region"><div class="faq-a-inner">Even better — we can audit what you have and rebuild it correctly. Most DIY Clay setups I see are missing the enrichment waterfall logic (so they hit Clay credit limits fast), have no deliverability monitoring, and use template openers instead of AI-personalized ones. A 30-minute audit on the discovery call usually finds 3–4 fixes immediately.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false" aria-controls="faq-a6">
+          <span class="faq-q-text">How do I pay?</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a" id="faq-a6" role="region"><div class="faq-a-inner">ACH bank transfer only, processed through Xflow. No credit card, PayPal, Venmo, or Zelle. Xflow provides US virtual bank account details — you initiate the ACH transfer from your US bank account. Clean, secure, no card fees.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false" aria-controls="faq-a7">
+          <span class="faq-q-text">How do I know this is legitimate?</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a" id="faq-a7" role="region"><div class="faq-a-inner">Search "Rishe S" on Google — you'll find my LinkedIn, my background in tech (5+ years in automation and AI systems), and everything else. Still skeptical? Book a free 15-minute call and ask me anything about Clay, enrichment waterfalls, deliverability, copy strategy — judge the depth of knowledge yourself before committing a single dollar. That's my confidence in the work.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOUNDER TRUST -->
+<section id="founder-trust" aria-labelledby="founder-h">
+  <div class="wrap">
+    <span class="label" aria-hidden="true">Founder</span>
+    <h2 id="founder-h" class="fade-up">Built by a real person, not a brand.</h2>
+    <div class="founder-card fade-up">
+      <img src="rishe.jpg" alt="Rishe S, Founder of Breculia AI" class="founder-photo" width="96" height="96" loading="lazy">
+      <div class="founder-info">
+        <h3>Rishe S — Founder, Chennai, India</h3>
+        <p>I personally build every Clay waterfall table, configure every Instantly campaign, write the copy, and manage the system weekly. You get my direct contact — not a support queue. I've spent years building automation systems, and outbound pipeline is what I focus on entirely. Search "Rishe S" and see exactly who you're working with.</p>
+        <div class="founder-links">
+          <a href="https://www.linkedin.com/in/rishe-s-t/" target="_blank" rel="noopener noreferrer" class="founder-link">💼 LinkedIn — Rishe S</a>
+          <a href="mailto:founder@breculia.tech" class="founder-link">✉️ founder@breculia.tech</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOK / CONTACT -->
+<section id="book" aria-labelledby="book-h" style="background:var(--bg2)">
+  <div class="wrap">
+    <div class="book-wrap" style="max-width:640px">
+      <span class="label" aria-hidden="true">Get Started</span>
+      <h2 id="book-h" class="book-title">Ready to stop losing pipeline to manual research?</h2>
+      <p class="book-sub">15-min call. I'll audit your current outbound stack for free. No pitch until you see the gaps yourself.</p>
+      <div class="book-options">
+        <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3iTx2DnWIYJw8dxUYGvbvG_2H0-9Ydc9NFHeGThZwVxzYew0xB1vN61xEhvQaVscCpwHKL0YOK?gv=true"
+           target="_blank" rel="noopener noreferrer" class="book-opt"
+           aria-label="Book a free 15-min call via Google Calendar">
+          <div class="book-opt-icon" aria-hidden="true">📅</div>
+          <div>
+            <strong>Book free 15-min call →</strong>
+            <span>Pick a slot. I audit your outbound stack. No pitch until you see the gaps.</span>
+          </div>
+        </a>
+        <a href="https://www.linkedin.com/in/rishe-s-t/" target="_blank" rel="noopener noreferrer" class="book-opt"
+           aria-label="Connect on LinkedIn">
+          <div class="book-opt-icon" aria-hidden="true">💼</div>
+          <div>
+            <strong>Message Rishe on LinkedIn</strong>
+            <span>DM with your current outbound setup — I'll reply within the hour.</span>
+          </div>
+        </a>
+        <a href="mailto:founder@breculia.tech?subject=Outbound%20Audit%20Request&body=Hi%20Rishe%2C%0A%0ACurrent%20tools%3A%20%0AICP%3A%20%0AMonthly%20emails%20sent%3A%20%0ACurrent%20open%20rate%3A%20%0ACurrent%20reply%20rate%3A%20%0A%0AI'd%20like%20a%20free%20audit%20of%20my%20outbound%20stack."
+           class="book-opt" aria-label="Email founder@breculia.tech">
+          <div class="book-opt-icon" aria-hidden="true">✉️</div>
+          <div>
+            <strong>Email me directly</strong>
+            <span>founder@breculia.tech — include your current setup and reply rate.</span>
+          </div>
+        </a>
+      </div>
+      <div class="founder-strip fade-up">
+        <img src="rishe.jpg" alt="Rishe S, Founder" class="founder-av-img" width="34" height="34" loading="lazy">
+        <p><strong>Rishe S</strong> — I personally run every discovery call, build every system, and manage every campaign. You deal with me directly, not a team.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-inner">
+      <p>&copy; 2026 Breculia AI &middot; Chennai, India &middot; Serving US market &middot; <a href="mailto:founder@breculia.tech">founder@breculia.tech</a></p>
+      <p><a href="partners.html">Partner Program</a> &middot; <a href="privacy.html">Privacy Policy</a> &middot; <a href="terms.html">Terms</a> &middot; <a href="refund.html">Refund Policy</a> &middot; <a href="mailto:founder@breculia.tech">Contact</a></p>
+    </div>
+  </div>
+</footer>
+
+<div id="sticky" role="banner" aria-label="Sticky call to action">
+  <a href="#book" id="stickyLink">📅 Book a Free 15-min Outbound Audit →</a>
+</div>
+
+<script>
+/* ── THEME ── */
+(function(){
+  var html=document.documentElement,btn=document.getElementById('themeBtn'),
+      meta=document.querySelector('meta[name="theme-color"]');
+  function apply(t){
+    if(t==='light'){html.classList.add('light');if(meta)meta.setAttribute('content','#ffffff');}
+    else{html.classList.remove('light');if(meta)meta.setAttribute('content','#080808');}
+  }
+  var s=localStorage.getItem('bt');
+  if(s==='dark')apply('dark');
+  else apply('light');
+  if(btn)btn.addEventListener('click',function(){
+    var n=html.classList.contains('light')?'dark':'light';
+    apply(n);localStorage.setItem('bt',n);
+  });
+})();
+
+/* ── HERO WORD ANIMATION — runs after fonts load to prevent CLS ── */
+(function(){
+  function animateWords(){
+    ['.h1-l1','.h1-l2','.h1-l3'].forEach(function(sel,si){
+      var el=document.querySelector(sel);
+      if(!el)return;
+      /* save text before destroying it */
+      var txt=el.textContent.trim();
+      var words=txt.split(/\s+/);
+      el.innerHTML='';
+      words.forEach(function(w,i){
+        var s=document.createElement('span');
+        s.className='word';
+        s.textContent=w;
+        s.style.animationDelay=(150+si*180+i*80)+'ms';
+        el.appendChild(s);
+        /* add space between words */
+        if(i<words.length-1)el.appendChild(document.createTextNode('\u00a0'));
       });
-    })();
+    });
+  }
+  /* wait for fonts to avoid measuring shift */
+  if(document.fonts&&document.fonts.ready){
+    document.fonts.ready.then(animateWords);
+  } else {
+    /* fallback: slight delay so paint happens first */
+    setTimeout(animateWords,200);
+  }
+})();
 
-    // Terminal animation
-    (function(){
-      var CMD='python3 agent.py single "Sprinto" "sprinto.com" "Girish"';
-      var LINES=[
-        {t:'// Researching company...',c:'tc-comment'},
-        {t:'',c:''},
-        {t:'COMPANY: Sprinto',c:'tc-key'},
-        {t:'WHAT THEY DO: Compliance automation for fast-growing SaaS',c:'tc-val'},
-        {t:'STAGE: growth / Series B',c:'tc-val'},
-        {t:'PAIN: Scaling compliance ops, outbound not keeping up',c:'tc-val'},
-        {t:'',c:''},
-        {t:'📧 PERSONALIZED OPENER:',c:'tc-label'},
-        {t:'"Sprinto\'s autonomous compliance is impressive —',c:'tc-quote'},
-        {t:'automating what used to require a 3-person GRC team.',c:'tc-quote'},
-        {t:'Most compliance-stage SaaS founders hit the same wall:',c:'tc-quote'},
-        {t:'great product, but outbound pipeline isn\'t keeping up."',c:'tc-quote'},
-        {t:'',c:''},
-        {t:'// 500 leads enriched. Instantly campaign live. ✓',c:'tc-success'}
-      ];
-      var cmdEl=document.getElementById('termCmd');
-      var outEl=document.getElementById('termOutput');
-      var cur=document.getElementById('termCursor');
+/* ── FADE-UP ── */
+(function(){
+  var els=document.querySelectorAll('.fade-up');
+  if(!('IntersectionObserver' in window)){
+    els.forEach(function(e){e.classList.add('in')});return;
+  }
+  var obs=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){e.target.classList.add('in');obs.unobserve(e.target);}
+    });
+  },{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
+  els.forEach(function(e){obs.observe(e)});
+})();
 
-      function typeCmd(i){
-        if(i<=CMD.length){
-          cmdEl.textContent=CMD.slice(0,i);
-          setTimeout(function(){typeCmd(i+1);},36);
-        } else {
-          cur.style.display='none';
-          setTimeout(function(){showLine(0);},400);
-        }
-      }
-      function showLine(i){
-        if(i<LINES.length){
-          var s=document.createElement('span');
-          s.style.display='block';
-          if(LINES[i].c){s.className=LINES[i].c;}
-          s.textContent=LINES[i].t;
-          outEl.appendChild(s);
-          var delay=i<2?700:95;
-          setTimeout(function(){showLine(i+1);},delay);
-        } else {
-          setTimeout(reset,3800);
-        }
-      }
-      function reset(){
-        cmdEl.textContent='';
-        outEl.innerHTML='';
-        cur.style.display='';
-        typeCmd(0);
-      }
-      typeCmd(0);
-    })();
-  </script>
+/* ── SMOOTH SCROLL ── */
+document.querySelectorAll('a[href^="#"]').forEach(function(a){
+  a.addEventListener('click',function(e){
+    var t=document.querySelector(this.getAttribute('href'));
+    if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'});}
+  });
+});
+
+/* ── STICKY BAR ── */
+(function(){
+  var bar=document.getElementById('sticky');if(!bar)return;
+  var bookEl=document.getElementById('book');
+  window.addEventListener('scroll',function(){
+    var ratio=window.scrollY/(document.body.scrollHeight-window.innerHeight)||0;
+    var bookInView=bookEl&&bookEl.getBoundingClientRect().top<window.innerHeight;
+    if(ratio>0.52&&!bookInView){
+      bar.style.display='block';
+      document.body.style.paddingBottom='46px';
+    }else{
+      bar.style.display='none';
+      document.body.style.paddingBottom='0';
+    }
+  },{passive:true});
+})();
+
+/* ── FAQ ── */
+function toggleFaq(btn){
+  var item=btn.parentElement;
+  var isOpen=item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(function(i){
+    i.classList.remove('open');
+    i.querySelector('.faq-q').setAttribute('aria-expanded','false');
+  });
+  if(!isOpen){
+    item.classList.add('open');
+    btn.setAttribute('aria-expanded','true');
+  }
+}
+<\/script>
 </body>
 </html>
