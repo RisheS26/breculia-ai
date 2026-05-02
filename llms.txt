@@ -1,19 +1,33 @@
 # Breculia AI
 
-> AI voice receptionists for US immigration law firms and home service contractors. Two products: Elena (bilingual Spanish/English legal intake) and Emma (contractor job capture).
+> Clay + Instantly outbound pipeline operator for US B2B founders. I build and run automated cold email systems that book meetings — without hiring SDRs or spending 6 weeks learning Clay yourself.
 
-## Verticals
+## Service
 
-- <a href="https://breculia.tech/legal/">Legal — Elena</a>: Bilingual AI intake for immigration law firms. Emergency triage. $1,500 setup + $299/month.
-- <a href="https://breculia.tech/hserv/">Home Services — Emma</a>: 24/7 AI voice receptionist for HVAC, plumbing, roofing, electrical contractors.
+- **Setup ($1,500 one-time):** Clay waterfall enrichment table, Apollo + Hunter + Prospeo fallback, Instantly campaign with domain warmup, AI-personalized openers for 500 leads, 20-min Loom walkthrough. Live in 48 hours.
+- **Managed ($1,000/month):** Weekly lead list refresh (500 new/week), copy updates, deliverability monitoring, A/B testing, monthly performance report. 30-Day Improvement Guarantee.
+- **Growth ($2,500/month):** Everything in Managed + Top-500 ABM campaign, custom account research, CRM sync (HubSpot / Salesforce), LinkedIn + email combined, weekly 30-min strategy call.
 
-## Legal Compliance
+## ICP Served
 
-- <a href="https://breculia.tech/legal/privacy/">Legal Privacy Policy</a>
-- <a href="https://breculia.tech/legal/terms/">Legal Terms of Service</a>
-- <a href="https://breculia.tech/hserv/privacy/">Home Services Privacy Policy</a>
-- <a href="https://breculia.tech/hserv/terms/">Home Services Terms of Service</a>
+B2B SaaS, consulting, agencies, and coaching businesses · $500K–$5M ARR · 1–20 people · United States only · founders who feel the pain of manual outbound or a stalled pipeline.
+
+## Tool Stack
+
+Clay · Instantly · Apollo.io · Hunter.io · Prospeo · Smartlead · Xflow · Airtable · Google Calendar · Notion
+
+## Results
+
+- 61% average open rate (industry avg 28%)
+- 4.2% reply rate (industry avg 1%)
+- 18 meetings booked in Month 1 from 1,847 emails
+
+## Legal
+
+- <a href="https://breculia.tech/privacy.html">Privacy Policy</a>
+- <a href="https://breculia.tech/terms.html">Terms &amp; Conditions</a>
+- <a href="https://breculia.tech/refund.html">Refund Policy</a>
 
 ## Contact
 
-founder@breculia.tech | Rishe S, Founder | breculia.tech
+founder@breculia.tech | Rishe S, Founder | breculia.tech | Chennai, India · Serving US market
