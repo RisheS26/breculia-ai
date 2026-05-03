@@ -77,10 +77,13 @@
     .expect-text strong{color:var(--white);}
 
     /* FOUNDER */
-    .founder-card{display:flex;gap:20px;align-items:flex-start;margin-top:28px;padding:24px;background:var(--bg2);border:1px solid var(--border);border-radius:12px;}
-    .founder-av{width:60px;height:60px;border-radius:50%;background:rgba(34,197,94,0.15);border:1.5px solid rgba(34,197,94,0.3);overflow:hidden;flex-shrink:0;}
-    .founder-info strong{display:block;font-size:1rem;font-weight:700;color:var(--white);margin-bottom:4px;}
-    .founder-info p{font-size:.86rem;color:var(--text);line-height:1.7;margin:0;}
+    .founder-card{display:flex;flex-direction:column;align-items:center;gap:32px;margin-top:40px;
+      background:var(--bg);border:1px solid var(--border);border-radius:24px;padding:36px;text-align:center}
+    @media(min-width:560px){.founder-card{flex-direction:row;text-align:left;align-items:flex-start}}
+    .founder-photo{flex-shrink:0;width:100px;height:100px;border-radius:50%;object-fit:cover;
+      border:2.5px solid var(--green);box-shadow:0 0 24px var(--glow)}
+    .founder-info strong{display:block;font-size:1rem;font-weight:700;color:var(--white);margin-bottom:8px;}
+    .founder-info p{font-size:.88rem;color:var(--text);line-height:1.75;margin:0;}
 
     /* SECTION */
     .section{padding:52px 0;border-bottom:1px solid var(--border);}
@@ -200,7 +203,7 @@
     <h2>Who you're talking to</h2>
     <p class="sec-sub">Not a faceless support queue. Direct access to the team.</p>
     <div class="founder-card fade-up">
-      <img src="rishe.jpg" alt="Rishe S, Founder of Breculia AI" class="founder-photo" width="96" height="96" loading="lazy">
+      <img src="rishe.jpg" alt="Rishe S, Founder of Breculia AI" class="founder-photo" width="100" height="100" loading="lazy">
       <div class="founder-info">
         <strong>Rishe S — Founder, Breculia AI</strong>
         <p>Serving US B2B founders. We build every Clay waterfall table, configure every Instantly campaign, write the copy, and run the discovery call. You deal with us directly at every step — no handoffs. Rishe leads the team. Search "Rishe S" on LinkedIn to verify who you're working with before you book anything.</p>
