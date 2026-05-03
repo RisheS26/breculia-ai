@@ -10,7 +10,7 @@
 <meta name="author" content="Breculia AI">
 <meta name="theme-color" content="#ffffff">
 <meta property="og:title" content="Outbound systems that book meetings automatically. — Breculia AI">
-<meta property="og:description" content="I build Clay + Instantly pipelines for US B2B founders. Setup in 48 hours. No SDR hiring. No 6-week DIY learning curve.">
+<meta property="og:description" content="We build Clay + Instantly pipelines for US B2B founders. Setup in 48 hours. No SDR hiring. No 6-week DIY learning curve.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://breculia.tech">
 <meta property="og:image" content="https://breculia.tech/logo-favicon.png">
@@ -19,7 +19,7 @@
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Outbound systems that book meetings automatically. — Breculia AI">
-<meta name="twitter:description" content="I build Clay + Instantly cold email pipelines for US B2B SaaS founders. 61% open rate, 4.2% reply rate. Setup in 48h.">
+<meta name="twitter:description" content="We build Clay + Instantly cold email pipelines for US B2B SaaS founders. 61% open rate, 4.2% reply rate. Setup in 48h.">
 <meta name="twitter:image" content="https://breculia.tech/logo-favicon.png">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <link rel="canonical" href="https://breculia.tech">
@@ -43,7 +43,7 @@
 {"@context":"https://schema.org","@type":"Service","name":"Clay + Instantly Outbound Pipeline","provider":{"@type":"Organization","name":"Breculia AI","url":"https://breculia.tech"},"serviceType":"B2B Cold Email Outbound System","description":"Builds and manages Clay waterfall enrichment tables and Instantly cold email campaigns for US B2B SaaS founders. Setup in 48 hours. Managed weekly."}
 </script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How fast is setup?","acceptedAnswer":{"@type":"Answer","text":"48 hours from our discovery call to your first emails sending. Clay table built, Instantly campaign live, domains warmed, AI openers written — all done."}},{"@type":"Question","name":"Do I need a Clay or Instantly account?","acceptedAnswer":{"@type":"Answer","text":"Yes. Clients pay Clay and Instantly directly (~$600/mo combined). I charge for operator expertise — building and running the system — not for the tools themselves."}},{"@type":"Question","name":"What's the 30-day guarantee?","acceptedAnswer":{"@type":"Answer","text":"If there's no measurable improvement in your campaign metrics (open rate or reply rate vs baseline) in the first 30 days, Month 2 is at no charge."}},{"@type":"Question","name":"Am I locked into a contract?","acceptedAnswer":{"@type":"Answer","text":"Month-to-month managed plans. Cancel with 7 days notice. The $1,500 setup is one-time — it's fully refundable before any build work begins."}},{"@type":"Question","name":"How do I pay?","acceptedAnswer":{"@type":"Answer","text":"ACH bank transfer only, processed through Xflow. No credit card, PayPal, Venmo, or Zelle."}}]}
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How fast is setup?","acceptedAnswer":{"@type":"Answer","text":"48 hours from our discovery call to your first emails sending. Clay table built, Instantly campaign live, domains warmed, AI openers written — all done."}},{"@type":"Question","name":"Do I need a Clay or Instantly account?","acceptedAnswer":{"@type":"Answer","text":"Yes. Clients pay Clay and Instantly directly (~$600/mo combined). We charge for operator expertise — building and running the system — not for the tools themselves."}},{"@type":"Question","name":"What's the 30-day guarantee?","acceptedAnswer":{"@type":"Answer","text":"If there's no measurable improvement in your campaign metrics (open rate or reply rate vs baseline) in the first 30 days, Month 2 is at no charge."}},{"@type":"Question","name":"Am I locked into a contract?","acceptedAnswer":{"@type":"Answer","text":"Month-to-month managed plans. Cancel with 7 days notice. The $1,500 setup is one-time — it's fully refundable before any build work begins."}},{"@type":"Question","name":"How do I pay?","acceptedAnswer":{"@type":"Answer","text":"ACH bank transfer only, processed through Xflow. No credit card, PayPal, Venmo, or Zelle."}}]}
 </script>
 
 <style>
@@ -744,6 +744,102 @@ html.light .pc--pop{border-color:rgba(34,197,94,0.4);box-shadow:0 8px 40px rgba(
 .metric-desc{font-size:0.82rem;color:var(--text);line-height:1.6}
 html.light .metric-card{background:rgba(255,255,255,0.65);backdrop-filter:blur(16px) saturate(150%);
   border:1px solid rgba(255,255,255,0.78);box-shadow:0 4px 16px rgba(0,0,0,0.04)}
+
+/* ── AMBIENT HERO ORBS ── */
+@keyframes orbDrift{0%,100%{transform:translate(0,0) scale(1)}40%{transform:translate(32px,-26px) scale(1.04)}70%{transform:translate(-16px,18px) scale(0.97)}}
+@keyframes orbDrift2{0%,100%{transform:translate(0,0) scale(1)}35%{transform:translate(-24px,34px) scale(1.03)}65%{transform:translate(18px,-14px) scale(0.96)}}
+.hero-orb{position:absolute;border-radius:50%;pointer-events:none;z-index:0;filter:blur(80px)}
+.hero-orb-1{width:700px;height:700px;top:-220px;right:-180px;background:radial-gradient(ellipse at 50% 50%,rgba(34,197,94,0.09),transparent 68%);animation:orbDrift 20s ease-in-out infinite}
+.hero-orb-2{width:450px;height:450px;bottom:-100px;left:-100px;background:radial-gradient(ellipse at 50% 50%,rgba(34,197,94,0.06),transparent 68%);animation:orbDrift2 26s ease-in-out infinite}
+html.light .hero-orb-1{background:radial-gradient(ellipse at 50% 50%,rgba(34,197,94,0.11),transparent 68%)}
+html.light .hero-orb-2{background:radial-gradient(ellipse at 50% 50%,rgba(34,197,94,0.08),transparent 68%)}
+.hero-top,.hero-card-row{position:relative;z-index:1}
+
+/* ── SCROLL PROGRESS BAR ── */
+#scroll-progress{position:fixed;top:0;left:0;z-index:9999;height:2px;background:linear-gradient(90deg,var(--green),rgba(34,197,94,0.4));width:0%;pointer-events:none;box-shadow:0 0 8px rgba(34,197,94,0.5)}
+
+/* ── TECH STACK SECTION ── */
+#stack{background:var(--bg2)}
+.stack-intro{margin-top:14px;font-size:0.95rem;color:var(--text);max-width:520px;line-height:1.7}
+.stack-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:40px}
+@media(min-width:540px){.stack-grid{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:900px){.stack-grid{grid-template-columns:repeat(6,1fr);gap:12px}}
+.stack-card{position:relative;overflow:hidden;background:var(--bg3);border:1px solid var(--border);border-radius:20px;padding:24px 14px 18px;text-align:center;transition:transform 0.4s cubic-bezier(0.16,1,0.3,1),box-shadow 0.4s cubic-bezier(0.16,1,0.3,1),border-color 0.3s;transform-style:preserve-3d;will-change:transform;cursor:default}
+.stack-card::after{content:'';position:absolute;inset:0;border-radius:inherit;background:var(--sc-shine,none);opacity:0;transition:opacity 0.35s;pointer-events:none}
+.stack-card:hover{transform:translateY(-6px)}
+.stack-card:hover::after{opacity:1}
+.sc-logo{width:52px;height:52px;border-radius:14px;margin:0 auto 14px;transition:transform 0.35s cubic-bezier(0.34,1.56,0.64,1),box-shadow 0.35s;display:block}
+.sc-logo svg{width:52px;height:52px;display:block;border-radius:14px;overflow:hidden}
+.stack-card:hover .sc-logo{transform:scale(1.12) translateY(-2px)}
+.sc-name{font-size:0.84rem;font-weight:700;color:var(--white);margin-bottom:3px;letter-spacing:-0.01em}
+.sc-role{font-size:0.68rem;color:var(--muted);line-height:1.45}
+html.light .stack-card{background:rgba(255,255,255,0.75);backdrop-filter:blur(20px) saturate(170%);-webkit-backdrop-filter:blur(20px) saturate(170%);border:1px solid rgba(255,255,255,0.88);box-shadow:0 4px 24px rgba(0,0,0,0.05)}
+html.light .stack-card:hover{box-shadow:0 20px 56px rgba(0,0,0,0.1);border-color:rgba(255,255,255,0.98)}
+
+/* ── 3D TILT (pricing + metric cards) ── */
+.pricing-grid{perspective:1400px}
+.pc,.metric-card{transform-style:preserve-3d;will-change:transform}
+.metric-num{display:block;font-variant-numeric:tabular-nums}
+
+/* ── ENHANCED STEP NUMBERS ── */
+.step-num{background:linear-gradient(135deg,var(--bg3),var(--bg4));box-shadow:0 4px 16px rgba(0,0,0,0.2),inset 0 1px 0 rgba(255,255,255,0.05)}
+html.light .step-num{background:rgba(255,255,255,0.9);box-shadow:0 4px 16px rgba(0,0,0,0.08),0 0 0 1px rgba(34,197,94,0.2)}
+
+/* ── ENHANCED FOOTER ── */
+footer{border-top:none;position:relative}
+footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--green),transparent);opacity:0.4}
+
+/* ── ENHANCED HERO GRADIENT ── */
+#hero{background:radial-gradient(ellipse 110% 60% at 50% -10%,rgba(34,197,94,0.1) 0%,transparent 60%)}
+html.light #hero{background:radial-gradient(ellipse 110% 60% at 50% -10%,rgba(34,197,94,0.06) 0%,transparent 60%)}
+
+/* ── CARD GLOW ON HOVER (pricing) ── */
+.pc:hover{box-shadow:0 24px 64px rgba(0,0,0,0.35),0 0 0 1px rgba(34,197,94,0.12)}
+.pc--pop:hover{box-shadow:0 24px 64px rgba(0,0,0,0.4),0 0 40px rgba(34,197,94,0.1),0 0 0 1px rgba(34,197,94,0.25)}
+
+/* ── REDUCED MOTION: disable new animations ── */
+@media(prefers-reduced-motion:reduce){.hero-orb{animation:none!important}.stack-card,.pc,.metric-card{transform:none!important;transition:box-shadow 0.2s!important}}
+
+/* ── APPLE-INSPIRED STAGGER ANIMATIONS ── */
+@keyframes slideUp{0%{opacity:0;transform:translateY(32px)}100%{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{0%{opacity:0}100%{opacity:1}}
+@keyframes shimmer{0%{background-position:200% center}100%{background-position:-200% center}}
+@keyframes floatY{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@keyframes glowPulse{0%,100%{box-shadow:0 0 0 0 rgba(34,197,94,0)}50%{box-shadow:0 0 28px 4px rgba(34,197,94,0.18)}}
+
+/* Stagger children inside .stagger-group */
+.stagger-group > *{opacity:0;transform:translateY(24px);transition:opacity 0.6s cubic-bezier(0.16,1,0.3,1),transform 0.6s cubic-bezier(0.16,1,0.3,1)}
+.stagger-group.in > *:nth-child(1){opacity:1;transform:none;transition-delay:0ms}
+.stagger-group.in > *:nth-child(2){opacity:1;transform:none;transition-delay:90ms}
+.stagger-group.in > *:nth-child(3){opacity:1;transform:none;transition-delay:180ms}
+.stagger-group.in > *:nth-child(4){opacity:1;transform:none;transition-delay:270ms}
+.stagger-group.in > *:nth-child(5){opacity:1;transform:none;transition-delay:360ms}
+.stagger-group.in > *:nth-child(6){opacity:1;transform:none;transition-delay:450ms}
+
+/* Enhanced gradient text shimmer */
+.shimmer-text{background:linear-gradient(90deg,var(--green) 0%,#86efac 40%,var(--green) 80%,#86efac 100%);background-size:200% auto;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:shimmer 4s linear infinite}
+html.light .shimmer-text{background:linear-gradient(90deg,#16a34a 0%,#22c55e 40%,#16a34a 80%,#22c55e 100%);background-size:200% auto;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+
+/* Magnetic button wrapper */
+.mag-btn-wrap{display:inline-block;position:relative}
+
+/* Float animation for proof badges */
+.float-badge{animation:floatY 4s ease-in-out infinite}
+
+/* CTA glow pulse */
+.cta-glow:focus,.cta-glow:hover{animation:glowPulse 2s ease-in-out infinite}
+
+/* Smooth section reveal line */
+.section-reveal-line{width:0;height:2px;background:linear-gradient(90deg,var(--green),rgba(34,197,94,0.3));border-radius:1px;transition:width 1s cubic-bezier(0.16,1,0.3,1) 0.2s;margin-bottom:20px}
+.fade-up.in .section-reveal-line{width:48px}
+
+/* Enhanced hero headline gradient */
+.h1-accent{background:linear-gradient(135deg,var(--green) 0%,#86efac 50%,var(--green) 100%);background-size:200% auto;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:shimmer 5s linear infinite}
+
+/* Reduced motion: disable new animations */
+@media(prefers-reduced-motion:reduce){
+  .stagger-group>*,.shimmer-text,.float-badge,.cta-glow:hover,.section-reveal-line,.h1-accent{animation:none!important;transition:none!important;opacity:1!important;transform:none!important;width:48px;-webkit-text-fill-color:var(--green)}
+}
 </style>
 </head>
 <body>
@@ -766,10 +862,13 @@ html.light .metric-card{background:rgba(255,255,255,0.65);backdrop-filter:blur(1
   </div>
 </nav>
 
+<div id="scroll-progress" aria-hidden="true"></div>
 <main>
 
 <!-- HERO -->
 <section id="hero" aria-label="Hero">
+  <div class="hero-orb hero-orb-1" aria-hidden="true"></div>
+  <div class="hero-orb hero-orb-2" aria-hidden="true"></div>
   <div class="hero-top">
     <div class="wrap">
       <div class="hero-text-col">
@@ -782,10 +881,10 @@ html.light .metric-card{background:rgba(255,255,255,0.65);backdrop-filter:blur(1
           <span class="h1-l2" style="color:var(--green)">book meetings</span><br>
           <span class="h1-l3">automatically.</span>
         </h1>
-        <p class="hero-sub">I build Clay + Instantly pipelines for US B2B founders. Setup in 48 hours. No SDR hiring. No 6-week DIY learning curve.</p>
+        <p class="hero-sub">We build Clay + Instantly pipelines for US B2B founders. Setup in 48 hours. No SDR hiring. No 6-week DIY learning curve.</p>
         <div class="hero-ctas">
-          <a href="https://cal.com/rishe/audit" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">Book 15-min call →</a>
-          <a href="#how" class="btn btn-ghost btn-lg">See how it works</a>
+          <span class="mag-btn-wrap"><a href="https://cal.com/rishe/audit" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg cta-glow">Book 15-min call →</a></span>
+          <span class="mag-btn-wrap"><a href="#how" class="btn btn-ghost btn-lg">See how it works</a></span>
         </div>
         <div class="hero-proof" role="list">
           <div class="proof-item" role="listitem"><span class="pi-check" aria-hidden="true">✓</span> 30-day improvement guarantee</div>
@@ -851,7 +950,7 @@ html.light .metric-card{background:rgba(255,255,255,0.65);backdrop-filter:blur(1
       </div>
     </div>
     <div class="problem-callout fade-up">
-      You know Clay and Instantly are the answer. You just don't have 6 weeks to learn the waterfall, the domain warming, the copy angles, and the deliverability stack. <strong>That's exactly what I build in 48 hours.</strong>
+      You know Clay and Instantly are the answer. You just don't have 6 weeks to learn the waterfall, the domain warming, the copy angles, and the deliverability stack. <strong>That's exactly what we build in 48 hours.</strong>
     </div>
   </div>
 </section>
@@ -898,12 +997,12 @@ html.light .metric-card{background:rgba(255,255,255,0.65);backdrop-filter:blur(1
   <div class="wrap">
     <span class="label" aria-hidden="true">How It Works</span>
     <h2 id="how-h" class="fade-up">48 hours from call to live campaign.</h2>
-    <div class="steps fade-up" role="list">
+    <div class="steps fade-up stagger-group" role="list">
       <div class="step" role="listitem">
         <div class="step-num" aria-hidden="true">1</div>
         <div class="step-body">
           <h3>15-min discovery call</h3>
-          <p>We talk through your ICP, deal size, and current outbound gaps. You share access to your Clay and Instantly accounts. I learn what "a good reply" means for your business.</p>
+          <p>We talk through your ICP, deal size, and current outbound gaps. You share access to your Clay and Instantly accounts. We learn what "a good reply" means for your business.</p>
           <span class="step-time">Day 0 — 15 minutes</span>
         </div>
       </div>
@@ -926,11 +1025,77 @@ html.light .metric-card{background:rgba(255,255,255,0.65);backdrop-filter:blur(1
       <div class="step" role="listitem">
         <div class="step-num" aria-hidden="true">4</div>
         <div class="step-body">
-          <h3>I manage it weekly</h3>
+          <h3>We manage it weekly</h3>
           <p>Weekly lead list refresh (500 new leads), email copy updates, deliverability and domain monitoring, A/B tests on subject lines and openers. Monthly report: emails sent, replies, meetings booked.</p>
           <span class="step-time">Ongoing — weekly management</span>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- TECH STACK -->
+<section id="stack" aria-labelledby="stack-h">
+  <div class="wrap">
+    <span class="label" aria-hidden="true">The Stack</span>
+    <h2 id="stack-h" class="fade-up">Best-in-class outbound infrastructure.</h2>
+    <p class="stack-intro fade-up">Every system runs on the same proven toolkit — the one that makes 61% open rates and 4.2% reply rates possible.</p>
+    <div class="stack-grid fade-up stagger-group" role="list">
+
+      <!-- Clay -->
+      <div class="stack-card" role="listitem" style="--sc-shine:linear-gradient(135deg,rgba(249,115,22,0.1),transparent 60%)">
+        <div class="sc-logo">
+          <svg viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Clay logo"><rect width="52" height="52" rx="13" fill="#F97316"/><path d="M33 17C30 14.5 25.5 14 21.5 15.8C15 18.8 12.5 26.5 15.5 33C18 38.5 25 41.5 31 40" stroke="white" stroke-width="3.5" stroke-linecap="round" fill="none"/><circle cx="35" cy="22" r="3" fill="white"/></svg>
+        </div>
+        <div class="sc-name">Clay</div>
+        <div class="sc-role">Data enrichment & waterfall</div>
+      </div>
+
+      <!-- Instantly -->
+      <div class="stack-card" role="listitem" style="--sc-shine:linear-gradient(135deg,rgba(14,165,233,0.1),transparent 60%)">
+        <div class="sc-logo">
+          <svg viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Instantly logo"><rect width="52" height="52" rx="13" fill="#0EA5E9"/><path d="M28 13L18 27h9l-5 12L37 25h-9z" fill="white"/></svg>
+        </div>
+        <div class="sc-name">Instantly</div>
+        <div class="sc-role">Cold email sending & sequences</div>
+      </div>
+
+      <!-- Apollo -->
+      <div class="stack-card" role="listitem" style="--sc-shine:linear-gradient(135deg,rgba(124,58,237,0.1),transparent 60%)">
+        <div class="sc-logo">
+          <svg viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Apollo logo"><rect width="52" height="52" rx="13" fill="#7C3AED"/><circle cx="26" cy="26" r="6" fill="white"/><ellipse cx="26" cy="26" rx="13" ry="5.5" stroke="white" stroke-width="2" fill="none" transform="rotate(-35 26 26)"/><ellipse cx="26" cy="26" rx="13" ry="5.5" stroke="white" stroke-width="2" fill="none" transform="rotate(35 26 26)"/></svg>
+        </div>
+        <div class="sc-name">Apollo</div>
+        <div class="sc-role">Lead database & contact data</div>
+      </div>
+
+      <!-- Hunter -->
+      <div class="stack-card" role="listitem" style="--sc-shine:linear-gradient(135deg,rgba(245,158,11,0.1),transparent 60%)">
+        <div class="sc-logo">
+          <svg viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Hunter logo"><rect width="52" height="52" rx="13" fill="#F59E0B"/><circle cx="23" cy="23" r="9" stroke="white" stroke-width="3" fill="none"/><circle cx="23" cy="23" r="3.5" fill="white"/><line x1="30" y1="30" x2="39" y2="39" stroke="white" stroke-width="3" stroke-linecap="round"/></svg>
+        </div>
+        <div class="sc-name">Hunter</div>
+        <div class="sc-role">Email finder & verification</div>
+      </div>
+
+      <!-- Prospeo -->
+      <div class="stack-card" role="listitem" style="--sc-shine:linear-gradient(135deg,rgba(99,102,241,0.1),transparent 60%)">
+        <div class="sc-logo">
+          <svg viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Prospeo logo"><rect width="52" height="52" rx="13" fill="#6366F1"/><rect x="11" y="16" width="30" height="22" rx="4" stroke="white" stroke-width="2.5" fill="none"/><path d="M11 20L26 30L41 20" stroke="white" stroke-width="2.5" stroke-linecap="round" fill="none"/></svg>
+        </div>
+        <div class="sc-name">Prospeo</div>
+        <div class="sc-role">Email waterfall fallback</div>
+      </div>
+
+      <!-- LinkedIn -->
+      <div class="stack-card" role="listitem" style="--sc-shine:linear-gradient(135deg,rgba(10,102,194,0.1),transparent 60%)">
+        <div class="sc-logo">
+          <svg viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="LinkedIn logo"><rect width="52" height="52" rx="13" fill="#0A66C2"/><rect x="13" y="22" width="7" height="17" rx="1" fill="white"/><circle cx="16.5" cy="15.5" r="4" fill="white"/><rect x="24" y="22" width="7" height="17" rx="1" fill="white"/><path d="M24 27C24 23.7 26.7 21 30 21H31V22C34.3 22 37 24.7 37 28V39H30V29C30 27.3 28.7 26 27 26H24Z" fill="white"/></svg>
+        </div>
+        <div class="sc-name">LinkedIn</div>
+        <div class="sc-role">Profile enrichment & ABM</div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -941,30 +1106,30 @@ html.light .metric-card{background:rgba(255,255,255,0.65);backdrop-filter:blur(1
     <span class="label" aria-hidden="true">Results</span>
     <h2 id="results-h" class="fade-up">What the system actually delivers.</h2>
     <p style="color:var(--text);margin-top:8px;font-size:0.95rem;max-width:540px">Real numbers from real campaigns. Industry averages shown for context.</p>
-    <div class="metric-grid fade-up" role="list">
+    <div class="metric-grid fade-up stagger-group" role="list">
       <div class="metric-card" role="listitem">
-        <div class="metric-num">61%</div>
+        <div class="metric-num" data-count="61" data-suffix="%">61%</div>
         <div class="metric-lbl">Average open rate</div>
         <div class="metric-desc">Industry average is 28%. The difference is domain warming, sending reputation, and subject line A/B testing built into the system from day one.</div>
       </div>
       <div class="metric-card" role="listitem">
-        <div class="metric-num">4.2%</div>
+        <div class="metric-num" data-count="4.2" data-suffix="%">4.2%</div>
         <div class="metric-lbl">Reply rate</div>
         <div class="metric-desc">Generic cold email averages 1%. AI-personalized openers based on company research — not mail-merge — drive real engagement.</div>
       </div>
       <div class="metric-card" role="listitem">
-        <div class="metric-num">18</div>
+        <div class="metric-num" data-count="18">18</div>
         <div class="metric-lbl">Meetings in Month 1</div>
         <div class="metric-desc">From 1,847 emails sent. That's one meeting per ~100 emails — a benchmark most SDR teams spend months trying to reach.</div>
       </div>
       <div class="metric-card" role="listitem">
-        <div class="metric-num">48h</div>
+        <div class="metric-num" data-count="48" data-suffix="h">48h</div>
         <div class="metric-lbl">Call to live campaign</div>
         <div class="metric-desc">Discovery call on Monday. First emails sending by Wednesday. Loom walkthrough delivered. No 6-week onboarding. No slide decks.</div>
       </div>
     </div>
     <div class="math-conclusion fade-up" style="margin-top:28px">
-      <p>Clients pay <strong>Clay + Instantly directly (~$600/mo)</strong>. You own the tools, the data, the leads. I charge for the operator expertise — building the system correctly and keeping it running.</p>
+      <p>Clients pay <strong>Clay + Instantly directly (~$600/mo)</strong>. You own the tools, the data, the leads. We charge for the operator expertise — building the system correctly and keeping it running.</p>
     </div>
   </div>
 </section>
@@ -974,8 +1139,8 @@ html.light .metric-card{background:rgba(255,255,255,0.65);backdrop-filter:blur(1
   <div class="wrap">
     <span class="label" aria-hidden="true">Pricing</span>
     <h2 id="price-h" class="fade-up" style="text-align:center">Transparent, flat pricing.</h2>
-    <p style="text-align:center;color:var(--text);margin-top:12px;font-size:0.95rem;max-width:560px;margin-left:auto;margin-right:auto;line-height:1.7">You pay Clay + Instantly directly (~$600/mo). I charge for operator expertise.</p>
-    <div class="pricing-grid fade-up">
+    <p style="text-align:center;color:var(--text);margin-top:12px;font-size:0.95rem;max-width:560px;margin-left:auto;margin-right:auto;line-height:1.7">You pay Clay + Instantly directly (~$600/mo). We charge for operator expertise.</p>
+    <div class="pricing-grid fade-up stagger-group">
       <!-- SETUP -->
       <div class="pc">
         <div class="pc-tier">One-Time Setup</div>
@@ -1086,7 +1251,7 @@ html.light .metric-card{background:rgba(255,255,255,0.65);backdrop-filter:blur(1
         </tbody>
       </table>
     </div>
-    <p class="comp-note fade-up">You own your Clay and Instantly accounts. Your data, your leads, your campaigns. I just operate them better — and faster — than you'd be able to while also running your company.</p>
+    <p class="comp-note fade-up">You own your Clay and Instantly accounts. Your data, your leads, your campaigns. We just operate them better — and faster — than you'd be able to while also running your company.</p>
   </div>
 </section>
 
@@ -1101,14 +1266,14 @@ html.light .metric-card{background:rgba(255,255,255,0.65);backdrop-filter:blur(1
           <span class="faq-q-text">Do I need my own Clay and Instantly accounts?</span>
           <span class="faq-icon" aria-hidden="true">+</span>
         </button>
-        <div class="faq-a" id="faq-a1" role="region"><div class="faq-a-inner">Yes. You pay Clay and Instantly directly — approximately $600/mo combined. I charge for the operator expertise: building the enrichment waterfall, configuring campaigns correctly, writing copy that converts, and running it weekly. You own all accounts, data, and leads.</div></div>
+        <div class="faq-a" id="faq-a1" role="region"><div class="faq-a-inner">Yes. You pay Clay and Instantly directly — approximately $600/mo combined. We charge for the operator expertise: building the enrichment waterfall, configuring campaigns correctly, writing copy that converts, and running it weekly. You own all accounts, data, and leads.</div></div>
       </div>
       <div class="faq-item">
         <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false" aria-controls="faq-a2">
           <span class="faq-q-text">What's the 30-day improvement guarantee?</span>
           <span class="faq-icon" aria-hidden="true">+</span>
         </button>
-        <div class="faq-a" id="faq-a2" role="region"><div class="faq-a-inner">If there is no measurable improvement in your campaign metrics — open rate or reply rate vs your baseline — in the first 30 days, Month 2 is at no charge. You submit a written request to founder@breculia.tech, I verify the data, and we resolve it within 3 business days.</div></div>
+        <div class="faq-a" id="faq-a2" role="region"><div class="faq-a-inner">If there is no measurable improvement in your campaign metrics — open rate or reply rate vs your baseline — in the first 30 days, Month 2 is at no charge. You submit a written request to founder@breculia.tech, we verify the data, and we resolve it within 3 business days.</div></div>
       </div>
       <div class="faq-item">
         <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false" aria-controls="faq-a3">
@@ -1129,7 +1294,7 @@ html.light .metric-card{background:rgba(255,255,255,0.65);backdrop-filter:blur(1
           <span class="faq-q-text">What if I already have a Clay or Instantly setup?</span>
           <span class="faq-icon" aria-hidden="true">+</span>
         </button>
-        <div class="faq-a" id="faq-a5" role="region"><div class="faq-a-inner">Even better — we can audit what you have and rebuild it correctly. Most DIY Clay setups I see are missing the enrichment waterfall logic (so they hit Clay credit limits fast), have no deliverability monitoring, and use template openers instead of AI-personalized ones. A 30-minute audit on the discovery call usually finds 3–4 fixes immediately.</div></div>
+        <div class="faq-a" id="faq-a5" role="region"><div class="faq-a-inner">Even better — we can audit what you have and rebuild it correctly. Most DIY Clay setups we see are missing the enrichment waterfall logic (so they hit Clay credit limits fast), have no deliverability monitoring, and use template openers instead of AI-personalized ones. A 30-minute audit on the discovery call usually finds 3–4 fixes immediately.</div></div>
       </div>
       <div class="faq-item">
         <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false" aria-controls="faq-a6">
@@ -1158,7 +1323,7 @@ html.light .metric-card{background:rgba(255,255,255,0.65);backdrop-filter:blur(1
       <img src="rishe.jpg" alt="Rishe S, Founder of Breculia AI" class="founder-photo" width="96" height="96" loading="lazy">
       <div class="founder-info">
         <h3>Rishe S — Founder</h3>
-        <p>I personally build every Clay waterfall table, configure every Instantly campaign, write the copy, and manage the system weekly. You get my direct contact — not a support queue. I've spent years building automation systems, and outbound pipeline is what I focus on entirely. Search "Rishe S" and see exactly who you're working with.</p>
+        <p>Our team builds every Clay waterfall table, configures every Instantly campaign, writes the copy, and manages the system weekly. You get our direct contact — not a support queue. We've spent years building automation systems, and outbound pipeline is what we focus on entirely. Search "Rishe S" and see exactly who you're working with.</p>
         <div class="founder-links">
           <a href="https://www.linkedin.com/in/rishe-s-t/" target="_blank" rel="noopener noreferrer" class="founder-link">💼 LinkedIn — Rishe S</a>
           <a href="mailto:founder@breculia.tech" class="founder-link">✉️ founder@breculia.tech</a>
@@ -1174,7 +1339,7 @@ html.light .metric-card{background:rgba(255,255,255,0.65);backdrop-filter:blur(1
     <div class="book-wrap" style="max-width:640px">
       <span class="label" aria-hidden="true">Get Started</span>
       <h2 id="book-h" class="book-title">Ready to stop losing pipeline to manual research?</h2>
-      <p class="book-sub">15-min call. I'll audit your current outbound stack for free. No pitch until you see the gaps yourself.</p>
+      <p class="book-sub">15-min call. We'll audit your current outbound stack for free. No pitch until you see the gaps yourself.</p>
       <div class="book-options">
         <a href="https://cal.com/rishe/audit"
            target="_blank" rel="noopener noreferrer" class="book-opt"
@@ -1182,7 +1347,7 @@ html.light .metric-card{background:rgba(255,255,255,0.65);backdrop-filter:blur(1
           <div class="book-opt-icon" aria-hidden="true">📅</div>
           <div>
             <strong>Book free 15-min call →</strong>
-            <span>Pick a slot. I audit your outbound stack. No pitch until you see the gaps.</span>
+            <span>Pick a slot. We audit your outbound stack. No pitch until you see the gaps.</span>
           </div>
         </a>
         <a href="https://www.linkedin.com/in/rishe-s-t/" target="_blank" rel="noopener noreferrer" class="book-opt"
@@ -1190,21 +1355,21 @@ html.light .metric-card{background:rgba(255,255,255,0.65);backdrop-filter:blur(1
           <div class="book-opt-icon" aria-hidden="true">💼</div>
           <div>
             <strong>Message Rishe on LinkedIn</strong>
-            <span>DM with your current outbound setup — I'll reply within the hour.</span>
+            <span>DM with your current outbound setup — We'll reply within the hour.</span>
           </div>
         </a>
         <a href="mailto:founder@breculia.tech?subject=Outbound%20Audit%20Request&body=Hi%20Rishe%2C%0A%0ACurrent%20tools%3A%20%0AICP%3A%20%0AMonthly%20emails%20sent%3A%20%0ACurrent%20open%20rate%3A%20%0ACurrent%20reply%20rate%3A%20%0A%0AI'd%20like%20a%20free%20audit%20of%20my%20outbound%20stack."
            class="book-opt" aria-label="Email founder@breculia.tech">
           <div class="book-opt-icon" aria-hidden="true">✉️</div>
           <div>
-            <strong>Email me directly</strong>
+            <strong>Email us directly</strong>
             <span>founder@breculia.tech — include your current setup and reply rate.</span>
           </div>
         </a>
       </div>
       <div class="founder-strip fade-up">
         <img src="rishe.jpg" alt="Rishe S, Founder" class="founder-av-img" width="34" height="34" loading="lazy">
-        <p><strong>Rishe S</strong> — I personally run every discovery call, build every system, and manage every campaign. You deal with me directly, not a team.</p>
+        <p><strong>Rishe S</strong> — We personally run every discovery call, build every system, and manage every campaign. You deal with our team directly — not a faceless support queue.</p>
       </div>
     </div>
   </div>
@@ -1215,9 +1380,9 @@ html.light .metric-card{background:rgba(255,255,255,0.65);backdrop-filter:blur(1
 <footer>
   <div class="wrap">
     <div class="footer-inner">
-      <p>&copy; 2026 Breculia AI &middot; Serving US market &middot; <a href="mailto:founder@breculia.tech">founder@breculia.tech</a></p>
-      <p><a href="services.html">Services</a> &middot; <a href="how-it-works.html">How It Works</a> &middot; <a href="contact.html">Contact</a> &middot; <a href="partners.html">Partner Program</a> &middot; <a href="privacy.html">Privacy Policy</a> &middot; <a href="terms.html">Terms</a> &middot; <a href="refund.html">Refund Policy</a></p>
-      <p><a href="https://cal.com/rishe/audit" target="_blank" rel="noopener noreferrer">Book a call →</a></p>
+      <p>&copy; 2026 Breculia AI &middot; Serving US B2B Founders &middot; Chennai, India &middot; <a href="mailto:founder@breculia.tech">founder@breculia.tech</a></p>
+      <p><a href="index.html">Home</a> &middot; <a href="services.html">Services</a> &middot; <a href="how-it-works.html">How It Works</a> &middot; <a href="contact.html">Contact</a> &middot; <a href="partners.html">Partner Program</a> &middot; <a href="privacy.html">Privacy Policy</a> &middot; <a href="terms.html">Terms</a> &middot; <a href="refund.html">Refund Policy</a></p>
+      <p><a href="https://cal.com/rishe/audit" target="_blank" rel="noopener noreferrer">Book a free call &rarr;</a></p>
     </div>
   </div>
 </footer>
@@ -1331,6 +1496,95 @@ function toggleFaq(btn){
     btn.setAttribute('aria-expanded','true');
   }
 }
+
+/* ── SCROLL PROGRESS BAR ── */
+(function(){
+  var bar=document.getElementById('scroll-progress');
+  if(!bar)return;
+  window.addEventListener('scroll',function(){
+    var pct=window.scrollY/(document.body.scrollHeight-window.innerHeight)*100;
+    bar.style.width=Math.min(pct,100)+'%';
+  },{passive:true});
+})();
+
+/* ── COUNTER ANIMATION ── */
+(function(){
+  if(!('IntersectionObserver' in window))return;
+  if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+  function animateCount(el,target,suffix,dur){
+    var start=Date.now(),isFloat=target!==Math.floor(target);
+    function step(){
+      var p=Math.min((Date.now()-start)/dur,1);
+      var ease=1-Math.pow(1-p,4);
+      var val=target*ease;
+      el.textContent=(isFloat?val.toFixed(1):Math.round(val))+(suffix||'');
+      if(p<1)requestAnimationFrame(step);
+      else el.textContent=target+(suffix||'');
+    }
+    requestAnimationFrame(step);
+  }
+  var obs=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        var el=e.target,t=parseFloat(el.dataset.count),s=el.dataset.suffix||'';
+        if(!isNaN(t))animateCount(el,t,s,1400);
+        obs.unobserve(el);
+      }
+    });
+  },{threshold:0.5});
+  document.querySelectorAll('[data-count]').forEach(function(el){obs.observe(el)});
+})();
+
+/* ── 3D TILT EFFECT ── */
+(function(){
+  if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+  function addTilt(sel,intensity){
+    document.querySelectorAll(sel).forEach(function(card){
+      card.addEventListener('mousemove',function(e){
+        var r=card.getBoundingClientRect();
+        var x=(e.clientX-r.left)/r.width-0.5;
+        var y=(e.clientY-r.top)/r.height-0.5;
+        card.style.transform='translateY(-8px) rotateX('+(-y*intensity)+'deg) rotateY('+(x*intensity)+'deg)';
+        card.style.boxShadow='0 24px 60px rgba(0,0,0,0.3),'+(-x*12)+'px '+(-y*12)+'px 20px rgba(0,0,0,0.1)';
+      });
+      card.addEventListener('mouseleave',function(){
+        card.style.transform='';
+        card.style.boxShadow='';
+      });
+    });
+  }
+  addTilt('.stack-card',16);
+  addTilt('.pc',10);
+  addTilt('.metric-card',8);
+})();
+
+/* ── STAGGER GROUPS ── */
+(function(){
+  if(!('IntersectionObserver' in window))return;
+  var obs=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){e.target.classList.add('in');obs.unobserve(e.target);}
+    });
+  },{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.stagger-group').forEach(function(el){obs.observe(el)});
+})();
+
+/* ── MAGNETIC BUTTON EFFECT ── */
+(function(){
+  if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+  document.querySelectorAll('.mag-btn-wrap').forEach(function(wrap){
+    var btn=wrap.querySelector('a,button');if(!btn)return;
+    wrap.addEventListener('mousemove',function(e){
+      var r=wrap.getBoundingClientRect();
+      var x=(e.clientX-r.left-r.width/2)*0.3;
+      var y=(e.clientY-r.top-r.height/2)*0.3;
+      btn.style.transform='translate('+x+'px,'+y+'px) scale(1.03)';
+    });
+    wrap.addEventListener('mouseleave',function(){
+      btn.style.transform='';
+    });
+  });
+})();
 </script>
 </body>
 </html>

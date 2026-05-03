@@ -26,8 +26,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <script>(function(){var t=localStorage.getItem('bt');if(t==='dark'){document.documentElement.classList.remove('light')}else{document.documentElement.classList.add('light')}})();</script>
   <style>
-    :root{--bg:#000000;--bg2:#111111;--bg3:#1c1c1e;--bg4:#2c2c2e;--green:#22c55e;--green2:#16a34a;--glow:rgba(34,197,94,0.12);--white:#f5f5f7;--text:#a1a1a6;--text-dim:#636366;--border:#2c2c2e;--border2:#3a3a3c;--fh:'Inter',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif;--fb:'Inter',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif;color-scheme:dark;}
-    html.light{--bg:#f5f5f7;--bg2:#ffffff;--bg3:#f0f0f5;--bg4:#e8e8ed;--green:#1d9e44;--green2:#15803d;--glow:rgba(22,163,74,0.1);--white:#1d1d1f;--text:#424245;--text-dim:#86868b;--border:#d2d2d7;--border2:#c7c7cc;color-scheme:light;}
+    :root{--bg:#000000;--bg2:#111111;--bg3:#1c1c1e;--bg4:#2c2c2e;--green:#22c55e;--green2:#16a34a;--glow:rgba(34,197,94,0.12);--glow2:rgba(34,197,94,0.06);--white:#f5f5f7;--text:#a1a1a6;--text-dim:#636366;--muted:#636366;--border:#2c2c2e;--border2:#3a3a3c;--fh:'Inter',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif;--fb:'Inter',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif;color-scheme:dark;}
+    html.light{--bg:#ffffff;--bg2:#fafafa;--bg3:#f5f5f7;--bg4:#e8e8ed;--green:#22c55e;--green2:#16a34a;--glow:rgba(34,197,94,0.14);--glow2:rgba(34,197,94,0.07);--white:#1d1d1f;--text:#6e6e73;--text-dim:#86868b;--muted:#a1a1aa;--border:#e5e5e7;--border2:#d1d1d6;color-scheme:light;}
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
     html{scroll-behavior:smooth;}
     body{background:var(--bg);color:var(--white);font-family:var(--fb);line-height:1.7;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;transition:background-color 0.3s,color 0.3s;}
@@ -108,10 +108,35 @@
     footer a{color:var(--text);text-decoration:none;transition:color .2s;}
     footer a:hover{color:var(--green);text-decoration:none;}
 
+    /* SCROLL PROGRESS */
+    #scroll-progress{position:fixed;top:0;left:0;z-index:9999;height:2px;background:linear-gradient(90deg,var(--green),rgba(34,197,94,0.4));width:0%;pointer-events:none;box-shadow:0 0 8px rgba(34,197,94,0.4)}
+    /* FADE-UP */
+    .fade-up{opacity:0;transform:translateY(24px);filter:blur(3px);transition:opacity 0.7s cubic-bezier(0.16,1,0.3,1),transform 0.7s cubic-bezier(0.16,1,0.3,1),filter 0.7s}
+    .fade-up.in{opacity:1;transform:translateY(0);filter:blur(0)}
+    @media(prefers-reduced-motion:reduce){.fade-up{opacity:1!important;transform:none!important;filter:none!important;transition:none!important}}
+    /* ENHANCED STEP ITEMS */
+    .step-item{transition:background 0.2s}
+    .step-item:hover{background:var(--glow2);border-radius:12px;padding-left:12px;padding-right:12px;margin:0 -12px}
+    .step-num{box-shadow:0 4px 16px rgba(0,0,0,0.2),0 0 0 1px rgba(34,197,94,0.15)}
+    html.light .step-num{background:rgba(255,255,255,0.9);box-shadow:0 4px 16px rgba(0,0,0,0.08),0 0 0 1px rgba(34,197,94,0.2)}
+    html.light .stack-item{background:rgba(255,255,255,0.75);backdrop-filter:blur(14px) saturate(160%);-webkit-backdrop-filter:blur(14px) saturate(160%);border:1px solid rgba(255,255,255,0.85)}
+    footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--green),transparent);opacity:0.4}
+    footer{position:relative;border-top:none}
     @media(max-width:480px){.page-hero{padding:52px 0 40px;}.step-item{grid-template-columns:1fr;gap:12px;}}
+
+    /* ── STAGGER ANIMATIONS ── */
+    .stagger-group > *{opacity:0;transform:translateY(24px);transition:opacity 0.6s cubic-bezier(0.16,1,0.3,1),transform 0.6s cubic-bezier(0.16,1,0.3,1)}
+    .stagger-group.in > *:nth-child(1){opacity:1;transform:none;transition-delay:0ms}
+    .stagger-group.in > *:nth-child(2){opacity:1;transform:none;transition-delay:90ms}
+    .stagger-group.in > *:nth-child(3){opacity:1;transform:none;transition-delay:180ms}
+    .stagger-group.in > *:nth-child(4){opacity:1;transform:none;transition-delay:270ms}
+    .stagger-group.in > *:nth-child(5){opacity:1;transform:none;transition-delay:360ms}
+    .stagger-group.in > *:nth-child(6){opacity:1;transform:none;transition-delay:450ms}
+    @media(prefers-reduced-motion:reduce){.stagger-group>*{animation:none!important;transition:none!important;opacity:1!important;transform:none!important}}
   </style>
 </head>
 <body>
+<div id="scroll-progress" aria-hidden="true"></div>
 
 <nav>
   <div class="wrap">
@@ -132,20 +157,20 @@
 
   <div class="page-hero">
     <span class="pg-label">The Process</span>
-    <h1>48 hours from call to live campaign.</h1>
+    <h1 class="fade-up">48 hours from call to live campaign.</h1>
     <p>Here is exactly what happens when you work with Breculia AI — from the first 15-minute discovery call to hundreds of personalized emails sending every day, with weekly management keeping it optimized.</p>
   </div>
 
   <!-- FOUR STEPS -->
   <div class="section">
-    <h2>Step-by-step: discovery call to live outbound</h2>
+    <h2 class="fade-up">Step-by-step: discovery call to live outbound</h2>
     <div class="step-list" role="list">
 
       <div class="step-item" role="listitem">
         <div class="step-num" aria-hidden="true">1</div>
         <div class="step-body">
           <h3>15-min discovery call</h3>
-          <p>We talk through your ICP (ideal customer profile): target industry, company size range, decision-maker title, geography, and what a good reply looks like for your business. You share editor access to your Clay account and campaign access to your Instantly account. I learn the context that separates your best-fit prospects from wasted credits.</p>
+          <p>We talk through your ICP (ideal customer profile): target industry, company size range, decision-maker title, geography, and what a good reply looks like for your business. You share editor access to your Clay account and campaign access to your Instantly account. We learn the context that separates your best-fit prospects from wasted credits.</p>
           <p style="margin-top:12px">You leave with a clear picture of what the system will look like before a single dollar changes hands.</p>
           <span class="step-time">Day 0 — 15 minutes</span>
         </div>
@@ -155,7 +180,7 @@
         <div class="step-num" aria-hidden="true">2</div>
         <div class="step-body">
           <h3>Clay enrichment waterfall built</h3>
-          <p>I build your Clay table from scratch on your account. The enrichment waterfall pulls from Apollo as primary, with Hunter and Prospeo as fallbacks — so you get verified emails even when Apollo misses. Each row is enriched for first name, work email, job title, company, website, funding stage, employee count, and LinkedIn URL.</p>
+          <p>We build your Clay table from scratch on your account. The enrichment waterfall pulls from Apollo as primary, with Hunter and Prospeo as fallbacks — so you get verified emails even when Apollo misses. Each row is enriched for first name, work email, job title, company, website, funding stage, employee count, and LinkedIn URL.</p>
           <p style="margin-top:12px">The waterfall is structured to maximize enrichment coverage while minimizing Clay credit burn — the exact logic most DIY tables miss.</p>
           <span class="step-time">Day 1 — in progress</span>
         </div>
@@ -186,7 +211,7 @@
         <div class="step-body">
           <h3>Weekly management (Managed + Growth plans)</h3>
           <p>Every week: 500 new leads added and enriched. Email copy updated based on what reply data shows. Domain health and deliverability monitored. A/B tests run on subject lines and openers. A monthly report delivered showing emails sent, open rate, reply rate, and meetings booked.</p>
-          <p style="margin-top:12px">You review replies and jump on sales calls. I handle everything that keeps the machine running.</p>
+          <p style="margin-top:12px">You review replies and jump on sales calls. We handle everything that keeps the machine running.</p>
           <span class="step-time">Every week — ongoing</span>
         </div>
       </div>
@@ -196,8 +221,8 @@
 
   <!-- TECH STACK -->
   <div class="section">
-    <h2>The tool stack</h2>
-    <p class="sec-sub">Every tool serves a specific purpose in the system. You pay Clay and Instantly directly — you own the accounts. I operate them.</p>
+    <h2 class="fade-up">The tool stack</h2>
+    <p class="sec-sub">Every tool serves a specific purpose in the system. You pay Clay and Instantly directly — you own the accounts. We operate them.</p>
     <div class="stack-grid">
       <div class="stack-item">
         <div class="stack-name">Clay</div>
@@ -225,13 +250,13 @@
       </div>
     </div>
     <div class="callout">
-      <p><strong>You own the accounts.</strong> Clay, Instantly, Apollo, Hunter, and Prospeo are all on your accounts, billed directly to you (~$600/mo combined). I operate them. If you cancel Breculia AI, your system stays in your accounts — your Clay table, leads, and Instantly campaigns are yours permanently.</p>
+      <p><strong>You own the accounts.</strong> Clay, Instantly, Apollo, Hunter, and Prospeo are all on your accounts, billed directly to you (~$600/mo combined). We operate them. If you cancel Breculia AI, your system stays in your accounts — your Clay table, leads, and Instantly campaigns are yours permanently.</p>
     </div>
   </div>
 
   <!-- WHY IT WORKS -->
   <div class="section">
-    <h2>Why the system works</h2>
+    <h2 class="fade-up">Why the system works</h2>
     <p class="sec-sub">Three reasons generic cold email fails — and what the system does differently.</p>
 
     <div style="display:flex;flex-direction:column;gap:20px;margin-top:28px;">
@@ -252,7 +277,7 @@
 
   <!-- RESULTS -->
   <div class="section">
-    <h2>What the system delivers</h2>
+    <h2 class="fade-up">What the system delivers</h2>
     <p class="sec-sub">Real numbers from real campaigns. Industry averages shown for context.</p>
     <div class="metric-row" role="list">
       <div class="metric" role="listitem">
@@ -271,14 +296,14 @@
 
     <div class="guarantee">
       <h3>30-Day Improvement Guarantee (Managed plan)</h3>
-      <p>If the system delivers fewer than 5 positive replies in the first 30 days of live campaign, Month 2 is at no charge. You submit a written request to <a href="mailto:founder@breculia.tech">founder@breculia.tech</a> within 30 days of go-live. I verify the Instantly dashboard stats within 3 business days and issue the credit if qualified. Full terms in the <a href="refund.html">Refund Policy</a>.</p>
+      <p>If the system delivers fewer than 5 positive replies in the first 30 days of live campaign, Month 2 is at no charge. You submit a written request to <a href="mailto:founder@breculia.tech">founder@breculia.tech</a> within 30 days of go-live. We verify the Instantly dashboard stats within 3 business days and issue the credit if qualified. Full terms in the <a href="refund.html">Refund Policy</a>.</p>
     </div>
   </div>
 
   <!-- CTA -->
   <div class="section" style="text-align:center;padding-bottom:80px;">
-    <h2>See the system on a free 15-min call</h2>
-    <p class="sec-sub" style="margin-left:auto;margin-right:auto;text-align:center">I'll audit your current outbound setup and show you exactly what the Clay waterfall and Instantly campaign would look like for your ICP. No pitch until you see the gaps yourself.</p>
+    <h2 class="fade-up">See the system on a free 15-min call</h2>
+    <p class="sec-sub" style="margin-left:auto;margin-right:auto;text-align:center">We'll audit your current outbound setup and show you exactly what the Clay waterfall and Instantly campaign would look like for your ICP. No pitch until you see the gaps yourself.</p>
     <a href="https://cal.com/rishe/audit" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:8px;padding:18px 40px;background:var(--green);color:#000;font-size:1rem;font-weight:600;border-radius:40px;text-decoration:none;transition:background 0.2s,transform 0.2s;" onmouseover="this.style.background='var(--green2)';this.style.transform='translateY(-2px)'" onmouseout="this.style.background='var(--green)';this.style.transform='none'">📅 Book free 15-min call →</a>
     <p style="font-size:.78rem;color:var(--text-dim);margin-top:14px">Or view <a href="services.html" style="color:var(--text);">pricing and services →</a></p>
   </div>
@@ -287,27 +312,20 @@
 
 <footer>
   <div class="wrap">
-    <p>© 2026 Breculia AI · Serving US B2B Founders · <a href="mailto:founder@breculia.tech">founder@breculia.tech</a></p>
-    <p><a href="index.html">Home</a> · <a href="services.html">Services</a> · <a href="contact.html">Contact</a> · <a href="partners.html">Partner Program</a> · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="refund.html">Refund Policy</a></p>
-    <p><a href="https://cal.com/rishe/audit" target="_blank" rel="noopener noreferrer">Book a call →</a></p>
+    <div class="footer-inner">
+      <p>&copy; 2026 Breculia AI &middot; Serving US B2B Founders &middot; Chennai, India &middot; <a href="mailto:founder@breculia.tech">founder@breculia.tech</a></p>
+      <p><a href="index.html">Home</a> &middot; <a href="services.html">Services</a> &middot; <a href="how-it-works.html">How It Works</a> &middot; <a href="contact.html">Contact</a> &middot; <a href="partners.html">Partner Program</a> &middot; <a href="privacy.html">Privacy Policy</a> &middot; <a href="terms.html">Terms</a> &middot; <a href="refund.html">Refund Policy</a></p>
+      <p><a href="https://cal.com/rishe/audit" target="_blank" rel="noopener noreferrer">Book a free call &rarr;</a></p>
+    </div>
   </div>
 </footer>
 
 <script>
-(function(){
-  var html=document.documentElement,toggle=document.getElementById('themeToggle'),
-      meta=document.querySelector('meta[name="theme-color"]'),
-      stored=localStorage.getItem('bt');
-  function apply(t){
-    if(t==='light'){html.classList.add('light');if(meta)meta.setAttribute('content','#f5f5f5')}
-    else{html.classList.remove('light');if(meta)meta.setAttribute('content','#0a0a0a')}
-  }
-  if(stored==='dark')apply('dark');else apply('light');
-  if(toggle)toggle.addEventListener('click',function(){
-    var n=html.classList.contains('light')?'dark':'light';
-    apply(n);localStorage.setItem('bt',n);
-  });
-})();
+(function(){var html=document.documentElement,toggle=document.getElementById('themeToggle'),meta=document.querySelector('meta[name="theme-color"]'),stored=localStorage.getItem('bt');function apply(t){if(t==='light'){html.classList.add('light');if(meta)meta.setAttribute('content','#ffffff')}else{html.classList.remove('light');if(meta)meta.setAttribute('content','#0a0a0a')}}if(stored==='dark')apply('dark');else apply('light');if(toggle)toggle.addEventListener('click',function(){var n=html.classList.contains('light')?'dark':'light';apply(n);localStorage.setItem('bt',n)})})();
+(function(){var els=document.querySelectorAll('.fade-up');if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return;}var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');obs.unobserve(e.target)}})},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});els.forEach(function(e){obs.observe(e)})})();
+(function(){var bar=document.getElementById('scroll-progress');if(!bar)return;window.addEventListener('scroll',function(){bar.style.width=Math.min(window.scrollY/(document.body.scrollHeight-window.innerHeight)*100,100)+'%'},{passive:true})})();
+/* ── STAGGER GROUPS ── */
+(function(){if(!('IntersectionObserver' in window))return;var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');obs.unobserve(e.target);}});},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});document.querySelectorAll('.stagger-group').forEach(function(el){obs.observe(el)});})();
 </script>
 </body>
 </html>
