@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Services &amp; Pricing — Breculia AI | Clay + Instantly Outbound Systems</title>
-  <meta name="description" content="Breculia AI outbound operator services: one-time setup ($1,500), Managed ($1,000/mo), and Growth ($2,500/mo). Clay enrichment, Instantly campaigns, and weekly management for US B2B founders." />
+  <meta name="description" content="Breculia AI outbound operator services: one-time setup ($1,500), Managed ($1,000/mo), Growth ($2,500/mo), and AI SDR Infrastructure Setup ($2,500 one-time + $1,500/mo). Clay enrichment, Instantly campaigns, and weekly management for US B2B founders." />
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
   <link rel="canonical" href="https://breculia.tech/services.html" />
   <meta property="og:title" content="Services &amp; Pricing — Breculia AI" />
@@ -71,7 +71,7 @@
     /* TIER CARDS */
     .tier-grid{display:grid;grid-template-columns:1fr;gap:20px;margin-top:40px;}
     @media(min-width:640px){.tier-grid{grid-template-columns:1fr 1fr;}}
-    @media(min-width:900px){.tier-grid{grid-template-columns:1fr 1fr 1fr;}}
+    @media(min-width:1100px){.tier-grid{grid-template-columns:repeat(4,1fr);}}
     .tier{background:var(--bg2);border:1px solid var(--border);border-radius:16px;padding:32px 28px;position:relative;transition:transform 0.3s,box-shadow 0.3s;}
     .tier:hover{transform:translateY(-4px);box-shadow:0 16px 48px rgba(0,0,0,0.3);}
     .tier--pop{border-color:rgba(34,197,94,0.5);box-shadow:0 0 0 1px rgba(34,197,94,0.1);}
@@ -191,7 +191,7 @@
   <!-- TIER CARDS -->
   <div class="section">
     <h2 class="fade-up">Choose your tier</h2>
-    <p class="sec-sub">Start with Setup, add Managed if you want weekly management, or go straight to Growth for full-stack ABM + CRM sync.</p>
+    <p class="sec-sub">Start with Setup, add Managed if you want weekly management, go straight to Growth for full-stack ABM + CRM sync, or choose AI SDR Infrastructure for a complete AI-powered sending stack with reply triage and signal layer.</p>
     <div class="tier-grid fade-up">
 
       <!-- SETUP -->
@@ -247,6 +247,24 @@
         <a href="https://cal.com/rishe/audit" target="_blank" rel="noopener noreferrer" class="tier-btn tier-btn-ghost">Book discovery call →</a>
       </div>
 
+      <!-- AI SDR INFRASTRUCTURE -->
+      <div class="tier">
+        <div class="tier-name">AI SDR Infrastructure</div>
+        <div class="tier-price"><sup>$</sup>2,500</div>
+        <div class="tier-period">one-time setup · then $1,500/mo maintenance</div>
+        <div class="tier-desc">Full AI SDR infrastructure: 3-domain pool, reply triage, and ICP signal layer — built and run for you.</div>
+        <ul class="tier-feats">
+          <li>3-domain sending pool — each domain warmed separately, rotation in Instantly</li>
+          <li>Postmaster + SNDS monitoring setup</li>
+          <li>Instantly AI Agent configured</li>
+          <li>Reply triage — positive → human alert, OOO → reschedule, not interested → stop, pricing/security → human takeover</li>
+          <li>Weekly deliverability report</li>
+          <li>ICP signal layer — job change alerts, SDR hiring signals, funding announcements</li>
+        </ul>
+        <p style="font-size:.76rem;color:var(--text-dim);margin-bottom:16px;line-height:1.5">Monthly maintenance $1,500/mo — vs. $2,000–$5,000/mo for Artisan/AiSDR that still fail 47% of the time.</p>
+        <a href="https://cal.com/rishe/audit" target="_blank" rel="noopener noreferrer" class="tier-btn tier-btn-ghost">Book discovery call →</a>
+      </div>
+
     </div>
     <p style="font-size:.82rem;color:var(--text-dim);text-align:center;margin-top:20px">All plans require active Clay + Instantly accounts (~$600/mo paid directly to tools). ACH via Xflow only.</p>
   </div>
@@ -263,6 +281,7 @@
             <th scope="col">Setup</th>
             <th scope="col" class="hl">Managed</th>
             <th scope="col">Growth</th>
+            <th scope="col">AI SDR Infra</th>
           </tr>
         </thead>
         <tbody>
@@ -271,11 +290,13 @@
             <td><span class="ck">✓</span></td>
             <td class="hl"><span class="ck">✓</span></td>
             <td><span class="ck">✓</span></td>
+            <td><span class="ck">✓</span></td>
           </tr>
           <tr>
             <td>Apollo + Hunter + Prospeo fallback enrichment</td>
             <td><span class="ck">✓</span></td>
             <td class="hl"><span class="ck">✓</span></td>
+            <td><span class="ck">✓</span></td>
             <td><span class="ck">✓</span></td>
           </tr>
           <tr>
@@ -283,11 +304,13 @@
             <td><span class="ck">✓</span></td>
             <td class="hl"><span class="ck">✓</span></td>
             <td><span class="ck">✓</span></td>
+            <td><span class="ck">✓</span> 3 domains</td>
           </tr>
           <tr>
             <td>AI-personalized openers — 500 leads</td>
             <td><span class="ck">✓</span></td>
             <td class="hl"><span class="ck">✓</span></td>
+            <td><span class="ck">✓</span></td>
             <td><span class="ck">✓</span></td>
           </tr>
           <tr>
@@ -295,35 +318,41 @@
             <td><span class="ck">✓</span></td>
             <td class="hl"><span class="ck">✓</span></td>
             <td><span class="ck">✓</span></td>
+            <td><span class="ck">✓</span></td>
           </tr>
           <tr>
             <td>Weekly lead refresh (500 new/week)</td>
             <td class="na">—</td>
             <td class="hl"><span class="ck">✓</span></td>
             <td><span class="ck">✓</span></td>
+            <td class="na">—</td>
           </tr>
           <tr>
             <td>Email copy updates + A/B testing</td>
             <td class="na">—</td>
             <td class="hl"><span class="ck">✓</span></td>
             <td><span class="ck">✓</span></td>
+            <td class="na">—</td>
           </tr>
           <tr>
             <td>Deliverability + domain monitoring</td>
             <td class="na">—</td>
             <td class="hl"><span class="ck">✓</span></td>
             <td><span class="ck">✓</span></td>
+            <td><span class="ck">✓</span> Postmaster + SNDS</td>
           </tr>
           <tr>
             <td>Monthly performance report</td>
             <td class="na">—</td>
             <td class="hl"><span class="ck">✓</span></td>
             <td><span class="ck">✓</span></td>
+            <td><span class="ck">✓</span> Weekly</td>
           </tr>
           <tr>
             <td>30-Day Improvement Guarantee</td>
             <td class="na">—</td>
             <td class="hl"><span class="ck">✓</span></td>
+            <td class="na">—</td>
             <td class="na">—</td>
           </tr>
           <tr>
@@ -331,23 +360,48 @@
             <td class="na">—</td>
             <td class="hl na">—</td>
             <td><span class="ck">✓</span></td>
+            <td class="na">—</td>
           </tr>
           <tr>
             <td>CRM sync — HubSpot or Salesforce</td>
             <td class="na">—</td>
             <td class="hl na">—</td>
             <td><span class="ck">✓</span></td>
+            <td class="na">—</td>
           </tr>
           <tr>
             <td>LinkedIn + email combined outbound</td>
             <td class="na">—</td>
             <td class="hl na">—</td>
             <td><span class="ck">✓</span></td>
+            <td class="na">—</td>
           </tr>
           <tr>
             <td>Weekly 30-min strategy call</td>
             <td class="na">—</td>
             <td class="hl na">—</td>
+            <td><span class="ck">✓</span></td>
+            <td class="na">—</td>
+          </tr>
+          <tr>
+            <td>Instantly AI Agent configured</td>
+            <td class="na">—</td>
+            <td class="hl na">—</td>
+            <td class="na">—</td>
+            <td><span class="ck">✓</span></td>
+          </tr>
+          <tr>
+            <td>Reply triage automation</td>
+            <td class="na">—</td>
+            <td class="hl na">—</td>
+            <td class="na">—</td>
+            <td><span class="ck">✓</span></td>
+          </tr>
+          <tr>
+            <td>ICP signal layer (job change, SDR hiring, funding)</td>
+            <td class="na">—</td>
+            <td class="hl na">—</td>
+            <td class="na">—</td>
             <td><span class="ck">✓</span></td>
           </tr>
         </tbody>
